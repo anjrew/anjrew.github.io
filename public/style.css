@@ -380,6 +380,18 @@ textarea{
 
 }
 
+.project{
+	width: 110%;
+	height: 110%;
+	transform-origin: center;
+}
+
+.project:hover{
+	width: 100%;
+	height: 100%
+}
+
+
 textarea:hover{
 	font-size: 25px;
 	box-shadow: none;
@@ -415,6 +427,10 @@ textarea:active{
 
  a{
 	color: black;
+ }
+
+ .reactjs-coverflow_Element .active{
+	 transform: scale(1.1)
  }
 
 @media only screen and (max-width: 850px) {

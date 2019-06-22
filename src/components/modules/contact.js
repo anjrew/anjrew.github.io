@@ -31,7 +31,8 @@ export default class Contact extends React.Component {
                             animateIn="fadeInRight"
                             animateOnce={true}
                         >	
-                            <h1 style={{ textAlign: this.props.align ||'end' }}>Get in touch</h1>
+                        
+							<h1 style={{ textAlign: this.props.align ||'end' }}>Get in touch</h1>
 							
                             
                         </ScrollAnimation>
