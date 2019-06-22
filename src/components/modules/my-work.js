@@ -22,9 +22,24 @@ export default class MyWork extends React.Component {
                             animateOnce={true}
                         >	
                             <h2 style={{ textAlign: this.props.align ||'start' }}>My Work</h2>
-                            <LinkButton 
-                                onClick={() => { window.location.href = "mailto:earyzhe@gmail.com"; }}
-                            >earyzhe@gmail.com</LinkButton> 
+
+                            <Column
+								alignItems={'start'}>
+                                <a
+                                    className='link-button'
+                                    href='https://github.com/earyzhe'
+                                >GitHub</a> 
+                                <a
+                                    className='link-button'
+                                    href='http://www.cupomatic.net/'
+                                >CupOmatic</a>
+								<a
+                                    className='link-button'
+                                    href='https://www.facebook.com/dialincoffee/'
+                                >Dial in</a> 
+                            </Column>
+
+
                         </ScrollAnimation>
                     </Row>
                 </Column>
