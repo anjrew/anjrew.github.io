@@ -4,6 +4,8 @@ import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { LinkButton } from '../buttons/link_button';
+import Coverflow from 'react-coverflow';
+
 
 export default class MyWork extends React.Component {
 
@@ -24,7 +26,7 @@ export default class MyWork extends React.Component {
                             <h2 style={{ textAlign: this.props.align ||'start' }}>My Work</h2>
 
                             <Column
-								alignItems={'start'}>
+                                alignItems={'start'}>
                                 <a
                                     className='link-button'
                                     href='https://github.com/earyzhe'
@@ -33,10 +35,24 @@ export default class MyWork extends React.Component {
                                     className='link-button'
                                     href='http://www.cupomatic.net/'
                                 >CupOmatic</a>
-								<a
+                                <a		
                                     className='link-button'
                                     href='https://www.facebook.com/dialincoffee/'
                                 >Dial in</a> 
+
+                                <Coverflow
+                                    backgroundColor= "black"
+                                    width="960" 
+                                    height="500"
+                                    displayQuantityOfSide={2}
+                                    navigation={false}
+                                    enableScroll={true}
+                                    clickable={true}
+                                    active={0}
+                                >
+                                    <img src='/assets/images/cupomatic.jpg' alt='title or description' data-action="http://andyyou.github.io/react-coverflow/"/>
+                                    <img src='/assets/images/cupomatic.jpg' alt='title or description' data-action="http://andyyou.github.io/react-coverflow/"/>
+                                </Coverflow>
                             </Column>
 
 
