@@ -1,5 +1,5 @@
 *{
-	font-family: 'Calligraffitti', cursive;
+	font-family: 'Raleway', sans-serif;
     text-align: center;
     transition: all 200ms;
     outline: none;
@@ -60,6 +60,9 @@ button:active{
     transform: translateY(-3px);
 }
 
+
+
+
 .avatar:hover{
     transform: scale(1.05)
 }
@@ -68,7 +71,7 @@ button:active{
 }
 
 h1{
-	font-size: 45px
+	font-size: 100px
 }
 
 h2{
