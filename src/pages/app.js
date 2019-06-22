@@ -18,6 +18,11 @@ import { Container } from '../components/boxes/container';
 import { Icon } from '../components/graphics/icon';
 import { NavBarButton } from '../components/buttons/nav-bar-button';
 import Header from '../components/modules/header';
+import About from '../components/modules/about';
+import Skills from '../components/modules/skills';
+import Contact from '../components/modules//contact';
+import MyWork from '../components/modules/my-work';
+
 
 // PAGES
 
@@ -41,7 +46,17 @@ export default class App extends React.Component{
             <div style={{ maxHeight: '100vh'}}>
 
                 <Header/>
-{/* 
+
+                <About/>
+
+                <Skills/>
+
+                <MyWork/>
+
+                <Contact/>
+
+				
+                {/* 
                 <Parallax
                     blur={1}
                     bgImage={'/assets/images/tower-1.jpg'}

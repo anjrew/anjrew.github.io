@@ -21,7 +21,7 @@ export default class Header extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    height={'calc(100vh - 20px)'}
+                    height={'calc(80vh - 20px)'}
                     placeContent='space-evenly'
                 >
                     <Row

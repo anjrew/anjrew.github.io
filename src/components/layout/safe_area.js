@@ -9,7 +9,6 @@ export class SafeArea extends React.Component{
         this.style = {
             padding: props.padding || '20px',
             alignItems: 'center',
-            textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
             height: 'calc(100% - 40px)',
