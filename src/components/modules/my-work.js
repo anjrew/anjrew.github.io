@@ -10,26 +10,8 @@ import ProjectImage from '../images/project';
 
 
 export default class MyWork extends React.Component {
-	 
 
     render() {
-        const imageContainerStyle = {
-            // '-webkit-box-reflect':  "below 0px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.7, transparent), to(rgba(250, 250, 250, 0.4)))",
-            width: '200px', 
-            height: '200px',
-            margin: '3px',
-            overflow: 'hidden',
-            display: 'flex',
-            placeContent: 'center center'
-        };
-        const imageStyle = {
-            // '-webkit-box-reflect':  "below 0px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.7, transparent), to(rgba(250, 250, 250, 0.4)))",
-            width: '200px', 
-            height: '200px',
-            margin: '3px',
-            overflow: 'hidden' 
-        };
-		
 		
         return (
             <SafeArea>
@@ -38,7 +20,7 @@ export default class MyWork extends React.Component {
                     alignItems={`flex-${this.props.align ||'start'} `}
                 >
                     <Row
-                        width='60%'
+                        width='100%'
                         placeContent={'center flex-start'}>
                         <ScrollAnimation
                             animateIn="fadeInLeft"
@@ -48,10 +30,23 @@ export default class MyWork extends React.Component {
 
                             <Column
                                 alignItems={'start'}>
-                                <a
+                                <p>Check out my code on  <a
                                     className='link-button'
                                     href='https://github.com/earyzhe'
-                                >GitHub</a> 
+                                >GitHub</a> and see my projects below.</p>
+                               				 
+
+                                <Wrap>
+                                    <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
+
+                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
+
+                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='Battery Saver'/>
+
+                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='Plant irrigation system'/>  
+                                </Wrap>
+
+									
                                 <a
                                     className='link-button'
                                     href='http://www.cupomatic.net/'
@@ -59,15 +54,7 @@ export default class MyWork extends React.Component {
                                 <a		
                                     className='link-button'
                                     href='https://www.facebook.com/dialincoffee/'
-                                >Dial in</a> 
-
-                                <Wrap>
-								<ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
-                                    <div style={imageContainerStyle}>
-                                        <img className='project' src='/assets/images/cupomatic.jpg'/>
-                                    </div>
-                                    <img style={imageContainerStyle} src='/assets/images/dial-in.jpg'/>
-                                </Wrap>
+                                >Dial in</a>
 
                                 {/* <Coverflow
 									backgroundColor= "black"

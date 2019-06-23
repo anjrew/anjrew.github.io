@@ -19,10 +19,15 @@ export default class Contact extends React.Component {
                     
 
                     <Row
-                        width='60%'
-                        placeContent={`center flex-${this.props.align ||'end'}`}>
-						 <Column width='100px'>						
-                            <a className='link-button' href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'>LinkedIn</a>
+                        width='100%'
+                        placeContent={`space-between`}>
+                        <Column 
+                            width='unset'>						
+                            <a 
+                                style={{ alignSelf: 'start', padding: '10px'}}
+                                className='link-button' 
+                                href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
+                            >LinkedIn</a>
                             <LinkButton 
                                 onClick={() => { window.location.href = "mailto:earyzhe@gmail.com"; }}
                             >earyzhe@gmail.com</LinkButton> 
@@ -32,9 +37,8 @@ export default class Contact extends React.Component {
                             animateOnce={true}
                         >	
                         
-							<h1 style={{ textAlign: this.props.align ||'end' }}>Get in touch</h1>
-							
-                            
+                            <h1 style={{ textAlign: this.props.align ||'end' }}>Get in touch</h1>
+    
                         </ScrollAnimation>
 
                         

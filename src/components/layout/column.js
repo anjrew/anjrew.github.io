@@ -6,7 +6,7 @@ export class Column extends React.Component{
         return (
             <div 
                 ref={ this.props.referance } 
-                className={`column ${this.props.classNames}` }  
+                className={`column ${this.props.classNames && this.props.classNames}` }  
                 style={{
                     minWidth: this.props.minWidth,
                     overflowX: this.props.overflowX,
