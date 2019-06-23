@@ -16,7 +16,18 @@ export default class ProjectImage extends React.Component{
         const size = this.props.size || '300px';
         const width = size;
         const height = size;
-        const fontSize = this.props.name.length > 15 ? '50px' : '80px';
+		
+        const words = this.props.name.split(' ');
+        var biggestWordLength = 0; 
+        for (let index = 0; index < words.length; index++) {
+            const word = words[index];
+            if ( word.length > biggestWordLength){
+                biggestWordLength = word.length;
+            }
+        }
+		
+        const fontSize = this.props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+
 
         const imageContainerStyle = {
             // '-webkit-box-reflect':  "below 0px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.7, transparent), to(rgba(250, 250, 250, 0.4)))",
@@ -53,7 +64,7 @@ export default class ProjectImage extends React.Component{
                         position: 'absolute',
                         zIndex:'10',
                         alignSelf: 'center',
-                        wordWrap: 'break-word',
+                        // wordWrap: 'break-word',
                         padding: '10px'
                     }}
                 >
@@ -62,7 +73,7 @@ export default class ProjectImage extends React.Component{
                             color: 'white',
                             textAlign: 'center',
                             margin: '30px',
-                            wordBreak: 'break-all',
+                            // wordBreak: 'break-all',
                             fontSize: fontSize,
                             transition: 'opacity 500ms',
                             opacity: this.state.showText ? 1 : 0,

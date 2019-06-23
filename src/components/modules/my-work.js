@@ -41,9 +41,14 @@ export default class MyWork extends React.Component {
 
                                     <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
 
-                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='Battery Saver'/>
+                                    <ProjectImage src='/assets/images/battery_saver_logo.png' name='Battery Saver'/>
 
-                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='Plant irrigation system'/>  
+                                    <ProjectImage src='/assets/images/plant-watering.jpg' name='Plant irrigation system'/>
+
+									<ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp pertition'/> 
+
+									<ProjectImage src='/assets/images/laissez-faire.jpg' name='Laissez Faire'/>   
+  
                                 </Wrap>
 
 									
