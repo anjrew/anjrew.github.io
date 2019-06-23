@@ -10,7 +10,17 @@ export class LinkButton extends React.Component{
 
     render(){
         return (
-            <button className={'link-button'}  onClick={this.handleClick}>{this.label}{this.props.children}</button>
+            <button 
+                className={'link-button'}  
+                onClick={this.handleClick}
+                style={{
+                    color: this.props.color,
+                    alignSelf: this.props.alignSelf
+                }}
+            >
+                {this.label}{this.props.children}
+				
+            </button>
         );
     }
 }

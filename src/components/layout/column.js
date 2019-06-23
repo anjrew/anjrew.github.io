@@ -8,6 +8,7 @@ export class Column extends React.Component{
                 ref={ this.props.referance } 
                 className={`column ${this.props.classNames && this.props.classNames}` }  
                 style={{
+                    marginTop: this.props.marginTop,
                     minWidth: this.props.minWidth,
                     overflowX: this.props.overflowX,
                     overflowY: this.props.overflowY,

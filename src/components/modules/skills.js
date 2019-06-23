@@ -10,8 +10,9 @@ export default class Skills extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    placeContent={`flex-${this.props.align ||'end'} `}
-                    alignItems={`flex-${this.props.align ||'end'} `}
+                    margin='200px 0px'
+                    placeContent={`flex-${this.props.align ||'center'} `}
+                    alignItems={`flex-${this.props.align ||'center'} `}
                 >
                     <Row
                         width='60%'

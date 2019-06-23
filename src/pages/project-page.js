@@ -22,6 +22,7 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
+import { Z_FIXED } from 'zlib';
 
 
 // PAGES
@@ -43,19 +44,23 @@ export default class App extends React.Component{
     render(){
 
         return ( 
-            <div style={{ maxHeight: '100vh'}}>
+            <div style={{ 
+                height: '100vh',
+                width: '100vw',
+                display: 'fixed',
+                top: '0px'
+            }}>
                 <Parallax
-                    blur={1}
-                    bgImage={'/assets/images/me-noeyes-5.png'}
-                    bgImageAlt="Andrew Johnson"
+                    blur={10}
+                    bgImage={this.props.backgroundImage}
+                    bgImageAlt={this.props.title}
                     strength={1000}
                 >
 
 
-                    <Header/>
+                    <h1>{this.props.title}</h1>
 
-                    <About/>
-
+                    <p></p>
                     <Skills/>
 
                     <MyWork/>
@@ -64,37 +69,8 @@ export default class App extends React.Component{
 
                 </Parallax>
 				
-                {/* 
-                
-				<div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'green'}}></div> 
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'black'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'red'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'yellow'}}></div> 
-
-
-                </Parallax>
-
-                <Parallax
-                    blur={1}
-                    bgImage={'/assets/images/tower-2.jpg'}
-                    bgImageAlt="the cat"
-                    strength={1000}
-                >
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'green'}}></div> 
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'black'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'red'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'yellow'}}></div> 
-
-
-                </Parallax> */}
             </div>
-
         );
-       
     }
 
     componentDidMount() {

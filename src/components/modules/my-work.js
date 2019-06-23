@@ -16,6 +16,7 @@ export default class MyWork extends React.Component {
         return (
             <SafeArea>
                 <Column
+                    margin='200px 0px'
                     placeContent={`flex-${this.props.align ||'start'} `}
                     alignItems={`flex-${this.props.align ||'start'} `}
                 >

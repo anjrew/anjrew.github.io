@@ -12,7 +12,6 @@ export default class ProjectImage extends React.Component{
     }
 
     render(){
-        console.log('The name is', this.props.name, 'and the count is', this.props.name.length);
         const size = this.props.size || '300px';
         const width = size;
         const height = size;
@@ -26,7 +25,10 @@ export default class ProjectImage extends React.Component{
             }
         }
 		
-        const fontSize = this.props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+        var fontSize = this.props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+        if (biggestWordLength > 10 ) {
+            fontSize = '40px';
+        }
 
 
         const imageContainerStyle = {

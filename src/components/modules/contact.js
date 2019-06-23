@@ -13,43 +13,38 @@ export default class Contact extends React.Component {
         return (
             <SafeArea>
                 <Column
+                    marginTop='200px'
                     placeContent={`flex-${this.props.align ||'end'} `}
                     alignItems={`flex-${this.props.align ||'end'} `}
                 >
-                    
-
                     <Row
                         width='100%'
-                        placeContent={`space-between`}>
+                        placeContent={`flex-end`}>
                         <Column 
-                            width='unset'>						
+                            width='unset'>	
+                            <ScrollAnimation
+                                animateIn="fadeInRight"
+                                animateOnce={true}>	
+                        
+                                <h1 style={{ 
+                                    textAlign: this.props.align ||'end',
+                                    color: 'white' }}>Get in touch</h1>
+    
+                            </ScrollAnimation>					
                             <a 
-                                style={{ alignSelf: 'start', padding: '10px'}}
+                                style={{ alignSelf: 'flex-end', color: 'white', padding: '10px'}}
                                 className='link-button' 
                                 href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
                             >LinkedIn</a>
                             <LinkButton 
-                                onClick={() => { window.location.href = "mailto:earyzhe@gmail.com"; }}
+                                color='white'
+                                alignSelf= 'flex-end'
+                                handleClick={() => { 
+                                    console.log('Trying to open email client');
+                                    window.location.href = "mailto:earyzhe@gmail.com"; }}
                             >earyzhe@gmail.com</LinkButton> 
-                        </Column>	
-                        <ScrollAnimation
-                            animateIn="fadeInRight"
-                            animateOnce={true}
-                        >	
-                        
-                            <h1 style={{ textAlign: this.props.align ||'end' }}>Get in touch</h1>
-    
-                        </ScrollAnimation>
-
-                        
+                        </Column>
                     </Row>
-
-                    <ScrollAnimation
-                        animateIn="fadeInLeft"
-                        animateOnce={true}
-                    >	
-                    
-                    </ScrollAnimation>
                 </Column>
             </SafeArea>
         );

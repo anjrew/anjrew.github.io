@@ -10,8 +10,9 @@ export default class About extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    placeContent={`flex-${this.props.align ||'start'} `}
-                    alignItems={`flex-${this.props.align ||'start'} `}
+                    margin='200px 0px'
+                    placeContent={`flex-${this.props.align ||'center'} `}
+                    alignItems={`flex-${this.props.align ||'center'} `}
                 >
                     <Row
                         width='60%'
@@ -31,8 +32,12 @@ export default class About extends React.Component {
                             <p>Berlin based.</p>
                         </ScrollAnimation>
 
+                        <ScrollAnimation
+                            animateIn="fadeInLeft"
+                            animateOnce={true}>	
+                            {/* <img src='/assets/images/me-noeyes.png'/> */}
+                        </ScrollAnimation>
                     </Row>
-                    
                 </Column>
             </SafeArea>
         );
