@@ -67,18 +67,18 @@ export default class App extends React.Component{
                             technologies: [
                                 new Technology({ 
                                     imageUrl: '/assets/images/flutter-logo2.svg', 
-									name: 'Flutter',
-									href:
+                                    name: 'Flutter',
+                                    href: 'https://flutter.dev/'
                                 }),
                                 new Technology({ 
                                     imageUrl: '/assets/images/dart-logo-2.jpg', 
-									name: 'Dart',
-									href:
+                                    name: 'Dart',
+                                    href: 'https://dart.dev/'
                                 }),
                                 new Technology({ 
                                     imageUrl: '/assets/images/firebase-logo2.png', 
-									name: 'Firebase',
-									href:
+                                    name: 'Firebase',
+                                    href: 'https://firebase.google.com/'
                                 })
                             ],
                             links: [
