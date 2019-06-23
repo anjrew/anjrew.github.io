@@ -33,10 +33,9 @@ export default class ProjectPage extends React.Component{
 
 	
     render(){
-        console.log(this.props);
+        console.log('Project page props are', this.props);
         return ( 
             <div style={{ 
-                height: '100vh',
                 width: '100vw',
                 display: 'fixed',
                 top: '0px',
@@ -44,47 +43,67 @@ export default class ProjectPage extends React.Component{
             }}>
                 
                 <SafeArea>
-						
-                    <h1>{this.props.data.title}</h1>
+                    <Column
+                        placeContent='space-between'>
+                        <Row>
+                            <Column
+                                placeContent='flex-start'
+                                alignItems='flex-start'
+                            >
+                                <h1 style={{ textDecoration: 'underline' }}>{this.props.data.title}</h1>
 
-                    <p>{this.props.data.description}</p>
+                                <p>{this.props.data.description}</p>
 
-                    <h2>Featuring</h2>
+                                <h2>Featuring</h2>
+                            </Column>
+                            { this.props.data.logoUrl &&
+                            <div>
+                                <img style={{
+                                    objectFit: 'cover',
+                                    height: '350px',
+                                    width: '350px'
+                                }} src={this.props.data.logoUrl}/>
+                            </div>
+                            }
+                        </Row>
+
 					
-                    {/* technologies */}
-                    { this.props.data.technologies && 
-						<Wrap>
+                        {/* technologies */}
+                        { this.props.data.technologies && 
+						<Wrap
+						    alignItems='start'
+						    placeContent='flex-start'
+						>
 						    { this.props.data.technologies.map((technology) => {
-						        console.log('Tringin to render image with ', technology);
 						        return ( <ProjectImage key={technology.name} src={technology.imageUrl} name={technology.name}/> ); 
 						    })
 						    }
 						</Wrap>
-                    }
+                        }
 
-                    {/* links  */}
-                    { this.props.data.links && 
+                        {/* links  */}
+                        { this.props.data.links && 
                     <Wrap>
 						    { this.props.data.links.map((link) => {
 								
                             return <a key={link.href} href={link.href}> {link.name}</a>; 
 						        
 						    })
-						    }
+                        }
                     </Wrap>
-                    }
+                        }
 					
-                    { this.props.data.screenShots && 
+                        { this.props.data.screenShots && 
                     <Wrap>
 						    { this.props.data.screenShots.map((screenShot) => {
-						        <img src={screenShot} />;  
+                            <img src={screenShot} />;  
 						    })
-						    }
+                        }
                     </Wrap>
-                    }
+                        }
 
-                </SafeArea>
-				
+                    </Column>
+                </SafeArea>				
             </div>
         );
     }
@@ -98,6 +117,7 @@ export class ProjectPageData {
 
     constructor (data) {
         this.backgroundImage = data['backgroundImage'];
+        this.logoUrl = data['logoUrl'];
         this.title = data['title'];
         this.description = data['description'];
         this.technologies = data['technologies'];

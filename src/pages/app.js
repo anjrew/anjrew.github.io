@@ -64,6 +64,7 @@ export default class App extends React.Component{
                             backgroundImage: '/assets/images/dial-in.jpg',
                             title: 'Dial in',
                             description: 'A tool to help coffee professionals record and analyse data',
+                            logoUrl: '/assets/images/dial-in-logo.png',
                             technologies: [
                                 new Technology({ 
                                     imageUrl: '/assets/images/flutter-logo2.svg', 

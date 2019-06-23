@@ -15,7 +15,8 @@ export class Wrap extends React.Component{
                     alignSelf: this.props.alignSelf || 'center',
                     flexWrap: 'wrap',
                     alignContent: this.props.alignContent || 'center',
-                    width: this.props.width || '100%'
+                    width: this.props.width || '100%',
+                    placeContent: this.props.placeContent
                 }}>
                 {this.props.children}
             </div>
