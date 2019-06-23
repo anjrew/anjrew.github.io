@@ -22,52 +22,68 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
-import { Z_FIXED } from 'zlib';
+import { Wrap } from '../components/layout/wrap';
+import ProjectImage from '../components/images/project';
+import { LinkButton } from '../components/buttons/link_button';
 
 
 // PAGES
 
-export default class App extends React.Component{
+export default class ProjectPage extends React.Component{
 
-    constructor(){
-        super();
-        this.state = {
-            showApp: false,
-        };
-        this.renderNext = this.renderNext.bind(this);
-        this.setLocationState = this.setLocationState.bind(this);		
-        this.dismissLoader = this.dismissLoader.bind(this);
-        this.avatarClicked = this.avatarClicked.bind(this);
-    }
 	
-
     render(){
-
+        console.log(this.props);
         return ( 
             <div style={{ 
                 height: '100vh',
                 width: '100vw',
                 display: 'fixed',
-                top: '0px'
+                top: '0px',
+                backgroundColor: 'rgba(255,255,255,0.9)'
             }}>
-                <Parallax
-                    blur={10}
-                    bgImage={this.props.backgroundImage}
-                    bgImageAlt={this.props.title}
-                    strength={1000}
-                >
+                
+                <SafeArea>
+						
+                    <h1>{this.props.data.title}</h1>
 
+                    <p>{this.props.data.description}</p>
 
-                    <h1>{this.props.title}</h1>
+                    <h2>Featuring</h2>
+					
+                    {/* technologies */}
+                    { this.props.data.technologies && 
+						<Wrap>
+						    { this.props.data.technologies.map((technology) => {
+						        console.log('Tringin to render image with ', technology);
+						        return ( <ProjectImage key={technology.name} src={technology.imageUrl} name={technology.name}/> ); 
+						    })
+						    }
+						</Wrap>
+                    }
 
-                    <p></p>
-                    <Skills/>
+                    {/* links  */}
+                    { this.props.data.links && 
+                    <Wrap>
+						    { this.props.data.links.map((link) => {
+								
+                            return <a key={link.href} href={link.href}> {link.name}</a>; 
+						        
+						    })
+						    }
+                    </Wrap>
+                    }
+					
+                    { this.props.data.screenShots && 
+                    <Wrap>
+						    { this.props.data.screenShots.map((screenShot) => {
+						        <img src={screenShot} />;  
+						    })
+						    }
+                    </Wrap>
+                    }
 
-                    <MyWork/>
-
-                    <Contact/>
-
-                </Parallax>
+                </SafeArea>
 				
             </div>
         );
@@ -76,25 +92,51 @@ export default class App extends React.Component{
     componentDidMount() {
         this.setState({ showApp: true});
     }
-	
-    setLocationState(location){
-       
-    }
-	
-    makeNextToRender(location){	  
-        
-    }
+}
 
-    renderNext(history){
-  
-    }
+export class ProjectPageData {
 
-    dismissLoader(){
-       
+    constructor (data) {
+        this.backgroundImage = data['backgroundImage'];
+        this.title = data['title'];
+        this.description = data['description'];
+        this.technologies = data['technologies'];
+        this.links = data['links'];
+        this.screenShots = data['screenShots'];
+        for (const key in arguments) {
+            const element = arguments[key];
+            if (element == null || element == undefined) {
+                throw Error(`${key} Arguments are missing`);
+            }
+        }
     }
+}
 
-    avatarClicked(){
-       
+export class Technology{
+    constructor (data) {
+        this.imageUrl = data['imageUrl'];
+        this.name = data['name'];
+        this.href = data['href'];
+        for (const key in arguments) {
+            const element = arguments[key];
+            if (element == null || element == undefined) {
+                throw Error(`${key} Arguments are missing`);
+            }
+        }
+    }
+}
+
+export class LinkData{
+    constructor (data) {
+        this.href = data['href'];
+        this.imageUrl = data['imageUrl'];
+        this.name = data['name'];
+        for (const key in arguments) {
+            const element = arguments[key];
+            if (element == null || element == undefined) {
+                throw Error(`${key} Arguments are missing`);
+            }
+        }
     }
 }
 

@@ -52,7 +52,9 @@ export default class MyWork extends React.Component {
 									
                                     <ProjectImage src='/assets/images/goatstagram.jpg' name='Goatstagram'/>
 
-                                    <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>   
+                                    <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
+
+                                    <ProjectImage src='/assets/images/me-noeyes.png' name='this.'/>   
   
                                 </Wrap>
 

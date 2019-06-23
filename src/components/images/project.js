@@ -12,6 +12,7 @@ export default class ProjectImage extends React.Component{
     }
 
     render(){
+		
         const size = this.props.size || '300px';
         const width = size;
         const height = size;

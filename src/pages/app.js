@@ -22,6 +22,7 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
+import	ProjectPage ,{ ProjectPageData, Technology, LinkData } from './project-page';
 
 
 // PAGES
@@ -48,9 +49,7 @@ export default class App extends React.Component{
                     blur={1}
                     bgImage={'/assets/images/me-noeyes-5.png'}
                     bgImageAlt="Andrew Johnson"
-                    strength={1000}
-                >
-
+                    strength={1000}>
 
                     <Header/>
 
@@ -59,6 +58,48 @@ export default class App extends React.Component{
                     <Skills/>
 
                     <MyWork/>
+
+                    <ProjectPage data={ 
+                        new ProjectPageData({
+                            backgroundImage: '/assets/images/dial-in.jpg',
+                            title: 'Dial in',
+                            description: 'A tool to help coffee professionals record and analyse data',
+                            technologies: [
+                                new Technology({ 
+                                    imageUrl: '/assets/images/flutter-logo2.svg', 
+									name: 'Flutter',
+									href:
+                                }),
+                                new Technology({ 
+                                    imageUrl: '/assets/images/dart-logo-2.jpg', 
+									name: 'Dart',
+									href:
+                                }),
+                                new Technology({ 
+                                    imageUrl: '/assets/images/firebase-logo2.png', 
+									name: 'Firebase',
+									href:
+                                })
+                            ],
+                            links: [
+                                new LinkData({
+                                    imageUrl: '/assets/images/faceBookIcon.png',
+                                    href: 'https://www.facebook.com/dialincoffee/',
+                                    name: 'Facebook'
+                                }),
+                                new LinkData({
+                                    imageUrl: '/assets/images/instagramLogo.png',
+                                    href: 'https://www.instagram.com/dial_in_coffee/',
+                                    name: 'Instagram'
+                                }),
+                                new LinkData({
+                                    imageUrl: '/assets/images/GooglePlayBadge.png',
+                                    href: '/assets/images/instagramLogo.png',
+                                    name: 'Google Play'
+                                })
+                            ]
+							
+                        })}/>
 
                     <Contact/>
 
