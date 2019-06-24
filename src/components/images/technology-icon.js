@@ -24,7 +24,7 @@ export default class TechnologyIcon extends React.Component{
             }
         }
 		
-        var fontSize = data.name.length > 15 || biggestWordLength > 6 ? '25px' : '40px';
+        var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '25px' : '40px';
         if (biggestWordLength > 10 ) {
             fontSize = '20px';
         }
@@ -45,7 +45,7 @@ export default class TechnologyIcon extends React.Component{
             transformOrigin: 'center center', 
             objectFit: 'cover',
             transition: 'all 500ms',
-            filter: this.state.showText && 'blur(8px) brightness(0.8)',
+            filter: this.state.showText && 'blur(8px) brightness(1.5)',
             transform: 'scale(0.9) ',
         };
 
@@ -71,7 +71,7 @@ export default class TechnologyIcon extends React.Component{
                     >
                         <h2 
                             style={{  
-                                color: 'white',
+                                color: 'black',
                                 textAlign: 'center',
                                 margin: '30px',
                                 // wordBreak: 'break-all',
