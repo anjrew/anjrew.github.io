@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Diamensions from '../../data/diamensions';
-
+import { connect } from 'react-redux';
 
 // Components
 import { Row } from '../layout/row';
@@ -9,7 +9,7 @@ import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import { LinkButton } from '../buttons/link_button';
 
-export default class Contact extends React.Component {
+class Contact extends React.Component {
 
     render() {
         return (
@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
                                 <h1 style={{ 
                                     textAlign: this.props.align ||'end',
                                     color: 'white' }}>Get in touch</h1>
-    		
+										
                                 <a 
                                     style={{ alignSelf: 'flex-end', color: 'white', padding: '10px'}}
                                     className='link-button' 
@@ -54,4 +54,13 @@ export default class Contact extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+    };
+};
+
+export default connect(mapStateToProps)(Contact);
 

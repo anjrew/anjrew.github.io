@@ -37,10 +37,10 @@ class App extends React.Component{
         const windowWidth = window.innerWidth;
         var backGroundImage = '';
         var blur = 1;
-        var strength = 1000;
+        var strength = this.props.mobileApp ? 1000 : 1000;
         if (windowWidth < 750 ){
-            blur = 10;
-            backGroundImage = '/assets/images/me-noeyes-1.png';
+            blur = 8;
+            backGroundImage = '/assets/images/triple-me-for-mobile.png';
         } else {
             backGroundImage = '/assets/images/me-noeyes-4.png';
         }
@@ -91,6 +91,7 @@ const mapStateToProps = state => {
 
     return {
         showProject: state.showProject,
+        mobileApp: state.mobileApp,
     };
 };
 
