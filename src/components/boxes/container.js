@@ -27,13 +27,17 @@ export class Container extends React.Component{
             opacity: props.opacity,
             top: props.top,
             zIndex: props.zIndex,
+			
         };
         console.log('Container style is ', this.style);
     }
 
     render(){
         return (
-            <div id={this.props.id} style={this.style}>
+            <div 
+                id={this.props.id} 
+                style={this.style}
+                onClick={this.props.onClick}>
                 {this.props.children}
             </div>
         );

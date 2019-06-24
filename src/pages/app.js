@@ -12,7 +12,7 @@ import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
 import ProjectPage from './project-page';
 import { Container } from '../components/boxes/container';
-
+import { Action as action } from '../react_utils/redux/actions';
 
 // PAGES
 
@@ -24,10 +24,6 @@ class App extends React.Component{
             showApp: false,
             showProject: true
         };
-        this.renderNext = this.renderNext.bind(this);
-        this.setLocationState = this.setLocationState.bind(this);		
-        this.dismissLoader = this.dismissLoader.bind(this);
-        this.avatarClicked = this.avatarClicked.bind(this);
         this.headerRef = React.createRef();
         this.aboutRef = React.createRef();
         this.skillsRef = React.createRef();
@@ -59,8 +55,8 @@ class App extends React.Component{
 
                     <CSSTransition
                         in={!!this.props.showProject}
-                        timeout={300}
-                        classNames="scale"
+                        timeout={400}
+                        classNames="fade"
                         unmountOnExit
                     >
                         <ProjectPage data={ DialInData }/>
@@ -68,7 +64,7 @@ class App extends React.Component{
 
                     <CSSTransition 
                         in={!!this.props.showProject} 
-                        timeout={300} 
+                        timeout={400} 
                         classNames="fade" 
                         unmountOnExit>
                         <Container 
@@ -78,11 +74,11 @@ class App extends React.Component{
                             height='100vh'
                             backgroundColor= 'rgba(0,0,0,0.50)'
                             zIndex="5"
-                            top='0px'>
+                            top='0px'
+                            onClick={() => this.props.dispatch(action.dismissAll())}
+                        >
                         </Container>
                     </CSSTransition>
-					zIndex: '10',
-
                 </Parallax>
             </div>
         );
@@ -90,26 +86,6 @@ class App extends React.Component{
 
     componentDidMount() {
         this.setState({ showApp: true});
-    }
-	
-    setLocationState(location){
-       
-    }
-	
-    makeNextToRender(location){	  
-        
-    }
-
-    renderNext(history){
-  
-    }
-
-    dismissLoader(){
-       
-    }
-
-    avatarClicked(){
-       
     }
 }
 

@@ -2,7 +2,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
 // Components
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
@@ -11,7 +10,6 @@ import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
-
 
 // PAGES
 class ProjectPage extends React.Component{

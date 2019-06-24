@@ -3,7 +3,7 @@ import { DialInData } from '../../data/project-page-data';
 
 // All aJax requests will go from this file
 export const Action = {
-    showProject: async function(projectName){
+    showProject: function(projectName){
         var data = {};
         switch(projectName){
             case 'Dial In':
@@ -15,6 +15,11 @@ export const Action = {
             project: data
         };
     },
+    dismissAll(){
+        return {
+            type: "DISSMISS_ALL",
+        };
+    }
 };
 
 export const ActionIds = {
