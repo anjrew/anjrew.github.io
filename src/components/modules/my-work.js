@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
 // Components
 import { Row } from '../layout/row';
 import { Column } from '../layout/column';
@@ -36,33 +35,28 @@ export default class MyWork extends React.Component {
                                     className='link-button'
                                     href='https://github.com/earyzhe'
                                 >GitHub</a> and see my projects below.</p> 
-								 <BrowserRouter>
-                       						<Route render= {({location , history }) => {                       				 
-
-                                        return <Wrap
-                                            placeContent='flex-start'>
+                                <Wrap
+                                    placeContent='flex-start'>
 									
-                                            <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
+                                    <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
 
-                                            <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
+                                    <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
 
-                                            <ProjectImage src='/assets/images/battery_saver_logo.png' name='Battery Saver'/>
+                                    <ProjectImage src='/assets/images/battery_saver_logo.png' name='Battery Saver'/>
 
-                                            <ProjectImage src='/assets/images/plant-watering.jpg' name='Plant irrigation system'/>
+                                    <ProjectImage src='/assets/images/plant-watering.jpg' name='Plant irrigation system'/>
 
-                                            <ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp pertition'/> 
+                                    <ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp pertition'/> 
 
-                                            <ProjectImage src='/assets/images/laissez-faire.jpg' name='Laissez Faire'/>   
+                                    <ProjectImage src='/assets/images/laissez-faire.jpg' name='Laissez Faire'/>   
 									
-                                            <ProjectImage src='/assets/images/goatstagram.jpg' name='Goatstagram'/>
+                                    <ProjectImage src='/assets/images/goatstagram.jpg' name='Goatstagram'/>
 
-                                            <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
+                                    <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
 
-                                            <ProjectImage src='/assets/images/me-noeyes.png' name='this.'/>   
+                                    <ProjectImage src='/assets/images/me-noeyes.png' name='this.'/>   
   
-                                        </Wrap>;
-                                    }}/>
-                                </BrowserRouter>
+                                </Wrap>;
                             </Column>
                         </ScrollAnimation>
                     </Row>

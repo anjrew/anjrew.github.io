@@ -1,6 +1,8 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route } from "react-router-dom";
+
 
 // Components
 import { SafeArea } from '../components/layout/safe_area';
@@ -19,7 +21,12 @@ class ProjectPage extends React.Component{
 
     constructor(){
         super();
-        console.log('Window is' , window);
+        this.dismiss = this.dismiss.bind(this);
+    }
+	
+    dismiss(history){
+        this.props.dispatch(action.dismissAll());
+        history.push('/');
     }
 
     render(){
@@ -29,33 +36,35 @@ class ProjectPage extends React.Component{
 		
         if (data){
             return ( 
-                <div style={{ 
-                    width: `calc(100% - ${margin * 4 + 'px'})`,
-                    position: 'absolute',
-                    zIndex: '10',
-                    margin: margin + 'px',
-                    padding: margin + 'px',
-                    top: window.scrollY + 'px',
-                    backgroundColor: 'rgba(255,255,255,0.99)'
-                }}>
+                <BrowserRouter>
+                    <Route render= {({ history }) => {
+                        return <div style={{ 
+                            width: `calc(100% - ${margin * 4 + 'px'})`,
+                            position: 'absolute',
+                            zIndex: '10',
+                            margin: margin + 'px',
+                            padding: margin + 'px',
+                            top: window.scrollY + 'px',
+                            backgroundColor: 'rgba(255,255,255,0.99)'
+                        }}>
 					
-                    <SafeArea>
-                        <Column
-                            placeContent='flex-start'>
-                            <Row
-                                placeContent='flex-start'
-                            >
+                            <SafeArea>
                                 <Column
-                                    placeContent='flex-start'
-                                    alignItems='flex-start'
-                                    width='unset'
-                                >
-                                    <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
-                                    <p>{data.description}</p>
+                                    placeContent='flex-start'>
+                                    <Row
+                                        placeContent='flex-start'
+                                    >
+                                        <Column
+                                            placeContent='flex-start'
+                                            alignItems='flex-start'
+                                            width='unset'
+                                        >
+                                            <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
+                                            <p>{data.description}</p>
 	
-                                </Column>
-                                <Padding padding='30px'/>
-                                { data.logoUrl &&
+                                        </Column>
+                                        <Padding padding='30px'/>
+                                        { data.logoUrl &&
 									<div >
 									    <img style={{
 									        objectFit: 'cover',
@@ -63,20 +72,20 @@ class ProjectPage extends React.Component{
 									        width: '350px'
 									    }} src={data.logoUrl}/>
 									</div>
-                                }
-                                <Container
-                                    alignSelf='start'
-                                    alignItems='flex-end'
-                                    height='100%'
-                                    flexGrow='1'
-                                    placeContent='flex-end flex-end'>
-                                    <button onClick={() => this.props.dispatch(action.dismissAll())}>X</button>
-                                </Container>
-                            </Row>
+                                        }
+                                        <Container
+                                            alignSelf='start'
+                                            alignItems='flex-end'
+                                            height='100%'
+                                            flexGrow='1'
+                                            placeContent='flex-end flex-end'>
+                                            <button onClick={() => this.dismiss(history)}>X</button>
+                                        </Container>
+                                    </Row>
 	
 						
-                            {/* technologies */}
-                            { data.technologies && 
+                                    {/* technologies */}
+                                    { data.technologies && 
 								<Column
 								    placeContent='flex-start'
 								    alignItems='flex-start'
@@ -92,10 +101,10 @@ class ProjectPage extends React.Component{
 								        }
 								    </Wrap>									
 								</Column>
-                            }
+                                    }
 	
-                            {/* links  */}
-                            { data.links &&
+                                    {/* links  */}
+                                    { data.links &&
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
@@ -109,9 +118,9 @@ class ProjectPage extends React.Component{
 								    }
                                 </Wrap>
                             </Column>
-                            }
+                                    }
 
-                            { data.screenShots &&
+                                    { data.screenShots &&
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
@@ -124,10 +133,12 @@ class ProjectPage extends React.Component{
                                     }
                                 </Row>
                             </Column>
-                            }
-                        </Column>
-                    </SafeArea>				
-                </div>
+                                    }
+                                </Column>
+                            </SafeArea>				
+                        </div>;
+                    }} />
+                </BrowserRouter>
             );
         } else {
             return <div></div>;

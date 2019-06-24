@@ -87,6 +87,8 @@ class App extends React.Component{
 
     componentDidMount() {
         this.setState({ showApp: true});
+        const location = window.location.pathname.replace('%20', ' ').substring(1);
+        this.props.dispatch(action.showProject(location));
     }
 }
 
