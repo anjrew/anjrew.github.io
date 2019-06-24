@@ -1,5 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
+import { connect } from 'react-redux';
+
 
 // Components
 import { SafeArea } from '../components/layout/safe_area';
@@ -9,25 +11,30 @@ import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
+
 
 // PAGES
+class ProjectPage extends React.Component{
 
-export default class ProjectPage extends React.Component{
+    constructor(){
+        super();
+        console.log('Window is' , window);
+    }
 
     render(){
-        const modalIsOpen = true;
         const data = this.props.data;
-        const sectionMargin = '20px';
+        const margin = 20;
+        const sectionMargin =  margin + 'px';
 
-        console.log('Screenshots', data.screenShots);
         return ( 
             <div style={{ 
-                width: '100vw',
-                display: 'fixed',
-                top: '0px',
-                backgroundColor: 'rgba(255,255,255,0.9)'
+                width: `calc(100% - ${margin * 4 + 'px'})`,
+                position: 'absolute',
+                zIndex: '10',
+                margin: margin + 'px',
+                padding: margin + 'px',
+                top: window.scrollY + 'px',
+                backgroundColor: 'rgba(255,255,255,0.99)'
             }}>
                 
                 <SafeArea>
@@ -119,6 +126,13 @@ export default class ProjectPage extends React.Component{
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        pageToRender: state.pageToRender,
+    };
+};
+
+export default connect(mapStateToProps)(ProjectPage);
 
 
 

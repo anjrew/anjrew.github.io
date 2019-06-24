@@ -1,6 +1,7 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-
+import { connect } from 'react-redux';
+import { DialInData } from '../data/project-page-data';
 
 // Components
 import { Parallax } from 'react-parallax';
@@ -9,12 +10,13 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
-import ProjectPage  from './project-page';
-import { DialInData } from '../data/project-page-data';
+import ProjectPage from './project-page';
+import { Container } from '../components/boxes/container';
+
 
 // PAGES
 
-export default class App extends React.Component{
+class App extends React.Component{
 
     constructor(){
         super();
@@ -56,13 +58,30 @@ export default class App extends React.Component{
                     <Contact referance={this.contactRef}/>
 
                     <CSSTransition
-                        in={this.state.showProject}
+                        in={!!this.props.showProject}
                         timeout={300}
                         classNames="scale"
                         unmountOnExit
                     >
                         <ProjectPage data={ DialInData }/>
                     </CSSTransition>
+
+                    <CSSTransition 
+                        in={!!this.props.showProject} 
+                        timeout={300} 
+                        classNames="fade" 
+                        unmountOnExit>
+                        <Container 
+                            padding="40px"
+                            position="fixed"
+                            width='100vw'
+                            height='100vh'
+                            backgroundColor= 'rgba(0,0,0,0.50)'
+                            zIndex="5"
+                            top='0px'>
+                        </Container>
+                    </CSSTransition>
+					zIndex: '10',
 
                 </Parallax>
             </div>
@@ -93,4 +112,13 @@ export default class App extends React.Component{
        
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        showProject: state.showProject,
+    };
+};
+
+export default connect(mapStateToProps)(App);
 

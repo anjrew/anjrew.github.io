@@ -12,9 +12,9 @@ import { LinkButton } from '../buttons/link_button';
 export default class Contact extends React.Component {
 
     render() {
-        console.log('Diamensions.margin', Diamensions.margin);
         return (
-            <SafeArea marginTop={Diamensions.margin}>
+            <SafeArea 
+                marginTop={Diamensions.margin}>
                 <Column
                     referance={this.props.referance}
                     placeContent={`flex-${this.props.align ||'end'} `}
@@ -28,13 +28,11 @@ export default class Contact extends React.Component {
                             placeContent={`flex-end`}>
                             <Column 
                                 width='unset'>	
-                            
                         
                                 <h1 style={{ 
                                     textAlign: this.props.align ||'end',
                                     color: 'white' }}>Get in touch</h1>
-    
-                           					
+    		
                                 <a 
                                     style={{ alignSelf: 'flex-end', color: 'white', padding: '10px'}}
                                     className='link-button' 

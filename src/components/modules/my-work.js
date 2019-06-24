@@ -15,7 +15,7 @@ export default class MyWork extends React.Component {
             <SafeArea>
                 <Column
                     referance={this.props.referance}
-                	margin={Diamensions.sectionMargin}
+                    margin={Diamensions.sectionMargin}
                     placeContent={`flex-${this.props.align ||'start'} `}
                     alignItems={`flex-${this.props.align ||'start'} `}
                 >
@@ -33,10 +33,10 @@ export default class MyWork extends React.Component {
                                 <p>Check out my code on  <a
                                     className='link-button'
                                     href='https://github.com/earyzhe'
-                                >GitHub</a> and see my projects below.</p>
-                               				 
+                                >GitHub</a> and see my projects below.</p>                        				 
 
-                                <Wrap>
+                                <Wrap
+                                    placeContent='flex-start'>
                                     <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
 
                                     <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
@@ -56,64 +56,7 @@ export default class MyWork extends React.Component {
                                     <ProjectImage src='/assets/images/me-noeyes.png' name='this.'/>   
   
                                 </Wrap>
-
-									
-                                <a
-                                    className='link-button'
-                                    href='http://www.cupomatic.net/'
-                                >CupOmatic</a>
-                                <a		
-                                    className='link-button'
-                                    href='https://www.facebook.com/dialincoffee/'
-                                >Dial in</a>
-
-                                {/* <Coverflow
-									backgroundColor= "black"
-									style={{
-										backgroundColor:'rgba(0,0,0,0)',
-										width:"960px", 
-										height:"600px"
-									}}
-                                    // width="960" 
-                                    // height="600"
-                                    displayQuantityOfSide={2}
-                                    navigation={false}
-                                    enableScroll={true}
-                                    clickable={true}
-                                    active={0}
-                                >
-                                    <img style={imageStyle} src='/assets/images/cupomatic.jpg' data-action="http://andyyou.github.io/react-coverflow/"/>
-                                    <img style={imageStyle} src='/assets/images/dial-in.jpg' data-action="http://andyyou.github.io/react-coverflow/"/>
-                                </Coverflow> */}
-
-                                {/* <Coverflow width="960" height="500"
-									displayQuantityOfSide={2}
-									navigation={false}
-									enableScroll={true}
-									clickable={true}
-									active={0}
-								>
-									<div
-									onClick={() => fn()}
-									onKeyDown={() => fn()}
-									role="menuitem"
-									tabIndex="0"
-									>
-									<img
-										src='image/path'
-										alt='title or description'
-										style={{
-										display: 'block',
-										width: '100%',
-										}}
-									/>
-									</div>
-									<img src='/assets/images/cupomatic.jpg' alt='title or description' data-action="/assets/images/cupomatic.jpg"/>
-									<img src='/assets/images/dial-in.jpg' alt='title or description' data-action="/assets/images/dial-in.jpg"/>
-								</Coverflow>, */}
                             </Column>
-
-
                         </ScrollAnimation>
                     </Row>
                 </Column>

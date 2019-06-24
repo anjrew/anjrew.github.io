@@ -1,6 +1,8 @@
 import React from 'react';
+import { Action as action } from '../../react_utils/redux/actions';
+import { connect } from 'react-redux';
 
-export default class ProjectImage extends React.Component{
+class ProjectImage extends React.Component{
 
     constructor(){
         super();
@@ -54,6 +56,7 @@ export default class ProjectImage extends React.Component{
                 style={imageContainerStyle}
                 onMouseEnter={() =>{ this.setState({ showText: true }); } }
                 onMouseLeave={() =>{ this.setState({ showText: false  }); } }
+                onClick={() => this.props.dispatch(action.showProject(this.props.name)) }
             >
                 <div
                     style={{
@@ -79,6 +82,7 @@ export default class ProjectImage extends React.Component{
                         }}
                         onMouseEnter={() =>{ this.setState({ showText: true }); } }
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
+                        onClick={() => this.props.dispatch(action.showProject(this.props.name)) }
                     >{this.props.name}</h2>
                 </div>
                 <img style={imageStyle} src={this.props.imageUrl || this.props.src}/>
@@ -86,4 +90,13 @@ export default class ProjectImage extends React.Component{
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        
+    };
+};
+
+export default connect(mapStateToProps)(ProjectImage);
 
