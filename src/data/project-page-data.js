@@ -16,7 +16,11 @@ import {
     postGresLink,
     htmlLink,
     cssLink,
-    javaScriptLink } from '../data/technology-data';
+    javaScriptLink, 
+	reduxLink,
+	reactLink,
+	awsLink,
+	vueLink } from '../data/technology-data';
 
 export class ProjectPageData {
 
@@ -189,26 +193,113 @@ export const PertitionData = new ProjectPageData({
     ],
     links: [
         new LinkData({
-            imageUrl: '/assets/images/faceBookIcon.png',
-            href: 'https://www.facebook.com/dialincoffee/',
-            name: 'Facebook'
+            imageUrl: '/assets/images/green-lava-lamp.jpg',
+            href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
+            name: 'Lava Lamp pertition'
         }),
-        new LinkData({
-            imageUrl: '/assets/images/instagramLogo.png',
-            href: 'https://www.instagram.com/dial_in_coffee/',
-            name: 'Instagram'
-        }),
-        new LinkData({
-            imageUrl: '/assets/images/GooglePlayBadge.png',
-            href: '/assets/images/instagramLogo.png',
-            name: 'Google Play'
-        })
     ],
     screenShots: [
-
         new GalleryImageData({
             imageUrl: '/assets/images/dial-in.jpg',
             description: 'Workflow'
         }),
     ]
+});
+
+export const LaissezFaireData = new ProjectPageData({
+    backgroundImage: '/assets/images/laissez-faire.jpg',
+    title: 'Laissez-Faire',
+	description: `Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
+	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
+	and more.`,
+    logoUrl: 'assets/images/laissez-faire.jpg',
+    technologies: [
+		nodeLink,
+        reduxLink,
+        reactLink,
+		vsCodeLink,
+		cssLink,
+		htmlLink,
+		javaScriptLink,
+		awsLink
+    ],
+    screenShots: [
+        new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+        }),
+    ]
+});
+
+export const GoatstagramData = new ProjectPageData({
+    backgroundImage: '/assets/images/goatstagram.jpg',
+    title: 'Goatstagram',
+	description: `Goatstagram is a comic imageboard which only accepts pictures of goats. 
+	The page is Audited by admin regulary to enforce this. Complete with sound affects you should definity head here for a laugh.`,
+    logoUrl: '/assets/images/goatstagram.jpg',
+    technologies: [
+		nodeLink,
+        vueLink,
+		vsCodeLink,
+		cssLink,
+		htmlLink,
+		javaScriptLink,
+		awsLink
+    ],
+    screenShots: [
+        new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram.jpg',
+            description: 'Coolio Goat'
+        }),
+    ]
+});
+
+export const SpicedAcademyData = new ProjectPageData({
+    backgroundImage: '/assets/images/spiced-logo.png',
+    title: 'SPICED ACADEMY',
+	description: `I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
+	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
+	listed below. We had many mock project to make and the final project was our own project. 
+	That project is the one you are looking at righ now :).
+		for more Info see "this."
+	})`,
+	logoUrl: '/assets/images/spiced-logo.png',
+    technologies: [
+		nodeLink,
+        vueLink,
+		vsCodeLink,
+		cssLink,
+		htmlLink,
+		javaScriptLink,
+		awsLink
+	],
+	links: [
+        new LinkData({
+            imageUrl: '/assets/images/twitter-logo.png',
+            href: 'https://twitter.com/spicedacademy',
+            name: 'Twitter'
+		}),
+		new LinkData({
+            imageUrl: '/assets/images/faceBookIcon.png',
+            href: 'https://www.facebook.com/spicedacademy/',
+            name: 'Facebook'
+        }),
+        new LinkData({
+            imageUrl: '/assets/images/instagramLogo.png',
+            href: 'https://www.instagram.com/spicedacademy/',
+            name: 'Instagram'
+        }),
+        new LinkData({
+            imageUrl: '/assets/images/spiced-logo.png',
+            href: 'www.spiced-academy.com',
+            name: 'www.spiced-academy.com'
+        })
+    ],
+    screenShots: [
+        new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram.jpg',
+            description: 'Coolio Goat'
+        }),
+	],
+	
 });

@@ -1,5 +1,3 @@
-
-
 export default class Technology{
     constructor (data) {
         this.imageUrl = data['imageUrl'];
@@ -13,7 +11,6 @@ export default class Technology{
         }
     }
 }
-
 
 export const flutterLink =new Technology({ 
     imageUrl: '/assets/images/flutter-logo2.svg', 
@@ -65,7 +62,7 @@ export const javaLink = new Technology({
 
 export const androidStudioLink = new Technology({ 
     imageUrl: '/assets/images/android-studio-logo.jpg', 
-    name: 'Andrid Studio',
+    name: 'Android Studio',
     href: 'https://developer.android.com/studio'
 });
 
@@ -112,14 +109,27 @@ export const javaScriptLink = new Technology({
 });
 
 export const reactLink = new Technology({
-    imageUrl: 'react-logo.png',
+    imageUrl: '/assets/images/react-logo.png',
     name: 'React',
     href: 'https://reactjs.org/'
 });
 
 export const reduxLink = new Technology({
-    imageUrl: 'redux-logo.png',
+    imageUrl: '/assets/images/redux-logo.png',
     name: 'Redux',
     href: 'https://redux.js.org/'
 });
+
+export const awsLink = new Technology({
+    imageUrl: '/assets/images/aws-logo.png',
+    name: 'Amazon Web Services',
+    href: 'https://aws.amazon.com/'
+});
+
+export const vueLink = new Technology({
+    imageUrl: '/assets/images/vue-logo.png',
+    name: 'Vue',
+    href: 'https://vuejs.org/'
+});
+
 

@@ -97,22 +97,22 @@ class ProjectPage extends React.Component{
                             </Column>
 	
                             {/* links  */}
+                            { data.links &&
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
                                 margin={sectionMargin}
                             >
-                                { data.links && <h3>More info</h3> }
-                                { data.links &&
-	
-								<Wrap>
+                            	<h3>More info</h3> 
+                                <Wrap>
 								    { data.links.map((link) => {
 								        return <LinkIcon key={link.href} data={link} />;  
 								    })
 								    }
-								</Wrap>
-                                }
+                                </Wrap>
+                                
                             </Column>
+                            }
 	
                             <Column
                                 placeContent='flex-start'
