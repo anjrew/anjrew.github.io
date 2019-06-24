@@ -7,8 +7,9 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { Wrap } from '../layout/wrap';
 import ProjectImage from '../images/project';
 import Diamensions from '../../data/diamensions';
+import { connect } from 'react-redux';
 
-export default class MyWork extends React.Component {
+class MyWork extends React.Component {
 
     render() {
 		
@@ -36,7 +37,7 @@ export default class MyWork extends React.Component {
                                     href='https://github.com/earyzhe'
                                 >GitHub</a> and see my projects below.</p> 
                                 <Wrap
-                                    placeContent='flex-start'>
+                                    placeContent={this.props.mobileApp ? 'center' : 'flex-start'}>
 									
                                     <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
 
@@ -65,3 +66,12 @@ export default class MyWork extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+    };
+};
+
+export default connect(mapStateToProps)(MyWork);

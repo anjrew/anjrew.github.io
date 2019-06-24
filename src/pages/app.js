@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 
 // Components
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import Header from '../components/modules/header';
 import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
@@ -33,10 +33,9 @@ class App extends React.Component{
 
     render(){
         const windowWidth = window.innerWidth;
-        console.log('The window width is ', windowWidth);
         var backGroundImage = '';
-		var blur = 1;
-		var strength
+        var blur = 1;
+        var strength = 1000;
         if (windowWidth < 750 ){
             blur = 10;
             backGroundImage = '/assets/images/me-noeyes-1.png';
@@ -48,9 +47,9 @@ class App extends React.Component{
             <div style={{ maxHeight: '100vh'}}>
                 <Parallax
                     blur={blur}
-                    bgImage={backGroundImage}
+                    bgImage={backGroundImage || '/assets/images/me-noeyes-4.png'}
                     bgImageAlt="Andrew Johnson"
-                    strength={1000}>
+                    strength={strength}>
 
                     <Header referance={this.headerRef} />
 
@@ -98,7 +97,7 @@ class App extends React.Component{
         if (location){
             this.props.dispatch(action.showProject(location));
         }
-        // this.props.dispatch(action.calibrateAppSize(window.innerWidth));
+        this.props.dispatch(action.calibrateAppSize(window.innerWidth));
     }
 }
 

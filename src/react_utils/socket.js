@@ -6,13 +6,10 @@ export let socket;
 export const init = store => {
     if (!socket) {
         socket = io.connect();
-
-        
-		
         socket.on(
             'connected',
             (data) => {
-                console.log('conected data is ', data)
+                // console.log('conected data is ', data)
                 // store.dispatch(
                 //     action.setUserId(data.id)
                 // );

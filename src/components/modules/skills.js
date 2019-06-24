@@ -4,20 +4,21 @@ import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Diamensions from '../../data/diamensions';
+import { connect } from 'react-redux';
 
-export default class Skills extends React.Component {
+class Skills extends React.Component {
 
     render() {
         return (
             <SafeArea>
                 <Column
-					referance={this.props.referance}
-                	margin={Diamensions.sectionMargin}
+                    referance={this.props.referance}
+                    margin={Diamensions.sectionMargin}
                     placeContent={`flex-${this.props.align ||'center'} `}
                     alignItems={`flex-${this.props.align ||'center'} `}
                 >
                     <Row
-                        width='60%'
+                        width={this.props.mobileApp ? '100%' : '60%'}
                         placeContent={`center flex-${this.props.align ||'end'}`}>
                         <ScrollAnimation
                             animateIn="fadeInRight"
@@ -46,3 +47,12 @@ export default class Skills extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+    };
+};
+
+export default connect(mapStateToProps)(Skills);

@@ -4,9 +4,9 @@ import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Diamensions from '../../data/diamensions';
+import { connect } from 'react-redux';
 
-
-export default class About extends React.Component {
+class About extends React.Component {
 
     render() {
 
@@ -19,13 +19,13 @@ export default class About extends React.Component {
                     alignItems={`flex-${this.props.align ||'center'} `}
                 >
                     <Row
-                        width='60%'
+                        width={this.props.mobileApp ? '100%' : '60%'}
                         placeContent={'center flex-start'}>
                         <ScrollAnimation
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >	
-                            <h2 style={{ textAlign: this.props.align ||'start' }}>About</h2>
+                            <h2 style={{ textAlign: 'start' }}>About</h2>
                             <p>
 								A passion for intuative user experience drives me to create products that are not only 
 								efficently functional, but a pleasure to use.
@@ -36,7 +36,7 @@ export default class About extends React.Component {
                             <p>Berlin based.</p>
 
 
-							<p>Fast
+                            <p>Fast
 								Fast load times and lag free interaction, my highest priority.
 								Responsive
 								My layouts will work on any device, big or small.
@@ -45,15 +45,18 @@ export default class About extends React.Component {
 								Dynamic
 								Websites don't have to be static, I love making pages come to life.</p>
                         </ScrollAnimation>
-
-                        <ScrollAnimation
-                            animateIn="fadeInLeft"
-                            animateOnce={true}>	
-                            {/* <img src='/assets/images/me-noeyes.png'/> */}
-                        </ScrollAnimation>
                     </Row>
                 </Column>
             </SafeArea>
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+    };
+};
+
+export default connect(mapStateToProps)(About);

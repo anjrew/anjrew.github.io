@@ -52,6 +52,12 @@ export const Action = {
         return {
             type: "DISSMISS_ALL",
         };
+    },
+    calibrateAppSize(widowWidth){
+        return {
+            type: "SET_APP_SIZE",
+            mobileApp: widowWidth < 750
+        };
     }
 };
 
