@@ -1,5 +1,7 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Diamensions from '../../data/diamensions';
+
 
 // Components
 import { Row } from '../layout/row';
@@ -10,41 +12,45 @@ import { LinkButton } from '../buttons/link_button';
 export default class Contact extends React.Component {
 
     render() {
+        console.log('Diamensions.margin', Diamensions.margin);
         return (
-            <SafeArea>
+            <SafeArea marginTop={Diamensions.margin}>
                 <Column
-                    marginTop='200px'
+                    referance={this.props.referance}
                     placeContent={`flex-${this.props.align ||'end'} `}
                     alignItems={`flex-${this.props.align ||'end'} `}
                 >
-                    <Row
-                        width='100%'
-                        placeContent={`flex-end`}>
-                        <Column 
-                            width='unset'>	
-                            <ScrollAnimation
-                                animateIn="fadeInRight"
-                                animateOnce={true}>	
+                    <ScrollAnimation
+                        animateIn="fadeInRight"
+                        animateOnce={true}>	
+                        <Row
+                            width='100%'
+                            placeContent={`flex-end`}>
+                            <Column 
+                                width='unset'>	
+                            
                         
                                 <h1 style={{ 
                                     textAlign: this.props.align ||'end',
                                     color: 'white' }}>Get in touch</h1>
     
-                            </ScrollAnimation>					
-                            <a 
-                                style={{ alignSelf: 'flex-end', color: 'white', padding: '10px'}}
-                                className='link-button' 
-                                href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
-                            >LinkedIn</a>
-                            <LinkButton 
-                                color='white'
-                                alignSelf= 'flex-end'
-                                handleClick={() => { 
-                                    console.log('Trying to open email client');
-                                    window.location.href = "mailto:earyzhe@gmail.com"; }}
-                            >earyzhe@gmail.com</LinkButton> 
-                        </Column>
-                    </Row>
+                           					
+                                <a 
+                                    style={{ alignSelf: 'flex-end', color: 'white', padding: '10px'}}
+                                    className='link-button' 
+                                    href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
+                                >LinkedIn</a>
+                                <LinkButton 
+                                    color='white'
+                                    alignSelf= 'flex-end'
+                                    handleClick={() => { 
+                                        console.log('Trying to open email client');
+                                        window.location.href = "mailto:earyzhe@gmail.com"; }}
+                                >earyzhe@gmail.com</LinkButton> 
+                            </Column>
+                        </Row>
+                    </ScrollAnimation>
+
                 </Column>
             </SafeArea>
         );

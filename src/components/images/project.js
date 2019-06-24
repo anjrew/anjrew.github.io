@@ -1,6 +1,4 @@
 import React from 'react';
-import { transform } from '@babel/core';
-import { tsImportEqualsDeclaration } from '@babel/types';
 
 export default class ProjectImage extends React.Component{
 

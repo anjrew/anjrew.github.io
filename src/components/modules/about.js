@@ -3,14 +3,18 @@ import { Row } from '../layout/row';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Diamensions from '../../data/diamensions';
+
 
 export default class About extends React.Component {
 
     render() {
+
         return (
             <SafeArea>
                 <Column
-                    margin='200px 0px'
+                    referance={this.props.referance}
+                    margin={Diamensions.sectionMargin}
                     placeContent={`flex-${this.props.align ||'center'} `}
                     alignItems={`flex-${this.props.align ||'center'} `}
                 >
@@ -30,6 +34,16 @@ export default class About extends React.Component {
                             <p>It started with a fundamental belief that technology can set us free.</p>
                             <br/>
                             <p>Berlin based.</p>
+
+
+							<p>Fast
+								Fast load times and lag free interaction, my highest priority.
+								Responsive
+								My layouts will work on any device, big or small.
+								Intuitive
+								Strong preference for easy to use, intuitive UX/UI.
+								Dynamic
+								Websites don't have to be static, I love making pages come to life.</p>
                         </ScrollAnimation>
 
                         <ScrollAnimation

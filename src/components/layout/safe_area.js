@@ -12,7 +12,8 @@ export class SafeArea extends React.Component{
             display: 'flex',
             flexDirection: 'column',
             height: 'calc(100% - 40px)',
-            width: 'calc(100% - 40px)'
+            width: 'calc(100% - 40px)',
+            marginTop: this.props.marginTop
         };
     }
     render(){

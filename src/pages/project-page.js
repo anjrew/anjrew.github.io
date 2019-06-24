@@ -1,31 +1,12 @@
 import React from 'react';
-import axios from '../react_utils/axios';
-import routes from '../react_utils/react_routes';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 // Components
-import { Parallax, Background } from 'react-parallax';
-import { Logo } from '../components/graphics/logo';
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
 import { Row } from '../components/layout/row';
-import { Avatar } from '../components/graphics/avatar';
-import { Uploader } from '../components/modules/Uploader';
-import { OverLappedChildren} from '../components/layout/overlapped_children';
-import { ErrorMessage } from '../components/text/error_message';
-import { Container } from '../components/boxes/container';
-import { Icon } from '../components/graphics/icon';
-import { NavBarButton } from '../components/buttons/nav-bar-button';
-import Header from '../components/modules/header';
-import About from '../components/modules/about';
-import Skills from '../components/modules/skills';
-import Contact from '../components/modules//contact';
-import MyWork from '../components/modules/my-work';
 import { Wrap } from '../components/layout/wrap';
-import ProjectImage from '../components/images/project';
-import { LinkButton } from '../components/buttons/link_button';
-
+import TechnologyIcon from '../components/images/technology-icon';
+import LinkIcon from '../components/images/link-icon';
 
 // PAGES
 
@@ -54,7 +35,6 @@ export default class ProjectPage extends React.Component{
 
                                 <p>{this.props.data.description}</p>
 
-                                <h2>Featuring</h2>
                             </Column>
                             { this.props.data.logoUrl &&
                             <div>
@@ -69,29 +49,41 @@ export default class ProjectPage extends React.Component{
 
 					
                         {/* technologies */}
-                        { this.props.data.technologies && 
+                        <Column
+                            placeContent='flex-start'
+                            alignItems='flex-start'
+                        >
+                            <h3>Featuring</h3>
+                            { this.props.data.technologies && 
+						 
 						<Wrap
 						    alignItems='start'
 						    placeContent='flex-start'
 						>
 						    { this.props.data.technologies.map((technology) => {
-						        return ( <ProjectImage key={technology.name} src={technology.imageUrl} name={technology.name}/> ); 
+						        return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
 						    })
 						    }
 						</Wrap>
-                        }
+                            }
+                        </Column>
 
                         {/* links  */}
-                        { this.props.data.links && 
-                    <Wrap>
-						    { this.props.data.links.map((link) => {
-								
-                            return <a key={link.href} href={link.href}> {link.name}</a>; 
-						        
-						    })
-                        }
-                    </Wrap>
-                        }
+                        <Column
+                            placeContent='flex-start'
+                            alignItems='flex-start'
+                        >
+                            <h3>More info</h3>
+                            { this.props.data.links &&
+
+							<Wrap>
+							    { this.props.data.links.map((link) => {
+							        return <LinkIcon key={link.href} data={link} />;  
+							    })
+							    }
+							</Wrap>
+                            }
+                        </Column>
 					
                         { this.props.data.screenShots && 
                     <Wrap>

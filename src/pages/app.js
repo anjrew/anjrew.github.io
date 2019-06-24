@@ -1,28 +1,13 @@
 import React from 'react';
-import axios from '../react_utils/axios';
-import routes from '../react_utils/react_routes';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 // Components
-import { Parallax, Background } from 'react-parallax';
-import { Logo } from '../components/graphics/logo';
-import { SafeArea } from '../components/layout/safe_area';
-import { Column } from '../components/layout/column';
-import { Row } from '../components/layout/row';
-import { Avatar } from '../components/graphics/avatar';
-import { Uploader } from '../components/modules/Uploader';
-import { OverLappedChildren} from '../components/layout/overlapped_children';
-import { ErrorMessage } from '../components/text/error_message';
-import { Container } from '../components/boxes/container';
-import { Icon } from '../components/graphics/icon';
-import { NavBarButton } from '../components/buttons/nav-bar-button';
+import { Parallax } from 'react-parallax';
 import Header from '../components/modules/header';
 import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
-import	ProjectPage ,{ ProjectPageData, Technology, LinkData } from './project-page';
+import ProjectPage , { ProjectPageData, Technology, LinkData } from './project-page';
 
 
 // PAGES
@@ -38,6 +23,11 @@ export default class App extends React.Component{
         this.setLocationState = this.setLocationState.bind(this);		
         this.dismissLoader = this.dismissLoader.bind(this);
         this.avatarClicked = this.avatarClicked.bind(this);
+        this.headerRef = React.createRef();
+        this.aboutRef = React.createRef();
+        this.skillsRef = React.createRef();
+        this.myworkRef = React.createRef();
+        this.contactRef = React.createRef();
     }
 	
 
@@ -51,13 +41,13 @@ export default class App extends React.Component{
                     bgImageAlt="Andrew Johnson"
                     strength={1000}>
 
-                    <Header/>
+                    <Header referance={this.headerRef} />
 
-                    <About/>
+                    <About referance={this.aboutRef}/>
 
-                    <Skills/>
+                    <Skills referance={this.skillsRef}/>
 
-                    <MyWork/>
+                    <MyWork referance={this.myworkRef}/>
 
                     <ProjectPage data={ 
                         new ProjectPageData({
@@ -102,7 +92,7 @@ export default class App extends React.Component{
 							
                         })}/>
 
-                    <Contact/>
+                    <Contact referance={this.contactRef}/>
 
                 </Parallax>
 				

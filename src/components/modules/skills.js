@@ -3,6 +3,7 @@ import { Row } from '../layout/row';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Diamensions from '../../data/diamensions';
 
 export default class Skills extends React.Component {
 
@@ -10,7 +11,8 @@ export default class Skills extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    margin='200px 0px'
+					referance={this.props.referance}
+                	margin={Diamensions.sectionMargin}
                     placeContent={`flex-${this.props.align ||'center'} `}
                     alignItems={`flex-${this.props.align ||'center'} `}
                 >
