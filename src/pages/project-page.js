@@ -20,6 +20,7 @@ export default class ProjectPage extends React.Component{
     render(){
         const modalIsOpen = true;
         const data = this.props.data;
+        const sectionMargin = '20px';
 
         console.log('Screenshots', data.screenShots);
         return ( 
@@ -32,11 +33,13 @@ export default class ProjectPage extends React.Component{
                 
                 <SafeArea>
                     <Column
-                        placeContent='space-between'>
-                        <Row>
+                        placeContent='flex-start'>
+                        <Row
+                            placeContent='flex-start'>
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
+                                width='unset'
                             >
                                 <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
 
@@ -59,6 +62,7 @@ export default class ProjectPage extends React.Component{
                         <Column
                             placeContent='flex-start'
                             alignItems='flex-start'
+                            margin={sectionMargin}
                         >
                             <h3>Featuring</h3>
                             { data.technologies && 
@@ -79,6 +83,7 @@ export default class ProjectPage extends React.Component{
                         <Column
                             placeContent='flex-start'
                             alignItems='flex-start'
+                            margin={sectionMargin}
                         >
                             <h3>More info</h3>
                             { data.links &&
@@ -91,12 +96,19 @@ export default class ProjectPage extends React.Component{
 							</Wrap>
                             }
                         </Column>
-					
-                        { data.screenShots && data.screenShots.map((screenshot) => {
-                            return <GalleryImage key={screenshot} data={screenshot} />;  
-                        })
-							
-                        }
+
+                        <Column
+                            placeContent='flex-start'
+                            alignItems='flex-start'
+                            margin={sectionMargin}>
+                            <h3>Gallery</h3>
+                            <Row>
+                                { data.screenShots && data.screenShots.map((screenshot) => {
+                                    return <GalleryImage key={screenshot} data={screenshot} />;  
+                                })
+                                }
+                            </Row>
+                        </Column>
                     </Column>
                 </SafeArea>				
             </div>

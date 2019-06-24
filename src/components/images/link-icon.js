@@ -5,31 +5,13 @@ export default class LinkIcon extends React.Component{
     constructor(){
         super();
         this.state = {
-            showText: false
+            hover: false
         };
     }
 
     render(){
         const data = this.props.data;
-        // const size = data.size || '500px';
-        // const width = size;
-        // const height = size;
-		
-        const words = data.name.split(' ');
-        var biggestWordLength = 0; 
-        for (let index = 0; index < words.length; index++) {
-            const word = words[index];
-            if ( word.length > biggestWordLength){
-                biggestWordLength = word.length;
-            }
-        }
-		
-        var fontSize = data.name.length > 15 || biggestWordLength > 6 ? '25px' : '40px';
-        if (biggestWordLength > 10 ) {
-            fontSize = '20px';
-        }
-
-
+    
         const imageContainerStyle = {
             // width: width, 
             // height: height,
@@ -37,7 +19,9 @@ export default class LinkIcon extends React.Component{
             margin: '3px',
             overflow: 'hidden',
             display: 'flex',
-            placeContent: 'center center'
+            placeContent: 'center center',
+            transition: 'all 500ms',
+            transform: this.state.hover ? 'scale(1.05)': 'scale(1.0) ',
         };
 		
         const imageStyle ={
@@ -45,14 +29,15 @@ export default class LinkIcon extends React.Component{
             height: '100%',
             transformOrigin: 'center center', 
             objectFit: 'cover',
-            transition: 'all 500ms',
-            transform: 'scale(0.9) ',
+           
         };
 
         return (
             <a href={data.href} alt={data.name}>
                 <div 
                     style={imageContainerStyle}
+                    onMouseEnter={() =>{ this.setState({ hover: true }); } }
+                    onMouseLeave={() =>{ this.setState({ hover: false  }); } }
                 >
                     <img style={imageStyle} src={data.imageUrl || data.src}/>
                 </div>

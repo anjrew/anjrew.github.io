@@ -23,7 +23,7 @@ export default class GalleryImage extends React.Component{
             overflow: 'hidden',
             display: 'flex',
             placeContent: 'center center',
-            transform: this.state.showPicture ? 'scale(2) translateY(-10%)' : 'translateY(-10%)',
+            transform: this.state.showPicture ? 'scale(2)' : 'scale(1)',
         };
 		
         const imageStyle ={
