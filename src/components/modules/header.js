@@ -14,11 +14,32 @@ class Header extends React.Component {
 
                 {this.props.mobileApp ? 
 				
-                    <LazyHero
-                        parallaxOffset={200}
-                        imageSrc="/assets/images/me-noeyes-1.png">
-                        <h1>Generic Startup Hype Headline</h1>
-                    </LazyHero>
+                    <Column
+
+					placeContent='space-evenly'
+                    >
+                        <Row
+                            placeContent={'center flex-start'}>
+                            <ScrollAnimation
+                                animateIn="fadeInLeft"
+                                animateOnce={true}
+                            >
+                                <h1>Hi there. </h1>
+                            </ScrollAnimation>
+
+                        </Row>
+                        <Row
+                            placeContent={'center flex-end'}>
+                            <ScrollAnimation
+                                animateIn="fadeInRight"
+                                animateOnce={true}
+                            >
+                                <h1>I'm Andrew</h1>
+                            </ScrollAnimation>
+                        </Row>
+
+                        <img src='/assets/images/me-noeyes.png'/>
+                    </Column>
 
                     :
 					
