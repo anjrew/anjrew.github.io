@@ -9,6 +9,11 @@ class ProjectImage extends React.Component{
         this.state = {
             showText: false
         };
+        this.handleClick = this.handleClick.bind(this);
+    }
+	
+    handleClick(){
+        this.props.dispatch(action.showProject(this.props.name));
     }
 
     render(){
@@ -56,12 +61,12 @@ class ProjectImage extends React.Component{
                 style={imageContainerStyle}
                 onMouseEnter={() =>{ this.setState({ showText: true }); } }
                 onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-                onClick={() => this.props.dispatch(action.showProject(this.props.name)) }
+                onClick={() => this.handleClick() }
             >
                 <div
                     style={{
                         display: 'flex',
-            			placeContent: 'center center' ,
+                        placeContent: 'center center' ,
                         width: width,
                         height:'300px',
                         position: 'absolute',
@@ -82,7 +87,8 @@ class ProjectImage extends React.Component{
                         }}
                         onMouseEnter={() =>{ this.setState({ showText: true }); } }
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-                        onClick={() => this.props.dispatch(action.showProject(this.props.name)) }
+                        onClick={() => this.handleClick() }
+
                     >{this.props.name}</h2>
                 </div>
                 <img style={imageStyle} src={this.props.imageUrl || this.props.src}/>
@@ -92,7 +98,6 @@ class ProjectImage extends React.Component{
 }
 
 const mapStateToProps = state => {
-
     return {
         
     };

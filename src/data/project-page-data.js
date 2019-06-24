@@ -168,10 +168,10 @@ export const BatterySaverData = new ProjectPageData({
 export const PlantSystemData = new ProjectPageData({
     backgroundImage: '/assets/images/plant-watering.jpg',
     title: 'Irrigation System',
-    description: `I love plants... The more the merrier. But a man can only look after soo many. 
-	BUT, with the help of that machine A man can have many more plants. And that is why I decided to make this 
+    description: `I love plants... The more the merrier. But a person can only look after soo many. 
+	BUT, with the help of a machine, A person can have many more plants. And that is why I decided to make this 
 	project. As well as being alot of fun, it was a big learning experience. I used an Arduino micro controlller with 24v relays to controll the water flow to 
-	each plant. Also a main relay punping the water from the water tank(an old cooking pot :)`,
+	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
     logoUrl: 'assets/images/plant-watering.jpg',
     technologies: [
         arduinoLink,

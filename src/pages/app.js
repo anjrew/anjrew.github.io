@@ -1,7 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
-import { DialInData } from '../data/project-page-data';
 
 // Components
 import { Parallax } from 'react-parallax';
@@ -53,15 +52,17 @@ class App extends React.Component{
                     
                     <Contact referance={this.contactRef}/>
 
+                   
                     <CSSTransition
                         in={!!this.props.showProject}
                         timeout={400}
                         classNames="fade"
-                        unmountOnExit
-                    >
+                        unmountOnExit>
                         <ProjectPage data={ this.props.showProject }/>
-                    </CSSTransition>
+                    </CSSTransition>;
+        
 
+                   
                     <CSSTransition 
                         in={!!this.props.showProject} 
                         timeout={400} 
@@ -72,13 +73,13 @@ class App extends React.Component{
                             position="fixed"
                             width='100vw'
                             height='100vh'
-                            backgroundColor= 'rgba(0,0,0,0.50)'
+                            backgroundColor= 'rgba(0,0,0,0.30)'
                             zIndex="5"
                             top='0px'
                             onClick={() => this.props.dispatch(action.dismissAll())}
                         >
                         </Container>
-                    </CSSTransition>
+                    </CSSTransition>;
                 </Parallax>
             </div>
         );
