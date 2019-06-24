@@ -59,7 +59,7 @@ class App extends React.Component{
                         classNames="fade"
                         unmountOnExit
                     >
-                        <ProjectPage data={ DialInData }/>
+                        <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>
 
                     <CSSTransition 

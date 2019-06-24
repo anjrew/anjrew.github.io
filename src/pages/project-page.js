@@ -12,6 +12,7 @@ import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
 import { Action as action } from '../react_utils/redux/actions';
+import { Padding } from '../components/layout/padding';
 
 // PAGES
 class ProjectPage extends React.Component{
@@ -25,109 +26,113 @@ class ProjectPage extends React.Component{
         const data = this.props.data;
         const margin = 20;
         const sectionMargin =  margin + 'px';
-
-        return ( 
-            <div style={{ 
-                width: `calc(100% - ${margin * 4 + 'px'})`,
-                position: 'absolute',
-                zIndex: '10',
-                margin: margin + 'px',
-                padding: margin + 'px',
-                top: window.scrollY + 'px',
-                backgroundColor: 'rgba(255,255,255,0.99)'
-            }}>
-                
-                <SafeArea>
-                    <Column
-                        placeContent='flex-start'>
-                        <Row
-                            placeContent='flex-start'
-                        >
+		
+        if (data){
+            return ( 
+                <div style={{ 
+                    width: `calc(100% - ${margin * 4 + 'px'})`,
+                    position: 'absolute',
+                    zIndex: '10',
+                    margin: margin + 'px',
+                    padding: margin + 'px',
+                    top: window.scrollY + 'px',
+                    backgroundColor: 'rgba(255,255,255,0.99)'
+                }}>
+					
+                    <SafeArea>
+                        <Column
+                            placeContent='flex-start'>
+                            <Row
+                                placeContent='flex-start'
+                            >
+                                <Column
+                                    placeContent='flex-start'
+                                    alignItems='flex-start'
+                                    width='unset'
+                                >
+                                    <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
+                                    <p>{data.description}</p>
+	
+                                </Column>
+                                <Padding padding='30px'/>
+                                { data.logoUrl &&
+									<div >
+									    <img style={{
+									        objectFit: 'cover',
+									        height: '350px',
+									        width: '350px'
+									    }} src={data.logoUrl}/>
+									</div>
+                                }
+                                <Container
+                                    alignSelf='start'
+                                    alignItems='flex-end'
+                                    height='100%'
+                                    flexGrow='1'
+                                    placeContent='flex-end flex-end'>
+                                    <button onClick={() => this.props.dispatch(action.dismissAll())}>X</button>
+                                </Container>
+                            </Row>
+	
+						
+                            {/* technologies */}
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
-                                width='unset'
+                                margin={sectionMargin}
                             >
-                                <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
-
-                                <p>{data.description}</p>
-
-                            </Column>
-                            { data.logoUrl &&
-								<div>
-								    <img style={{
-								        objectFit: 'cover',
-								        height: '350px',
-								        width: '350px'
-								    }} src={data.logoUrl}/>
-								</div>
-                            }
-                            <Container
-                                alignSelf='start'
-                                alignItems='flex-end'
-                                height='100%'
-                                flexGrow='1'
-                                placeContent='flex-end flex-end'>
-                                <button onClick={() => this.props.dispatch(action.dismissAll())}>X</button>
-                            </Container>
-                        </Row>
-
-					
-                        {/* technologies */}
-                        <Column
-                            placeContent='flex-start'
-                            alignItems='flex-start'
-                            margin={sectionMargin}
-                        >
-                            <h3>Featuring</h3>
-                            { data.technologies && 
-						 
-						<Wrap
-						    alignItems='start'
-						    placeContent='flex-start'
-						>
-						    { data.technologies.map((technology) => {
-						        return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
-						    })
-						    }
-						</Wrap>
-                            }
-                        </Column>
-
-                        {/* links  */}
-                        <Column
-                            placeContent='flex-start'
-                            alignItems='flex-start'
-                            margin={sectionMargin}
-                        >
-                            <h3>More info</h3>
-                            { data.links &&
-
-							<Wrap>
-							    { data.links.map((link) => {
-							        return <LinkIcon key={link.href} data={link} />;  
+                                <h3>Featuring</h3>
+                                { data.technologies && 
+							 
+							<Wrap
+							    alignItems='start'
+							    placeContent='flex-start'
+							>
+							    { data.technologies.map((technology) => {
+							        return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
 							    })
 							    }
 							</Wrap>
-                            }
-                        </Column>
-
-                        <Column
-                            placeContent='flex-start'
-                            alignItems='flex-start'
-                            margin={sectionMargin}>
-                            <h3>Gallery</h3>
-                            <Row>
-                                { data.screenShots && data.screenShots.map((screenshot) => {
-                                    return <GalleryImage key={screenshot} data={screenshot} />;  
-                                	})
                                 }
-                            </Row>
+                            </Column>
+	
+                            {/* links  */}
+                            <Column
+                                placeContent='flex-start'
+                                alignItems='flex-start'
+                                margin={sectionMargin}
+                            >
+                                { data.links && <h3>More info</h3> }
+                                { data.links &&
+	
+								<Wrap>
+								    { data.links.map((link) => {
+								        return <LinkIcon key={link.href} data={link} />;  
+								    })
+								    }
+								</Wrap>
+                                }
+                            </Column>
+	
+                            <Column
+                                placeContent='flex-start'
+                                alignItems='flex-start'
+                                margin={sectionMargin}>
+                                <h3>Gallery</h3>
+                                <Row>
+                                    { data.screenShots && data.screenShots.map((screenshot) => {
+                                        return <GalleryImage key={screenshot} data={screenshot} />;  
+                                    })
+                                    }
+                                </Row>
+                            </Column>
                         </Column>
-                    </Column>
-                </SafeArea>				
-            </div>
-        );
+                    </SafeArea>				
+                </div>
+            );
+        } else {
+            return <div></div>;
+        }
     }
 
     componentDidMount() {

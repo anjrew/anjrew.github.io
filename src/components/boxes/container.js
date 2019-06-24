@@ -2,42 +2,36 @@ import React from 'react';
 
 export class Container extends React.Component{
 
-    constructor (props) {
-        super(props);
-        console.log('Container props are ', props);
-        this.style = {
-            flexGrow: props.flexGrow,
-            display: props.display || 'flex',
-            flexDirection: props.flexDirection || 'column',
-            justifyContent: props.justifyContent || 'center',
-            alignItems: props.alignItems || 'center',
-            alignContent: props.alignContent || 'center',
-            alignSelf: props.alignSelf || 'center',
-            borderRadius: props.borderRadius,
-            borderWidth: props.borderWidth,
-            borderColor: props.borderColor,
-            borderStyle: props.borderStyle,
-            height: props.height,
-            width: props.width,
-            padding: props.padding,
-            maxWidth: props.maxWidth,
-            margin: props.margin,
-            boxShadow: props.boxShadow && "1px 0px 3px 1px rgba(0,0,0,0.75)",
-            backgroundColor: props.backgroundColor,
-            position: props.position,
-            opacity: props.opacity,
-            top: props.top,
-            zIndex: props.zIndex,
-			
-        };
-        console.log('Container style is ', this.style);
-    }
 
     render(){
         return (
             <div 
                 id={this.props.id} 
-                style={this.style}
+                style={{
+                    flexGrow: this.props.flexGrow,
+                    display: this.props.display || 'flex',
+                    flexDirection: this.props.flexDirection || 'column',
+                    justifyContent: this.props.justifyContent || 'center',
+                    alignItems: this.props.alignItems || 'center',
+                    alignContent: this.props.alignContent || 'center',
+                    alignSelf: this.props.alignSelf || 'center',
+                    borderRadius: this.props.borderRadius,
+                    borderWidth: this.props.borderWidth,
+                    borderColor: this.props.borderColor,
+                    borderStyle: this.props.borderStyle,
+                    height: this.props.height,
+                    width: this.props.width,
+                    padding: this.props.padding,
+                    maxWidth: this.props.maxWidth,
+                    margin: this.props.margin,
+                    boxShadow: this.props.boxShadow && "1px 0px 3px 1px rgba(0,0,0,0.75)",
+                    backgroundColor: this.props.backgroundColor,
+                    position: this.props.position,
+                    opacity: this.props.opacity,
+                    top: this.props.top,
+                    zIndex: this.props.zIndex,
+					
+                }}
                 onClick={this.props.onClick}>
                 {this.props.children}
             </div>

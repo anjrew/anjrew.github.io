@@ -43,7 +43,7 @@ export default class TechnologyIcon extends React.Component{
             width: '100%',
             height: '100%',
             transformOrigin: 'center center', 
-            objectFit: 'cover',
+            objectFit: 'contain',
             transition: 'all 500ms',
             filter: this.state.showText && 'blur(8px) brightness(1.5)',
             transform: 'scale(0.9) ',

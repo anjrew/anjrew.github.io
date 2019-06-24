@@ -28,8 +28,7 @@ export default class LinkIcon extends React.Component{
             width: 'auto',
             height: '100%',
             transformOrigin: 'center center', 
-            objectFit: 'cover',
-           
+            objectFit: 'contain',
         };
 
         return (

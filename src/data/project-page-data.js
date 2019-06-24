@@ -1,5 +1,22 @@
+/* eslint-disable indent */
 import LinkData from '../data/link-data';
-import Technology , { flutterLink, dartLink, firebaseLink, vsCodeLink, xcodeLink }from '../data/technology-data';
+import { 
+    flutterLink,
+    dartLink, 
+    firebaseLink, 
+    vsCodeLink, 
+    xcodeLink, 
+    swiftLink, 
+    javaLink,
+    androidStudioLink,
+    parseServerLink,
+    flareLink,
+    arduinoLink,
+    nodeLink,
+    postGresLink,
+    htmlLink,
+    cssLink,
+    javaScriptLink } from '../data/technology-data';
 
 export class ProjectPageData {
 
@@ -38,34 +55,17 @@ export class GalleryImageData{
 export const DialInData = new ProjectPageData({
     backgroundImage: '/assets/images/dial-in.jpg',
     title: 'Dial in',
-    description: 'A tool to help coffee professionals record and analyse data',
+    description: `A tool to help coffee professionals record and analyse data. 
+	I started off by making the app in Swift an purly iOS. I had a suddent realiseation that I should definity
+	dive into cross platform development. That's what I did. I started the {}`,
     logoUrl: '/assets/images/dial-in-logo.png',
     technologies: [
-        new Technology({ 
-            imageUrl: '/assets/images/flutter-logo2.svg', 
-            name: 'Flutter',
-            href: 'https://flutter.dev/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/dart-logo-2.jpg', 
-            name: 'Dart',
-            href: 'https://dart.dev/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/firebase-logo2.png', 
-            name: 'Firebase',
-            href: 'https://firebase.google.com/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/vs-code-logo.png', 
-            name: 'VS code',
-            href: 'https://code.visualstudio.com/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/xcode-logo.jpg', 
-            name: 'Xcode',
-            href: 'https://developer.apple.com/xcode/'
-        })
+        flutterLink,
+        dartLink,
+        firebaseLink,
+        vsCodeLink,
+        xcodeLink,
+        parseServerLink
     ],
     links: [
         new LinkData({
@@ -80,12 +80,11 @@ export const DialInData = new ProjectPageData({
         }),
         new LinkData({
             imageUrl: '/assets/images/GooglePlayBadge.png',
-            href: 'https://www.instagram.com/dial_in_coffee/',
+            href: 'https://play.google.com/store/apps/details?id=com.dialin.android.abc&hl=en',
             name: 'Google Play'
         })
     ],
     screenShots: [
-
         new GalleryImageData({
             imageUrl: '/assets/images/dial-in.jpg',
             description: 'Workflow'
@@ -100,31 +99,93 @@ export const CupomaticData = new ProjectPageData({
     description: 'A tool to assist coffee professionals with the the cupping protocol',
     logoUrl: 'assets/images/cupOmatic-logo.jpg',
     technologies: [
-        new Technology({ 
-            imageUrl: '/assets/images/swift-logo.png', 
-            name: 'Swift',
-            href: 'https://developer.apple.com/swift/'
+        swiftLink,
+        javaLink,
+        xcodeLink,
+        androidStudioLink
+    ],
+    links: [
+        new LinkData({
+            imageUrl: '/assets/images/faceBookIcon.png',
+            href: 'https://www.facebook.com/cupOmatic/',
+            name: 'Facebook'
         }),
-        new Technology({ 
-            imageUrl: '/assets/images/java-logo.png', 
-            name: 'Java',
-            href: 'https://www.java.com/en/'
+        new LinkData({
+            imageUrl: '/assets/images/instagramLogo.png',
+            href: 'https://www.instagram.com/cupomatic/',
+            name: 'Instagram'
         }),
-        new Technology({ 
-            imageUrl: '/assets/images/firebase-logo2.png', 
-            name: 'Firebase',
-            href: 'https://firebase.google.com/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/vs-code-logo.png', 
-            name: 'VS code',
-            href: 'https://code.visualstudio.com/'
-        }),
-        new Technology({ 
-            imageUrl: '/assets/images/xcode-logo.jpg', 
-            name: 'Xcode',
-            href: 'https://developer.apple.com/xcode/'
+        new LinkData({
+            imageUrl: '/assets/images/GooglePlayBadge.png',
+            href: '/assets/images/instagramLogo.png',
+            name: 'Google Play'
         })
+    ],
+    screenShots: [
+
+        new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+        }),
+    ]
+});
+
+export const BatterySaverData = new ProjectPageData({
+    backgroundImage: '/assets/images/battery_saver_logo.png',
+    title: 'Battery Saver',
+    description: `Battery saver works with bluetooth hardware to control the charge of your device. 
+	Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
+		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
+    logoUrl: 'assets/images/battery_saver_logo.png',
+    technologies: [
+        flutterLink,
+        flareLink,
+        vsCodeLink
+    ],
+    screenShots: [
+
+        new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+        }),
+    ]
+});
+
+export const PlantSystemData = new ProjectPageData({
+    backgroundImage: '/assets/images/plant-watering.jpg',
+    title: 'Irrigation System',
+    description: `I love plants... The more the merrier. But a man can only look after soo many. 
+	BUT, with the help of that machine A man can have many more plants. And that is why I decided to make this 
+	project. As well as being alot of fun, it was a big learning experience. I used an Arduino micro controlller with 24v relays to controll the water flow to 
+	each plant. Also a main relay punping the water from the water tank(an old cooking pot :)`,
+    logoUrl: 'assets/images/plant-watering.jpg',
+    technologies: [
+        arduinoLink,
+        vsCodeLink
+    ],
+    screenShots: [
+
+        new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+        }),
+    ]
+});
+
+export const PertitionData = new ProjectPageData({
+    backgroundImage: '/assets/images/green-lava-lamp.jpg',
+    title: 'Lava lamp pertition',
+    description: `Being a firm believer in lava lamps, I created a pertition site to record the
+	amount of people who would like lava lamps to be exempt from Vat.
+	 Follow the link and take a look yourself :).`,
+    logoUrl: '/assets/images/green-lava-lamp.jpg',
+    technologies: [
+        nodeLink,
+        postGresLink,
+        htmlLink,
+        cssLink,
+		javaScriptLink,
+		vsCodeLink
     ],
     links: [
         new LinkData({
@@ -150,5 +211,4 @@ export const CupomaticData = new ProjectPageData({
             description: 'Workflow'
         }),
     ]
-
 });
