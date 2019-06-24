@@ -331,7 +331,7 @@ export const thisData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
-            imageUrl: 'assets/images/assets/images/me-noeyes.png',
+            imageUrl: '/assets/images/me-noeyes.png',
             description: 'Me'
         }),
     ]

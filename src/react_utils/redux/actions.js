@@ -12,7 +12,7 @@ import {
 // All aJax requests will go from this file
 export const Action = {
     showProject: function(projectName){
-        console.log('The project name in the action is ', projectName);
+        // console.log('The project name in the action is ', projectName);
         var data = {};
         switch(projectName){
             case 'Dial In':

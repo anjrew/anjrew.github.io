@@ -59,7 +59,10 @@ class ProjectPage extends React.Component{
                                             alignItems='flex-start'
                                             width='unset'
                                         >
-                                            <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
+                                            { data.title &&   <h1 style={{ 
+                                                fontSize: data.title.length > 8 && '120px',
+                                                textDecoration: 'underline' }}>{data.title}</h1>
+                                            }
                                             <p>{data.description}</p>
 	
                                         </Column>
@@ -120,7 +123,7 @@ class ProjectPage extends React.Component{
                             </Column>
                                     }
 
-                                    { data.screenShots &&
+                        	{ data.screenShots &&
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'

@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 
 // Components
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import Header from '../components/modules/header';
 import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
@@ -32,12 +32,23 @@ class App extends React.Component{
 	
 
     render(){
+        const windowWidth = window.innerWidth;
+        console.log('The window width is ', windowWidth);
+        var backGroundImage = '';
+		var blur = 1;
+		var strength
+        if (windowWidth < 750 ){
+            blur = 10;
+            backGroundImage = '/assets/images/me-noeyes-1.png';
+        } else {
+            backGroundImage = '/assets/images/me-noeyes-4.png';
+        }
 
         return ( 
             <div style={{ maxHeight: '100vh'}}>
                 <Parallax
-                    blur={1}
-                    bgImage={'/assets/images/me-noeyes-5.png'}
+                    blur={blur}
+                    bgImage={backGroundImage}
                     bgImageAlt="Andrew Johnson"
                     strength={1000}>
 
@@ -49,9 +60,7 @@ class App extends React.Component{
 
                     <MyWork referance={this.myworkRef}/>
 
-                    
                     <Contact referance={this.contactRef}/>
-
                    
                     <CSSTransition
                         in={!!this.props.showProject}
@@ -61,8 +70,6 @@ class App extends React.Component{
                         <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>;
         
-
-                   
                     <CSSTransition 
                         in={!!this.props.showProject} 
                         timeout={400} 
@@ -88,7 +95,10 @@ class App extends React.Component{
     componentDidMount() {
         this.setState({ showApp: true});
         const location = window.location.pathname.split('%20').join(' ').substring(1);
-        this.props.dispatch(action.showProject(location));
+        if (location){
+            this.props.dispatch(action.showProject(location));
+        }
+        // this.props.dispatch(action.calibrateAppSize(window.innerWidth));
     }
 }
 
