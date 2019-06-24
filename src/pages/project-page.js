@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route } from "react-router-dom";
 
-
 // Components
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
