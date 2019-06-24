@@ -15,28 +15,33 @@ class About extends React.Component {
                 <Column
                     referance={this.props.referance}
                     margin={Diamensions.sectionMargin}
-                    placeContent={`flex-${this.props.align ||'center'} `}
-                    alignItems={`flex-${this.props.align ||'center'} `}
+                    placeContent={this.props.mobileApp ? 'center':`flex-center'`}
+                    alignItems={this.props.mobileApp ? 'center':`flex-center`}
                 >
                     <Row
                         width={this.props.mobileApp ? '100%' : '60%'}
-                        placeContent={'center flex-start'}>
+                        placeContent={this.props.mobileApp ? 'center':'center flex-start'}>
                         <ScrollAnimation
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >	
-                            <h2 style={{ textAlign: 'start' }}>About</h2>
-                            <p>
+                            <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>About</h2>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
 								A passion for intuative user experience drives me to create products that are not only 
 								efficently functional, but a pleasure to use.
                             </p>
                             <br/>
-                            <p>It started with a fundamental belief that technology can set us free.</p>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                            >It started with a fundamental belief that technology can set us free.</p>
                             <br/>
-                            <p>Berlin based.</p>
+                            <p
+                                style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                            >Berlin based.</p>
 
 
-                            <p>Fast
+                            <p
+                                style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                            >Fast
 								Fast load times and lag free interaction, my highest priority.
 								Responsive
 								My layouts will work on any device, big or small.

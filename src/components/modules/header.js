@@ -47,9 +47,6 @@ class Header extends React.Component {
                         </Row>
                     </Column>
                 }
-                
-
-                
             </SafeArea>
         );
     }

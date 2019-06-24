@@ -18,24 +18,25 @@ class MyWork extends React.Component {
                 <Column
                     referance={this.props.referance}
                     margin={Diamensions.sectionMargin}
-                    placeContent={`flex-${this.props.align ||'start'} `}
-                    alignItems={`flex-${this.props.align ||'start'} `}
+                    placeContent={this.props.mobileApp ? 'center': `flex-start`}
+                    alignItems={this.props.mobileApp ? 'center': `flex-start`}
                 >
                     <Row
                         width='100%'
-                        placeContent={'center flex-start'}>
+                        placeContent={this.props.mobileApp ? 'center' :'center flex-start'}>
                         <ScrollAnimation
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >	
-                            <h2 style={{ textAlign: this.props.align ||'start' }}>My Work</h2>
+                            <h2 style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>My Work</h2>
 
                             <Column
-                                alignItems={'start'}>
-                                <p>Check out my code on  <a
-                                    className='link-button'
-                                    href='https://github.com/earyzhe'
-                                >GitHub</a> and see my projects below.</p> 
+                                alignItems={this.props.mobileApp ? 'center' :'start'}>
+                                <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                                >Check out my code on  <a
+                                        className='link-button'
+                                        href='https://github.com/earyzhe'
+                                    >GitHub</a> and see my projects below.</p> 
                                 <Wrap
                                     placeContent={this.props.mobileApp ? 'center' : 'flex-start'}>
 									
