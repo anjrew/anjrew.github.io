@@ -16,7 +16,6 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 
 export default class ProjectPage extends React.Component{
 
-	
     render(){
         const modalIsOpen = true;
         const data = this.props.data;
@@ -120,64 +119,6 @@ export default class ProjectPage extends React.Component{
     }
 }
 
-export class ProjectPageData {
 
-    constructor (data) {
-        this.backgroundImage = data['backgroundImage'];
-        this.logoUrl = data['logoUrl'];
-        this.title = data['title'];
-        this.description = data['description'];
-        this.technologies = data['technologies'];
-        this.links = data['links'];
-        this.screenShots = data['screenShots'];
-        for (const key in arguments) {
-            const element = arguments[key];
-            if (element == null || element == undefined) {
-                throw Error(`${key} Arguments are missing`);
-            }
-        }
-    }
-}
 
-export class Technology{
-    constructor (data) {
-        this.imageUrl = data['imageUrl'];
-        this.name = data['name'];
-        this.href = data['href'];
-        for (const key in arguments) {
-            const element = arguments[key];
-            if (element == null || element == undefined) {
-                throw Error(`${key} Arguments are missing`);
-            }
-        }
-    }
-}
-
-export class LinkData{
-    constructor (data) {
-        this.href = data['href'];
-        this.imageUrl = data['imageUrl'];
-        this.name = data['name'];
-        for (const key in arguments) {
-            const element = arguments[key];
-            if (element == null || element == undefined) {
-                throw Error(`${key} Arguments are missing`);
-            }
-        }
-    }
-}
-
-export class GalleryImageData{
-    constructor (data) {
-        this.description = data['description'];
-        this.imageUrl = data['imageUrl'];
-        this.name = data['name'];
-        for (const key in arguments) {
-            const element = arguments[key];
-            if (element == null || element == undefined) {
-                throw Error(`${key} Arguments are missing`);
-            }
-        }
-    }
-}
 

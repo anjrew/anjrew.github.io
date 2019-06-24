@@ -1,4 +1,6 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
+
 
 // Components
 import { Parallax } from 'react-parallax';
@@ -7,9 +9,8 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
-import ProjectPage , { ProjectPageData, Technology, LinkData, GalleryImageData } from './project-page';
-
-
+import ProjectPage  from './project-page';
+import { DialInData } from '../data/project-page-data';
 
 // PAGES
 
@@ -19,6 +20,7 @@ export default class App extends React.Component{
         super();
         this.state = {
             showApp: false,
+            showProject: true
         };
         this.renderNext = this.renderNext.bind(this);
         this.setLocationState = this.setLocationState.bind(this);		
@@ -50,101 +52,21 @@ export default class App extends React.Component{
 
                     <MyWork referance={this.myworkRef}/>
 
-                    <ProjectPage data={ 
-                        new ProjectPageData({
-                            backgroundImage: '/assets/images/dial-in.jpg',
-                            title: 'Dial in',
-                            description: 'A tool to help coffee professionals record and analyse data',
-                            logoUrl: '/assets/images/dial-in-logo.png',
-                            technologies: [
-                                new Technology({ 
-                                    imageUrl: '/assets/images/flutter-logo2.svg', 
-                                    name: 'Flutter',
-                                    href: 'https://flutter.dev/'
-                                }),
-                                new Technology({ 
-                                    imageUrl: '/assets/images/dart-logo-2.jpg', 
-                                    name: 'Dart',
-                                    href: 'https://dart.dev/'
-                                }),
-                                new Technology({ 
-                                    imageUrl: '/assets/images/firebase-logo2.png', 
-                                    name: 'Firebase',
-                                    href: 'https://firebase.google.com/'
-                                }),
-                                new Technology({ 
-                                    imageUrl: '/assets/images/vs-code-logo.png', 
-                                    name: 'VS code',
-                                    href: 'https://code.visualstudio.com/'
-                                }),
-                                new Technology({ 
-                                    imageUrl: '/assets/images/xcode-logo.jpg', 
-                                    name: 'Xcode',
-                                    href: 'https://developer.apple.com/xcode/'
-                                })
-                            ],
-                            links: [
-                                new LinkData({
-                                    imageUrl: '/assets/images/faceBookIcon.png',
-                                    href: 'https://www.facebook.com/dialincoffee/',
-                                    name: 'Facebook'
-                                }),
-                                new LinkData({
-                                    imageUrl: '/assets/images/instagramLogo.png',
-                                    href: 'https://www.instagram.com/dial_in_coffee/',
-                                    name: 'Instagram'
-                                }),
-                                new LinkData({
-                                    imageUrl: '/assets/images/GooglePlayBadge.png',
-                                    href: '/assets/images/instagramLogo.png',
-                                    name: 'Google Play'
-                                })
-                            ],
-                            screenShots: [
-
-                                new GalleryImageData({
-                                    imageUrl: '/assets/images/dial-in.jpg',
-                                    description: 'Workflow'
-                                }),
-                            ]
-							
-                        })}/>
-
+                    
                     <Contact referance={this.contactRef}/>
 
-                </Parallax>
-				
-                {/* 
-                
-				<div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'green'}}></div> 
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'black'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'red'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'yellow'}}></div> 
-
+                    <CSSTransition
+                        in={this.state.showProject}
+                        timeout={300}
+                        classNames="scale"
+                        unmountOnExit
+                    >
+                        <ProjectPage data={ DialInData }/>
+                    </CSSTransition>
 
                 </Parallax>
-
-                <Parallax
-                    blur={1}
-                    bgImage={'/assets/images/tower-2.jpg'}
-                    bgImageAlt="the cat"
-                    strength={1000}
-                >
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'green'}}></div> 
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'black'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'red'}}></div> 
-
-                    <div style={{ margin: '30px', height: '600px', width: '100px', backgroundColor: 'yellow'}}></div> 
-
-
-                </Parallax> */}
             </div>
-
         );
-       
     }
 
     componentDidMount() {
