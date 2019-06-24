@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
 
 // Components
@@ -6,7 +7,10 @@ import { Column } from '../components/layout/column';
 import { Row } from '../components/layout/row';
 import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
+import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
 
 // PAGES
 
@@ -14,7 +18,10 @@ export default class ProjectPage extends React.Component{
 
 	
     render(){
-        console.log('Project page props are', this.props);
+        const modalIsOpen = true;
+        const data = this.props.data;
+
+        console.log('Screenshots', data.screenShots);
         return ( 
             <div style={{ 
                 width: '100vw',
@@ -31,18 +38,18 @@ export default class ProjectPage extends React.Component{
                                 placeContent='flex-start'
                                 alignItems='flex-start'
                             >
-                                <h1 style={{ textDecoration: 'underline' }}>{this.props.data.title}</h1>
+                                <h1 style={{ textDecoration: 'underline' }}>{data.title}</h1>
 
-                                <p>{this.props.data.description}</p>
+                                <p>{data.description}</p>
 
                             </Column>
-                            { this.props.data.logoUrl &&
+                            { data.logoUrl &&
                             <div>
                                 <img style={{
                                     objectFit: 'cover',
                                     height: '350px',
                                     width: '350px'
-                                }} src={this.props.data.logoUrl}/>
+                                }} src={data.logoUrl}/>
                             </div>
                             }
                         </Row>
@@ -54,13 +61,13 @@ export default class ProjectPage extends React.Component{
                             alignItems='flex-start'
                         >
                             <h3>Featuring</h3>
-                            { this.props.data.technologies && 
+                            { data.technologies && 
 						 
 						<Wrap
 						    alignItems='start'
 						    placeContent='flex-start'
 						>
-						    { this.props.data.technologies.map((technology) => {
+						    { data.technologies.map((technology) => {
 						        return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
 						    })
 						    }
@@ -74,10 +81,10 @@ export default class ProjectPage extends React.Component{
                             alignItems='flex-start'
                         >
                             <h3>More info</h3>
-                            { this.props.data.links &&
+                            { data.links &&
 
 							<Wrap>
-							    { this.props.data.links.map((link) => {
+							    { data.links.map((link) => {
 							        return <LinkIcon key={link.href} data={link} />;  
 							    })
 							    }
@@ -85,15 +92,11 @@ export default class ProjectPage extends React.Component{
                             }
                         </Column>
 					
-                        { this.props.data.screenShots && 
-                    <Wrap>
-						    { this.props.data.screenShots.map((screenShot) => {
-                            <img src={screenShot} />;  
-						    })
+                        { data.screenShots && data.screenShots.map((screenshot) => {
+                            return <GalleryImage key={screenshot} data={screenshot} />;  
+                        })
+							
                         }
-                    </Wrap>
-                        }
-
                     </Column>
                 </SafeArea>				
             </div>
@@ -141,6 +144,20 @@ export class Technology{
 export class LinkData{
     constructor (data) {
         this.href = data['href'];
+        this.imageUrl = data['imageUrl'];
+        this.name = data['name'];
+        for (const key in arguments) {
+            const element = arguments[key];
+            if (element == null || element == undefined) {
+                throw Error(`${key} Arguments are missing`);
+            }
+        }
+    }
+}
+
+export class GalleryImageData{
+    constructor (data) {
+        this.description = data['description'];
         this.imageUrl = data['imageUrl'];
         this.name = data['name'];
         for (const key in arguments) {

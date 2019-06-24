@@ -7,7 +7,8 @@ import About from '../components/modules/about';
 import Skills from '../components/modules/skills';
 import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
-import ProjectPage , { ProjectPageData, Technology, LinkData } from './project-page';
+import ProjectPage , { ProjectPageData, Technology, LinkData, GalleryImageData } from './project-page';
+
 
 
 // PAGES
@@ -70,6 +71,16 @@ export default class App extends React.Component{
                                     imageUrl: '/assets/images/firebase-logo2.png', 
                                     name: 'Firebase',
                                     href: 'https://firebase.google.com/'
+                                }),
+                                new Technology({ 
+                                    imageUrl: '/assets/images/vs-code-logo.png', 
+                                    name: 'VS code',
+                                    href: 'https://code.visualstudio.com/'
+                                }),
+                                new Technology({ 
+                                    imageUrl: '/assets/images/xcode-logo.jpg', 
+                                    name: 'Xcode',
+                                    href: 'https://developer.apple.com/xcode/'
                                 })
                             ],
                             links: [
@@ -88,6 +99,13 @@ export default class App extends React.Component{
                                     href: '/assets/images/instagramLogo.png',
                                     name: 'Google Play'
                                 })
+                            ],
+                            screenShots: [
+
+                                new GalleryImageData({
+                                    imageUrl: '/assets/images/dial-in.jpg',
+                                    description: 'Workflow'
+                                }),
                             ]
 							
                         })}/>
