@@ -7,7 +7,8 @@ import {
     PertitionData,
     LaissezFaireData,
     GoatstagramData,
-    SpicedAcademyData } from '../../data/project-page-data';
+    SpicedAcademyData,
+    thisData } from '../../data/project-page-data';
 
 // All aJax requests will go from this file
 export const Action = {
@@ -39,6 +40,8 @@ export const Action = {
             case 'Spiced Academy':
                 data = SpicedAcademyData;
                 break;
+            case 'this.':
+                data = thisData;
         }	
         console.log('The data of the project to be rendered is', data);
         return {

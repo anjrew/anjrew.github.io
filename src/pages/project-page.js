@@ -76,25 +76,23 @@ class ProjectPage extends React.Component{
 	
 						
                             {/* technologies */}
-                            <Column
-                                placeContent='flex-start'
-                                alignItems='flex-start'
-                                margin={sectionMargin}
-                            >
-                                <h3>Featuring</h3>
-                                { data.technologies && 
-							 
-							<Wrap
-							    alignItems='start'
-							    placeContent='flex-start'
-							>
-							    { data.technologies.map((technology) => {
-							        return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
-							    })
-							    }
-							</Wrap>
-                                }
-                            </Column>
+                            { data.technologies && 
+								<Column
+								    placeContent='flex-start'
+								    alignItems='flex-start'
+								    margin={sectionMargin}>
+								    <h3>Featuring</h3>
+								    <Wrap
+								        alignItems='start'
+								        placeContent='flex-start'
+								    >
+								        { data.technologies.map((technology) => {
+								            return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
+								        })
+								        }
+								    </Wrap>									
+								</Column>
+                            }
 	
                             {/* links  */}
                             { data.links &&
@@ -110,10 +108,10 @@ class ProjectPage extends React.Component{
 								    })
 								    }
                                 </Wrap>
-                                
                             </Column>
                             }
-	
+
+                            { data.screenShots &&
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
@@ -126,6 +124,7 @@ class ProjectPage extends React.Component{
                                     }
                                 </Row>
                             </Column>
+                            }
                         </Column>
                     </SafeArea>				
                 </div>

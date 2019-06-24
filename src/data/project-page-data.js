@@ -123,7 +123,17 @@ export const CupomaticData = new ProjectPageData({
             imageUrl: '/assets/images/GooglePlayBadge.png',
             href: '/assets/images/instagramLogo.png',
             name: 'Google Play'
-        })
+		}),
+		new LinkData({
+            imageUrl: '/assets/images/app-store-badge.svg',
+            href: 'https://apps.apple.com/app/id1336170587',
+            name: 'App Store'
+		}),
+		new LinkData({
+            imageUrl: '/assets/images/cupOmatic-logo.jpg',
+            href: 'http://www.cupomatic.net/',
+            name: 'CupOmatic.net'
+        }),
     ],
     screenShots: [
 
@@ -301,5 +311,28 @@ export const SpicedAcademyData = new ProjectPageData({
             description: 'Coolio Goat'
         }),
 	],
-	
+});
+
+export const thisData = new ProjectPageData({
+    backgroundImage: '/assets/images/me-noeyes.png',
+    title: 'this.',
+	description: `This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
+	 so I can blend my personal experience into truly unique products.`,
+    logoUrl: 'assets/images/me-noeyes.png',
+    technologies: [
+		nodeLink,
+        reduxLink,
+        reactLink,
+		vsCodeLink,
+		cssLink,
+		htmlLink,
+		javaScriptLink,
+		awsLink
+    ],
+    screenShots: [
+        new GalleryImageData({
+            imageUrl: 'assets/images/assets/images/me-noeyes.png',
+            description: 'Me'
+        }),
+    ]
 });

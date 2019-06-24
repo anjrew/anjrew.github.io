@@ -21,7 +21,7 @@ export default class LinkIcon extends React.Component{
             display: 'flex',
             placeContent: 'center center',
             transition: 'all 500ms',
-            transform: this.state.hover ? 'scale(1.05)': 'scale(1.0) ',
+            transform: this.state.hover ? 'scale(1.08)': 'scale(1.0) ',
         };
 		
         const imageStyle ={
