@@ -5,11 +5,13 @@ import { connect } from 'react-redux';
 // Components
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
+import { Container } from '../components/boxes/container';
 import { Row } from '../components/layout/row';
 import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
+import { Action as action } from '../react_utils/redux/actions';
 
 // PAGES
 class ProjectPage extends React.Component{
@@ -39,7 +41,8 @@ class ProjectPage extends React.Component{
                     <Column
                         placeContent='flex-start'>
                         <Row
-                            placeContent='flex-start'>
+                            placeContent='flex-start'
+                        >
                             <Column
                                 placeContent='flex-start'
                                 alignItems='flex-start'
@@ -51,14 +54,22 @@ class ProjectPage extends React.Component{
 
                             </Column>
                             { data.logoUrl &&
-                            <div>
-                                <img style={{
-                                    objectFit: 'cover',
-                                    height: '350px',
-                                    width: '350px'
-                                }} src={data.logoUrl}/>
-                            </div>
+								<div>
+								    <img style={{
+								        objectFit: 'cover',
+								        height: '350px',
+								        width: '350px'
+								    }} src={data.logoUrl}/>
+								</div>
                             }
+                            <Container
+                                alignSelf='start'
+                                alignItems='flex-end'
+                                height='100%'
+                                flexGrow='1'
+                                placeContent='flex-end flex-end'>
+                                <button onClick={() => this.props.dispatch(action.dismissAll())}>X</button>
+                            </Container>
                         </Row>
 
 					
@@ -109,7 +120,7 @@ class ProjectPage extends React.Component{
                             <Row>
                                 { data.screenShots && data.screenShots.map((screenshot) => {
                                     return <GalleryImage key={screenshot} data={screenshot} />;  
-                                })
+                                	})
                                 }
                             </Row>
                         </Column>

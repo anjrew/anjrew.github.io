@@ -6,6 +6,7 @@ export class Container extends React.Component{
         super(props);
         console.log('Container props are ', props);
         this.style = {
+            flexGrow: props.flexGrow,
             display: props.display || 'flex',
             flexDirection: props.flexDirection || 'column',
             justifyContent: props.justifyContent || 'center',
