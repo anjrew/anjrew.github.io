@@ -40,7 +40,8 @@ export default function reducer(state = {}, action) {
                     ...state,
                     showImage: false,
                     nextImage: action.image,
-                    nextDirection: action.direction
+                    nextDirection: action.direction,
+                    direction: action.direction
                 };
             }
             
