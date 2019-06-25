@@ -42,7 +42,6 @@ export const Action = {
             case 'this.':
                 data = thisData;
         }	
-        console.log('The data of the project to be rendered is', data);
         return {
             type: "SHOW_PROJECT",
             project: data
