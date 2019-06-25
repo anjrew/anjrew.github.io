@@ -31,7 +31,7 @@ export const dartLink =new Technology({
 });
 
 export const firebaseLink =new Technology({ 
-    imageUrl: '/assets/images/firebase-logo2.png', 
+    imageUrl: '/assets/images/firebase-logo-no-bg.png', 
     name: 'Firebase',
     href: 'https://firebase.google.com/'
 });
@@ -43,7 +43,7 @@ export const vsCodeLink =new Technology({
 });
 
 export const xcodeLink =new Technology({ 
-    imageUrl: '/assets/images/xcode-logo-no-bg.png, 
+    imageUrl: '/assets/images/xcode-logo-no-bg.png', 
     name: 'Xcode',
     href: 'https://developer.apple.com/xcode/'
 });
@@ -73,7 +73,7 @@ export const parseServerLink = new Technology({
 });
 
 export const arduinoLink = new Technology({ 
-    imageUrl: '/assets/images/arduino-logo.jpeg', 
+    imageUrl: '/assets/images/arduino-logo-no-bg.png', 
     name: 'Arduino',
     href: 'https://www.arduino.cc/'
 });
