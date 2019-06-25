@@ -10,6 +10,9 @@ class GalleryImage extends React.Component{
             showPicture: false,
             hoverImage: false,
         };
+        this.mouseOver = this.mouseOver.bind(this);
+        this.mouseLeave = this.mouseLeave.bind(this);
+        this.mouseClick = this.mouseClick.bind(this);
     }
 
     render(){
@@ -37,7 +40,6 @@ class GalleryImage extends React.Component{
             transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9) translateY(-5%)': 'scale(1)',
         };
 		
-        console.log('The data is',data);
         const words = data.name.split(' ');
         var biggestWordLength = 0; 
         for (let index = 0; index < words.length; index++) {
@@ -47,23 +49,18 @@ class GalleryImage extends React.Component{
             }
         }
 		
-        var fontSize = data.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+        var fontSize = data.name.length > 15 || biggestWordLength > 5 ? '50px' : '80px';
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
 
-
-        // const imageStyle ={
-        //     filter: this.state.showText && 'blur(8px) brightness(0.8)',
-        //     transform: this.state.showText ? 'scale(0.9) translateY(-10%)' : 'translateY(-10%)',
-        // };
         return (
             <React.Fragment>
                 <div 
                     style={imageContainerStyle}
-                    onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
-                    onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
-                    onClick={() => {  this.props.dispatch(action.showImage(data)); } }
+                    onMouseEnter={this.mouseOver} 
+                    onMouseLeave={this.mouseLeave }
+                    onClick={this.mouseClick}
                 >
                     <div
                         style={{
@@ -88,10 +85,9 @@ class GalleryImage extends React.Component{
                                 alignSelf: 'center',
                                 backgroundColor: 'rgba(0,0,0,0)',
                             }}
-                            onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
-                            onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
-                            onClick={() => {  this.props.dispatch(action.showImage(data)); } }
-
+                            onMouseEnter={this.mouseOver} 
+                            onMouseLeave={this.mouseLeave }
+                            onClick={this.mouseClick}
                         >{data && data.name}</h2>
                     </div>
                     <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
@@ -99,12 +95,26 @@ class GalleryImage extends React.Component{
             </React.Fragment>
         );
     }
+	
+    mouseOver(){
+        this.setState({ hoverImage: true });
+    }
+    mouseLeave(){
+        this.setState({ hoverImage: false  }); 
+    }
+    mouseClick(){
+		console.log('this.props.mobileApp',this.props.mobileApp)
+        if (!this.props.mobileApp) {
+            this.props.dispatch(action.showImage(this.props.data));
+        }
+    }
 }
 
 const mapStateToProps = state => {
     return {
         pageToRender: state.pageToRender,
-        smallScreen: state.smallScreen 
+        smallScreen: state.smallScreen,
+        mobileApp: state.mobileApp, 
     };
 };
 

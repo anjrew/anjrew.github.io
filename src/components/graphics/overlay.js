@@ -16,7 +16,6 @@ export class Overlay extends React.Component{
     }
 	
     dismiss(history){
-		console.log('IN dismiss history', history);
         this.props.dispatch(action.dismissAll());
         history.push('/');
     }

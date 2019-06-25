@@ -8,14 +8,9 @@ const cookieSession = require('cookie-session');
 const csurf = require('csurf');
 const path = require('path');
 const print = require('./utils/print');
-const routes = require('./routers/routes');
 const server = require('http').Server(app);
 const io = require('socket.io')(server, { origins: 'localhost:8080' });
 const { db } = require('./utils/db');
-
-const routers = [
- 
-];
 
 global.appRoot = path.resolve(__dirname);
 

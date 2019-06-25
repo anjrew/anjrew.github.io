@@ -464,7 +464,7 @@ export const GoatstagramData = new ProjectPageData({
 		new GalleryImageData({
             imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.56.56.png',
 			description: 'Error propmt on no file selected',
-			name: 'Main page',
+			name: 'Error handling',
 			screenShot: false
 		}),
 		new GalleryImageData({
