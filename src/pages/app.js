@@ -59,9 +59,10 @@ class App extends React.Component{
             height: 'calc(80% - 100px)',
         };
 		
-		const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
+        const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
+        const imageKey = this.props.currentImage ? this.props.currentImage.imageUrl : '';
 		
-		console.log('Show image?', this.props.showImage);
+        console.log('Show image?', this.props.showImage,'');
 
         return ( 
             <div style={{ maxHeight: '100vh'}}>
@@ -92,7 +93,7 @@ class App extends React.Component{
                     <CSSTransition 
                         key={transitionKey} 
                         in={!!this.props.nextImage || !!this.props.currentImage}
-                        onExited={() => this.props.nextImage ? this.props.dispatch(action.renderNext()): this.props.dispatch(action.dismissImage())}
+                        onExited={() => this.props.dispatch(action.renderNext()) }
                         timeout={400} 
                         classNames="fade" 
                         unmountOnExit>
@@ -123,7 +124,7 @@ class App extends React.Component{
                                         style={arrowStyle}
                                     	/></div>
                                 <CSSTransition 
-                                    key={transitionKey} 
+                                    key={imageKey} 
                                     in={!!this.props.showImage}
                                     onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
                                     timeout={400} 
