@@ -25,8 +25,8 @@ export class TechnologyIcon extends React.Component{
             }
         }
 		
-        var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '25px' : '40px';
-        if (biggestWordLength > 10 ) {
+        var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '24px' : '40px';
+        if (biggestWordLength > 8 ) {
             fontSize = '20px';
         }
 

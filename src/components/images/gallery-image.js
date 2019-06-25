@@ -1,4 +1,6 @@
 import React from 'react';
+import { Overlay } from '../graphics/overlay';
+
 
 export default class GalleryImage extends React.Component{
 
@@ -11,7 +13,7 @@ export default class GalleryImage extends React.Component{
     }
 
     render(){
-		const data = this.props.data;
+        const data = this.props.data;
         const size = this.props.size || '300px';
         const width = size;
         const height = size;
@@ -46,7 +48,6 @@ export default class GalleryImage extends React.Component{
                 onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
                 onClick={() =>{ this.setState({ showPicture: !this.state.showPicture}); } }
             >
-                
                 <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
             </div>
         );

@@ -20,13 +20,12 @@ import {
 	reduxLink,
 	reactLink,
 	awsLink,
-	vueLink } from '../data/technology-data';
+	vueLink,
+	handlebarsLink } from '../data/technology-data';
 
 export class ProjectPageData {
 
     constructor (data) {
-		console.log('data incomoing to the project is is ', data);
-
         this.backgroundImage = data['backgroundImage'];
         this.logoUrl = data['logoUrl'];
         this.title = data['title'];
@@ -46,7 +45,6 @@ export class ProjectPageData {
 
 export class GalleryImageData{
     constructor (data) {
-		console.log('data incomoing to the image is ', data);
         this.description = data['description'];
         this.imageUrl = data['imageUrl'];
 		this.name = data['name'];
@@ -226,6 +224,20 @@ export const CupomaticData = new ProjectPageData({
 			name: 'Qc',
 			screenShot: false
 		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/Screenshot 2018-01-20 16.43.42.png',
+			description: 'Main page',
+			name: 'Screenshot one',
+			screenShot: true
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/Screenshot 2018-01-20 16.44.14.png',
+			description: 'Settings page',
+			name: 'Screenshot two',
+			screenShot: true
+		}),
     ]
 });
 
@@ -241,13 +253,13 @@ export const BatterySaverData = new ProjectPageData({
         flareLink,
         vsCodeLink
     ],
-    screenShots: [
+    // screenShots: [
 
-        new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
-        }),
-    ]
+    //     new GalleryImageData({
+    //         imageUrl: '/assets/images/dial-in.jpg',
+    //         description: 'Workflow'
+    //     }),
+    // ]
 });
 
 export const PlantSystemData = new ProjectPageData({
@@ -265,8 +277,24 @@ export const PlantSystemData = new ProjectPageData({
     screenShots: [
 
         new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+            imageUrl: '/assets/images/plant-system/IMG_0756.jpg',
+			description: 'The main control board.',
+			name: 'Main board',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/plant-system/IMG_2984.jpg',
+			description: 'More plants and header tank',
+			name: 'Tank',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/plant-system/IMG_3764.jpg',
+			description: 'More plants :)',
+			name: 'Plants',
+			screenShot: false
         }),
     ]
 });
@@ -275,7 +303,7 @@ export const PertitionData = new ProjectPageData({
     backgroundImage: '/assets/images/green-lava-lamp.jpg',
     title: 'Lava lamp pertition',
     description: `Being a firm believer in lava lamps, I created a pertition site to record the
-	amount of people who would like lava lamps to be exempt from Vat.
+	amount of people who would like lava lamps to be exempt from VAT.
 	 Follow the link and take a look yourself :).`,
     logoUrl: '/assets/images/green-lava-lamp.jpg',
     technologies: [
@@ -284,7 +312,8 @@ export const PertitionData = new ProjectPageData({
         htmlLink,
         cssLink,
 		javaScriptLink,
-		vsCodeLink
+		vsCodeLink,
+		handlebarsLink
     ],
     links: [
         new LinkData({
@@ -295,9 +324,41 @@ export const PertitionData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
-        }),
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.51.06.png',
+			description: 'Login page',
+			name: 'Login',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.52.59.png',
+			description: 'Signed',
+			name: 'Signed',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.53.41.png',
+			description: 'More info.',
+			name: 'About',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.54.06.png',
+			description: 'Pertition',
+			name: 'Pertition',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.52.59.png',
+			description: 'Signed',
+			name: 'Signed',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.54.41.png',
+			description: 'Edit profile',
+			name: 'Edit profile',
+			screenShot: false
+		}),
     ]
 });
 
@@ -320,6 +381,26 @@ export const LaissezFaireData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/dial-in.jpg',
+            description: 'Workflow'
+		}),
+		new GalleryImageData({
             imageUrl: '/assets/images/dial-in.jpg',
             description: 'Workflow'
         }),

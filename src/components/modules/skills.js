@@ -23,7 +23,8 @@ import {
     reactLink,
     awsLink,
     vueLink,
-    redisLink } from '../../data/technology-data';
+    redisLink,
+    handlebarsLink } from '../../data/technology-data';
 	
 // Components
 import { Row } from '../layout/row';
@@ -88,7 +89,8 @@ class Skills extends React.Component {
                                 <TechnologyIcon key={awsLink.name} data={awsLink} />
                                 <TechnologyIcon key={vueLink.name} data={vueLink} />
                                 <TechnologyIcon key={redisLink.name} data={redisLink} />
-								
+                                <TechnologyIcon key={handlebarsLink.name} data={handlebarsLink} />
+
                             </Wrap>
                             <br/> 
                             <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>

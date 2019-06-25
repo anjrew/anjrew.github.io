@@ -138,4 +138,10 @@ export const redisLink = new Technology({
     href: 'https://redis.io/'
 });
 
+export const handlebarsLink = new Technology({
+    imageUrl: '/assets/images/handlebars-logo.png',
+    name: 'Handlebars',
+    href: 'https://handlebarsjs.com/'
+});
+
 
