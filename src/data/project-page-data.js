@@ -146,8 +146,14 @@ export const DialInData = new ProjectPageData({
 			screenShot: true,
 			name: 'Flavours',
 		}),
-    ]
 
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37',
+			description: 'Options menu.',
+			screenShot: true,
+			name: 'Options menu',
+		}),
+    ]
 });
 
 export const CupomaticData = new ProjectPageData({
@@ -380,30 +386,36 @@ export const LaissezFaireData = new ProjectPageData({
 		awsLink
     ],
     screenShots: [
-        new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+		new GalleryImageData({
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.19.30.png',
+			description: 'Login page',
+			name: 'Login',
+			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.20.42.png',
+			description: 'User Profile.',
+			name: 'User Profile',
+			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.21.21.png',
+			description: 'Find users',
+			name: 'Find Users',
+			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.22.08.png',
+			description: 'Friends',
+			name: 'Friends.',
+			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
+            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.22.42.png',
+			description: 'Requests.',
+			name: 'Requests',
+			screenShot: false
 		}),
-		new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
-        }),
     ]
 });
 
