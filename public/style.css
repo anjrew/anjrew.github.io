@@ -282,22 +282,26 @@ input[type="text"]:hover,  input[type="password"]:hover, input[type="email"]:hov
 
 .shift-enter {
     animation-delay: 1ms;
-    transform: translateX(-100vw);
+	transform: translateX(-100vw);
+	transition: all 100ms ease-in;
+	opacity: 0;
 }
 
 .shift-enter-active {
-    transform: translateX(0px);
-    transition: all 5s ease-in;
+    transform: translateX(-100vw);
+	transition: all 100ms ease-in;
 }
 
 .shift-exit {
     animation-delay: 1ms;
-    transform: translateX(0px);
+	transform: translateX(0px);
+	transition: all 100ms ease-in;
+	opacity: 0;
 }
 
 .shift-exit-active {
     transform: translateX(100vw);
-    transition: all 5s ease-in;
+	transition: all 100ms ease-in;
 }
 
 @keyframes lds-ring {

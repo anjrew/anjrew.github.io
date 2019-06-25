@@ -124,11 +124,18 @@ class App extends React.Component{
                                         style={arrowStyle}
                                     	/></div>
                                 <CSSTransition 
-                                    key={imageKey} 
+                                    key={'key'} 
                                     in={!!this.props.showImage}
-                                    onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
-                                    timeout={400} 
-                                    classNames="fade" 
+                                    onExited={() => {
+                                        this.props.nextImage && this.props.dispatch(action.renderNext());
+                                        console.log('onExited');}}
+                                    timeout={450}
+                                    onEnter={console.log('Enter')}
+                                    onEntered={console.log('Entered')}
+                                    onEntering={console.log('onEntering')}
+                                    onExit={console.log('on exit')}
+                                    onExiting={console.log('on exiting')}
+                                    classNames="shift" 
                                     unmountOnExit>
                                     <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 </CSSTransition>
