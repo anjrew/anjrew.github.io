@@ -505,9 +505,35 @@ export const SpicedAcademyData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
-            imageUrl: '/assets/images/goatstagram.jpg',
-            description: 'Coolio Goat'
-        }),
+            imageUrl: '/assets/images/spiced/SIMG_7715.JPG',
+			description: 'David teaching.',
+			name: 'Lecture',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/spiced/IMG_7716.JPG',
+			description: 'Chris being a jerk.',
+			name: 'Buddy',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/spiced/PHOTO-2019-05-22-13-36-21.jpg',
+			description: 'Project time.',
+			name: 'Coding',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/spiced/PHOTO-2019-05-29-20-43-02.jpg',
+			description: 'Presentation.',
+			name: 'Presenting Goastagram',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/spiced/PHOTO-2019-06-21-12-14-37.jpg',
+			description: 'Presentation pt2.',
+			name: 'Presenting Goastagram pt2',
+			screenShot: false
+		}),
 	],
 });
 
