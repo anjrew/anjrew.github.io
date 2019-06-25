@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class TechnologyIcon extends React.Component{
+export class TechnologyIcon extends React.Component{
 
     constructor(){
         super();
@@ -79,6 +80,7 @@ export default class TechnologyIcon extends React.Component{
                                 transition: 'opacity 500ms',
                                 opacity: this.state.showText ? 1 : 0,
                                 alignSelf: 'center',
+                                backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
                             }}
                             onMouseEnter={() =>{ this.setState({ showText: true }); } }
                             onMouseLeave={() =>{ this.setState({ showText: false  }); } }
@@ -90,4 +92,14 @@ export default class TechnologyIcon extends React.Component{
         );
     }
 }
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+    };
+};
+
+export default connect(mapStateToProps)(TechnologyIcon);
+
 

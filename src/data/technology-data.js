@@ -25,7 +25,7 @@ export const flareLink =new Technology({
 });
 
 export const dartLink =new Technology({ 
-    imageUrl: '/assets/images/dart-logo-2.jpg', 
+    imageUrl: '/assets/images/dart-logo-no-bg.png', 
     name: 'Dart',
     href: 'https://dart.dev/'
 });
@@ -43,7 +43,7 @@ export const vsCodeLink =new Technology({
 });
 
 export const xcodeLink =new Technology({ 
-    imageUrl: '/assets/images/xcode-logo.jpg', 
+    imageUrl: '/assets/images/xcode-logo-no-bg.png, 
     name: 'Xcode',
     href: 'https://developer.apple.com/xcode/'
 });
@@ -61,7 +61,7 @@ export const javaLink = new Technology({
 });
 
 export const androidStudioLink = new Technology({ 
-    imageUrl: '/assets/images/android-studio-logo.jpg', 
+    imageUrl: '/assets/images/android-studio-logo-no-bg.png', 
     name: 'Android Studio',
     href: 'https://developer.android.com/studio'
 });

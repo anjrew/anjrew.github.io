@@ -28,7 +28,10 @@ class MyWork extends React.Component {
                             animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true}
                         >	
-                            <h2 style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>My Work</h2>
+                            <h2 style={{ 
+                                textAlign: this.props.mobileApp ? 'center': 'start',
+                                backgroundColor: 'rgba(0,0,0,0)'					 
+                            }}>My Work</h2>
 
                             <Column
                                 alignItems={this.props.mobileApp ? 'center' :'start'}>
