@@ -13,6 +13,16 @@ export default function reducer(state = {}, action) {
                 mobileApp: action.mobileApp,
                 smallScreen: action.smallScreen
 			 };
+        case "SHOW_IMAGE":
+            return { 
+                ...state, 
+                currentImage: action.image,
+            };
+        case "DISSMISS_IMAGE":
+            return { 
+                ...state, 
+                currentImage: null,
+            };
         default:
             return state;
     }

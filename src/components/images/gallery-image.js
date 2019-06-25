@@ -1,8 +1,8 @@
 import React from 'react';
-import { Overlay } from '../graphics/overlay';
+import { connect } from 'react-redux';
+import { Action as action } from '../../react_utils/redux/actions';
 
-
-export default class GalleryImage extends React.Component{
+class GalleryImage extends React.Component{
 
     constructor(){
         super();
@@ -40,19 +40,32 @@ export default class GalleryImage extends React.Component{
             transition: 'all 500ms',
             transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9)': 'scale(1)',
         };
-
+		
         return (
-            <div 
-                style={imageContainerStyle}
-                onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
-                onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
-                onClick={() =>{ this.setState({ showPicture: !this.state.showPicture}); } }
-            >
-                <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
-            </div>
+            <React.Fragment>
+                <div 
+                    style={imageContainerStyle}
+                    onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
+                    onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
+                    onClick={() =>{ 
+                        // this.setState({ showPicture: !this.state.showPicture}); 
+                        this.props.dispatch(action.showImage(data));
+                    } }>
+                    <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
+                </div>
+            </React.Fragment>
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        pageToRender: state.pageToRender,
+        smallScreen: state.smallScreen
+    };
+};
+
+export default connect(mapStateToProps)(GalleryImage);
 
 
 

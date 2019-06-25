@@ -32,13 +32,19 @@ export class ProjectPageData {
         this.description = data['description'];
         this.technologies = data['technologies'];
         this.links = data['links'];
-        this.screenShots = data['screenShots'];
+		this.screenShots = data['screenShots'];
+		if (this.screenShots){
+			for (let index = 0; index < this.screenShots.length; index++) {
+				const image = this.screenShots[index];
+				image.project = this.title;
+			}
+		}
         for (const key in data) {
             const element = data[key];
             if (element == null || element == undefined) {
                 throw Error(`${key} Arguments are missing`);
             }
-        }
+		}
     }
 }
 
@@ -351,12 +357,6 @@ export const PertitionData = new ProjectPageData({
             imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.54.06.png',
 			description: 'Pertition',
 			name: 'Pertition',
-			screenShot: false
-		}),
-		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 10.52.59.png',
-			description: 'Signed',
-			name: 'Signed',
 			screenShot: false
 		}),
 		new GalleryImageData({

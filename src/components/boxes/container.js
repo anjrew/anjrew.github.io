@@ -4,6 +4,7 @@ export class Container extends React.Component{
 
 
     render(){
+		console.log('container props are ', this.props)
         return (
             <div 
                 id={this.props.id} 

@@ -43,6 +43,8 @@ class ProjectPage extends React.Component{
             </div>;
         }
 		
+        console.log('The props here are ',  this.props);
+		
         if (data){
             return ( 
                 <BrowserRouter>
@@ -56,7 +58,6 @@ class ProjectPage extends React.Component{
                             top: window.scrollY + 'px',
                             backgroundColor: 'rgba(255,255,255,0.99)'
                         }}>
-					
                             <SafeArea>
                                 <Column
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
@@ -115,7 +116,7 @@ class ProjectPage extends React.Component{
 								    >
 								        { data.technologies.map((technology) => {
 								            return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
-								        })
+								        	})
 								        }
 								    </Wrap>									
 								</Column>
@@ -127,15 +128,14 @@ class ProjectPage extends React.Component{
 							    id='links'
 							    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
 							    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
-							    margin={sectionMargin}
-							>
+							    margin={sectionMargin}>
                             	<h3>More info</h3> 
 							    <Wrap
 							        alignItems={ this.props.smallScreen ? 'center' : 'start' }
 							        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
 								    { data.links.map((link) => {
 								        return <LinkIcon key={link.href} data={link} />; 
-								    })
+								    	})
 								    }
 							    </Wrap>
 							</Column>
@@ -152,7 +152,7 @@ class ProjectPage extends React.Component{
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
                                     { data.screenShots && data.screenShots.map((screenshot) => {
                                         return <GalleryImage key={screenshot.imageUrl} data={screenshot} />;  
-                                    })
+                                    	})
                                     }
                                 </Wrap>
                             </Column>
@@ -174,9 +174,11 @@ class ProjectPage extends React.Component{
 }
 
 const mapStateToProps = state => {
+    console.log('mapStateToProps in project page is', state);
     return {
         pageToRender: state.pageToRender,
-        smallScreen: state.smallScreen
+        smallScreen: state.smallScreen,
+        currentImage: state.currentImage
     };
 };
 

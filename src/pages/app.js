@@ -12,7 +12,9 @@ import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
 import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
-
+import { Column } from '../components/layout/column';
+import { Row } from '../components/layout/row';
+import BarrierDismissable from '../components/graphics/barrier-dismissable';
 // PAGES
 
 class App extends React.Component{
@@ -42,6 +44,21 @@ class App extends React.Component{
         } else {
             backGroundImage = '/assets/images/me-noeyes-4.png';
         }
+		
+        const arrowStyle = {
+            padding: '10px',
+            margin: '10px',
+            backgroundColor: 'white'
+
+        };
+        const imageStyle = {
+            objectFit: 'cover',
+            maxWidth: 'calc(90% - 300px)',
+            width: 'auto',
+            height: 'calc(80% - 30px)',
+        };
+		
+        const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
 
         return ( 
             <div style={{ maxHeight: '100vh'}}>
@@ -68,8 +85,46 @@ class App extends React.Component{
                         unmountOnExit>
                         <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>
+
+                    {/* <BarrierDismissable 
+                        in={!!this.props.currentImage}
+                        dismiss=/> */}
+
+                    <CSSTransition 
+                        key={transitionKey} 
+                        in={!!this.props.currentImage} 
+                        timeout={300} 
+                        classNames="scale" 
+                        unmountOnExit>
+                        <Column
+                            position={'fixed'}
+                            top='0px'
+                            left='0px'
+                            width='100vw'
+                            height='100vh'
+                            zIndex='800'
+                            backgroundColor= 'rgba(0,0,0,0.50)'
+                            onClick={() => this.props.dispatch(action.dismissImage())}>
+                            <Row
+                                height='unset'>
+                                <img 
+                                    src="/assets/icons/left-arrow.png" 
+                                    alt='left-arrow' 
+                                    style={arrowStyle}
+                                    onClick={() => this.props.dispatch(action.previousImage(this.props.currentImage))}/>
+                                <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
+                                <img src="/assets/icons/right-arrow.png"
+                                    alt='right-arrow' 
+                                    style={arrowStyle}
+                                    onClick={() => this.props.dispatch(action.nextImage(this.props.currentImage))}/>
+                            </Row>
+                            <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
+                            <p>{this.props.currentImage && this.props.currentImage.description}</p>
+                        </Column>
+                    </CSSTransition>
+
         
-                    <Overlay in={!!this.props.showProject} />
+                    <Overlay in={!!this.props.showProject || !!this.props.currentImage} />
                 </Parallax>
             </div>
         );
@@ -90,6 +145,7 @@ const mapStateToProps = state => {
     return {
         showProject: state.showProject,
         mobileApp: state.mobileApp,
+        currentImage: state.currentImage
     };
 };
 
