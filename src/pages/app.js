@@ -67,9 +67,9 @@ class App extends React.Component{
                         classNames="fade"
                         unmountOnExit>
                         <ProjectPage data={ this.props.showProject }/>
-                    </CSSTransition>;
+                    </CSSTransition>
         
-                    <Overlay in={!!this.props.showProject} />;
+                    <Overlay in={!!this.props.showProject} />
                 </Parallax>
             </div>
         );

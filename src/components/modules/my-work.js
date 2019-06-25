@@ -61,7 +61,7 @@ class MyWork extends React.Component {
                                     <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
 
                                     <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
-                                </Wrap>;
+                                </Wrap>
                             </Column>
                         </ScrollAnimation>
                     </Row>

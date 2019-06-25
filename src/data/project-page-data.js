@@ -387,31 +387,31 @@ export const LaissezFaireData = new ProjectPageData({
     ],
     screenShots: [
 		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.19.30.png',
+            imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.19.30.png',
 			description: 'Login page',
 			name: 'Login',
 			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.20.42.png',
+            imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.20.42.png',
 			description: 'User Profile.',
 			name: 'User Profile',
 			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.21.21.png',
+            imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.21.21.png',
 			description: 'Find users',
 			name: 'Find Users',
 			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.22.08.png',
+            imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.22.08.png',
 			description: 'Friends',
 			name: 'Friends.',
 			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/pertition/Screenshot 2019-06-25 at 11.22.42.png',
+            imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.22.42.png',
 			description: 'Requests.',
 			name: 'Requests',
 			screenShot: false

@@ -123,25 +123,27 @@ class ProjectPage extends React.Component{
 	
                                     {/* links  */}
                                     { data.links &&
-                            <Column
-                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                margin={sectionMargin}
-                            >
+							<Column	
+							    id='links'
+							    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+							    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+							    margin={sectionMargin}
+							>
                             	<h3>More info</h3> 
-                                <Wrap
-                                    alignItems={ this.props.smallScreen ? 'center' : 'start' }
-                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+							    <Wrap
+							        alignItems={ this.props.smallScreen ? 'center' : 'start' }
+							        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
 								    { data.links.map((link) => {
-								        return <LinkIcon key={link.href} data={link} />;  
+								        return <LinkIcon key={link.href} data={link} />; 
 								    })
 								    }
-                                </Wrap>
-                            </Column>
+							    </Wrap>
+							</Column>
                                     }
 
                         	{ data.screenShots &&
                             <Column
+                                id='screenShots'
                                 placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
                                 alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}>
