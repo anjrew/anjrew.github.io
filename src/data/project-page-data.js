@@ -25,6 +25,8 @@ import {
 export class ProjectPageData {
 
     constructor (data) {
+		console.log('data incomoing to the project is is ', data);
+
         this.backgroundImage = data['backgroundImage'];
         this.logoUrl = data['logoUrl'];
         this.title = data['title'];
@@ -32,8 +34,8 @@ export class ProjectPageData {
         this.technologies = data['technologies'];
         this.links = data['links'];
         this.screenShots = data['screenShots'];
-        for (const key in arguments) {
-            const element = arguments[key];
+        for (const key in data) {
+            const element = data[key];
             if (element == null || element == undefined) {
                 throw Error(`${key} Arguments are missing`);
             }
@@ -44,13 +46,15 @@ export class ProjectPageData {
 
 export class GalleryImageData{
     constructor (data) {
+		console.log('data incomoing to the image is ', data);
         this.description = data['description'];
         this.imageUrl = data['imageUrl'];
-        this.name = data['name'];
-        for (const key in arguments) {
-            const element = arguments[key];
+		this.name = data['name'];
+		this.screenShot = data['screenShot'];
+        for (const key in data) {
+            const element = data[key];
             if (element == null || element == undefined) {
-                throw Error(`${key} Arguments are missing`);
+                throw Error(`${key} Arguments are missing, and the other data was, `, data);
             }
         }
     }
@@ -91,8 +95,59 @@ export const DialInData = new ProjectPageData({
     screenShots: [
         new GalleryImageData({
             imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
-        }),
+			description: 'Workflow',
+			name: 'Working on bar',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.13.03.png',
+			description: '1',
+			name: 'Login',
+			screenShot: true
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.06.png',
+			description: '2',
+			name: 'Recipes',
+			screenShot: true
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.31.png',
+			description: '3',
+			name: 'Feed',
+			screenShot: true
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.45.png',
+			description: '4',
+			screenShot: true,
+			name: 'Profile',
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.59.png',
+			description: '5',
+			screenShot: true,
+			name: 'Recipe',
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.16.05.png',
+			description: '5',
+			screenShot: true,
+			name: 'Score',
+		}),
+
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.16.27.png',
+			description: '6',
+			screenShot: true,
+			name: 'Flavours',
+		}),
     ]
 
 });
@@ -138,9 +193,39 @@ export const CupomaticData = new ProjectPageData({
     screenShots: [
 
         new GalleryImageData({
-            imageUrl: '/assets/images/dial-in.jpg',
-            description: 'Workflow'
-        }),
+            imageUrl: '/assets/images/screenshots/cupomatic/analyse.jpg',
+			description: 'Analyse',
+			name: 'Alalysing the coffee',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/cupping.jpg',
+			description: 'Cupping at origin',
+			name: 'Cupping',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/devloping.jpg',
+			description: 'Developing',
+			name: 'Android development',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/holding.jpg',
+			description: 'Holding',
+			name: 'Holding',
+			screenShot: false
+		}),
+		
+		new GalleryImageData({
+            imageUrl: '/assets/images/screenshots/cupomatic/qc.jpg',
+			description: 'Quality control',
+			name: 'Qc',
+			screenShot: false
+		}),
     ]
 });
 

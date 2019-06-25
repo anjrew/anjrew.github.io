@@ -7,7 +7,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
 import { Container } from '../components/boxes/container';
-import { Row } from '../components/layout/row';
 import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
@@ -147,13 +146,13 @@ class ProjectPage extends React.Component{
                                 alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}>
                                 <h3>Gallery</h3>
-                                <Row
+                                <Wrap
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
                                     { data.screenShots && data.screenShots.map((screenshot) => {
-                                        return <GalleryImage key={screenshot} data={screenshot} />;  
+                                        return <GalleryImage key={screenshot.imageUrl} data={screenshot} />;  
                                     })
                                     }
-                                </Row>
+                                </Wrap>
                             </Column>
                                     }
                                 </Column>

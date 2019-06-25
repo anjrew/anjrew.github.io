@@ -11,29 +11,32 @@ export default class GalleryImage extends React.Component{
     }
 
     render(){
-        const data = this.props.data;
+		const data = this.props.data;
         const size = this.props.size || '300px';
         const width = size;
         const height = size;
 
         const imageContainerStyle = {
+            position: this.state.showPicture ? 'fixed' : 'relative',
+            top: this.state.showPicture && '50%',
+            left: this.state.showPicture && '50%',
+            transform: this.state.showPicture ? 'translate(-50%, -50%) scale(2)' :'scale(1)',
+            zIndex: this.state.showPicture && '500',
             width: width, 
             height: height,
             margin: '3px',
-            overflow: 'hidden',
+            overflow: this.state.showPicture ? 'visable': 'hidden',
             display: 'flex',
             placeContent: 'center center',
-            transform: this.state.showPicture ? 'scale(2)' : 'scale(1)',
         };
 		
         const imageStyle ={
-            width: '120%',
-            height: '120%',
+            width: '100%',
+            height: '100%',
             transformOrigin: 'center center', 
-            objectFit: 'cover',
+            objectFit: data.screenShot ? 'contain' : 'cover', //this.props.contain ? 'contain' : 'cover',
             transition: 'all 500ms',
-            // filter: this.state.showPicture && 'blur(8px) brightness(0.8)',
-            transform: this.state.hoverImage ? 'scale(0.9) translateY(-10%)' : 'translateY(-10%)',
+            transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9)': 'scale(1)',
         };
 
         return (
@@ -43,23 +46,7 @@ export default class GalleryImage extends React.Component{
                 onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
                 onClick={() =>{ this.setState({ showPicture: !this.state.showPicture}); } }
             >
-                <div
-                    style={{
-                        display: 'flex',
-            			placeContent: 'center center' ,
-                        width: width,
-                        height: height,
-                        position: 'absolute',
-                        zIndex:'10',
-                        alignSelf: 'center',
-                        padding: '10px'
-                    }}
-                    onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
-                    onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
-                    onClick={() =>{ this.setState({ showPicture: !this.state.showPicture}); } }
-
-                >
-                </div>
+                
                 <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
             </div>
         );
