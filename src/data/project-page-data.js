@@ -505,7 +505,7 @@ export const SpicedAcademyData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
-            imageUrl: '/assets/images/spiced/SIMG_7715.JPG',
+            imageUrl: '/assets/images/spiced/IMG_7715.JPG',
 			description: 'David teaching.',
 			name: 'Lecture',
 			screenShot: false
