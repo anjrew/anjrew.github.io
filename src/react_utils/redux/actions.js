@@ -24,7 +24,6 @@ const pageData = {
 // All aJax requests will go from this file
 export const Action = {
     showProject: function(projectName){
-        console.log('The project name in the action is ', projectName);
         var data = {};
         switch(projectName){
             case 'Dial In':
@@ -74,7 +73,6 @@ export const Action = {
         };
     },
     showImage: function(image){
-        console.log('trying to show image', image);
         return {
             type: "SHOW_IMAGE",
             image: image

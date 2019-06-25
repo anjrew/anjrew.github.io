@@ -47,9 +47,7 @@ class GalleryImage extends React.Component{
                     style={imageContainerStyle}
                     onMouseEnter={() =>{ this.setState({ hoverImage: true }); } }
                     onMouseLeave={() =>{ this.setState({ hoverImage: false  }); } }
-                    onClick={() => {
-                        console.log('trying to show image', data); 
-                        // this.setState({ showPicture: !this.state.showPicture}); 
+                    onClick={() => { 
                         this.props.dispatch(action.showImage(data));
                     } }>
                     <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>

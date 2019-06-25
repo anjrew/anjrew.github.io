@@ -59,7 +59,9 @@ class App extends React.Component{
             height: 'calc(80% - 100px)',
         };
 		
-        const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
+		const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
+		
+		console.log('Show image?', this.props.showImage);
 
         return ( 
             <div style={{ maxHeight: '100vh'}}>
@@ -90,7 +92,7 @@ class App extends React.Component{
                     <CSSTransition 
                         key={transitionKey} 
                         in={!!this.props.nextImage || !!this.props.currentImage}
-                        onExited={() => this.props.nextImage ? this.props.dispatch(action.renderNext()):this.props.dispatch(action.dismissImage())}
+                        onExited={() => this.props.nextImage ? this.props.dispatch(action.renderNext()): this.props.dispatch(action.dismissImage())}
                         timeout={400} 
                         classNames="fade" 
                         unmountOnExit>
@@ -101,7 +103,7 @@ class App extends React.Component{
                             width='100vw'
                             height='100vh'
                             zIndex='800'
-                            backgroundColor= 'rgba(0,0,0,0.50)'
+                            backgroundColor= 'rgba(0,0,0,0.80)'
                             onClick={() => {
                                 console.log('dismissing');
                                 this.props.dispatch(action.dismissImage());
