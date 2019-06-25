@@ -25,12 +25,23 @@ export default function reducer(state = {}, action) {
                 showImage: false,
                 currentImage: null
             };
+
         case "PREPARE_NEXT_IMAGE":
-            return {
-                ...state,
-                showImage: false,
-                nextImage: action.image,
-            };
+            if (action.image == undefined){
+                return {
+                    ...state,
+                    showImage: false,
+                    nextImage: null,
+                    currentImage: null
+                };
+            } else {
+                return {
+                    ...state,
+                    showImage: false,
+                    nextImage: action.image,
+                };
+            }
+            
         case "RENDER_NEXT_IMAGE":
             return {
                 ...state,

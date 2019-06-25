@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
@@ -14,7 +15,6 @@ import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
 import { Column } from '../components/layout/column';
 import { Row } from '../components/layout/row';
-import BarrierDismissable from '../components/graphics/barrier-dismissable';
 import { Container } from '../components/boxes/container';
 // PAGES
 
@@ -89,8 +89,8 @@ class App extends React.Component{
 
                     <CSSTransition 
                         key={transitionKey} 
-                        in={!!this.props.showImage}
-                        onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
+                        in={!!this.props.nextImage || !!this.props.currentImage}
+                        onExited={() => this.props.nextImage ? this.props.dispatch(action.renderNext()):this.props.dispatch(action.dismissImage())}
                         timeout={400} 
                         classNames="fade" 
                         unmountOnExit>
@@ -120,7 +120,15 @@ class App extends React.Component{
                                         alt='left-arrow' 
                                         style={arrowStyle}
                                     	/></div>
-                                <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
+                                <CSSTransition 
+                                    key={transitionKey} 
+                                    in={!!this.props.showImage}
+                                    onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
+                                    timeout={400} 
+                                    classNames="Scale" 
+                                    unmountOnExit>
+                                    <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
+                                </CSSTransition>
                                 <div
                                     onClick={(e) => {
                                         e.preventDefault();
