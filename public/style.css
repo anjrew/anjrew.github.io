@@ -25,6 +25,7 @@ body{
     border: unset;
     border-radius: 0px;
 	font-size: 25px;
+	background-color: #000000;
 }
 
 .header{
@@ -61,9 +62,6 @@ button:active{
     transform: translateY(-3px);
 }
 
-
-
-
 .avatar:hover{
     transform: scale(1.05)
 }
@@ -72,16 +70,22 @@ button:active{
 }
 
 h1{
-	font-size: 150px
+	font-size: 150px;
+	background-color: white;
+	padding: 5px;
 }
 
 h2{
 	font-size: 80px;
 	margin-bottom: 10px;
+	background-color: white;
+	padding: 5px;
 }
 
 h3{
-	font-size: 30px
+	font-size: 30px;
+	background-color: white;
+	padding: 5px;
 }
 
 big {
@@ -89,7 +93,9 @@ big {
 }
 
 p{
-	font-size: 20px
+	font-size: 20px;
+	background-color: white;
+	padding: 5px;
 }
 
 .user-tile > *{

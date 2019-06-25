@@ -31,7 +31,7 @@ class Skills extends React.Component {
                             </p>
                             <br /> 
 
-                            <p>Server side I implement node.js and use <big>Firebase</big> or PostgreSQL for databases.</p>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>Server side I implement node.js and use <big>Firebase</big> or PostgreSQL for databases.</p>
                             <br /> 
                             <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>
 								Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.
