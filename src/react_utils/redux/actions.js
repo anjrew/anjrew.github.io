@@ -56,7 +56,8 @@ export const Action = {
     calibrateAppSize(widowWidth){
         return {
             type: "SET_APP_SIZE",
-            mobileApp: widowWidth < 750
+            mobileApp: widowWidth < 750,
+            smallScreen: widowWidth < 1020
         };
     }
 };

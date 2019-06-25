@@ -8,7 +8,11 @@ export default function reducer(state = {}, action) {
         case "DISSMISS_ALL":
             return { ...state, showProject: null };
         case "SET_APP_SIZE":
-            return { ...state, mobileApp: action.mobileApp };
+            return { 
+                ...state, 
+                mobileApp: action.mobileApp,
+                smallScreen: action.smallScreen
+			 };
         default:
             return state;
     }

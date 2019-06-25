@@ -89,6 +89,7 @@ class ProjectImage extends React.Component{
                                     transition: 'opacity 500ms',
                                     opacity: this.state.showText ? 1 : 0,
                                     alignSelf: 'center',
+                                    backgroundColor: 'rgba(0,0,0,0)',
                                 }}
                                 onMouseEnter={() =>{ this.setState({ showText: true }); } }
                                 onMouseLeave={() =>{ this.setState({ showText: false  }); } }

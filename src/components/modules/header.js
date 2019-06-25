@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Row } from '../layout/row';
 import { Column } from '../layout/column';
@@ -28,7 +29,7 @@ class Header extends React.Component {
                     <Row
                         placeContent={'center flex-end'}>
                         <ScrollAnimation
-                            animateIn="fadeInRight"
+                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
                             animateOnce={true}
                         >
                             <h1>I'm Andrew</h1>

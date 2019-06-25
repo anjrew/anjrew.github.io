@@ -21,7 +21,7 @@ class Contact extends React.Component {
                     alignItems={this.props.mobileApp ? 'center' : `flex-end`}
                 >
                     <ScrollAnimation
-                        animateIn="fadeInRight"
+                        animateIn={ this.props.mobileApp ? "flipInX": "fadeInRight"}
                         animateOnce={true}>	
                         <Row
                             width='100%'

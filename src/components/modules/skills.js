@@ -22,7 +22,7 @@ class Skills extends React.Component {
                         width={this.props.mobileApp ? '100%' : '60%'}
                         placeContent={this.props.mobileApp ? 'center':`center flex-end`}>
                         <ScrollAnimation
-                            animateIn="fadeInRight"
+                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
                             animateOnce={true}
                         >	
                             <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>Skills</h2>

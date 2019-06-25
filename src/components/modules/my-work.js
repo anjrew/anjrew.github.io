@@ -25,7 +25,7 @@ class MyWork extends React.Component {
                         width='100%'
                         placeContent={this.props.mobileApp ? 'center' :'center flex-start'}>
                         <ScrollAnimation
-                            animateIn="fadeInLeft"
+                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true}
                         >	
                             <h2 style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>My Work</h2>
@@ -34,6 +34,7 @@ class MyWork extends React.Component {
                                 alignItems={this.props.mobileApp ? 'center' :'start'}>
                                 <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
                                 >Check out my code on  <a
+                                        style={{ backgroundColor:"white"}}
                                         className='link-button'
                                         href='https://github.com/earyzhe'
                                     >GitHub</a> and see my projects below.</p> 
@@ -57,7 +58,6 @@ class MyWork extends React.Component {
                                     <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
 
                                     <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
-  
                                 </Wrap>;
                             </Column>
                         </ScrollAnimation>

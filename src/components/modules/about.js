@@ -23,8 +23,8 @@ class About extends React.Component {
                         width={this.props.mobileApp ? '100%' : '60%'}
                         placeContent={this.props.mobileApp ? 'center':'center flex-start'}>
                         <ScrollAnimation
-                            animateIn="fadeInLeft"
-                            animateOnce={true}
+                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
+                            animateOnce={true} 
                         >	
                             <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>About</h2>
                             <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
