@@ -34,7 +34,7 @@ class Contact extends React.Component {
                                     color: 'white',
                                     backgroundColor: 'black',
                                     margin: '20px 0px'
-								 }}
+                                }}
                                 >Get in touch</h1>
 										
                                 <a 

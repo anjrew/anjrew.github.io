@@ -13,8 +13,6 @@ import MyWork from '../components/modules/my-work';
 import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
 
-import { Container } from '../components/boxes/container';
-
 // PAGES
 
 class App extends React.Component{
@@ -39,7 +37,7 @@ class App extends React.Component{
         var blur = 1;
         var strength = this.props.mobileApp ? 1000 : 1000;
         if (windowWidth < 750 ){
-            blur = 8;
+            blur = 5;
             backGroundImage = '/assets/images/triple-me-for-mobile.png';
         } else {
             backGroundImage = '/assets/images/me-noeyes-4.png';

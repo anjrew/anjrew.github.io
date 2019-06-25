@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Row } from '../layout/row';
 import { Column } from '../layout/column';
