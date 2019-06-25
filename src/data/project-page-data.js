@@ -307,6 +307,26 @@ export const PlantSystemData = new ProjectPageData({
 			description: 'More plants :)',
 			name: 'Plants',
 			screenShot: false
+		}),
+		
+		//
+		new GalleryImageData({
+            imageUrl: '/assets/images/plant-system/IMG_7717.JPG',
+			description: 'Testing and calibrationg the sensor',
+			name: 'Sensor',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/plant-system/IMG_7718.JPG',
+			description: 'Mounting the transformer',
+			name: 'Transformer',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/plant-system/IMG_7719.JPG',
+			description: 'The board before',
+			name: 'Main Layout',
+			screenShot: false
         }),
     ]
 });
@@ -448,14 +468,20 @@ export const GoatstagramData = new ProjectPageData({
 			screenShot: false
 		}),
 		new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.59.46',
+			description: 'A radom pic of a funny goat.',
+			name: 'Goaty',
+			screenShot: false
+		}),
+		new GalleryImageData({
             imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.58.06.png',
-			description: 'An image.',
+			description: 'An image of a Goat',
 			name: 'Image',
 			screenShot: false
 		}),
 		new GalleryImageData({
             imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.58.56.png',
-			description: 'Comments.',
+			description: 'Comments section.',
 			name: 'Comments',
 			screenShot: false
 		}),

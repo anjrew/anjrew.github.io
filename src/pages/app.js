@@ -87,7 +87,6 @@ class App extends React.Component{
                         <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>
 
-
                     <CSSTransition 
                         key={transitionKey} 
                         in={!!this.props.showImage}
@@ -136,7 +135,6 @@ class App extends React.Component{
                             <Container
                                 backgroundColor='white'
                                 paddin='30px'>
-
                                 <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
                                 <p>{this.props.currentImage && this.props.currentImage.description}</p>
                             </Container>
