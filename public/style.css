@@ -280,27 +280,46 @@ input[type="text"]:hover,  input[type="password"]:hover, input[type="email"]:hov
     }
   }
 
-.shift-enter {
+/* Right */
+.shiftRight-enter {
     animation-delay: 1ms;
 	transform: translateX(-100vw);
 	transition: all 100ms ease-in;
 	opacity: 0;
 }
-
-.shift-enter-active {
+.shiftRight-enter-active {
     transform: translateX(-100vw);
 	transition: all 100ms ease-in;
 }
-
-.shift-exit {
+.shiftRight-exit {
     animation-delay: 1ms;
 	transform: translateX(0px);
 	transition: all 100ms ease-in;
 	opacity: 0;
 }
-
-.shift-exit-active {
+.shiftRight-exit-active {
     transform: translateX(100vw);
+	transition: all 100ms ease-in;
+}
+/* Left */
+.shiftLeft-enter {
+    animation-delay: 1ms;
+	transform: translateX(100vw);
+	transition: all 100ms ease-in;
+	opacity: 0;
+}
+.shiftLeft-enter-active {
+    transform: translateX(100vw);
+	transition: all 100ms ease-in;
+}
+.shiftLeft-exit {
+    animation-delay: 1ms;
+	transform: translateX(0px);
+	transition: all 100ms ease-in;
+	opacity: 0;
+}
+.shiftLeft-exit-active {
+    transform: translateX(-100vw);
 	transition: all 100ms ease-in;
 }
 

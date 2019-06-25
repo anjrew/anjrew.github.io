@@ -55,21 +55,24 @@ export const Action = {
         }	
         return {
             type: "SHOW_PROJECT",
-            project: data
+            project: data,
+            direction: "BOTTOM"
         };
     },
     nextImage(image){
         var nextImage = checkPageDataVsImage(pageData, image, 1);
         return {
             type: "PREPARE_NEXT_IMAGE",
-            image: nextImage
+            image: nextImage,
+            direction: "shiftRight"
         };
     },
     previousImage(image){
         var previousImage = checkPageDataVsImage(pageData, image, -1);
         return {
             type: "PREPARE_NEXT_IMAGE",
-            image: previousImage
+            image: previousImage,
+            direction: "shiftLeft"
         };
     },
     showImage: function(image){

@@ -32,13 +32,15 @@ export default function reducer(state = {}, action) {
                     ...state,
                     showImage: false,
                     nextImage: null,
-                    currentImage: null
+                    currentImage: null,
+                    nextDirection: null
                 };
             } else {
                 return {
                     ...state,
                     showImage: false,
                     nextImage: action.image,
+                    nextDirection: action.direction
                 };
             }
             
@@ -47,7 +49,9 @@ export default function reducer(state = {}, action) {
                 ...state,
                 currentImage: state.nextImage,
                 showImage: true,
-                nextImage: null
+                nextImage: null,
+                direction: state.nextDirection,
+                nextDirection: null
             };
         default:
             return state;

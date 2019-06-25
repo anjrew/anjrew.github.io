@@ -58,11 +58,9 @@ class App extends React.Component{
             width: 'auto',
             height: 'calc(80% - 100px)',
         };
+
 		
-        const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
-        const imageKey = this.props.currentImage ? this.props.currentImage.imageUrl : '';
-		
-        console.log('Show image?', this.props.showImage,'');
+        console.log(this.props.direction);
 
         return ( 
             <div style={{ maxHeight: '100vh'}}>
@@ -135,7 +133,7 @@ class App extends React.Component{
                                     onEntering={console.log('onEntering')}
                                     onExit={console.log('on exit')}
                                     onExiting={console.log('on exiting')}
-                                    classNames="shift" 
+                                    classNames={this.props.direction} 
                                     unmountOnExit>
                                     <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 </CSSTransition>
@@ -158,8 +156,6 @@ class App extends React.Component{
                             </Container>
                         </Column>
                     </CSSTransition>
-
-        
                     <Overlay in={!!this.props.showProject || !!this.props.currentImage} />
                 </Parallax>
             </div>
@@ -183,7 +179,8 @@ const mapStateToProps = state => {
         mobileApp: state.mobileApp,
         currentImage: state.currentImage,
         nextImage: state.nextImage,
-        showImage: state.showImage
+        showImage: state.showImage,
+        direction: state.direction
     };
 };
 
