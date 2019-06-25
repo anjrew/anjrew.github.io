@@ -24,7 +24,7 @@ const pageData = {
 // All aJax requests will go from this file
 export const Action = {
     showProject: function(projectName){
-        // console.log('The project name in the action is ', projectName);
+        console.log('The project name in the action is ', projectName);
         var data = {};
         switch(projectName){
             case 'Dial In':
@@ -62,18 +62,19 @@ export const Action = {
     nextImage(image){
         var nextImage = checkPageDataVsImage(pageData, image, 1);
         return {
-            type: "SHOW_IMAGE",
+            type: "PREPARE_NEXT_IMAGE",
             image: nextImage
         };
     },
     previousImage(image){
         var previousImage = checkPageDataVsImage(pageData, image, -1);
         return {
-            type: "SHOW_IMAGE",
+            type: "PREPARE_NEXT_IMAGE",
             image: previousImage
         };
     },
     showImage: function(image){
+        console.log('trying to show image', image);
         return {
             type: "SHOW_IMAGE",
             image: image
@@ -95,6 +96,11 @@ export const Action = {
             type: "SET_APP_SIZE",
             mobileApp: widowWidth < 750,
             smallScreen: widowWidth < 1020
+        };
+    },
+    renderNext(){
+        return {
+            type: "RENDER_NEXT_IMAGE"
         };
     }
 };

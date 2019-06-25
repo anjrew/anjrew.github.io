@@ -154,7 +154,7 @@ export const DialInData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37',
+            imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37.png',
 			description: 'Options menu.',
 			screenShot: true,
 			name: 'Options menu',

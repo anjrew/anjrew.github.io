@@ -15,6 +15,7 @@ import Overlay from '../components/graphics/overlay';
 import { Column } from '../components/layout/column';
 import { Row } from '../components/layout/row';
 import BarrierDismissable from '../components/graphics/barrier-dismissable';
+import { Container } from '../components/boxes/container';
 // PAGES
 
 class App extends React.Component{
@@ -55,7 +56,7 @@ class App extends React.Component{
             objectFit: 'cover',
             maxWidth: 'calc(90% - 300px)',
             width: 'auto',
-            height: 'calc(80% - 30px)',
+            height: 'calc(80% - 100px)',
         };
 		
         const transitionKey = this.props.currentImage ? this.props.currentImage.name : '';
@@ -89,9 +90,10 @@ class App extends React.Component{
 
                     <CSSTransition 
                         key={transitionKey} 
-                        in={!!this.props.currentImage} 
-                        timeout={300} 
-                        classNames="scale" 
+                        in={!!this.props.showImage}
+                        onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
+                        timeout={400} 
+                        classNames="fade" 
                         unmountOnExit>
                         <Column
                             position={'fixed'}
@@ -104,16 +106,13 @@ class App extends React.Component{
                             onClick={() => {
                                 console.log('dismissing');
                                 this.props.dispatch(action.dismissImage());
-							
                             }}>
                             <Row
-                                height='unset'>
+                                height='calc(80% - 100px)'>
                                 <div
                                     onClick={(e) => {
-                                        console.log('prev', e);
                                         e.preventDefault();
                                         e.stopPropagation();
-
                                         this.props.dispatch(action.previousImage(this.props.currentImage));}
                                     }
                                 	>
@@ -125,7 +124,6 @@ class App extends React.Component{
                                 <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 <div
                                     onClick={(e) => {
-                                        console.log('next', e);
                                         e.preventDefault();
                                         e.stopPropagation();
                                         this.props.dispatch(action.nextImage(this.props.currentImage));}
@@ -135,8 +133,13 @@ class App extends React.Component{
                                         style={arrowStyle}
                                     /></div>
                             </Row>
-                            <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
-                            <p>{this.props.currentImage && this.props.currentImage.description}</p>
+                            <Container
+                                backgroundColor='white'
+                                paddin='30px'>
+
+                                <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
+                                <p>{this.props.currentImage && this.props.currentImage.description}</p>
+                            </Container>
                         </Column>
                     </CSSTransition>
 
@@ -162,7 +165,9 @@ const mapStateToProps = state => {
     return {
         showProject: state.showProject,
         mobileApp: state.mobileApp,
-        currentImage: state.currentImage
+        currentImage: state.currentImage,
+        nextImage: state.nextImage,
+        showImage: state.showImage
     };
 };
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 export default function reducer(state = {}, action) {
-    // console.log('IN reducer with action ', action, ' and state ', state);
+    console.log('IN reducer with action ', action, ' and state ', state);
 
     switch (action.type) {
         case "SHOW_PROJECT":
@@ -17,11 +17,26 @@ export default function reducer(state = {}, action) {
             return { 
                 ...state, 
                 currentImage: action.image,
+                showImage: true
             };
         case "DISSMISS_IMAGE":
             return { 
                 ...state, 
-                currentImage: null,
+                showImage: false,
+                currentImage: null
+            };
+        case "PREPARE_NEXT_IMAGE":
+            return {
+                ...state,
+                showImage: false,
+                nextImage: action.image,
+            };
+        case "RENDER_NEXT_IMAGE":
+            return {
+                ...state,
+                currentImage: state.nextImage,
+                showImage: true,
+                nextImage: null
             };
         default:
             return state;
