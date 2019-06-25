@@ -436,9 +436,29 @@ export const GoatstagramData = new ProjectPageData({
     ],
     screenShots: [
         new GalleryImageData({
-            imageUrl: '/assets/images/goatstagram.jpg',
-            description: 'Coolio Goat'
-        }),
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.55.54.png',
+			description: 'The main page',
+			name: 'Main page',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.56.56.png',
+			description: 'Error propmt on no file selected',
+			name: 'Main page',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.58.06.png',
+			description: 'An image.',
+			name: 'Image',
+			screenShot: false
+		}),
+		new GalleryImageData({
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.58.56.png',
+			description: 'Comments.',
+			name: 'Comments',
+			screenShot: false
+		}),
     ]
 });
 
