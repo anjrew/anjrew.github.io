@@ -86,9 +86,6 @@ class App extends React.Component{
                         <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>
 
-                    {/* <BarrierDismissable 
-                        in={!!this.props.currentImage}
-                        dismiss=/> */}
 
                     <CSSTransition 
                         key={transitionKey} 
@@ -113,7 +110,10 @@ class App extends React.Component{
                                 height='unset'>
                                 <div
                                     onClick={(e) => {
+                                        console.log('prev', e);
                                         e.preventDefault();
+                                        e.stopPropagation();
+
                                         this.props.dispatch(action.previousImage(this.props.currentImage));}
                                     }
                                 	>
@@ -125,7 +125,9 @@ class App extends React.Component{
                                 <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 <div
                                     onClick={(e) => {
+                                        console.log('next', e);
                                         e.preventDefault();
+                                        e.stopPropagation();
                                         this.props.dispatch(action.nextImage(this.props.currentImage));}
                                     }
                                 ><img src="/assets/icons/right-arrow.png"
