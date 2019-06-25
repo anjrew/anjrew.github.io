@@ -42,9 +42,7 @@ class ProjectPage extends React.Component{
                 }} src={data.logoUrl}/>
             </div>;
         }
-		
-        console.log('The props here are ',  this.props);
-		
+				
         if (data){
             return ( 
                 <BrowserRouter>
@@ -174,7 +172,6 @@ class ProjectPage extends React.Component{
 }
 
 const mapStateToProps = state => {
-    console.log('mapStateToProps in project page is', state);
     return {
         pageToRender: state.pageToRender,
         smallScreen: state.smallScreen,

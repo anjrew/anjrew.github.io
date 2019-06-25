@@ -60,26 +60,17 @@ export const Action = {
         };
     },
     nextImage(image){
-        // for (const key in pageData) {
-        //     if (image.project == pageData[key].title){
-        //         var currentIndex = pageData[key].screenShots.findIndex((element) => { checkImageData(element, image); });
-        //         if (currentIndex >= 0) {
-        //             nextImage = pageData[key].screenShots[currentIndex + 1];
-        //             break;
-        //         }
-        //     }
-        // }
-        var nextImage = checkPageDataVsImage(pageData, image);
-        console.log('Next image', nextImage);
+        var nextImage = checkPageDataVsImage(pageData, image, 1);
         return {
-            type: "NEXT_IMAGE",
+            type: "SHOW_IMAGE",
             image: nextImage
         };
     },
     previousImage(image){
+        var previousImage = checkPageDataVsImage(pageData, image, -1);
         return {
-            type: "PREVIOUS_IMAGE",
-            image: image
+            type: "SHOW_IMAGE",
+            image: previousImage
         };
     },
     showImage: function(image){
@@ -113,18 +104,15 @@ export const ActionIds = {
 };
 
 function checkImageData(element ,imageData, ) {
-	console.log('checking element' ,element.name, 'vs', imageData.name);
-	console.log(imageData.name == element.name);
     return imageData.name == element.name;
 }
 
-function checkPageDataVsImage(pageData, image){
+function checkPageDataVsImage(pageData, image, returnDifference){
     for (const key in pageData) {
         if (image.project == pageData[key].title){
             var currentIndex = pageData[key].screenShots.findIndex((element) => checkImageData(element, image));
-            console.log('The current index is ', currentIndex);
             if (currentIndex >= 0) {
-                return pageData[key].screenShots[currentIndex + 1];
+                return pageData[key].screenShots[currentIndex + returnDifference];
             }
         }
     }  

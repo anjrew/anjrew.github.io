@@ -104,19 +104,34 @@ class App extends React.Component{
                             height='100vh'
                             zIndex='800'
                             backgroundColor= 'rgba(0,0,0,0.50)'
-                            onClick={() => this.props.dispatch(action.dismissImage())}>
+                            onClick={() => {
+                                console.log('dismissing');
+                                this.props.dispatch(action.dismissImage());
+							
+                            }}>
                             <Row
                                 height='unset'>
-                                <img 
-                                    src="/assets/icons/left-arrow.png" 
-                                    alt='left-arrow' 
-                                    style={arrowStyle}
-                                    onClick={() => this.props.dispatch(action.previousImage(this.props.currentImage))}/>
+                                <div
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        this.props.dispatch(action.previousImage(this.props.currentImage));}
+                                    }
+                                	>
+                                    <img 
+                                        src="/assets/icons/left-arrow.png"      
+                                        alt='left-arrow' 
+                                        style={arrowStyle}
+                                    	/></div>
                                 <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
-                                <img src="/assets/icons/right-arrow.png"
-                                    alt='right-arrow' 
-                                    style={arrowStyle}
-                                    onClick={() => this.props.dispatch(action.nextImage(this.props.currentImage))}/>
+                                <div
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        this.props.dispatch(action.nextImage(this.props.currentImage));}
+                                    }
+                                ><img src="/assets/icons/right-arrow.png"
+                                        alt='right-arrow' 
+                                        style={arrowStyle}
+                                    /></div>
                             </Row>
                             <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
                             <p>{this.props.currentImage && this.props.currentImage.description}</p>
