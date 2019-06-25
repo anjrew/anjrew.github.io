@@ -30,7 +30,7 @@ class MyWork extends React.Component {
                         >	
                             <h2 style={{ 
                                 textAlign: this.props.mobileApp ? 'center': 'start',
-                                backgroundColor: 'rgba(0,0,0,0)'					 
+                                backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'					 
                             }}>My Work</h2>
 
                             <Column

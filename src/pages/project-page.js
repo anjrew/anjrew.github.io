@@ -130,7 +130,9 @@ class ProjectPage extends React.Component{
                                 margin={sectionMargin}
                             >
                             	<h3>More info</h3> 
-                                <Wrap>
+                                <Wrap
+                                    alignItems={ this.props.smallScreen ? 'center' : 'start' }
+                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
 								    { data.links.map((link) => {
 								        return <LinkIcon key={link.href} data={link} />;  
 								    })

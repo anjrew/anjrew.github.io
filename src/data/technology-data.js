@@ -132,4 +132,10 @@ export const vueLink = new Technology({
     href: 'https://vuejs.org/'
 });
 
+export const redisLink = new Technology({
+    imageUrl: '/assets/images/redis-logo.png',
+    name: 'Redis',
+    href: 'https://redis.io/'
+});
+
 

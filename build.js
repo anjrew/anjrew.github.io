@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const conf = {
     entry: ["@babel/polyfill", __dirname + '/src/start.js'],
@@ -14,6 +14,9 @@ const conf = {
     },
     plugins: [
         new ExtractTextPlugin('styles.css'),
+        new HtmlWebpackPlugin({
+            favicon: "./public/assets/favicon.png"
+        })
     ],
     mode: require.main == module ? 'production' : 'development',
     optimization: require.main == module ? {
