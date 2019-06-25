@@ -91,7 +91,7 @@ class App extends React.Component{
                     </CSSTransition>
 
                     <CSSTransition 
-                        key={transitionKey} 
+                        key={'carosel'} 
                         in={!!this.props.nextImage || !!this.props.currentImage}
                         onExited={() => this.props.dispatch(action.renderNext()) }
                         timeout={400} 
@@ -128,7 +128,7 @@ class App extends React.Component{
                                     in={!!this.props.showImage}
                                     onExited={() => this.props.nextImage && this.props.dispatch(action.renderNext())}
                                     timeout={400} 
-                                    classNames="Scale" 
+                                    classNames="fade" 
                                     unmountOnExit>
                                     <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 </CSSTransition>
