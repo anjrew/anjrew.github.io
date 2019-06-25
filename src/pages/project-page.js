@@ -34,6 +34,27 @@ class ProjectPage extends React.Component{
         const sectionMargin =  margin + 'px';
         console.log('This is a small screen ',this.props.smallScreen);
 		
+
+        const dismissButton =  <Container
+            alignSelf={ this.props.smallScreen ? 'center' : 'start' }
+            alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
+            height='100%'
+            flexGrow='1'
+            placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
+            <button onClick={() => this.dismiss(history)}>X</button>
+        </Container>;
+		
+        const logo = <div >
+            <img style={{
+                objectFit: 'cover',
+                height: '350px',
+                width: '350px'
+            }} src={data.logoUrl}/>
+        </div>;
+		
+
+
+		
         if (data){
             return ( 
                 <BrowserRouter>
@@ -70,6 +91,7 @@ class ProjectPage extends React.Component{
 											    }}
 											>{data.title}</h1>
                                             }
+                                            {this.props.smallScreen && data.logoUrl && logo }
                                             <p 
                                                 style={{ 
                                                     textAlign: this.props.smallScreen ? 'center' : 'start' 
@@ -77,25 +99,10 @@ class ProjectPage extends React.Component{
                                             >{data.description}</p>
 	
                                         </Column>
-                                        <Padding padding='30px'/>
-                                        { data.logoUrl &&
-											<div >
-											    <img style={{
-											        objectFit: 'cover',
-											        height: '350px',
-											        width: '350px'
-											    }} src={data.logoUrl}/>
-											</div>
-                                        }
-									
-                                        <Container
-                                            alignSelf={ this.props.smallScreen ? 'center' : 'start' }
-                                            alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
-                                            height='100%'
-                                            flexGrow='1'
-                                            placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
-                                            <button onClick={() => this.dismiss(history)}>X</button>
-                                        </Container>
+
+                                        {!this.props.smallScreen && data.logoUrl && <Padding padding='30px'/>}
+                                        {!this.props.smallScreen && data.logoUrl && logo }
+                                        {!this.props.smallScreen && dismissButton}
                                     </Container>
 	
 						
