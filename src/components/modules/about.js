@@ -6,12 +6,17 @@ import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Diamensions from '../../data/diamensions';
 import { connect } from 'react-redux';
+import { Action as action } from '../../react_utils/redux/actions';
 
 class About extends React.Component {
 
     render() {
 
-        const linkStyle = {textDecoration: 'underline', padding: '0px' , margin: ' 0px 10px'};
+        const linkStyle = {
+            textDecoration: 'underline', 
+            padding: '0px' , 
+            margin: ' 0px 10px',
+            backgroundColor: 'rgba(0,0,0,0)'};
 
         return (
             <SafeArea>
@@ -33,22 +38,31 @@ class About extends React.Component {
 								I am a Berlin-based software developer. 
                             </p>
                             <br/>
-                            	<p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+	                          	<p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
 								This page is about me and what I do. 
 								So check out my 
-                                <button style={linkStyle}> Skills </button> and <button style={linkStyle}>Work</button> below if ya want. 
+                                <button 
+                                    style={linkStyle}
+                                    onClick={ () => this.props.scrollToRef('skills')}> Skills </button> 
+								and 
+                                <button 
+                                    style={linkStyle}
+                                    onClick={() => this.props.scrollToRef('myWork')}
+                                >Work</button> below if ya want. 
                             </p>
 
                             <br/>
                             <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
 							I love intuitive user experiences: pages that load fast, are lag free and responsive to all device sizes.
-
                             </p>
                             <br/>
 
                             <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
 								Feel free to 
-                                <button style={linkStyle}>Contact</button>
+                                <button 
+                                    style={linkStyle}
+                                    onClick={() => this.props.scrollToRef('contact')}
+                                >Contact</button>
 								me about work,
 								general chit-chat, and lava lamp queries.</p>
                         </ScrollAnimation>

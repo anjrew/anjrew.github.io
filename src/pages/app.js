@@ -14,6 +14,7 @@ import MyWork from '../components/modules/my-work';
 import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
 import Carosel from '../components/modules/carosel';
+import Footer from '../components/modules/footer';
 
 // PAGES
 
@@ -30,11 +31,15 @@ class App extends React.Component{
         this.skillsRef = React.createRef();
         this.myworkRef = React.createRef();
         this.contactRef = React.createRef();
+        this.scrollToRef = this.scrollToRef.bind(this);
+		
+        console.log('My work  ref is ', this.myworkRef);
     }
 	
 
     render(){
         const windowWidth = window.innerWidth;
+        const props = this.props;
         var backGroundImage = '';
         var blur = 1;
         var strength = this.props.mobileApp ? 1000 : 1000;
@@ -42,7 +47,7 @@ class App extends React.Component{
             blur = 5;
             backGroundImage = '/assets/images/triple-me-for-mobile.png';
         } else {
-            backGroundImage = '/assets/images/me-noeyes-4.png';
+            backGroundImage = '/assets/images/me-noeyes-3.png';
         }
 		
         return ( 
@@ -55,13 +60,15 @@ class App extends React.Component{
 
                     <Header referance={this.headerRef} />
 
-                    <About referance={this.aboutRef}/>
+                    <About referance={this.aboutRef} scrollToRef={this.scrollToRef}/>
 
-                    <Skills referance={this.skillsRef}/>
+                    <Skills referance={this.skillsRef} />
 
                     <MyWork referance={this.myworkRef}/>
 
                     <Contact referance={this.contactRef}/>
+
+                    <Footer scrollToRef={this.scrollToRef}/>
                    
                     <CSSTransition
                         in={!!this.props.showProject}
@@ -86,6 +93,32 @@ class App extends React.Component{
             this.props.dispatch(action.showProject(location));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
+        console.log('My work  ref is ', this.myworkRef);
+
+    }
+	
+    scrollToRef(section){
+        var ref;
+        switch(section) {
+            case 'header':
+                ref = this.headerRef;
+                break;
+            case 'about':
+                ref = this.aboutRef;
+                break;
+            case 'skills':
+                ref = this.skillsRef;
+                break;
+            case 'myWork':
+                ref = this.myworkRef;
+                break;
+            case 'contact':
+                ref = this.contactRef;
+                break;
+            default:
+                break;
+        }
+        window.scrollTo({ top: ref.current.offsetTop, behavior: 'smooth' });
     }
 }
 
