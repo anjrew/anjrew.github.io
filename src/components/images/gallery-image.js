@@ -40,7 +40,7 @@ class GalleryImage extends React.Component{
             transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9) translateY(-5%)': 'scale(1)',
         };
 		
-        const words = data.name.split(' ');
+        const words = data.name ? data.name.split(' ') : [];
         var biggestWordLength = 0; 
         for (let index = 0; index < words.length; index++) {
             const word = words[index];
@@ -49,7 +49,7 @@ class GalleryImage extends React.Component{
             }
         }
 		
-        var fontSize = data.name.length > 15 || biggestWordLength > 5 ? '50px' : '80px';
+        var fontSize = data .name ? data.name.length > 15 || biggestWordLength > 5 ? '50px' : '80px' : '0px';
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }

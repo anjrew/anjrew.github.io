@@ -128,7 +128,7 @@ class App extends React.Component{
                                         this.props.nextImage && this.props.dispatch(action.renderNext());
                                         console.log('onExited');}}
                                     timeout={480}
-                                    classNames={this.props.direction} 
+                                    classNames={this.props.direction || 'fade'} 
                                     unmountOnExit>
                                     <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
                                 </CSSTransition>
