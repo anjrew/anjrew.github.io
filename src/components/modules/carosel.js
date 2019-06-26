@@ -29,12 +29,9 @@ class Carosel extends React.Component{
 	
 
     render(){
-
         const arrowStyle = {
             padding: '10px',
             margin: '10px',
-            backgroundColor: 'white'
-
         };
         const imageStyle = {
             objectFit: 'cover',
@@ -72,7 +69,7 @@ class Carosel extends React.Component{
                         }
                     >
                         <img 
-                            src="/assets/icons/left-arrow.png"      
+                            src="/assets/icons/back-arrow-white.png"      
                             alt='left-arrow' 
                             style={arrowStyle}
                         /></div>
@@ -93,16 +90,16 @@ class Carosel extends React.Component{
                             e.stopPropagation();
                             this.props.dispatch(action.nextImage(this.props.currentImage));}
                         }
-                    ><img src="/assets/icons/right-arrow.png"
+                    ><img src="/assets/icons/right-arrow-white.png"
                             alt='right-arrow' 
                             style={arrowStyle}
                         /></div>
                 </Row>
                 <Container
-                    backgroundColor='white'
+                    // backgroundColor='white'
                     paddin='30px'>
-                    <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
-                    <p>{this.props.currentImage && this.props.currentImage.description}</p>
+                    <h3 style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.name}</h3>
+                    <p style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.description}</p>
                 </Container>
             </Column>
         </CSSTransition>;
