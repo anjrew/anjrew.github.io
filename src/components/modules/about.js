@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 class About extends React.Component {
 
     render() {
-
+        const props = this.props;
         const linkStyle = {
             textDecoration: 'underline', 
             padding: '0px' , 
@@ -20,47 +20,47 @@ class About extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    referance={this.props.referance}
+                    referance={props.referance}
                     margin={Diamensions.sectionMargin}
-                    placeContent={this.props.mobileApp ? 'center':`flex-center'`}
-                    alignItems={this.props.mobileApp ? 'center':`flex-center`}
+                    placeContent={props.mobileApp ? 'center':`flex-center'`}
+                    alignItems={props.mobileApp ? 'center':`flex-center`}
                 >
                     <Row
-                        width={this.props.mobileApp ? '100%' : '60%'}
-                        placeContent={this.props.mobileApp ? 'center':'center flex-start'}>
+                        width={props.mobileApp ? '100%' : '60%'}
+                        placeContent={props.mobileApp ? 'center':'center flex-start'}>
                         <ScrollAnimation
-                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
+                            animateIn={ props.mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true} 
                         >	
-                            <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>About</h2>
-                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+                            <h2 style={{ textAlign: props.mobileApp ? 'center':'start' }}>About</h2>
+                            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
 								I am a Berlin-based software developer. 
                             </p>
                             <br/>
-                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+                            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
 								This page is about me and what I do. 
 								So check out my 
                                 <button 
                                     style={linkStyle}
-                                    onClick={ () => this.props.scrollToRef('skills')}> Skills </button> 
+                                    onClick={ () => props.scrollToRef('skills')}> Skills </button> 
 								and 
                                 <button 
                                     style={linkStyle}
-                                    onClick={() => this.props.scrollToRef('myWork')}
+                                    onClick={() => props.scrollToRef('myWork')}
                                 >Work</button> below if ya want. 
                             </p>
 
                             <br/>
-                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+                            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
 							I love intuitive user experiences: pages that load fast, are lag free and responsive to all device sizes.
                             </p>
                             <br/>
 
-                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+                            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
 								Feel free to 
                                 <button 
                                     style={linkStyle}
-                                    onClick={() => this.props.scrollToRef('contact')}
+                                    onClick={() => props.scrollToRef('contact')}
                                 >Contact</button>
 								me about work,
 								general chit-chat, and lava lamp queries.</p>
