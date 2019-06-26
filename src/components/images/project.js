@@ -15,6 +15,8 @@ class ProjectImage extends React.Component{
     }
 	
     handleClick(history){
+		console.log('history in project',history);
+
         this.props.dispatch(action.showProject(this.props.name));
         history.push(`/${this.props.name}`);
     }

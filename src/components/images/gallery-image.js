@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route } from "react-router-dom";
 import { Action as action } from '../../react_utils/redux/actions';
 
 class GalleryImage extends React.Component{
@@ -20,7 +21,7 @@ class GalleryImage extends React.Component{
         const size = this.props.size || '300px';
         const width = size;
         const height = size;
-
+       
         const imageContainerStyle = {
             width: width, 
             height: height,
@@ -49,51 +50,54 @@ class GalleryImage extends React.Component{
             }
         }
 		
-        var fontSize = data .name ? data.name.length > 15 || biggestWordLength > 5 ? '50px' : '80px' : '0px';
+        var fontSize = data.name ? data.name.length > 15 || biggestWordLength > 5 ? '50px' : '80px' : '0px';
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
 
-        return (
-            <React.Fragment>
-                <div 
-                    style={imageContainerStyle}
-                    onMouseEnter={this.mouseOver} 
-                    onMouseLeave={this.mouseLeave }
-                    onClick={this.mouseClick}
+        return<React.Fragment>
+            <div 
+                style={imageContainerStyle}
+                onMouseEnter={this.mouseOver} 
+                onMouseLeave={this.mouseLeave }
+                onClick={this.mouseClick}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        placeContent: 'center center' ,
+                        width: width,
+                        height:'300px',
+                        position: 'absolute',
+                        zIndex:'10',
+                        alignSelf: 'center',
+                        padding: '10px'
+                    }}
                 >
-                    <div
-                        style={{
-                            display: 'flex',
-                            placeContent: 'center center' ,
-                            width: width,
-                            height:'300px',
-                            position: 'absolute',
-                            zIndex:'10',
+                    <h2 
+                        style={{  
+                            color: data.screenShot ? 'black' : 'white',
+                            textAlign: 'center',
+                            margin: '30px',
+                            fontSize: fontSize,
+                            transition: 'opacity 500ms',
+                            opacity: this.state.hoverImage ? 1 : 0,
                             alignSelf: 'center',
-                            padding: '10px'
+                            backgroundColor: 'rgba(0,0,0,0)',
                         }}
-                    >
-                        <h2 
-                            style={{  
-                                color: data.screenShot ? 'black' : 'white',
-                                textAlign: 'center',
-                                margin: '30px',
-                                fontSize: fontSize,
-                                transition: 'opacity 500ms',
-                                opacity: this.state.hoverImage ? 1 : 0,
-                                alignSelf: 'center',
-                                backgroundColor: 'rgba(0,0,0,0)',
-                            }}
-                            onMouseEnter={this.mouseOver} 
-                            onMouseLeave={this.mouseLeave }
-                            onClick={this.mouseClick}
-                        >{data && data.name}</h2>
-                    </div>
-                    <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
+                        onMouseEnter={this.mouseOver} 
+                        onMouseLeave={this.mouseLeave }
+                        onClick={() => { 
+                            console.log(history);
+                            this.mouseClick(history);}}
+                    >{data && data.name}</h2>;
+				
                 </div>
-            </React.Fragment>
-        );
+
+                <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
+            </div>
+        </React.Fragment>;
+
     }
 	
     mouseOver(){
@@ -102,7 +106,9 @@ class GalleryImage extends React.Component{
     mouseLeave(){
         this.setState({ hoverImage: false  }); 
     }
-    mouseClick(){
+    mouseClick(historythis){
+        console.log('history in image',historythis);
+
         if (!this.props.mobileApp) {
             this.props.dispatch(action.showImage(this.props.data));
         }

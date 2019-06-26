@@ -13,8 +13,6 @@ export default class LinkIcon extends React.Component{
         const data = this.props.data;
     
         const imageContainerStyle = {
-            // width: width, 
-            // height: height,
             height: '60px',
             margin: '3px',
             overflow: 'hidden',
