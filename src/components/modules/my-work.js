@@ -25,6 +25,7 @@ class MyWork extends React.Component {
                         width='100%'
                         placeContent={this.props.mobileApp ? 'center' :'center flex-start'}>
                         <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
                             animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true}
                         >	

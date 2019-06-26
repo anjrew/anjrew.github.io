@@ -20,6 +20,7 @@ class Header extends React.Component {
                     <Row
                         placeContent={'center flex-start'}>
                         <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >
@@ -30,6 +31,7 @@ class Header extends React.Component {
                     <Row
                         placeContent={'center flex-end'}>
                         <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
                             animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
                             animateOnce={true}
                         >

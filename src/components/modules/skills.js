@@ -50,6 +50,7 @@ class Skills extends React.Component {
                         width={mobileApp ? '100%' : '60%'}
                         placeContent={mobileApp ? 'center':`center flex-end`}>
                         <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
                             animateIn={mobileApp ? "fadeInUp" : "fadeInLeft"}
                             animateOnce={true}
                         >	

@@ -18,24 +18,28 @@ class Footer extends React.Component {
                     margin={'80' + 'px 0px'}
                 >
                     <ScrollAnimation
+                        initiallyVisible={this.props.mobileApp}
                         animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
                         animateOnce={true}>
                         <button onClick={() => this.props.scrollToRef('header')} >Home</button>
                     </ScrollAnimation>
 
                     <ScrollAnimation
+                        initiallyVisible={this.props.mobileApp}
                         animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
                         animateOnce={true}>
                         <button onClick={() => this.props.scrollToRef('about')} >About</button>
                     </ScrollAnimation>
 
                     <ScrollAnimation
+                        initiallyVisible={this.props.mobileApp}
                         animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
                         animateOnce={true}>
                         <button onClick={() => this.props.scrollToRef('skills')} >Skills</button>
                     </ScrollAnimation>
 
                     <ScrollAnimation
+                        initiallyVisible={this.props.mobileApp}
                         animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
                         animateOnce={true}>
                         <button onClick={() => this.props.scrollToRef('myWork')} >My Work</button>
