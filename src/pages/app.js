@@ -13,9 +13,8 @@ import Contact from '../components/modules//contact';
 import MyWork from '../components/modules/my-work';
 import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
-import { Column } from '../components/layout/column';
-import { Row } from '../components/layout/row';
-import { Container } from '../components/boxes/container';
+import Carosel from '../components/modules/carosel';
+
 // PAGES
 
 class App extends React.Component{
@@ -46,20 +45,6 @@ class App extends React.Component{
             backGroundImage = '/assets/images/me-noeyes-4.png';
         }
 		
-        const arrowStyle = {
-            padding: '10px',
-            margin: '10px',
-            backgroundColor: 'white'
-
-        };
-        const imageStyle = {
-            objectFit: 'cover',
-            maxWidth: 'calc(90% - 300px)',
-            width: 'auto',
-            height: 'calc(80% - 100px)',
-        };
-
-		
         console.log(this.props.direction);
 
         return ( 
@@ -88,69 +73,8 @@ class App extends React.Component{
                         <ProjectPage data={ this.props.showProject }/>
                     </CSSTransition>
 
-                    <CSSTransition 
-                        key={'carosel'} 
-                        in={!!this.props.nextImage || !!this.props.currentImage}
-                        onExited={() => this.props.dispatch(action.renderNext()) }
-                        timeout={400} 
-                        classNames="fade" 
-                        unmountOnExit>
-                        <Column
-                            position={'fixed'}
-                            top='0px'
-                            left='0px'
-                            width='100vw'
-                            height='100vh'
-                            zIndex='800'
-                            backgroundColor= 'rgba(0,0,0,0.80)'
-                            onClick={() => {
-                                console.log('dismissing');
-                                this.props.dispatch(action.dismissImage());
-                            }}>
-                            <Row
-                                height='calc(80% - 100px)'>
-                                <div
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                        this.props.dispatch(action.previousImage(this.props.currentImage));}
-                                    }
-                                	>
-                                    <img 
-                                        src="/assets/icons/left-arrow.png"      
-                                        alt='left-arrow' 
-                                        style={arrowStyle}
-                                    	/></div>
-                                <CSSTransition 
-                                    key={'key'} 
-                                    in={!!this.props.showImage}
-                                    onExited={() => {
-                                        this.props.nextImage && this.props.dispatch(action.renderNext());
-                                        console.log('onExited');}}
-                                    timeout={480}
-                                    classNames={this.props.direction || 'fade'} 
-                                    unmountOnExit>
-                                    <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
-                                </CSSTransition>
-                                <div
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                        this.props.dispatch(action.nextImage(this.props.currentImage));}
-                                    }
-                                ><img src="/assets/icons/right-arrow.png"
-                                        alt='right-arrow' 
-                                        style={arrowStyle}
-                                    /></div>
-                            </Row>
-                            <Container
-                                backgroundColor='white'
-                                paddin='30px'>
-                                <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
-                                <p>{this.props.currentImage && this.props.currentImage.description}</p>
-                            </Container>
-                        </Column>
-                    </CSSTransition>
+                    <Carosel/>
+                    
                     <Overlay in={!!this.props.showProject || !!this.props.currentImage} />
                 </Parallax>
             </div>

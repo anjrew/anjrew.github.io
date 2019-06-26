@@ -1,0 +1,104 @@
+
+import React from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { connect } from 'react-redux';
+import { Action as action } from '../../react_utils/redux/actions';
+
+// Components
+import { Column } from '../layout/column';
+import { Row } from '../layout/row';
+import { Container } from '../boxes/container';
+
+class Carosel extends React.Component{
+
+    render(){
+
+        const arrowStyle = {
+            padding: '10px',
+            margin: '10px',
+            backgroundColor: 'white'
+
+        };
+        const imageStyle = {
+            objectFit: 'cover',
+            maxWidth: 'calc(90% - 300px)',
+            width: 'auto',
+            height: 'calc(80% - 100px)',
+        };
+        return <CSSTransition 
+            key={'carosel'} 
+            in={!!this.props.nextImage || !!this.props.currentImage}
+            onExited={() => this.props.dispatch(action.renderNext()) }
+            timeout={400} 
+            classNames="fade" 
+            unmountOnExit>
+            <Column
+                position={'fixed'}
+                top='0px'
+                left='0px'
+                width='100vw'
+                height='100vh'
+                zIndex='800'
+                backgroundColor= 'rgba(0,0,0,0.80)'
+                onClick={() => {
+                    console.log('dismissing');
+                    this.props.dispatch(action.dismissImage());
+                }}>
+                <Row
+                    height='calc(80% - 100px)'>
+                    <div
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.props.dispatch(action.previousImage(this.props.currentImage));}
+                        }
+                    >
+                        <img 
+                            src="/assets/icons/left-arrow.png"      
+                            alt='left-arrow' 
+                            style={arrowStyle}
+                        /></div>
+                    <CSSTransition 
+                        key={'key'} 
+                        in={!!this.props.showImage}
+                        onExited={() => {
+                            this.props.nextImage && this.props.dispatch(action.renderNext());
+                            console.log('onExited');}}
+                        timeout={480}
+                        classNames={this.props.direction || 'fade'} 
+                        unmountOnExit>
+                        <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
+                    </CSSTransition>
+                    <div
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.props.dispatch(action.nextImage(this.props.currentImage));}
+                        }
+                    ><img src="/assets/icons/right-arrow.png"
+                            alt='right-arrow' 
+                            style={arrowStyle}
+                        /></div>
+                </Row>
+                <Container
+                    backgroundColor='white'
+                    paddin='30px'>
+                    <h3>{this.props.currentImage && this.props.currentImage.name}</h3>
+                    <p>{this.props.currentImage && this.props.currentImage.description}</p>
+                </Container>
+            </Column>
+        </CSSTransition>;
+    }
+}
+
+const mapStateToProps = state => {
+
+    return {
+        currentImage: state.currentImage,
+        nextImage: state.nextImage,
+        showImage: state.showImage,
+        direction: state.direction
+    };
+};
+
+export default connect(mapStateToProps)(Carosel);
