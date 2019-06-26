@@ -3,7 +3,6 @@ import React from 'react';
 export class Column extends React.Component{
     
     render(){
-        console.log('this.props.onKeyDown', this.props.onKeyDown);
         return (
             <div 
                 ref={ this.props.referance } 

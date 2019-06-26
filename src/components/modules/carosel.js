@@ -64,11 +64,10 @@ class Carosel extends React.Component{
                     height='calc(80% - 100px)'>
                     <div
                         onClick={(e) => {
-                            if (this.notArrowKey(e.keyCode)){
-                                e.preventDefault();
-                                e.stopPropagation();
-                                this.props.dispatch(action.previousImage(this.props.currentImage));
-                            } else { this.handleKeyDown(e); } 
+                            console.log('The keyCode is ', e, 'and result ', this.notArrowKey(e.keyCode));
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.props.dispatch(action.previousImage(this.props.currentImage));
                         }}
                     >
                         <img 
@@ -89,20 +88,16 @@ class Carosel extends React.Component{
                             alt='image' 
                             style={imageStyle}
                             onClick={(e) => {
-                                if (this.notArrowKey(e.keyCode)){
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                } else { this.handleKeyDown(e); } 
+                                e.preventDefault();
+                                e.stopPropagation();
                             }}/>
                     </CSSTransition>
                     <div
                         onClick={(e) => {
-                            if (this.notArrowKey(e.keyCode)){
-                                e.preventDefault();
-                                e.stopPropagation();
-                                this.props.dispatch(action.nextImage(this.props.currentImage));
-                            } else { this.handleKeyDown(e); } }
-                        }
+                            e.preventDefault();
+                            e.stopPropagation();
+                            this.props.dispatch(action.nextImage(this.props.currentImage));
+                        }}
                     ><img src="/assets/icons/right-arrow-white.png"
                             alt='right-arrow' 
                             style={arrowStyle}
