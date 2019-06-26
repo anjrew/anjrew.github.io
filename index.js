@@ -104,9 +104,9 @@ app.get('*', function(req, res) {
 });
 
 if (require.main === module) {
-    server.listen(8080, function() {
-		console.log("I'm listening ON 8080.");
-	});
+    server.listen(process.env.PORT || 8080, function() {
+        console.log("I'm listening ON 8080.");
+    });
 }
 
 
