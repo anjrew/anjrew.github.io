@@ -14,6 +14,7 @@ class Carosel extends React.Component{
     constructor(){
         super();
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.notArrowKey = this.notArrowKey.bind(this);
     }
 	
     handleKeyDown(e) {
@@ -63,10 +64,12 @@ class Carosel extends React.Component{
                     height='calc(80% - 100px)'>
                     <div
                         onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            this.props.dispatch(action.previousImage(this.props.currentImage));}
-                        }
+                            if (this.notArrowKey(e.keyCode)){
+                                e.preventDefault();
+                                e.stopPropagation();
+                                this.props.dispatch(action.previousImage(this.props.currentImage));
+                            } else { this.handleKeyDown(e); } 
+                        }}
                     >
                         <img 
                             src="/assets/icons/back-arrow-white.png"      
@@ -86,14 +89,19 @@ class Carosel extends React.Component{
                             alt='image' 
                             style={imageStyle}
                             onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();}}/>
+                                if (this.notArrowKey(e.keyCode)){
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                } else { this.handleKeyDown(e); } 
+                            }}/>
                     </CSSTransition>
                     <div
                         onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            this.props.dispatch(action.nextImage(this.props.currentImage));}
+                            if (this.notArrowKey(e.keyCode)){
+                                e.preventDefault();
+                                e.stopPropagation();
+                                this.props.dispatch(action.nextImage(this.props.currentImage));
+                            } else { this.handleKeyDown(e); } }
                         }
                     ><img src="/assets/icons/right-arrow-white.png"
                             alt='right-arrow' 
@@ -108,6 +116,10 @@ class Carosel extends React.Component{
                 </Container>
             </Column>
         </CSSTransition>;
+    }
+	
+    notArrowKey(keyCode) {
+        return keyCode === 39 || keyCode === 37;
     }
 }
 

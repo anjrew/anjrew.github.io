@@ -41,6 +41,20 @@ class MyWork extends React.Component {
                                         className='link-button'
                                         href='https://github.com/earyzhe'
                                     >GitHub</a> and see my projects below.</p> 
+
+
+                                <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                                >If you are currently using any of my products;
+								with your help, I can keep them alive and updated! I run on caffine...</p>
+                                <a 
+                                    href= "https://www.buymeacoffee.com/earyzhe" 
+                                    rel="nofollow">
+                                    <img 
+                                        src="/assets/images/buy-me-coffee-button.png" 
+                                        alt="Donate" 
+                                        style={{margin: '20px'}}
+                                    />
+                                </a>
                                 <Wrap
                                     placeContent={this.props.mobileApp ? 'center' : 'flex-start'}>
 									
@@ -62,18 +76,7 @@ class MyWork extends React.Component {
 
                                     <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
                                 </Wrap>
-                                <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
-                                >If you are currently using any of my products;
-								with your help, I can keep them alive and updated! I run on caffine</p>
-                                <a 
-                                    href= "https://www.buymeacoffee.com/earyzhe" 
-                                    rel="nofollow">
-                                    <img 
-                                        src="/assets/images/buy-me-coffee-button.png" 
-                                        alt="Donate" 
-                                        style={{margin: '20px'}}
-                                    />
-                                </a>
+                                
 		
 		
                             </Column>
