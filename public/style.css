@@ -174,7 +174,8 @@ input[type="text"]:hover,  input[type="password"]:hover, input[type="email"]:hov
 
 .fade-enter {
     animation-delay: 1ms;
-    opacity: 0.01;
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
 }
 
 .fade-enter.fade-enter-active {
@@ -184,7 +185,9 @@ input[type="text"]:hover,  input[type="password"]:hover, input[type="email"]:hov
 
 .fade-exit {
     animation-delay: 1ms;
-    opacity: 1;
+	opacity: 1;
+	transition: opacity 300ms ease-in;
+
 }
 
 .fade-exit.fade-exit-active {

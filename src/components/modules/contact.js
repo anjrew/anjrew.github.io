@@ -42,13 +42,15 @@ class Contact extends React.Component {
                                     style={{ alignSelf: this.props.mobileApp ? 'center' : 'flex-end', color: 'white', padding: '10px'}}
                                     className='link-button' 
                                     href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >LinkedIn</a>
                                 <LinkButton 
                                     color='white'
                                     alignSelf= {this.props.mobileApp ? 'center' : 'flex-end'}
                                     handleClick={() => { 
-                                        console.log('Trying to open email client');
-                                        window.location.href = "mailto:earyzhe@gmail.com"; }}
+                                        window.location.href = "mailto:earyzhe@gmail.com"; 
+                                    }}
                                 >earyzhe@gmail.com</LinkButton> 
                             </Column>
                         </Row>

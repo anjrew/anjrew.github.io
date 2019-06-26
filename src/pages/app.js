@@ -69,7 +69,7 @@ class App extends React.Component{
                    
                     <CSSTransition
                         in={!!props.showProject}
-                        timeout={400}
+                        timeout={500}
                         classNames="fade"
                         unmountOnExit>
                         <ProjectPage data={ props.showProject }/>

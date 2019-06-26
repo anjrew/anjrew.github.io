@@ -171,23 +171,26 @@ class ProjectPage extends React.Component{
     }
 
     componentDidMount() {
-        
-        const windowScrollYTop = window.scrollY;
-        const totalHeight = document.documentElement.scrollHeight;
-        const elementHeight = this.elemRef.current.clientHeight;
-        const windowBottom = windowScrollYTop + elementHeight;
-        var elemenTop;
-        const toobig = windowBottom > totalHeight;
-        if ( (toobig) ){
-            elemenTop = totalHeight - elementHeight - 100;
-        } else {
-            elemenTop = windowScrollYTop;
-        }
-        window.scrollTo(0, elemenTop);
-        this.setState({ 
-            showApp: true,
-            elemenTop: elemenTop
-        });
+		
+        setTimeout(() =>{ 
+
+            const windowScrollYTop = window.scrollY;
+            const totalHeight = document.documentElement.scrollHeight;
+            const elementHeight = this.elemRef.current.clientHeight;
+            const windowBottom = windowScrollYTop + elementHeight;
+            var elemenTop;
+            const toobig = windowBottom > totalHeight;
+            if ( (toobig) ){
+                elemenTop = totalHeight - elementHeight - 100;
+            } else {
+                elemenTop = windowScrollYTop;
+            }
+            window.scrollTo(0, elemenTop);
+            this.setState({ 
+                showApp: true,
+                elemenTop: elemenTop
+            });
+        }, 500);
     }
 }
 
