@@ -103,7 +103,6 @@ class GalleryImage extends React.Component{
         this.setState({ hoverImage: false  }); 
     }
     mouseClick(){
-		console.log('this.props.mobileApp',this.props.mobileApp)
         if (!this.props.mobileApp) {
             this.props.dispatch(action.showImage(this.props.data));
         }
