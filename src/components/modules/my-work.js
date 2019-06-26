@@ -40,6 +40,8 @@ class MyWork extends React.Component {
                                         style={{ backgroundColor:"white"}}
                                         className='link-button'
                                         href='https://github.com/earyzhe'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >GitHub</a> and see my projects below.</p> 
 
 
@@ -48,7 +50,8 @@ class MyWork extends React.Component {
 								with your help, I can keep them alive and updated! I run on caffine...</p>
                                 <a 
                                     href= "https://www.buymeacoffee.com/earyzhe" 
-                                    rel="nofollow">
+                                    target="_blank"
+                                    rel="noopener noreferrer">
                                     <img 
                                         src="/assets/images/buy-me-coffee-button.png" 
                                         alt="Donate" 

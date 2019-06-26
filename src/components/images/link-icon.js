@@ -32,7 +32,7 @@ export default class LinkIcon extends React.Component{
         };
 
         return (
-            <a href={data.href} alt={data.name}>
+            <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
                 <div 
                     style={imageContainerStyle}
                     onMouseEnter={() =>{ this.setState({ hover: true }); } }
