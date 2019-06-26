@@ -47,7 +47,7 @@ class MyWork extends React.Component {
 
                                 <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
                                 >If you are currently using any of my products;
-								with your help, I can keep them alive and updated! I run on caffine...</p>
+								with your help, I can keep them alive and updated! I run on Caffeine...</p>
                                 <a 
                                     href= "https://www.buymeacoffee.com/earyzhe" 
                                     target="_blank"
@@ -79,9 +79,6 @@ class MyWork extends React.Component {
 
                                     <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
                                 </Wrap>
-                                
-		
-		
                             </Column>
                         </ScrollAnimation>
                     </Row>

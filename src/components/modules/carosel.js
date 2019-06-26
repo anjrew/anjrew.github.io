@@ -79,7 +79,7 @@ class Carosel extends React.Component{
                         onExited={() => {
                             this.props.nextImage && this.props.dispatch(action.renderNext());
                         }}
-                        timeout={450}
+                        timeout={410}
                         classNames={this.props.direction || 'fade'} 
                         unmountOnExit>
                         <img src={this.props.currentImage && this.props.currentImage.imageUrl} 

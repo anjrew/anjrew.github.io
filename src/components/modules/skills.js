@@ -92,7 +92,6 @@ class Skills extends React.Component {
                                 <TechnologyIcon key={vueLink.name} data={vueLink} />
                                 <TechnologyIcon key={redisLink.name} data={redisLink} />
                                 <TechnologyIcon key={handlebarsLink.name} data={handlebarsLink} />
-
                             </Wrap>
                             <br/> 
                             <p style={{ textAlign: mobileApp ? 'center':'start' }}>

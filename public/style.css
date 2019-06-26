@@ -305,22 +305,22 @@ input[type="text"]:hover,  input[type="password"]:hover, input[type="email"]:hov
 .shiftLeft-enter {
     animation-delay: 1ms;
 	transform: translateX(100vw);
-	transition: all 100ms ease-in;
+	transition: all 80ms ease-in;
 	opacity: 0;
 }
 .shiftLeft-enter-active {
     transform: translateX(100vw);
-	transition: all 100ms ease-in;
+	transition: all 80ms ease-in;
 }
 .shiftLeft-exit {
     animation-delay: 1ms;
 	transform: translateX(0px);
-	transition: all 100ms ease-in;
+	transition: all 80ms ease-in;
 	opacity: 0;
 }
 .shiftLeft-exit-active {
     transform: translateX(-100vw);
-	transition: all 100ms ease-in;
+	transition: all 80ms ease-in;
 }
 
 @keyframes lds-ring {

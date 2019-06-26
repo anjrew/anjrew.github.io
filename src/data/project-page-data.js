@@ -468,7 +468,7 @@ export const GoatstagramData = new ProjectPageData({
 			screenShot: false
 		}),
 		new GalleryImageData({
-            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.59.46',
+            imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.59.46.png',
 			description: 'A radom pic of a funny goat.',
 			name: 'Goaty',
 			screenShot: false
