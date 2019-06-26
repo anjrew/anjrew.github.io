@@ -57,11 +57,21 @@ class Skills extends React.Component {
                             <h2 style={{ textAlign: mobileApp ? 'center':'start' }}>Skills</h2>
 							
                             <p style={{ textAlign: mobileApp ? 'center':'start' }}>
-								The main area I specialise in is making mobile and web applications using Google's <big>Flutter</big> framework with code written in <big>Dart</big>.
+								The main area I specialise in is making mobile and web applications using Google's <a 
+                                    href='https://flutter.dev/'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                >Flutter</a> framework with code written in <a 
+                                    href='https://dart.dev/'
+                                    target='_blank'
+                                    rel="noopener noreferrer">Dart</a>.
                             </p>
                             <br /> 
 
-                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>Server side I implement node.js and use <big>Firebase</big> or PostgreSQL for databases.</p>
+                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>Server side I implement node.js and use <a 
+                                href='https://firebase.google.com/'
+                                target='_blank'
+                                rel="noopener noreferrer">Firebase</a> or PostgreSQL for databases.</p>
                             <br /> 
                             <p style={{ textAlign: mobileApp ? 'center':'start' }}>
 								Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.
@@ -96,7 +106,9 @@ class Skills extends React.Component {
                             </Wrap>
                             <br/> 
                             <p style={{ textAlign: mobileApp ? 'center':'start' }}>
-							Check out my <a href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/' >LinkedIn</a> profile for more information.
+							Check out my <a href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/'
+                                    target='_blank'
+                                    rel="noopener noreferrer" >LinkedIn</a> profile for more information.
                             </p>
                         </ScrollAnimation>
                     </Row>

@@ -23,6 +23,7 @@ class GalleryImage extends React.Component{
         const height = size;
        
         const imageContainerStyle = {
+            cursor: 'pointer',  
             width: width, 
             height: height,
             margin: '3px',
@@ -32,6 +33,7 @@ class GalleryImage extends React.Component{
         };
 		
         const imageStyle ={
+            cursor: 'pointer',  
             width: data.screenShot ?'100%' : '120%',
             height: data.screenShot ?'100%' : '120%',
             transformOrigin: 'center center', 
@@ -64,6 +66,7 @@ class GalleryImage extends React.Component{
             >
                 <div
                     style={{
+                        cursor: 'pointer',  
                         display: 'flex',
                         placeContent: 'center center' ,
                         width: width,
@@ -75,7 +78,8 @@ class GalleryImage extends React.Component{
                     }}
                 >
                     <h2 
-                        style={{  
+                        style={{
+                            cursor: 'pointer',  
                             color: data.screenShot ? 'black' : 'white',
                             textAlign: 'center',
                             margin: '30px',
