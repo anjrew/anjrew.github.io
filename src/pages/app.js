@@ -32,17 +32,14 @@ class App extends React.Component{
         this.myworkRef = React.createRef();
         this.contactRef = React.createRef();
         this.scrollToRef = this.scrollToRef.bind(this);
-		
-        console.log('My work  ref is ', this.myworkRef);
     }
-	
 
     render(){
         const windowWidth = window.innerWidth;
         const props = this.props;
         var backGroundImage = '';
         var blur = 1;
-        var strength = this.props.mobileApp ? 1000 : 1000;
+        var strength = props.mobileApp ? 1000 : 1000;
         if (windowWidth < 750 ){
             blur = 5;
             backGroundImage = '/assets/images/triple-me-for-mobile.png';
@@ -71,16 +68,16 @@ class App extends React.Component{
                     <Footer scrollToRef={this.scrollToRef}/>
                    
                     <CSSTransition
-                        in={!!this.props.showProject}
+                        in={!!props.showProject}
                         timeout={400}
                         classNames="fade"
                         unmountOnExit>
-                        <ProjectPage data={ this.props.showProject }/>
+                        <ProjectPage data={ props.showProject }/>
                     </CSSTransition>
 
                     <Carosel/>
                     
-                    <Overlay in={!!this.props.showProject || !!this.props.currentImage} />
+                    <Overlay in={!!props.showProject || !!props.currentImage} />
                 </Parallax>
             </div>
         );
@@ -93,12 +90,9 @@ class App extends React.Component{
             this.props.dispatch(action.showProject(location));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
-        console.log('My work  ref is ', this.myworkRef);
-
     }
 	
     scrollToRef(section){
-        console.log('the section is', section);
         var ref;
         switch(section) {
             case 'header':

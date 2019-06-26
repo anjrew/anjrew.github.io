@@ -14,7 +14,7 @@ class Carosel extends React.Component{
     constructor(){
         super();
         this.handleKeyDown = this.handleKeyDown.bind(this);
-        this.notArrowKey = this.notArrowKey.bind(this);
+        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
 	
     handleKeyDown(e) {
@@ -57,14 +57,12 @@ class Carosel extends React.Component{
                 zIndex='800'
                 backgroundColor= 'rgba(0,0,0,0.80)'
                 onClick={() => {
-                    console.log('dismissing');
                     this.props.dispatch(action.dismissImage());
                 }}>
                 <Row
                     height='calc(80% - 100px)'>
                     <div
                         onClick={(e) => {
-                            console.log('The keyCode is ', e, 'and result ', this.notArrowKey(e.keyCode));
                             e.preventDefault();
                             e.stopPropagation();
                             this.props.dispatch(action.previousImage(this.props.currentImage));
@@ -80,8 +78,8 @@ class Carosel extends React.Component{
                         in={!!this.props.showImage}
                         onExited={() => {
                             this.props.nextImage && this.props.dispatch(action.renderNext());
-                            console.log('onExited');}}
-                        timeout={480}
+                        }}
+                        timeout={450}
                         classNames={this.props.direction || 'fade'} 
                         unmountOnExit>
                         <img src={this.props.currentImage && this.props.currentImage.imageUrl} 
@@ -104,7 +102,6 @@ class Carosel extends React.Component{
                         /></div>
                 </Row>
                 <Container
-                    // backgroundColor='white'
                     paddin='30px'>
                     <h3 style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.name}</h3>
                     <p style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.description}</p>
@@ -113,8 +110,24 @@ class Carosel extends React.Component{
         </CSSTransition>;
     }
 	
-    notArrowKey(keyCode) {
-        return keyCode === 39 || keyCode === 37;
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleKeyPress);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.handleKeyPress, true);
+    }
+
+    handleKeyPress(event){
+        if (event.keyCode == 39){
+            this.props.dispatch(action.nextImage(this.props.currentImage));
+        }
+        if (event.keyCode == 37){
+            this.props.dispatch(action.previousImage(this.props.currentImage));
+        }
+        if (event.keyCode == 40){
+            this.props.dispatch(action.dismissImage());
+        }
     }
 }
 

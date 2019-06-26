@@ -46,7 +46,6 @@ class ProjectPage extends React.Component{
         }
 		
         const containerTop = this.state.elemenTop || window.scrollY + 'px';
-        console.log( 'containerTop', containerTop,);
 				
         if (data){
             return ( 
