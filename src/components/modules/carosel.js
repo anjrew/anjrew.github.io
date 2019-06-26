@@ -17,7 +17,7 @@ class Carosel extends React.Component{
     }
 	
     handleKeyDown(e) {
-		console.log('Key down in carosel with code ', e.keyCode);
+        console.log('Key down in carosel with code ', e.keyCode);
         // Right arrow
         if ( e.keyCode === 39 ) {
             this.props.dispatch(action.nextImage(this.props.currentImage));
@@ -82,7 +82,12 @@ class Carosel extends React.Component{
                         timeout={480}
                         classNames={this.props.direction || 'fade'} 
                         unmountOnExit>
-                        <img src={this.props.currentImage && this.props.currentImage.imageUrl} alt='image' style={imageStyle}/>
+                        <img src={this.props.currentImage && this.props.currentImage.imageUrl} 
+                            alt='image' 
+                            style={imageStyle}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();}}/>
                     </CSSTransition>
                     <div
                         onClick={(e) => {
