@@ -35,7 +35,7 @@ class GalleryImage extends React.Component{
             height: data.screenShot ?'100%' : '120%',
             transformOrigin: 'center center', 
             objectFit: data.screenShot ? 'contain' : 'cover', //this.props.contain ? 'contain' : 'cover',
-			transition: 'all 500ms',
+            transition: 'all 500ms',
             filter: this.state.hoverImage && `blur(8px) ${ data.screenShot ? 'blur(8px) brightness(1.3)' :'blur(8px) brightness(0.7)'}`,
             transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9) translateY(-5%)': 'scale(1)',
         };

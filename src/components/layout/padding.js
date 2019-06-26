@@ -11,7 +11,8 @@ export class Padding extends React.Component{
         return (
             <div 
                 style={{
-                    padding: this.props.padding
+                    padding: this.props.padding,
+                    flexGrow: this.props.flexGrow
                 }}>
                 {this.children}
             </div>

@@ -94,13 +94,12 @@ class ProjectPage extends React.Component{
 	
                                         </Column>
 
-                                        {!this.props.smallScreen && data && data.logoUrl && <Padding padding='30px'/>}
+                                        {!this.props.smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
                                         {!this.props.smallScreen && data && data.logoUrl && logo }
                                         {!this.props.smallScreen &&  <Container
                                             alignSelf={ this.props.smallScreen ? 'center' : 'start' }
                                             alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
                                             height='100%'
-                                            flexGrow='1'
                                             placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
                                             <button onClick={() => this.dismiss(history)}>X</button>
                                         </Container>}
