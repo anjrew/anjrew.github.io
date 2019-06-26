@@ -13,6 +13,7 @@ class Header extends React.Component {
             <SafeArea>
 
                 <Column
+                    referance={this.props.referance}
                     height={'calc(80vh - 20px)'}
                     placeContent='space-evenly'
                 >

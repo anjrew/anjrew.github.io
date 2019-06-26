@@ -37,6 +37,7 @@ import TechnologyIcon from '../images/technology-icon';
 class Skills extends React.Component {
 
     render() {
+        const mobileApp = this.props.mobileApp;
         return (
             <SafeArea>
                 <Column
@@ -46,28 +47,29 @@ class Skills extends React.Component {
                     alignItems={`flex-center`}
                 >
                     <Row
-                        width={this.props.mobileApp ? '100%' : '60%'}
-                        placeContent={this.props.mobileApp ? 'center':`center flex-end`}>
+                        width={mobileApp ? '100%' : '60%'}
+                        placeContent={mobileApp ? 'center':`center flex-end`}>
                         <ScrollAnimation
-                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
+                            animateIn={mobileApp ? "fadeInUp" : "fadeInLeft"}
                             animateOnce={true}
                         >	
-                            <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>Skills</h2>
+                            <h2 style={{ textAlign: mobileApp ? 'center':'start' }}>Skills</h2>
 							
-                            <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>
+                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>
 								The main area I specialise in is making mobile and web applications using Google's <big>Flutter</big> framework with code written in <big>Dart</big>.
                             </p>
                             <br /> 
 
-                            <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>Server side I implement node.js and use <big>Firebase</big> or PostgreSQL for databases.</p>
+                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>Server side I implement node.js and use <big>Firebase</big> or PostgreSQL for databases.</p>
                             <br /> 
-                            <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>
+                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>
 								Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.
                             </p>
                             <br /> 
                            
 
-                            <Wrap>
+                            <Wrap
+							 placeContent={mobileApp ? 'center' : 'flex-start'}>
                                 <TechnologyIcon key={flutterLink.name} data={flutterLink}/>
                                 <TechnologyIcon key={dartLink.name} data={dartLink} />
                                 <TechnologyIcon key={firebaseLink.name} data={firebaseLink} />
@@ -93,7 +95,7 @@ class Skills extends React.Component {
 
                             </Wrap>
                             <br/> 
-                            <p style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>
+                            <p style={{ textAlign: mobileApp ? 'center':'start' }}>
 							Check out my <a href='https://www.linkedin.com/in/andrew-johnson-96ba18ba/' >LinkedIn</a> profile for more information.
                             </p>
                         </ScrollAnimation>
