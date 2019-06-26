@@ -68,7 +68,7 @@ export const DialInData = new ProjectPageData({
     backgroundImage: '/assets/images/dial-in.jpg',
     title: 'Dial in',
     description: `A tool to help coffee professionals record and analyse data. 
-	I started off by making the app in Swift an purly iOS. I had a suddent realiseation that I should definity
+	I started off by making the app in Swift and purly iOS. I had a suddent realiseation that I should definity
 	dive into cross platform development. That's what I did. I started the {}`,
     logoUrl: '/assets/images/dial-in-logo.png',
     technologies: [

@@ -70,7 +70,7 @@ class MyWork extends React.Component {
 
                                     <ProjectImage src='/assets/images/plant-watering.jpg' name='Plant irrigation system'/>
 
-                                    <ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp pertition'/> 
+                                    <ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp petition'/> 
 
                                     <ProjectImage src='/assets/images/laissez-faire.jpg' name='Laissez Faire'/>   
 									

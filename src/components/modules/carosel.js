@@ -34,6 +34,7 @@ class Carosel extends React.Component{
         const arrowStyle = {
             padding: '10px',
             margin: '10px',
+            cursor: 'pointer'
         };
         const imageStyle = {
             objectFit: 'cover',

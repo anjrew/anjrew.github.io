@@ -170,10 +170,8 @@ class ProjectPage extends React.Component{
         }
     }
 
-    componentDidMount() {
-		
-        setTimeout(() =>{ 
-
+    componentDidMount() {	
+        setTimeout(() => { 
             const windowScrollYTop = window.scrollY;
             const totalHeight = document.documentElement.scrollHeight;
             const elementHeight = this.elemRef.current.clientHeight;

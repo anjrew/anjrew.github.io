@@ -48,7 +48,7 @@ class About extends React.Component {
                                 <button 
                                     style={linkStyle}
                                     onClick={() => props.scrollToRef('myWork')}
-                                >Work</button> below if ya want. 
+                                >Work</button> below if you like. 
                             </p>
 
                             <br/>

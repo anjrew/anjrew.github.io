@@ -38,7 +38,7 @@ export const Action = {
             case 'Plant irrigation system':
                 data = PlantSystemData;
                 break;
-            case 'Lava lamp pertition':
+            case 'Lava lamp petition':
                 data = PertitionData;
                 break;
             case 'Laissez Faire':
