@@ -45,8 +45,6 @@ class App extends React.Component{
             backGroundImage = '/assets/images/me-noeyes-4.png';
         }
 		
-        console.log(this.props.direction);
-
         return ( 
             <div style={{ maxHeight: '100vh'}}>
                 <Parallax
@@ -99,7 +97,6 @@ const mapStateToProps = state => {
         currentImage: state.currentImage,
         nextImage: state.nextImage,
         showImage: state.showImage,
-        direction: state.direction
     };
 };
 

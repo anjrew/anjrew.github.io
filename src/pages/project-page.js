@@ -41,7 +41,10 @@ class ProjectPage extends React.Component{
                     width: '350px'
                 }} src={data.logoUrl}/>
             </div>;
-        }
+		}
+		
+		const windowScrollY = window.scrollY + 'px';
+		
 				
         if (data){
             return ( 

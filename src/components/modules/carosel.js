@@ -11,6 +11,23 @@ import { Container } from '../boxes/container';
 
 class Carosel extends React.Component{
 
+    constructor(){
+        super();
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
+	
+    handleKeyDown(e) {
+		console.log('Key down in carosel with code ', e.keyCode);
+        // Right arrow
+        if ( e.keyCode === 39 ) {
+            this.props.dispatch(action.nextImage(this.props.currentImage));
+        // Left arrow
+        } else if ( e.keyCode === 37 ) {
+            this.props.dispatch(action.previousImage(this.props.currentImage));
+        }
+    }
+	
+
     render(){
 
         const arrowStyle = {
@@ -33,8 +50,9 @@ class Carosel extends React.Component{
             classNames="fade" 
             unmountOnExit>
             <Column
+                onKeyDown={ this.handleKeyDown }
                 position={'fixed'}
-                top='0px'
+                top={'0px'}
                 left='0px'
                 width='100vw'
                 height='100vh'

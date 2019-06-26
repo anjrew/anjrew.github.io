@@ -25,7 +25,6 @@ export default class BarrierDismissable extends React.Component{
 					left='0px'
 					onClick={ () => {
 						this.props.dismiss();
-						console.log('trying to dismis barrier dismissable');	
 					}}
 				>
 				</Container>

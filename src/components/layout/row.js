@@ -13,6 +13,7 @@ export class Row extends React.Component{
                     boxSizing: this.props.boxSizing,
                     minHeight: this.props.minHeight,
                     maxHeight: this.props.maxHeight,
+                    maxWidth: this.props.maxWidth,
                     display: this.props.display || 'flex', 
                     flexDirection: 'row',
                     alignItems: this.props.alignItems || 'center',

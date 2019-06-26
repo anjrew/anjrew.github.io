@@ -11,6 +11,8 @@ class About extends React.Component {
 
     render() {
 
+        const linkStyle = {textDecoration: 'underline', padding: '0px' , margin: ' 0px 10px'};
+
         return (
             <SafeArea>
                 <Column
@@ -28,28 +30,27 @@ class About extends React.Component {
                         >	
                             <h2 style={{ textAlign: this.props.mobileApp ? 'center':'start' }}>About</h2>
                             <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
-								A passion for intuative user experience drives me to create products that are not only 
-								efficently functional, but a pleasure to use.
+								I am a Berlin-based software developer. 
                             </p>
                             <br/>
-                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
-                            >It started with a fundamental belief that technology can set us free.</p>
+                            	<p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+								This page is about me and what I do. 
+								So check out my 
+                                <button style={linkStyle}> Skills </button> and <button style={linkStyle}>Work</button> below if ya want. 
+                            </p>
+
                             <br/>
-                            <p
-                                style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
-                            >Berlin based.</p>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+							I love intuitive user experiences: pages that load fast, are lag free and responsive to all device sizes.
 
+                            </p>
+                            <br/>
 
-                            <p
-                                style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
-                            >Fast
-								Fast load times and lag free interaction, my highest priority.
-								Responsive
-								My layouts will work on any device, big or small.
-								Intuitive
-								Strong preference for easy to use, intuitive UX/UI.
-								Dynamic
-								Websites don't have to be static, I love making pages come to life.</p>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+								Feel free to 
+                                <button style={linkStyle}>Contact</button>
+								me about work,
+								general chit-chat, and lava lamp queries.</p>
                         </ScrollAnimation>
                     </Row>
                 </Column>

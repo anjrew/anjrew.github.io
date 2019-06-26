@@ -3,10 +3,12 @@ import React from 'react';
 export class Column extends React.Component{
     
     render(){
+        console.log('this.props.onKeyDown', this.props.onKeyDown);
         return (
             <div 
                 ref={ this.props.referance } 
-                className={`column ${this.props.classNames && this.props.classNames}` }  
+                className={`column ${this.props.classNames && this.props.classNames}` } 
+                onKeyDown={ this.props.onKeyDown } 
                 style={{
                     top: this.props.top,
                     left: this.props.left,

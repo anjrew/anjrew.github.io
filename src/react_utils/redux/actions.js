@@ -116,10 +116,12 @@ function checkImageData(element ,imageData, ) {
 
 function checkPageDataVsImage(pageData, image, returnDifference){
     for (const key in pageData) {
-        if (image.project == pageData[key].title){
-            var currentIndex = pageData[key].screenShots.findIndex((element) => checkImageData(element, image));
-            if (currentIndex >= 0) {
-                return pageData[key].screenShots[currentIndex + returnDifference];
+        if (image){
+            if (image.project == pageData[key].title){
+                var currentIndex = pageData[key].screenShots.findIndex((element) => checkImageData(element, image));
+                if (currentIndex >= 0) {
+                    return pageData[key].screenShots[currentIndex + returnDifference];
+                }
             }
         }
     }  
