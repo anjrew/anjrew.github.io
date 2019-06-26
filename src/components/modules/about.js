@@ -6,7 +6,6 @@ import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Diamensions from '../../data/diamensions';
 import { connect } from 'react-redux';
-import { Action as action } from '../../react_utils/redux/actions';
 
 class About extends React.Component {
 
@@ -38,7 +37,7 @@ class About extends React.Component {
 								I am a Berlin-based software developer. 
                             </p>
                             <br/>
-	                          	<p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
+                            <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}>
 								This page is about me and what I do. 
 								So check out my 
                                 <button 

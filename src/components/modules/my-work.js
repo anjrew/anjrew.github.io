@@ -62,6 +62,20 @@ class MyWork extends React.Component {
 
                                     <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
                                 </Wrap>
+                                <p style={{ textAlign: this.props.mobileApp ? 'center': 'start' }}
+                                >If you are currently using any of my products;
+								with your help, I can keep them alive and updated! I run on caffine</p>
+                                <a 
+                                    href= "https://www.buymeacoffee.com/earyzhe" 
+                                    rel="nofollow">
+                                    <img 
+                                        src="/assets/images/buy-me-coffee-button.png" 
+                                        alt="Donate" 
+                                        style={{margin: '20px'}}
+                                    />
+                                </a>
+		
+		
                             </Column>
                         </ScrollAnimation>
                     </Row>

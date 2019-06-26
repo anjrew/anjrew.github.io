@@ -98,7 +98,7 @@ class App extends React.Component{
     }
 	
     scrollToRef(section){
-		console.log('the section is', section);
+        console.log('the section is', section);
         var ref;
         switch(section) {
             case 'header':

@@ -1,11 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Row } from '../layout/row';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { connect } from 'react-redux';
-import Diamensions from '../../data/diamensions';
 
 class Footer extends React.Component {
 

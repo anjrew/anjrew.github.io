@@ -69,7 +69,7 @@ class Skills extends React.Component {
                            
 
                             <Wrap
-							 placeContent={mobileApp ? 'center' : 'flex-start'}>
+                                placeContent={mobileApp ? 'center' : 'flex-start'}>
                                 <TechnologyIcon key={flutterLink.name} data={flutterLink}/>
                                 <TechnologyIcon key={dartLink.name} data={dartLink} />
                                 <TechnologyIcon key={firebaseLink.name} data={firebaseLink} />
