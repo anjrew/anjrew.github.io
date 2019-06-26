@@ -19,7 +19,9 @@ class ProjectPage extends React.Component{
 
     constructor(){
         super();
+        this.state = {};
         this.dismiss = this.dismiss.bind(this);
+        this.elemRef = React.createRef();
     }
 	
     dismiss(history){
@@ -41,10 +43,10 @@ class ProjectPage extends React.Component{
                     width: '350px'
                 }} src={data.logoUrl}/>
             </div>;
-		}
+        }
 		
-		const windowScrollY = window.scrollY + 'px';
-		
+        const containerTop = this.state.elemenTop || window.scrollY + 'px';
+        console.log( 'containerTop', containerTop,);
 				
         if (data){
             return ( 
@@ -56,11 +58,12 @@ class ProjectPage extends React.Component{
                             zIndex: '10',
                             margin: margin + 'px',
                             padding: margin + 'px',
-                            top: window.scrollY + 'px',
+                            top: containerTop,
                             backgroundColor: 'rgba(255,255,255,0.99)'
                         }}>
                             <SafeArea>
                                 <Column
+                                    referance={this.elemRef}
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
                                     <Container
                                         width='100%'
@@ -76,7 +79,7 @@ class ProjectPage extends React.Component{
                                             { data.title &&   
 											<h1 
 											    style={{ 
-											    	fontSize: this.props.smallScreen ? '50px' : data.title.length > 8 && '120px',
+											    	fontSize: this.props.smallScreen ? '50px' : data.title.length > 10 ? '80px': data.title.length > 8 ? '100px' : '120px',
 											        textDecoration: 'underline',
 											        textAlign: this.props.smallScreen ? 'center' : 'start'  
 											    }}
@@ -170,7 +173,23 @@ class ProjectPage extends React.Component{
     }
 
     componentDidMount() {
-        this.setState({ showApp: true});
+        
+        const windowScrollYTop = window.scrollY;
+        const totalHeight = document.documentElement.scrollHeight;
+        const elementHeight = this.elemRef.current.clientHeight;
+        const windowBottom = windowScrollYTop + elementHeight;
+        var elemenTop;
+        const toobig = windowBottom > totalHeight;
+        if ( (toobig) ){
+            elemenTop = totalHeight - elementHeight - 100;
+        } else {
+            elemenTop = windowScrollYTop;
+        }
+        window.scrollTo(0, elemenTop);
+        this.setState({ 
+            showApp: true,
+            elemenTop: elemenTop
+        });
     }
 }
 
