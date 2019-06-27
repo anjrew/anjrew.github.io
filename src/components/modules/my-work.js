@@ -90,7 +90,6 @@ class MyWork extends React.Component {
                 >
                     { this.props.mobileApp ? elem : 
                         <ScrollAnimation
-                            initiallyVisible={this.props.mobileApp}
                             animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true}>	
                             {elem}
