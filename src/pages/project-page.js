@@ -190,6 +190,22 @@ class ProjectPage extends React.Component{
             this.setState({ 
                 elemenTop: elemenTop
             });
+			
+					
+            const options = window.location.pathname.split('/');
+            var image;
+            if (options[2]){
+                if ( options[2] == 'image' ){ 
+                    if(options[3]){ image = options[3].split('%20').join(' '); }
+		 		}
+            }
+			
+            for (let index = 0; index < this.props.data.screenShots.length; index++) {
+                const imagedata = this.props.data.screenShots[index];
+                if (imagedata.name == image){
+                    this.props.dispatch(action.showImage(imagedata));
+                }
+            }
         }, 600);
     }
 

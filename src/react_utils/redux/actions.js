@@ -103,6 +103,7 @@ export const Action = {
         };
     },
     showImage: function(image){
+        if( typeof image !== 'object'){ throw new Error('Image should be an object'); }
         return {
             type: "SHOW_IMAGE",
             image: image
