@@ -171,12 +171,7 @@ class ProjectPage extends React.Component{
     }
 
     componentDidMount() {
-<<<<<<< HEAD
-=======
-        document.addEventListener('scroll', this.handleScroll);	
->>>>>>> parent of b2d8e2e... Saving after a loing time. fade animation project not working in not working
 
-	
         setTimeout(() => { 
             document.addEventListener('scroll', this.handleScroll);	
 

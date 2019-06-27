@@ -4,15 +4,11 @@ export default function reducer(state = {}, action) {
 
     switch (action.type) {
         case "SHOW_PROJECT":
-<<<<<<< HEAD
             return { 
                 ...state, 
                 showProject: action.project,
-                // currentImage: action.image 
+                currentImage: action.image 
             };
-=======
-            return { ...state, showProject: action.project };
->>>>>>> parent of b2d8e2e... Saving after a loing time. fade animation project not working in not working
         case "DISSMISS_ALL":
             return { ...state, showProject: null };
         case "SET_APP_SIZE":

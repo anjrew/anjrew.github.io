@@ -43,10 +43,7 @@ class Carosel extends React.Component{
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
-<<<<<<< HEAD
             console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
-=======
->>>>>>> parent of b2d8e2e... Saving after a loing time. fade animation project not working in not working
             window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
         }
 		

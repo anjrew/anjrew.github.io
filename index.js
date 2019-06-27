@@ -10,38 +10,6 @@ const path = require('path');
 const print = require('./utils/print');
 const server = require('http').Server(app);
 const io = require('socket.io')(server, { origins: 'localhost:8080' });
-const { db } = require('./utils/db');
-const axios = require('axios');
-const https = require('https');
-const secrets = require('./secrets.json');
-var spotifyToken;
-getToken()
-    .then((result) => {
-        spotifyToken = result;
-        console.log('my spotify token is ', spotifyToken);
-        var auth = 'Basic ' + new Buffer(secrets.clientId + ':' + secrets.clientSecret).toString('base64');
-        axios({
-            method: 'GET',
-            url: "https://api.spotify.com/v1/me/player/currently-playing?market=ES",
-            headers: {
-                Accept: 'application/json',
-                "Content-Type": "application/json",
-                Authorization: auth,
-                access_token: spotifyToken,
-                client_id: secrets.clientId
-                // Authorziation: 'Bearer ' + 'BQAYylYwY0YHAFrjgyC4xeLXKnds8U9IKBnb26OzdhatEtUUEhXI-6RGYFTlbPyYYpG17F51Q69qUAiUV0helrisMX4ChEYr_RRkY6k31GWAxsCHDdbufHbt3QWK1Ow1LtGtVzNgPuSO-rRj7jTUDsWVwAv28F-1mjQqCJcK'
-            }
-        }).then((result) => {
-            print.success('result', result);
-        })
-            .catch((e) =>{
-                print.error('Error', e);
-            });
-
-    }).catch((e) =>{
-        print.error(e);
-    });
-
 
 
 
@@ -146,40 +114,3 @@ if (require.main === module) {
         console.log("Server addess", server.address());
     });
 }
-
-function getToken() {
-    return new Promise(function (resolve, reject) {
-        var auth = 'Basic ' + new Buffer(secrets.clientId + ':' + secrets.clientSecret).toString('base64');
-
-        const requestData = {
-            method: 'POST',
-            host: 'accounts.spotify.com',
-            path: '/api/token',
-            headers: {
-                Authorization: auth,
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-        };
-
-        const req = https.request(requestData, (resp) => {
-            // console.log("The response is",resp);
-            if (resp.statusCode != 200) {
-                console.log(resp.headers);
-                return reject(resp.statusCode);
-            }
-            let body = '';
-            resp.on('data', function (data) {
-                body += data;
-            }).on('end', function () {
-                // console.log(body)
-                resolve(JSON.parse(body).access_token);
-            }).on('error', function (err) {
-                return reject(err);
-            });
-        });
-        req.write('grant_type=client_credentials');
-        req.end();
-    });
-}
-
-

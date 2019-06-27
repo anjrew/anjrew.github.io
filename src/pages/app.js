@@ -84,7 +84,6 @@ class App extends React.Component{
     }
 
     componentDidMount() {
-<<<<<<< HEAD
         // this.setState({ showApp: true});
         const options = window.location.pathname.split('/');
         var image;
@@ -95,12 +94,8 @@ class App extends React.Component{
         }
         const location = options[1].split('%20').join(' ');
         console.log('location is', location);
-=======
-        this.setState({ showApp: true});
-        const location = window.location.pathname.split('%20').join(' ').substring(1);
->>>>>>> parent of b2d8e2e... Saving after a loing time. fade animation project not working in not working
         if (location){
-            this.props.dispatch(action.showProject(location));
+            this.props.dispatch(action.showProject(location, image));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
     }
