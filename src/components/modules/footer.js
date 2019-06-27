@@ -9,6 +9,11 @@ class Footer extends React.Component {
 
     render() {
         const isMobile = this.props.mobileApp; 
+        const headerButton = <button onClick={() => this.props.scrollToRef('header')} >Home</button>;
+        const aboutButton = <button onClick={() => this.props.scrollToRef('about')} >About</button>;
+        const skillsButton = <button onClick={() => this.props.scrollToRef('skills')} >Skills</button>;
+        const myWorkButton = <button onClick={() => this.props.scrollToRef('myWork')} >My Work</button>;
+
         return (
             <SafeArea>
 
@@ -17,34 +22,42 @@ class Footer extends React.Component {
                     placeContent={isMobile ? 'center':'flex-start'}
                     margin={'80' + 'px 0px'}
                 >
-                    <ScrollAnimation
-                        initiallyVisible={this.props.mobileApp}
-                        animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
-                        animateOnce={true}>
-                        <button onClick={() => this.props.scrollToRef('header')} >Home</button>
-                    </ScrollAnimation>
+                    { isMobile ?  headerButton :
+                        <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
+                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
+                            animateOnce={true}>
+                            {headerButton}
+                        </ScrollAnimation>
+                    }
 
-                    <ScrollAnimation
-                        initiallyVisible={this.props.mobileApp}
-                        animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
-                        animateOnce={true}>
-                        <button onClick={() => this.props.scrollToRef('about')} >About</button>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation
-                        initiallyVisible={this.props.mobileApp}
-                        animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
-                        animateOnce={true}>
-                        <button onClick={() => this.props.scrollToRef('skills')} >Skills</button>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation
-                        initiallyVisible={this.props.mobileApp}
-                        animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
-                        animateOnce={true}>
-                        <button onClick={() => this.props.scrollToRef('myWork')} >My Work</button>
-                    </ScrollAnimation>
-
+                    { isMobile ? aboutButton :
+                        <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
+                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
+                            animateOnce={true}>
+                            {aboutButton}
+                        </ScrollAnimation>
+                    }
+					
+                    { isMobile ? skillsButton :
+                        <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
+                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
+                            animateOnce={true}>
+                            {skillsButton}
+                        </ScrollAnimation>
+                    }
+					
+                    { isMobile ? myWorkButton :
+                        <ScrollAnimation
+                            initiallyVisible={this.props.mobileApp}
+                            animateIn={this.props.mobileApp ? "fadeInUp" : "fadeInLeft"}
+                            animateOnce={true}>
+                            {myWorkButton}
+                        </ScrollAnimation>
+                    }
+					
                 </Column>
                 {/* } */}
             </SafeArea>

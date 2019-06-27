@@ -14,7 +14,7 @@ import { Provider } from 'react-redux';
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(reduxPromise)));
 
 
-initSocket(store);
+// initSocket(store);
 
 const elem = <Provider store={store}>
     <App />
