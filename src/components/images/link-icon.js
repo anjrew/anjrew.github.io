@@ -13,7 +13,8 @@ export default class LinkIcon extends React.Component{
         const data = this.props.data;
     
         const imageContainerStyle = {
-            height: '100px',
+            cursor:  'pointer',
+            height: '60px',
             margin: '3px',
             overflow: 'hidden',
             display: 'flex',
@@ -23,6 +24,7 @@ export default class LinkIcon extends React.Component{
         };
 		
         const imageStyle ={
+            cursor:  'pointer',
             width: 'auto',
             height: '100%',
             transformOrigin: 'center center', 

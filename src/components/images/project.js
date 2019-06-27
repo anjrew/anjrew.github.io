@@ -39,6 +39,7 @@ class ProjectImage extends React.Component{
 
 
         const imageContainerStyle = {
+            cursor:  'pointer',
             width: width, 
             height: height,
             margin: '3px',
@@ -48,6 +49,7 @@ class ProjectImage extends React.Component{
         };
 		
         const imageStyle ={
+            cursor:  'pointer',
             width: '120%',
             height: '120%',
             transformOrigin: 'center center', 
