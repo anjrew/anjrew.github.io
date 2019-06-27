@@ -24,7 +24,7 @@ class Header extends React.Component {
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >
-                            <h1>Hello. </h1>
+                            <h1>Hi there. </h1>
                         </ScrollAnimation>
 
                     </Row>
@@ -35,7 +35,7 @@ class Header extends React.Component {
                             animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
                             animateOnce={true}
                         >
-                            <h1>I am Andrew</h1>
+                            <h1>I'm Andrew</h1>
                         </ScrollAnimation>
                     </Row>
                 </Column>
