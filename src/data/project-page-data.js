@@ -198,7 +198,8 @@ export const CupomaticData = new ProjectPageData({
 		new LinkData({
 			imageUrl: '/assets/images/cupOmatic-logo.jpg',
 			href: 'http://www.cupomatic.net/',
-			name: 'CupOmatic.net'
+			name: 'CupOmatic.net',
+			static: true
 		}),
 	],
 	screenShots: [
@@ -352,7 +353,8 @@ export const PertitionData = new ProjectPageData({
 		new LinkData({
 			imageUrl: '/assets/images/green-lava-lamp.jpg',
 			href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
-			name: 'Visit the Lava Lamp petition'
+			name: 'Visit the Lava Lamp petition',
+			static: true
 		}),
 	],
 	screenShots: [
@@ -609,7 +611,8 @@ export const connectFourData = new ProjectPageData({
 		new LinkData({
 			imageUrl: 'assets/images/connect-four/logo.jpg',
 			href: 'https://connect-four-andrew-johnson.herokuapp.com/',
-			name: 'Play the game'
+			name: 'Play the game',	
+			static: true
 		}),
 	]
 });

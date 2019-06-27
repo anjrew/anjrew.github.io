@@ -27,7 +27,7 @@ export default class LinkIcon extends React.Component{
             height: '100%',
             transformOrigin: 'center center', 
             objectFit: 'contain',
-            filter: this.state.hover && `blur(8px) brightness(1.5)`,
+            filter: this.state.hover && data.static && `blur(8px) brightness(1.5)`,
         };
 		
         const words = data.name.split(' ');
@@ -41,9 +41,9 @@ export default class LinkIcon extends React.Component{
 		
         var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '13px' : '20px';
         if (biggestWordLength > 8 ) {
-            fontSize = '20px';
+            fontSize = '10px';
         }
-		console.log('data.name', data);
+
 
         return (
             <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export default class LinkIcon extends React.Component{
                                 // wordBreak: 'break-all',
                                 fontSize: fontSize,
                                 transition: 'opacity 500ms',
-                                opacity: this.state.hover ? 1 : 0,
+                                opacity: this.state.hover && data.static ? 1 : 0,
                                 alignSelf: 'center',
                                 backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
                             }}

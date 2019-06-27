@@ -3,6 +3,7 @@ export default class LinkData{
         this.href = data['href'];
         this.imageUrl = data['imageUrl'];
         this.name = data['name'];
+        this.static = data['static'];
         for (const key in arguments) {
             const element = arguments[key];
             if (element == null || element == undefined) {
