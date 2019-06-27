@@ -268,8 +268,7 @@ export const BatterySaverData = new ProjectPageData({
 		vsCodeLink
 	],
 	screenShots: [
-
-	    new GalleryImageData({
+		new GalleryImageData({
 			imageUrl: '/assets/images/battery-saver/IMG-20190627-WA0000.jpg',
 			description: 'Search for battery saver hardware to connect to via bluetooth.',
 			name: 'Choosing a device',
