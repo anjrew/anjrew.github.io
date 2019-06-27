@@ -31,7 +31,7 @@ class ProjectPage extends React.Component{
     }
 
     render(){
-        const data = this.props.data;
+        const data = this.props.data || {};
         const margin = 20;
         const sectionMargin =  margin + 'px';
         var logo;
@@ -45,37 +45,38 @@ class ProjectPage extends React.Component{
                 }} src={data.logoUrl}/>
             </div>;
         }
-        console.log('data in project page is', data);
+		
+		
         const containerTop = this.state.elemenTop || window.scrollY + 'px';				
-        if (data){
-            return ( 
-                <BrowserRouter>
-                    <Route render= {({ history }) => {
-                        return <div style={{ 
-                            width: `calc(100% - ${margin * 4 + 'px'})`,
-                            position: 'absolute',
-                            zIndex: '10',
-                            margin: margin + 'px',
-                            padding: margin + 'px',
-                            top: containerTop,
-                            backgroundColor: 'rgba(255,255,255,0.99)'
-                        }}>
-                            <SafeArea referance={this.elemRef} >
-                                <Column
-                                    referance={this.elemRef}
-                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
-                                    <Container
-                                        width='100%'
-                                        display='flex'
-                                        flexDirection={ this.props.smallScreen ? 'column' : 'row' }
+        return ( 
+            <BrowserRouter>
+                <Route render= {({ history }) => {
+                    return <div style={{ 
+                        width: `calc(100% - ${margin * 4 + 'px'})`,
+                        position: 'absolute',
+                        zIndex: '10',
+                        margin: margin + 'px',
+                        padding: margin + 'px',
+                        top: containerTop,
+                        backgroundColor: 'rgba(255,255,255,0.99)'
+                    }}>
+                        <SafeArea 
+							    height={this.state.height}>
+                            <Column
+                                referance={this.elemRef}
+                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+                                <Container
+                                    width='100%'
+                                    display='flex'
+                                    flexDirection={ this.props.smallScreen ? 'column' : 'row' }
+                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                >
+                                    <Column
                                         placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                        alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                        width='unset'
                                     >
-                                        <Column
-                                            placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                            alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                            width='unset'
-                                        >
-                                            { data.title &&   
+                                        { data.title &&   
 											<h1 
 											    style={{ 
 											    	fontSize: this.props.smallScreen ? '50px' : data.title.length > 10 ? '80px': data.title.length > 8 ? '100px' : '120px',
@@ -83,30 +84,30 @@ class ProjectPage extends React.Component{
 											        textAlign: this.props.smallScreen ? 'center' : 'start'  
 											    }}
 											>{data.title}</h1>
-                                            }
-                                            {this.props.smallScreen && data && data.logoUrl && logo }
-                                            <p 
-                                                style={{ 
-                                                    textAlign: this.props.smallScreen ? 'center' : 'start' 
-                                                }}
-                                            >{data.description}</p>
+                                        }
+                                        {this.props.smallScreen && data && data.logoUrl && logo }
+                                        <p 
+                                            style={{ 
+                                                textAlign: this.props.smallScreen ? 'center' : 'start' 
+                                            }}
+                                        >{data.description}</p>
 	
-                                        </Column>
+                                    </Column>
 
-                                        {!this.props.smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
-                                        {!this.props.smallScreen && data && data.logoUrl && logo }
-                                        {!this.props.smallScreen &&  <Container
-                                            alignSelf={ this.props.smallScreen ? 'center' : 'start' }
-                                            alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
-                                            height='100%'
-                                            placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
-                                            <button onClick={() => this.dismiss(history)}>X</button>
-                                        </Container>}
-                                    </Container>
+                                    {!this.props.smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
+                                    {!this.props.smallScreen && data && data.logoUrl && logo }
+                                    {!this.props.smallScreen &&  <Container
+                                        alignSelf={ this.props.smallScreen ? 'center' : 'start' }
+                                        alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
+                                        height='100%'
+                                        placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
+                                        <button onClick={() => this.dismiss(history)}>X</button>
+                                    </Container>}
+                                </Container>
 	
 						
-                                    {/* technologies */}
-                                    { data.technologies && 
+                                {/* technologies */}
+                                { data.technologies && 
 								<Column
 								    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
 								    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
@@ -122,10 +123,10 @@ class ProjectPage extends React.Component{
 								        }
 								    </Wrap>									
 								</Column>
-                                    }
+                                }
 	
-                                    {/* links  */}
-                                    { data.links &&
+                                {/* links  */}
+                                { data.links &&
 							<Column	
 							    id='links'
 							    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
@@ -141,7 +142,7 @@ class ProjectPage extends React.Component{
 								    }
 							    </Wrap>
 							</Column>
-                                    }
+                                }
 
                         	{ data.screenShots &&
                             <Column
@@ -158,16 +159,14 @@ class ProjectPage extends React.Component{
                                     }
                                 </Wrap>
                             </Column>
-                                    }
-                                </Column>
-                            </SafeArea>				
-                        </div>;
-                    }} />
-                </BrowserRouter>
-            );
-        } else {
-            return <div></div>;
-        }
+                                }
+                            </Column>
+                        </SafeArea>				
+                    </div>;
+                }} />
+            </BrowserRouter>
+        );
+    
     }
 
     componentDidMount() {
@@ -188,7 +187,8 @@ class ProjectPage extends React.Component{
             }
             window.scrollTo(0, elemenTop);
             this.setState({ 
-                elemenTop: elemenTop
+                elemenTop: elemenTop,
+                height: elementHeight + 500
             });
 			
 					

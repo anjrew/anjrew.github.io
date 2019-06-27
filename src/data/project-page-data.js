@@ -267,13 +267,31 @@ export const BatterySaverData = new ProjectPageData({
 		flareLink,
 		vsCodeLink
 	],
-	// screenShots: [
+	screenShots: [
 
-	//     new GalleryImageData({
-	//         imageUrl: '/assets/images/dial-in.jpg',
-	//         description: 'Workflow'
-	//     }),
-	// ]
+	    new GalleryImageData({
+			imageUrl: '/assets/images/battery-saver/IMG-20190627-WA0000.jpg',
+			description: 'Search for battery saver hardware to connect to via bluetooth.',
+			name: 'Choosing a device',
+			screenShot: false
+		}),
+
+		new GalleryImageData({
+			imageUrl: '/assets/images/battery-saver/IMG-20190627-WA0001.jpg',
+			description: 'Change settings for tolerance and check frequency..',
+			name: 'Settings',
+			screenShot: false
+		}),
+
+		new GalleryImageData({
+			imageUrl: '/assets/images/battery-saver/IMG-20190627-WA0002.jpg',
+			description: 'The main screen',
+			name: 'Main Screen',
+			screenShot: false
+		}),
+
+
+	]
 });
 
 export const PlantSystemData = new ProjectPageData({

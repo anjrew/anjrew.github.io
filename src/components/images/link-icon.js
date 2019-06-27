@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 export default class LinkIcon extends React.Component{
 
@@ -48,44 +49,49 @@ export default class LinkIcon extends React.Component{
 
 
         return (
-            <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
-                <div 
-                    style={imageContainerStyle}
-                    onMouseEnter={() =>{ this.setState({ hover: true }); } }
-                    onMouseLeave={() =>{ this.setState({ hover: false  }); } }
-                >
-                    <div
-                        style={{
-                            display: 'flex',
-                            placeContent: 'center center' ,
-                            width: '100%',
-                            height: '100%',
-                            position: 'absolute',
-                            zIndex:'10',
-                            alignSelf: 'center',
-                            // wordWrap: 'break-word',
-                            padding: '10px'
-                        }}
+            <CSSTransition
+                in={this.state.show}
+                timeout={500}
+                classNames="fade"
+                unmountOnExit>
+                <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
+                    <div 
+                        style={imageContainerStyle}
+                        onMouseEnter={() =>{ this.setState({ hover: true }); } }
+                        onMouseLeave={() =>{ this.setState({ hover: false  }); } }
                     >
-                        <h2 
-                            style={{  
-                                color: 'black',
-                                textAlign: 'center',
-                                margin: '30px',
-                                // wordBreak: 'break-all',
-                                fontSize: fontSize,
-                                transition: 'opacity 500ms',
-                                opacity: this.state.hover && data.static ? 1 : 0,
+                        <div
+                            style={{
+                                display: 'flex',
+                                placeContent: 'center center' ,
+                                width: '100%',
+                                height: '100%',
+                                position: 'absolute',
+                                zIndex:'10',
                                 alignSelf: 'center',
-                                backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
-                            }}
-                            onMouseEnter={() =>{ this.setState({ hover: true }); } }
-                            onMouseLeave={() =>{ this.setState({ hover: false }); } }
-                        >{data.name}</h2>
+                                padding: '10px'
+                            }}>
+                            <h2 
+                                style={{  
+                                    color: 'black',
+                                    textAlign: 'center',
+                                    margin: '30px',
+                                    // wordBreak: 'break-all',
+                                    fontSize: fontSize,
+                                    transition: 'opacity 500ms',
+                                    opacity: this.state.hover && data.static ? 1 : 0,
+                                    alignSelf: 'center',
+                                    backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
+                                }}
+                                onMouseEnter={() =>{ this.setState({ hover: true }); } }
+                                onMouseLeave={() =>{ this.setState({ hover: false }); } }
+                            >{data.name}</h2>
+                        </div>
+                        <img style={imageStyle} src={data.imageUrl || data.src}/>
                     </div>
-                    <img style={imageStyle} src={data.imageUrl || data.src}/>
-                </div>
-            </a>
+                </a>
+            </CSSTransition>
+
         );
     }
 }
