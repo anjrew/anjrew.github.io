@@ -43,7 +43,7 @@ export const Action = {
             }
         }
 		
-        var data = {};
+        var data;
         switch(projectName){
             case 'Dial In':
                 data = DialInData;
