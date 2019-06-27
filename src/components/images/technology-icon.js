@@ -53,53 +53,52 @@ export class TechnologyIcon extends React.Component{
             transform: 'scale(0.9) ',
         };
 
-        const element = <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
-            <div 
-                style={imageContainerStyle}
-                onMouseEnter={() =>{ this.setState({ showText: true }); } }
-                onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-            >
-                <div
-                    style={{
-                        display: 'flex',
-                        placeContent: 'center center' ,
-                        width: width,
-                        height: height,
-                        position: 'absolute',
-                        zIndex:'10',
-                        alignSelf: 'center',
-                        // wordWrap: 'break-word',
-                        padding: '10px'
-                    }}
-                >
-                    <h2 
-                        style={{  
-                            color: 'black',
-                            textAlign: 'center',
-                            margin: '30px',
-                            // wordBreak: 'break-all',
-                            fontSize: fontSize,
-                            transition: 'opacity 500ms',
-                            opacity: this.state.showText ? 1 : 0,
-                            alignSelf: 'center',
-                            backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
-                        }}
-                        onMouseEnter={() =>{ this.setState({ showText: true }); } }
-                        onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-                    >{data.name}</h2>
-                </div>
-                <img style={imageStyle} src={data.imageUrl || data.src}/>
-            </div>
-        </a>;
-           
-        return this.props.mobileApp ? element :
-		
+        return (
             <ScrollAnimation
+                initiallyVisible={this.props.mobileApp}
                 animateIn={this.props.mobileApp || this.props.smallScreen ? "fadeIn" : "fadeInLeft"}
                 animateOnce={true}
                 delay={Math.floor(Math.random() * 600)}>
-                {element}
-            </ScrollAnimation>;
+                <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
+                    <div 
+                        style={imageContainerStyle}
+                        onMouseEnter={() =>{ this.setState({ showText: true }); } }
+                        onMouseLeave={() =>{ this.setState({ showText: false  }); } }
+                    >
+                        <div
+                            style={{
+                                display: 'flex',
+                                placeContent: 'center center' ,
+                                width: width,
+                                height: height,
+                                position: 'absolute',
+                                zIndex:'10',
+                                alignSelf: 'center',
+                                // wordWrap: 'break-word',
+                                padding: '10px'
+                            }}
+                        >
+                            <h2 
+                                style={{  
+                                    color: 'black',
+                                    textAlign: 'center',
+                                    margin: '30px',
+                                    // wordBreak: 'break-all',
+                                    fontSize: fontSize,
+                                    transition: 'opacity 500ms',
+                                    opacity: this.state.showText ? 1 : 0,
+                                    alignSelf: 'center',
+                                    backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
+                                }}
+                                onMouseEnter={() =>{ this.setState({ showText: true }); } }
+                                onMouseLeave={() =>{ this.setState({ showText: false  }); } }
+                            >{data.name}</h2>
+                        </div>
+                        <img style={imageStyle} src={data.imageUrl || data.src}/>
+                    </div>
+                </a>
+            </ScrollAnimation>
+        );
     }
 
 }
