@@ -40,12 +40,12 @@ class ProjectPage extends React.Component{
             logo = <div >
                 <img style={{
                     objectFit: 'cover',
-                    height: '350px',
-                    width: '350px'
+                    height: this.props.mobileApp ? '200px' : '350px',
+                    width: this.props.mobileApp ? '200px' : '350px'
                 }} src={data.logoUrl}/>
             </div>;
         }
-		console.log('data in project page is', data);
+        console.log('data in project page is', data);
         const containerTop = this.state.elemenTop || window.scrollY + 'px';				
         if (data){
             return ( 
@@ -219,7 +219,8 @@ const mapStateToProps = state => {
     return {
         pageToRender: state.pageToRender,
         smallScreen: state.smallScreen,
-        currentImage: state.currentImage
+        currentImage: state.currentImage,
+        mobileApp: state.mobileApp
     };
 };
 

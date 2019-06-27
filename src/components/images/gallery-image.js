@@ -40,7 +40,7 @@ class GalleryImage extends React.Component{
             objectFit: data.screenShot ? 'contain' : 'cover', //this.props.contain ? 'contain' : 'cover',
             transition: 'all 500ms',
             filter: this.state.hoverImage && `blur(8px) ${ data.screenShot ? 'blur(8px) brightness(1.3)' :'blur(8px) brightness(0.7)'}`,
-            transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9) translateY(-5%)': 'scale(1)',
+            transform: this.state.hoverImage || this.state.showPicture ? 'scale(0.9) translateY(-0%)': 'scale(1)',
         };
 		
         const words = data.name ? data.name.split(' ') : [];

@@ -84,8 +84,7 @@ class App extends React.Component{
     }
 
     componentDidMount() {
-		this.props.dispatch(action.showProject(location, image));
-        // this.setState({ showApp: true});
+		
         const options = window.location.pathname.split('/');
         var image;
         if (options[2]){
