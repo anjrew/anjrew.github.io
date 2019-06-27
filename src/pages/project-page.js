@@ -171,6 +171,7 @@ class ProjectPage extends React.Component{
     }
 
     componentDidMount() {
+		window.history.pushState({}, '/','/');
         document.addEventListener('scroll', this.handleScroll);	
 
         setTimeout(() => { 

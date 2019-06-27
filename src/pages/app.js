@@ -85,9 +85,17 @@ class App extends React.Component{
 
     componentDidMount() {
         this.setState({ showApp: true});
-        const location = window.location.pathname.split('%20').join(' ').substring(1);
+        const options = window.location.pathname.split('/');
+        var image;
+        if (options[2]){
+            if ( options[2] == 'image' ){ 
+                if(options[3]){ image = options[3].split('%20').join(' '); }
+            }
+        }
+        const location = options[1].split('%20').join(' ');
+        console.log('location is', location);
         if (location){
-            this.props.dispatch(action.showProject(location));
+            this.props.dispatch(action.showProject(location, image));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
     }

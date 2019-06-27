@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route } from "react-router-dom";
 import { Action as action } from '../../react_utils/redux/actions';
 
 class GalleryImage extends React.Component{
@@ -57,7 +56,7 @@ class GalleryImage extends React.Component{
             fontSize = '40px';
         }
 
-        return<React.Fragment>
+        const element = <React.Fragment>
             <div 
                 style={imageContainerStyle}
                 onMouseEnter={this.mouseOver} 
@@ -92,7 +91,6 @@ class GalleryImage extends React.Component{
                         onMouseEnter={this.mouseOver} 
                         onMouseLeave={this.mouseLeave }
                         onClick={() => { 
-                            console.log(history);
                             this.mouseClick(history);}}
                     >{data && data.name}</h2>;
 				
@@ -101,6 +99,8 @@ class GalleryImage extends React.Component{
                 <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
             </div>
         </React.Fragment>;
+		
+        return element;
 
     }
 	
@@ -110,9 +110,7 @@ class GalleryImage extends React.Component{
     mouseLeave(){
         this.setState({ hoverImage: false  }); 
     }
-    mouseClick(historythis){
-        console.log('history in image',historythis);
-
+    mouseClick(){
         if (!this.props.mobileApp) {
             this.props.dispatch(action.showImage(this.props.data));
         }

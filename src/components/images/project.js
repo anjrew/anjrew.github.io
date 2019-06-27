@@ -3,7 +3,6 @@ import { Action as action } from '../../react_utils/redux/actions';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route } from "react-router-dom";
 
-
 class ProjectImage extends React.Component{
 
     constructor(){
@@ -59,7 +58,7 @@ class ProjectImage extends React.Component{
             transform: this.state.showText ? 'scale(0.9) translateY(-10%)' : 'translateY(-10%)',
         };
 
-        return (
+        const element =  (
             <BrowserRouter>
                 <Route render= {({ history }) => {
                     return <div 
@@ -102,10 +101,12 @@ class ProjectImage extends React.Component{
                 }} />
             </BrowserRouter>
         );
+		
+        return  element;
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {
         
     };

@@ -1,5 +1,5 @@
-import { 
-    DialInData, 
+import {
+    DialInData,
     CupomaticData,
     BatterySaverData,
     PlantSystemData,
@@ -8,26 +8,43 @@ import {
     GoatstagramData,
     SpicedAcademyData,
     thisData,
-    connectFourData } from '../../data/project-page-data';
-	
+    connectFourData
+} from '../../data/project-page-data';
+
 const pageData = {
-    dialIn :DialInData,
-    cupomatic :CupomaticData,
-    batterySaver :BatterySaverData,
-    plantSystem :PlantSystemData,
-    pertition :PertitionData,
-    laissezFaire :LaissezFaireData,
-    goatstagram :GoatstagramData,
-    spicedAcademy :SpicedAcademyData,
-    this :thisData,
+    dialIn: DialInData,
+    cupomatic: CupomaticData,
+    batterySaver: BatterySaverData,
+    plantSystem: PlantSystemData,
+    pertition: PertitionData,
+    laissezFaire: LaissezFaireData,
+    goatstagram: GoatstagramData,
+    spicedAcademy: SpicedAcademyData,
+    this: thisData,
     connectFour: connectFourData
 };
 
 // All aJax requests will go from this file
 export const Action = {
-    showProject: function(projectName){
+    showProject: function (projectName, image) {
+        console.log("Project name and image" ,projectName, image);
+        var returnImage;
+        if (image) {
+            for (const key in pageData) {
+                const project = pageData[key];
+                if( project.screenShots){
+                    for (let index = 0; index < project.screenShots.length; index++) {
+                        const projectImage = project.screenShots[index];
+                        if (projectImage.name == image) {
+                            returnImage = projectImage;
+                            break;
+                        }
+                    }
+                }   
+            }
+        }
         var data = {};
-        switch(projectName){
+        switch (projectName) {
             case 'Dial In':
                 data = DialInData;
                 break;
@@ -58,16 +75,18 @@ export const Action = {
             case 'Connect Four':
                 data = connectFourData;
                 break;
-            default: 
-                console.log('All done');
-        }	
+            default:
+                console.log('ERROR no match in statement');
+                break;
+        }
         return {
             type: "SHOW_PROJECT",
             project: data,
-            direction: "BOTTOM"
+            direction: "BOTTOM",
+            image: returnImage,
         };
     },
-    nextImage(image){
+    nextImage(image) {
         var nextImage = checkPageDataVsImage(pageData, image, 1);
         return {
             type: "PREPARE_NEXT_IMAGE",
@@ -75,7 +94,7 @@ export const Action = {
             direction: "shiftRight"
         };
     },
-    previousImage(image){
+    previousImage(image) {
         var previousImage = checkPageDataVsImage(pageData, image, -1);
         return {
             type: "PREPARE_NEXT_IMAGE",
@@ -83,31 +102,32 @@ export const Action = {
             direction: "shiftLeft"
         };
     },
-    showImage: function(image){
+    showImage: function (image) {
+        console.log('Showing image', image);
         return {
             type: "SHOW_IMAGE",
             image: image
         };
     },
-    dismissImage:function(){
+    dismissImage: function () {
         return {
             type: "DISSMISS_IMAGE",
         };
     },
-    dismissAll(){
+    dismissAll() {
         this.dismissImage();
         return {
             type: "DISSMISS_ALL",
         };
     },
-    calibrateAppSize(widowWidth){
+    calibrateAppSize(widowWidth) {
         return {
             type: "SET_APP_SIZE",
             mobileApp: widowWidth < 750,
             smallScreen: widowWidth < 1020
         };
     },
-    renderNext(){
+    renderNext() {
         return {
             type: "RENDER_NEXT_IMAGE"
         };
@@ -115,22 +135,22 @@ export const Action = {
 };
 
 export const ActionIds = {
-	
+
 };
 
-function checkImageData(element ,imageData, ) {
+function checkImageData(element, imageData, ) {
     return imageData.name == element.name;
 }
 
-function checkPageDataVsImage(pageData, image, returnDifference){
+function checkPageDataVsImage(pageData, image, returnDifference) {
     for (const key in pageData) {
-        if (image){
-            if (image.project == pageData[key].title){
+        if (image) {
+            if (image.project == pageData[key].title) {
                 var currentIndex = pageData[key].screenShots.findIndex((element) => checkImageData(element, image));
                 if (currentIndex >= 0) {
                     return pageData[key].screenShots[currentIndex + returnDifference];
                 }
             }
         }
-    }  
+    }
 }

@@ -19,7 +19,6 @@ class Carosel extends React.Component{
     }
 	
     handleKeyDown(e) {
-        console.log('Key down in carosel with code ', e.keyCode);
         // Right arrow
         if ( e.keyCode === 39 ) {
             this.props.dispatch(action.nextImage(this.props.currentImage));
@@ -43,6 +42,7 @@ class Carosel extends React.Component{
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
+			console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`)
             window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
         }
 
