@@ -13,7 +13,7 @@ class About extends React.Component {
         const linkStyle = {
             textDecoration: 'underline', 
             padding: '0px' , 
-            margin: ' 0px 10px',
+            margin: ' 0px 8px',
             backgroundColor: 'rgba(0,0,0,0)'};
 			
         const element = <Column
@@ -38,7 +38,7 @@ class About extends React.Component {
                 <button 
                     style={linkStyle}
                     onClick={() => props.scrollToRef('myWork')}
-                >Work</button> below if you like. 
+                >Work</button>below if you like. 
             </p>
 
             <br/>
@@ -55,6 +55,12 @@ class About extends React.Component {
                 >Contact</button>
 				me about work,
 				general chit-chat, and lava lamp queries.</p>
+            <br/>
+            <p>You can take a look at my CV <a 
+                href="https://my-portfolio-earyzhe.s3.amazonaws.com/Andrew+Johnson+CV+Developer+(22.01.2019)+German.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >here</a>.</p>
         </Column>;
 
         return (

@@ -78,7 +78,8 @@ export const DialInData = new ProjectPageData({
 		firebaseLink,
 		vsCodeLink,
 		xcodeLink,
-		parseServerLink
+		parseServerLink,
+		androidStudioLink
 	],
 	links: [
 		new LinkData({
