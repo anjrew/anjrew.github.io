@@ -46,8 +46,7 @@ class ProjectPage extends React.Component{
             </div>;
         }
 		
-        const containerTop = this.state.elemenTop || window.scrollY + 'px';
-				
+        const containerTop = this.state.elemenTop || window.scrollY + 'px';				
         if (data){
             return ( 
                 <BrowserRouter>

@@ -1,6 +1,5 @@
 import React from 'react';
 // Components
-import { Row } from '../layout/row';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -73,7 +72,9 @@ class MyWork extends React.Component {
 
                     <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
 
-                    <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>   
+                    <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>  
+
+                    <ProjectImage src='/assets/images/connect-four/logo.jpg' name='Connect Four'/> 
                 </Wrap>
             </Column>
             

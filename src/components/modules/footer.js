@@ -8,11 +8,12 @@ import { connect } from 'react-redux';
 class Footer extends React.Component {
 
     render() {
+        const style = { cursor: 'pointer' };
         const isMobile = this.props.mobileApp; 
-        const headerButton = <button onClick={() => this.props.scrollToRef('header')} >Home</button>;
-        const aboutButton = <button onClick={() => this.props.scrollToRef('about')} >About</button>;
-        const skillsButton = <button onClick={() => this.props.scrollToRef('skills')} >Skills</button>;
-        const myWorkButton = <button onClick={() => this.props.scrollToRef('myWork')} >My Work</button>;
+        const headerButton = <button style={style} onClick={() => this.props.scrollToRef('header')} >Home</button>;
+        const aboutButton =  <button style={style} onClick={() => this.props.scrollToRef('about')} >About</button>;
+        const skillsButton = <button style={style} onClick={() => this.props.scrollToRef('skills')} >Skills</button>;
+        const myWorkButton = <button style={style} onClick={() => this.props.scrollToRef('myWork')} >My Work</button>;
 
         return (
             <SafeArea>

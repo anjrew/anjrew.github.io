@@ -7,7 +7,8 @@ import {
     LaissezFaireData,
     GoatstagramData,
     SpicedAcademyData,
-    thisData } from '../../data/project-page-data';
+    thisData,
+    connectFourData } from '../../data/project-page-data';
 	
 const pageData = {
     dialIn :DialInData,
@@ -19,6 +20,7 @@ const pageData = {
     goatstagram :GoatstagramData,
     spicedAcademy :SpicedAcademyData,
     this :thisData,
+    connectFour: connectFourData
 };
 
 // All aJax requests will go from this file
@@ -52,6 +54,12 @@ export const Action = {
                 break;
             case 'this.':
                 data = thisData;
+                break;
+            case 'Connect Four':
+                data = connectFourData;
+                break;
+            default: 
+                console.log('All done');
         }	
         return {
             type: "SHOW_PROJECT",
