@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { connect } from 'react-redux';
 
 class LinkIcon extends React.Component{

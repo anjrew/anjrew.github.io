@@ -605,7 +605,9 @@ export const thisData = new ProjectPageData({
 	screenShots: [
 		new GalleryImageData({
 			imageUrl: '/assets/images/me-noeyes.png',
-			description: 'Me'
+			description: 'Me trying to be edgy and failing',
+			name: 'My portfolio photo',
+			screenshot: false
 		}),
 	]
 });

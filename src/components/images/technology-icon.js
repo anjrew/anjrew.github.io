@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export class TechnologyIcon extends React.Component{
