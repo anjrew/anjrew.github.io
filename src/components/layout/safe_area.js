@@ -18,7 +18,10 @@ export class SafeArea extends React.Component{
     }
     render(){
         return (
-            <div style={this.style} className="safe-area">
+            <div 
+                style={this.style} 
+                className="safe-area"
+                ref={ this.props.referance } >
                 {this.props.children}
             </div>
         );

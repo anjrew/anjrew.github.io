@@ -21,6 +21,7 @@ class ProjectPage extends React.Component{
         super();
         this.state = {};
         this.dismiss = this.dismiss.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
         this.elemRef = React.createRef();
     }
 	
@@ -60,7 +61,7 @@ class ProjectPage extends React.Component{
                             top: containerTop,
                             backgroundColor: 'rgba(255,255,255,0.99)'
                         }}>
-                            <SafeArea>
+                            <SafeArea referance={this.elemRef} >
                                 <Column
                                     referance={this.elemRef}
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
@@ -170,7 +171,9 @@ class ProjectPage extends React.Component{
         }
     }
 
-    componentDidMount() {	
+    componentDidMount() {
+        document.addEventListener('scroll', this.handleScroll);	
+
         setTimeout(() => { 
             const windowScrollYTop = window.scrollY;
             const totalHeight = document.documentElement.scrollHeight;
@@ -190,8 +193,29 @@ class ProjectPage extends React.Component{
             });
         }, 500);
     }
-}
 
+    componentWillUnmount(){
+        document.removeEventListener('scroll', this.handleScroll, true);
+    }
+	
+    handleScroll(){
+        if( this.elemRef.current){
+            const windowScrollYTop = window.scrollY;
+            const elementHeight = this.elemRef.current.clientHeight;
+            const windowBottom = windowScrollYTop + window.innerHeight;
+            const rect = this.elemRef.current.getBoundingClientRect();
+            const elementDistanceFromTop = rect.top + window.scrollY;
+            const shouldDismissUp = windowBottom < elementDistanceFromTop + 100;
+            const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
+
+            if (shouldDismissUp || shouldDismissDown){ 
+                this.props.dispatch(action.dismissAll());
+            	window.history.pushState({}, '/','/');
+            }
+        }
+    }
+}
+	
 const mapStateToProps = state => {
     return {
         pageToRender: state.pageToRender,

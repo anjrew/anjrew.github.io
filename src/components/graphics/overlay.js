@@ -34,7 +34,7 @@ export class Overlay extends React.Component{
                             position="fixed"
                             width='100vw'
                             height='100vh'
-                            backgroundColor= 'rgba(0,0,0,0.30)'
+                            backgroundColor= 'rgba(0,0,0,0.70)'
                             zIndex="5"
                             top='0px'
                             onClick={() => this.dismiss(history)}
