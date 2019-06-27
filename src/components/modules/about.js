@@ -49,7 +49,7 @@ class About extends React.Component {
 
             <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
 				Feel free to 
-                    00<button 
+                <button 
                     style={linkStyle}
                     onClick={() => props.scrollToRef('contact')}
                 >Contact</button>
