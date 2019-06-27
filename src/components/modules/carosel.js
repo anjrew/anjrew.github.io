@@ -19,6 +19,7 @@ class Carosel extends React.Component{
     }
 	
     handleKeyDown(e) {
+        console.log('Key down in carosel with code ', e.keyCode);
         // Right arrow
         if ( e.keyCode === 39 ) {
             this.props.dispatch(action.nextImage(this.props.currentImage));
@@ -42,7 +43,10 @@ class Carosel extends React.Component{
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
+<<<<<<< HEAD
             console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
+=======
+>>>>>>> parent of b2d8e2e... Saving after a loing time. fade animation project not working in not working
             window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
         }
 		

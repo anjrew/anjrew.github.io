@@ -1,8 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import ScrollAnimation from 'react-animate-on-scroll';
 
-class LinkIcon extends React.Component{
+export default class LinkIcon extends React.Component{
 
     constructor(){
         super();
@@ -45,8 +43,9 @@ class LinkIcon extends React.Component{
         if (biggestWordLength > 8 ) {
             fontSize = '20px';
         }
+		console.log('data.name', data);
 
-        const element =  (
+        return (
             <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
                 <div 
                     style={imageContainerStyle}
@@ -62,6 +61,7 @@ class LinkIcon extends React.Component{
                             position: 'absolute',
                             zIndex:'10',
                             alignSelf: 'center',
+                            // wordWrap: 'break-word',
                             padding: '10px'
                         }}
                     >
@@ -70,6 +70,7 @@ class LinkIcon extends React.Component{
                                 color: 'black',
                                 textAlign: 'center',
                                 margin: '30px',
+                                // wordBreak: 'break-all',
                                 fontSize: fontSize,
                                 transition: 'opacity 500ms',
                                 opacity: this.state.hover ? 1 : 0,
@@ -84,23 +85,6 @@ class LinkIcon extends React.Component{
                 </div>
             </a>
         );
-		
-        return element;
-        // 	<ScrollAnimation
-        // 	animated={false}
-        // 	animateIn={ "fadeIn" }
-        // 	animateOnce={true}
-        // 	de >
-        // 	{element}
-        // </ScrollAnimation>;
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        mobileApp: state.mobileApp
-    };
-};
-
-export default connect(mapStateToProps)(LinkIcon);
 

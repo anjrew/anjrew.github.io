@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 export class TechnologyIcon extends React.Component{
 
@@ -51,7 +50,7 @@ export class TechnologyIcon extends React.Component{
             transform: 'scale(0.9) ',
         };
 
-        const element =  (
+        return (
             <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
                 <div 
                     style={imageContainerStyle}
@@ -61,12 +60,13 @@ export class TechnologyIcon extends React.Component{
                     <div
                         style={{
                             display: 'flex',
-                            placeContent: 'center center' ,
+            				placeContent: 'center center' ,
                             width: width,
                             height: height,
                             position: 'absolute',
                             zIndex:'10',
                             alignSelf: 'center',
+                            // wordWrap: 'break-word',
                             padding: '10px'
                         }}
                     >
@@ -75,6 +75,7 @@ export class TechnologyIcon extends React.Component{
                                 color: 'black',
                                 textAlign: 'center',
                                 margin: '30px',
+                                // wordBreak: 'break-all',
                                 fontSize: fontSize,
                                 transition: 'opacity 500ms',
                                 opacity: this.state.showText ? 1 : 0,
@@ -89,14 +90,6 @@ export class TechnologyIcon extends React.Component{
                 </div>
             </a>
         );
-        return this.props.mobileApp ? element : 
-            <ScrollAnimation
-                initiallyVisible={this.props.mobileApp}
-                animateIn={ 'fade' }
-                animateOnce={true}
-                delay={Math.floor(Math.random() * Math.floor(400))}>
-                {element}
-            </ScrollAnimation>;
     }
 }
 
