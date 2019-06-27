@@ -1,8 +1,6 @@
 import React from 'react';
 import { Action as action } from '../../react_utils/redux/actions';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route } from "react-router-dom";
-
 
 class ProjectImage extends React.Component{
 
@@ -14,9 +12,9 @@ class ProjectImage extends React.Component{
         this.handleClick = this.handleClick.bind(this);
     }
 	
-    handleClick(history){
+    handleClick(){
         this.props.dispatch(action.showProject(this.props.name));
-        history.push(`/${this.props.name}`);
+        window.history.pushState({}, '/',`/${this.props.name}`);
     }
 
     render(){
@@ -60,52 +58,48 @@ class ProjectImage extends React.Component{
         };
 
         return (
-            <BrowserRouter>
-                <Route render= {({ history }) => {
-                    return <div 
-                        style={imageContainerStyle}
+            <div 
+                style={imageContainerStyle}
+                onMouseEnter={() =>{ this.setState({ showText: true }); } }
+                onMouseLeave={() =>{ this.setState({ showText: false  }); } }
+                onClick={() => this.handleClick() }
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        placeContent: 'center center' ,
+                        width: width,
+                        height:'300px',
+                        position: 'absolute',
+                        zIndex:'10',
+                        alignSelf: 'center',
+                        padding: '10px'
+                    }}
+                >
+                    <h2 
+                        style={{  
+                            color: 'white',
+                            textAlign: 'center',
+                            margin: '30px',
+                            fontSize: fontSize,
+                            transition: 'opacity 500ms',
+                            opacity: this.state.showText ? 1 : 0,
+                            alignSelf: 'center',
+                            backgroundColor: 'rgba(0,0,0,0)',
+                        }}
                         onMouseEnter={() =>{ this.setState({ showText: true }); } }
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-                        onClick={() => this.handleClick(history) }
-                    >
-                        <div
-                            style={{
-                                display: 'flex',
-                                placeContent: 'center center' ,
-                                width: width,
-                                height:'300px',
-                                position: 'absolute',
-                                zIndex:'10',
-                                alignSelf: 'center',
-                                padding: '10px'
-                            }}
-                        >
-                            <h2 
-                                style={{  
-                                    color: 'white',
-                                    textAlign: 'center',
-                                    margin: '30px',
-                                    fontSize: fontSize,
-                                    transition: 'opacity 500ms',
-                                    opacity: this.state.showText ? 1 : 0,
-                                    alignSelf: 'center',
-                                    backgroundColor: 'rgba(0,0,0,0)',
-                                }}
-                                onMouseEnter={() =>{ this.setState({ showText: true }); } }
-                                onMouseLeave={() =>{ this.setState({ showText: false  }); } }
-                                onClick={() => this.handleClick(history) }
+                        onClick={() => this.handleClick() }
 
-                            >{this.props.name}</h2>
-                        </div>
-                        <img style={imageStyle} src={this.props.imageUrl || this.props.src}/>
-                    </div>;
-                }} />
-            </BrowserRouter>
+                    >{this.props.name}</h2>
+                </div>
+                <img style={imageStyle} src={this.props.imageUrl || this.props.src}/>
+            </div>
         );
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {
         
     };

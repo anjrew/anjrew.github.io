@@ -25,7 +25,24 @@ const pageData = {
 
 // All aJax requests will go from this file
 export const Action = {
-    showProject: function(projectName){
+    showProject: function(projectName, image){
+        console.log('IN show project with name', projectName, 'and image', image);
+        var returnImage;
+        if (image) {
+            for (const key in pageData) {
+                const project = pageData[key];
+                if( project.screenShots){
+                    for (let index = 0; index < project.screenShots.length; index++) {
+                        const projectImage = project.screenShots[index];
+                        if (projectImage.name == image) {
+                            returnImage = projectImage;
+                            break;
+                        }
+                    }
+                }   
+            }
+        }
+		
         var data = {};
         switch(projectName){
             case 'Dial In':
@@ -61,6 +78,8 @@ export const Action = {
             default: 
                 console.log('All done');
         }	
+        console.log('the return image is ', returnImage,' and the data is ' , data);
+
         return {
             type: "SHOW_PROJECT",
             project: data,

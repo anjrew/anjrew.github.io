@@ -45,7 +45,7 @@ class ProjectPage extends React.Component{
                 }} src={data.logoUrl}/>
             </div>;
         }
-		
+		console.log('data in project page is', data);
         const containerTop = this.state.elemenTop || window.scrollY + 'px';				
         if (data){
             return ( 
@@ -188,7 +188,6 @@ class ProjectPage extends React.Component{
             }
             window.scrollTo(0, elemenTop);
             this.setState({ 
-                showApp: true,
                 elemenTop: elemenTop
             });
         }, 600);
