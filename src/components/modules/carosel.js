@@ -42,11 +42,9 @@ class Carosel extends React.Component{
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
-            console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
+			console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`)
             window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
         }
-		
-        console.log('The current image is ', this.props.currentImage, ' and show image is', this.props.showImage);
 
         return <CSSTransition 
             key={'carosel'} 
@@ -127,11 +125,6 @@ class Carosel extends React.Component{
 	
     componentDidMount(){
         document.addEventListener("keydown", this.handleKeyPress);
-        if ( this.props.currentImage ){
-            this.setState({
-                showImage: true
-            });
-        }
     }
 
     componentWillUnmount(){

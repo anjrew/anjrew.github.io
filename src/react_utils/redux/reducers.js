@@ -7,7 +7,7 @@ export default function reducer(state = {}, action) {
             return { 
                 ...state, 
                 showProject: action.project,
-                // currentImage: action.image 
+                currentImage: action.image 
             };
         case "DISSMISS_ALL":
             return { ...state, showProject: null };

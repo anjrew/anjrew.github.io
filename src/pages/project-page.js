@@ -171,11 +171,10 @@ class ProjectPage extends React.Component{
     }
 
     componentDidMount() {
+		window.history.pushState({}, '/','/');
+        document.addEventListener('scroll', this.handleScroll);	
 
-	
         setTimeout(() => { 
-            document.addEventListener('scroll', this.handleScroll);	
-
             const windowScrollYTop = window.scrollY;
             const totalHeight = document.documentElement.scrollHeight;
             const elementHeight = this.elemRef.current.clientHeight;
@@ -192,7 +191,7 @@ class ProjectPage extends React.Component{
                 showApp: true,
                 elemenTop: elemenTop
             });
-        }, 600);
+        }, 500);
     }
 
     componentWillUnmount(){
