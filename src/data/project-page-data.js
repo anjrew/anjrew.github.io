@@ -371,7 +371,7 @@ export const PertitionData = new ProjectPageData({
 		new LinkData({
 			imageUrl: '/assets/images/green-lava-lamp.jpg',
 			href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
-			name: 'Visit the Lava Lamp petition',
+			name: 'Visit the petition',
 			static: true
 		}),
 	],

@@ -47,7 +47,8 @@ class MyWork extends React.Component {
                     href= "https://www.buymeacoffee.com/earyzhe" 
                     target="_blank"
                     rel="noopener noreferrer">
-                    <img 
+                    <img
+                        className={'grow-on-hover'}
                         src="/assets/images/buy-me-coffee-button.png" 
                         alt="Donate" 
                         style={{margin: '20px'}}

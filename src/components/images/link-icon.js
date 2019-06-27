@@ -1,12 +1,14 @@
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { connect } from 'react-redux';
 
-export default class LinkIcon extends React.Component{
+class LinkIcon extends React.Component{
 
     constructor(){
         super();
         this.state = {
-            hover: false
+            hover: false,
+            show: false
         };
     }
 
@@ -49,11 +51,12 @@ export default class LinkIcon extends React.Component{
 
 
         return (
-            <CSSTransition
-                in={this.state.show}
-                timeout={500}
-                classNames="fade"
-                unmountOnExit>
+		
+            <ScrollAnimation
+                initiallyVisible={this.props.mobileApp}
+                animateIn={this.props.mobileApp || this.props.smallScreen ? "fadeIn" : "fadeInLeft"}
+                animateOnce={true}
+                delay={Math.floor(Math.random() * 600)}>
                 <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">
                     <div 
                         style={imageContainerStyle}
@@ -90,9 +93,25 @@ export default class LinkIcon extends React.Component{
                         <img style={imageStyle} src={data.imageUrl || data.src}/>
                     </div>
                 </a>
-            </CSSTransition>
-
+            </ScrollAnimation>
         );
     }
+	
+    componentDidMount(){
+        this.setState({
+            show: true
+        });
+    }
 }
+
+
+const mapStateToProps = state => {
+
+    return {
+        mobileApp: state.mobileApp,
+        smallScreen: state.smallScreen
+    };
+};
+
+export default connect(mapStateToProps)(LinkIcon);
 
