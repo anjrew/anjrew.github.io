@@ -495,9 +495,11 @@ export const SpicedAcademyData = new ProjectPageData({
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
 	That project is the one you are looking at righ now :).
-		for more Info see "this."
-	})`,
+	`,
 	logoUrl: '/assets/images/spiced-logo.png',
+	projects : [
+		'https://connect-four-andrew-johnson.herokuapp.com/'
+	],
     technologies: [
 		nodeLink,
         vueLink,

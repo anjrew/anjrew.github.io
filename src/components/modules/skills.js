@@ -27,7 +27,6 @@ import {
     handlebarsLink } from '../../data/technology-data';
 	
 // Components
-import { Row } from '../layout/row';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -37,8 +36,8 @@ import TechnologyIcon from '../images/technology-icon';
 class Skills extends React.Component {
 
     render() {
-		const mobileApp = this.props.mobileApp
-		const alignment = {
+        const mobileApp = this.props.mobileApp;
+        const alignment = {
             selfAlign: mobileApp ? 'center':'start',
             textAlign: mobileApp ? 'center':'start' };
         const elem = <Column
@@ -61,9 +60,9 @@ class Skills extends React.Component {
             <br /> 
 
             <p style={alignment}>Server side I implement node.js and use <a 
-                    href='https://firebase.google.com/'
-                    target='_blank'
-                    rel="noopener noreferrer">Firebase</a> or PostgreSQL for databases.</p>
+                href='https://firebase.google.com/'
+                target='_blank'
+                rel="noopener noreferrer">Firebase</a> or PostgreSQL for databases.</p>
             <br /> 
             <p style={alignment}>
 				Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.
@@ -71,7 +70,7 @@ class Skills extends React.Component {
             <br /> 
 
             <Wrap
-                placeContent={alignment}>
+                placeContent={mobileApp ? 'center' : 'flex-start'}>
                 <TechnologyIcon key={flutterLink.name} data={flutterLink}/>
                 <TechnologyIcon key={dartLink.name} data={dartLink} />
                 <TechnologyIcon key={firebaseLink.name} data={firebaseLink} />
