@@ -19,9 +19,9 @@ class About extends React.Component {
 			
         const element = <Column
             margin={Diamensions.sectionMargin}
-            placeContent={props.mobileApp ? 'center':`flex-center'`}
-            alignItems={props.mobileApp ? 'center':`flex-center`}
-            width={props.mobileApp ? '100%' : '60%'}
+            placeContent={props.mobileApp ? 'center':`flex-start'`}
+            alignItems={props.mobileApp ? 'center':`flex-start`}
+            alignSelf={props.mobileApp ? 'center':`flex-start`}
         >
 
 		
@@ -65,35 +65,35 @@ class About extends React.Component {
                 rel="noopener noreferrer"
             >here</a>.</p>
         </Column>;
+		
+        console.log('rendering with about mobileApp', this.props.mobileApp);
+
 
         return (
-            <SafeArea>
-                <Column
-                    referance={props.referance}
-                    margin={Diamensions.sectionMargin}
-                    placeContent={props.mobileApp ? 'center':`flex-center'`}
-                    alignItems={props.mobileApp ? 'center':`flex-center`}
-                >
-                    {this.props.mobileApp ? element :<ScrollAnimation
-                        animated={false}
-                        initiallyVisible={props.mobileApp}
-                        animateIn={ props.mobileApp ? "fadeInUp" : "fadeInLeft" }
-                        animateOnce={true} 
-                    >	
-                        {element}
-                    </ScrollAnimation>
+            <SafeArea
+                referance={props.referance}
+                margin={Diamensions.sectionMargin}
+                placeContent={props.mobileApp ? 'center':`flex-start'`}
+                alignItems={props.mobileApp ? 'center':`flex-start`}
+                width={props.mobileApp ? '100%' : '60%'}
+            >
+              
+                {this.props.mobileApp ? element :<ScrollAnimation
+                    animated={false}
+                    initiallyVisible={props.mobileApp}
+                    animateIn={ props.mobileApp ? "fadeInUp" : "fadeInLeft" }
+                    animateOnce={true} 
+                >	
+                    {element}
+                </ScrollAnimation>
 					
-                    }
-
-                    
-                </Column>
+                }
             </SafeArea>
         );
     }
 }
 
 const mapStateToProps = state => {
-
     return {
         mobileApp: state.mobileApp,
     };

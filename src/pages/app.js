@@ -34,7 +34,8 @@ class App extends React.Component{
         this.scrollToRef = this.scrollToRef.bind(this);
     }
 
-    render(){
+	render(){
+		console.log('rendering with mobileApp', this.props.mobileApp)
         const windowWidth = window.innerWidth;
         const props = this.props;
         var backGroundImage = '';
@@ -98,8 +99,8 @@ class App extends React.Component{
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
         window.addEventListener("resize", () => {
-            console.log('Resizing with' ,window.innerWidth);
-            action.calibrateAppSize(window.innerWidth);
+            // console.log('Resizing with' ,window.innerWidth);
+            this.props.dispatch(action.calibrateAppSize(window.innerWidth));
         });
     }
 	

@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
@@ -10,6 +11,10 @@ import { connect } from 'react-redux';
 class Header extends React.Component {
 
     render() {
+		console.log('small screen', this.props.smallScreen)
+		console.log('mobileApp', this.props.mobileApp)
+		const showIam = (this.props.smallScreen && this.props.mobileApp) || this.props.mobileApp || this.props.smallScreen; 
+		console.log('showIam', showIam)
         return (
             <SafeArea>
 
@@ -29,32 +34,33 @@ class Header extends React.Component {
                         </ScrollAnimation>
 
                     </Row>
-                    { this.props.mobileApp && 
-					<ScrollAnimation
-							    initiallyVisible={this.props.mobileApp}
-							    animateIn={  "fadeIn"  }
-							    animateOnce={true}>
-							    <h1 style={{ textAlign: 'right' }}>I am</h1>
-
-					</ScrollAnimation>
+					{ showIam && 
+						<ScrollAnimation
+							initiallyVisible={this.props.mobileApp}
+							animateIn={  "fadeIn"  }
+							animateOnce={true}>
+							<h1 style={{ textAlign: 'right' }}>I am</h1>
+						</ScrollAnimation>
                     }
                     <Row
                         placeContent={'center flex-end'}>
-                        { !this.props.mobileApp ? 
-                            <ScrollAnimation
-							    initiallyVisible={this.props.mobileApp}
-							    animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
-							    animateOnce={true}>
-							    <h1 style={{ textAlign: 'right' }}>I am Andrew</h1>
-
-                            </ScrollAnimation> :
+                        { this.props.mobileApp || this.props.smallScreen ? 
+                           
 
                             <ScrollAnimation
                                 initiallyVisible={this.props.mobileApp}
                                 animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
                                 animateOnce={true}>
                                 <h1 style={{ textAlign: 'right' }}>Andrew</h1>
-                            </ScrollAnimation>
+                            </ScrollAnimation> 
+                            :
+							 <ScrollAnimation
+							 initiallyVisible={this.props.mobileApp}
+							 animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
+							 animateOnce={true}>
+							 <h1 style={{ textAlign: 'right' }}>I am Andrew</h1>
+
+						 </ScrollAnimation> 
                         }
                     </Row>
                 </Column>
@@ -68,6 +74,7 @@ const mapStateToProps = state => {
 
     return {
         mobileApp: state.mobileApp,
+        smallScreen: state.smallScreen
     };
 };
 

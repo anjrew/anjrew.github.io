@@ -6,20 +6,21 @@ export class SafeArea extends React.Component{
         super(props);
         this.padding = 20;
         this.paddingTwo = this.padding*2;
-        this.style = {
-            padding: props.padding || '20px',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            height: 'calc(100% - 40px)',
-            width: 'calc(100% - 40px)',
-            marginTop: this.props.marginTop
-        };
     }
     render(){
         return (
             <div 
-                style={this.style} 
+                style={{
+                    padding: this.props.padding || '20px',
+                    alignItems: this.props.alignItems ||'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 'calc(100% - 40px)',
+                    width: 'calc(100% - 40px)',
+                    marginTop: this.props.marginTop,
+                    placeContent: this.props.placeContent,
+                    margin: this.props.margin,
+                }} 
                 className="safe-area"
                 ref={ this.props.referance } >
                 {this.props.children}
