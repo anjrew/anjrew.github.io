@@ -11,7 +11,7 @@ class About extends React.Component {
     render() {
         
         const track = this.props.currentTrack;
-        var currentlyPlaying = false;
+        var currentlyPlaying = '';
  
         if(track){
             if (track['@attr']){

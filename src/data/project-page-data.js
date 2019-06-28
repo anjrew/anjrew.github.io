@@ -171,7 +171,7 @@ export const CupomaticData = new ProjectPageData({
 	backgroundImage: '/assets/images/dial-in.jpg',
 	title: 'CupOmatic',
 	description: 'A tool to assist coffee professionals with the the cupping protocol',
-	logoUrl: 'assets/images/cupOmatic-logo.jpg',
+	logoUrl: '/assets/images/cupOmatic-logo.jpg',
 	technologies: [
 		swiftLink,
 		javaLink,
@@ -266,7 +266,7 @@ export const BatterySaverData = new ProjectPageData({
 	description: `Battery saver works with bluetooth hardware to control the charge of your device. 
 	Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
 		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
-	logoUrl: 'assets/images/battery_saver_logo.png',
+	logoUrl: '/assets/images/battery_saver_logo.png',
 	technologies: [
 		flutterLink,
 		flareLink,
@@ -422,7 +422,7 @@ export const LaissezFaireData = new ProjectPageData({
 	description: `Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
 	and more.`,
-	logoUrl: 'assets/images/laissez-faire.jpg',
+	logoUrl: '/assets/images/laissez-faire.jpg',
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -601,7 +601,7 @@ export const thisData = new ProjectPageData({
 	title: 'this.',
 	description: `This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
 	 so I can blend my personal experience into truly unique products.`,
-	logoUrl: 'assets/images/me-noeyes.png',
+	logoUrl: '/assets/images/me-noeyes.png',
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -631,7 +631,7 @@ export const connectFourData = new ProjectPageData({
 		
 	Click the link below to play the game :-).\
 	`,
-	logoUrl: 'assets/images/connect-four/logo.jpg',
+	logoUrl: '/assets/images/connect-four/logo.jpg',
 	technologies: [
 		vsCodeLink,
 		cssLink,
