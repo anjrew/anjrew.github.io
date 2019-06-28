@@ -10,8 +10,12 @@ const path = require('path');
 const print = require('./utils/print');
 const server = require('http').Server(app);
 const io = require('socket.io')(server, { origins: 'localhost:8080' });
+const https = require('https');
+const request = require('request');
 
 
+
+// /2.0/?method=user.getrecenttracks&user=rj&api_key=YOUR_API_KEY&format=json
 
 global.appRoot = path.resolve(__dirname);
 
@@ -106,6 +110,46 @@ if (process.env.NODE_ENV != 'production') {
 
 app.get('*', function(req, res) {
     res.sendFile(__dirname + '/index.html');
+    // https.request({
+    //     method: 'GET',
+    //     host: 'ws.audioscrobbler.com',
+    // 	// path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
+    // 	path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
+
+		
+    // }, function(resp) {
+    // 	print.warning('The response from last fm was', resp);
+    // 	print.warning('The response from last fm was', resp.recentTracks);
+
+	// }).end();
+	
+	https.request({
+        method: 'GET',
+        host: 'ws.audioscrobbler.com',
+    	// path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
+    	path: '/2.0/?method=chart.gettopartists&api_key=8d860c323a1ca1af00d0cd41d1f99da9&format=json'
+
+		
+    }, function(resp) {
+    	print.warning('The response from last fm was', resp);
+    	print.warning('The response from last fm was', resp.recentTracks);
+
+    }).end();
+	
+    // request.get(
+    //     'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json')
+    //     	.on('response',(resp) => {
+    //         console.log('The response is  ', resp);
+    //         // let data=''; 
+    //         // console.log('data, is ', data);
+    //         // resp.on('data', (chunk=>{
+    //         //     data +=chunk;
+    //         // }));
+    //         // resp.on('end', ()=>{
+    //         //     console.log(JSON.parse(data));
+    //         // });
+    //     });
+    
 });
 
 if (require.main === module) {

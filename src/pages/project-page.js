@@ -104,7 +104,9 @@ class ProjectPage extends React.Component{
                                         alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
                                         height='100%'
                                         placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
-                                        <button onClick={() => this.dismiss(history)}>X</button>
+                                        <button 
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => this.dismiss(history)}>X</button>
                                     </Container>}
                                 </Container>
 	

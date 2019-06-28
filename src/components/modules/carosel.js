@@ -14,22 +14,9 @@ class Carosel extends React.Component{
 
     constructor(){
         super();
-        this.handleKeyDown = this.handleKeyDown.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
     }
 	
-    handleKeyDown(e) {
-        console.log('Key down in carosel with code ', e.keyCode);
-        // Right arrow
-        if ( e.keyCode === 39 ) {
-            this.props.dispatch(action.nextImage(this.props.currentImage));
-        // Left arrow
-        } else if ( e.keyCode === 37 ) {
-            this.props.dispatch(action.previousImage(this.props.currentImage));
-        }
-    }
-	
-
     render(){
         const arrowStyle = {
             height: this.props.mobileApp? '50px' : '150px',
@@ -45,12 +32,9 @@ class Carosel extends React.Component{
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
-            console.log('in carosel history push', `/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
             window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
         }
 		
-        console.log('The current image is ', this.props.currentImage, ' and show image is', this.props.showImage);
-
         return <CSSTransition 
             key={'carosel'} 
             in={!!this.props.nextImage || !!this.props.currentImage}
@@ -61,7 +45,7 @@ class Carosel extends React.Component{
             <BrowserRouter>
                 <Route render= {({ history }) => {
                     return( <Column
-                        onKeyDown={ this.handleKeyDown }
+                        onKeyDown={ this.handleKeyPress }
                         position={'fixed'}
                         top={'0px'}
                         left='0px'
@@ -150,13 +134,14 @@ class Carosel extends React.Component{
     }
 
     handleKeyPress(event){
+
         if (event.keyCode == 39){
             this.props.dispatch(action.nextImage(this.props.currentImage));
         }
         if (event.keyCode == 37){
             this.props.dispatch(action.previousImage(this.props.currentImage));
         }
-        if (event.keyCode == 40){
+        if (event.keyCode == 27){
             this.props.dispatch(action.dismissImage());
         }
     }
