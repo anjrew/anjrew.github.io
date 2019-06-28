@@ -15,6 +15,7 @@ class About extends React.Component {
             padding: '0px' , 
             margin: ' 0px 8px',
             backgroundColor: 'rgba(0,0,0,0)'};
+        const alignment = { textAlign: props.mobileApp ? 'center':'start' };
 			
         const element = <Column
             margin={Diamensions.sectionMargin}
@@ -22,13 +23,15 @@ class About extends React.Component {
             alignItems={props.mobileApp ? 'center':`flex-center`}
             width={props.mobileApp ? '100%' : '60%'}
         >
+
+		
            
-            <h2 style={{ textAlign: props.mobileApp ? 'center':'start' }}>About</h2>
-            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
+            <h2 style={alignment}>About</h2>
+            <p style={alignment}>
 				I am a Berlin-based software developer. 
             </p>
             <br/>
-            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
+            <p style={alignment}>
 				This page is about me and what I do. 
 				So check out my 
                 <button 
@@ -42,12 +45,12 @@ class About extends React.Component {
             </p>
 
             <br/>
-            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
+            <p style={alignment}>
 			I love intuitive user experiences: pages that load fast, are lag free and responsive to all device sizes.
             </p>
             <br/>
 
-            <p style={{ textAlign: props.mobileApp ? 'center': 'start' }}>
+            <p style={alignment}>
 				Feel free to 
                 <button 
                     style={linkStyle}
@@ -56,7 +59,7 @@ class About extends React.Component {
 				me about work,
 				general chit-chat, and lava lamp queries.</p>
             <br/>
-            <p>You can take a look at my CV <a 
+            <p style={alignment}>You can take a look at my CV <a 
                 href="https://my-portfolio-earyzhe.s3.amazonaws.com/Andrew+Johnson+CV+Developer+(22.01.2019)+German.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

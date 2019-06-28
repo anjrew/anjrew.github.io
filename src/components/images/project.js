@@ -19,7 +19,7 @@ class ProjectImage extends React.Component{
 
     render(){
 		
-        const size = this.props.size || '300px';
+        const size = this.props.mobileApp ? '100px' : '300px';
         const width = size;
         const height = size;
 		
@@ -83,11 +83,11 @@ class ProjectImage extends React.Component{
                             color: 'white',
                             textAlign: 'center',
                             margin: '30px',
-                            fontSize: fontSize,
+                            fontSize: this.props.mobileApp ? '13px' : fontSize,
                             transition: 'opacity 500ms',
-                            opacity: this.state.showText ? 1 : 0,
+                            opacity: this.state.showText || this.props.mobileApp ? 1 : 0,
                             alignSelf: 'center',
-                            backgroundColor: 'rgba(0,0,0,0)',
+                            backgroundColor: this.props.mobileApp ?'black' : 'rgba(0,0,0,0)',
                         }}
                         onMouseEnter={() =>{ this.setState({ showText: true }); } }
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
@@ -101,9 +101,9 @@ class ProjectImage extends React.Component{
     }
 }
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
     return {
-        
+        mobileApp: state.mobileApp
     };
 };
 
