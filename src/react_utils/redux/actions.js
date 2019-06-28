@@ -121,6 +121,8 @@ export const Action = {
         };
     },
     calibrateAppSize(widowWidth){
+        console.log('mobileApp:', widowWidth < 750);
+        console.log('smallScreen:', widowWidth < 1020);
         return {
             type: "SET_APP_SIZE",
             mobileApp: widowWidth < 750,

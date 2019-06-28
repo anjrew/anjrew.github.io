@@ -11,6 +11,7 @@ export class Row extends React.Component{
                     height: this.props.height,
                     flex: this.props.flex,
                     boxSizing: this.props.boxSizing,
+                    minWidth: this.props.minWidth,
                     minHeight: this.props.minHeight,
                     maxHeight: this.props.maxHeight,
                     maxWidth: this.props.maxWidth,

@@ -135,7 +135,7 @@ class ProjectPage extends React.Component{
 							    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
 							    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
 							    margin={sectionMargin}>
-                            	<h3>More info</h3> 
+                            	<h3>{data.linksTitle}</h3> 
 							    <Wrap
 							        alignItems={ this.props.smallScreen ? 'center' : 'start' }
 							        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
@@ -184,7 +184,7 @@ class ProjectPage extends React.Component{
             var elemenTop;
             const toobig = windowBottom > totalHeight;
             if ( (toobig) ){
-                elemenTop = totalHeight - elementHeight + 100;
+                elemenTop = totalHeight - elementHeight;
             } else {
                 elemenTop = windowScrollYTop;
             }

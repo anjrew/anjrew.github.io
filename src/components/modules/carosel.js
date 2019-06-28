@@ -75,7 +75,8 @@ class Carosel extends React.Component{
                         }}>
                         <Row
                             height='calc(80% - 100px)'
-                            width={'auto'}>
+                            width={'auto'}
+                            minWidth='100%'>
                             <div
                                 onClick={(e) => {
                                     e.preventDefault();

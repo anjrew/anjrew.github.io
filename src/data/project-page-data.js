@@ -34,6 +34,7 @@ export class ProjectPageData {
 		this.technologies = data['technologies'];
 		this.links = data['links'];
 		this.screenShots = data['screenShots'];
+		this.linksTitle = data['linksTitle'];
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
@@ -69,8 +70,9 @@ export const DialInData = new ProjectPageData({
 	backgroundImage: '/assets/images/dial-in.jpg',
 	title: 'Dial in',
 	description: `A tool to help coffee professionals record and analyse data. 
-	I started off by making the app in Swift and purly iOS. I had a suddent realiseation that I should definity
-	dive into cross platform development. That's what I did. I started the {}`,
+	I started off by making the app in Swift and purly iOS. I had a sudden realisation that I should definity
+	dive into cross platform development. That's what I did. I started from scratch and started making the app 
+	in the Flutter framework. I've never looked back :)`,
 	logoUrl: '/assets/images/dial-in-logo.png',
 	technologies: [
 		flutterLink,
@@ -81,6 +83,7 @@ export const DialInData = new ProjectPageData({
 		parseServerLink,
 		androidStudioLink
 	],
+	linksTitle: 'More Info',
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/faceBookIcon.png',
@@ -175,6 +178,7 @@ export const CupomaticData = new ProjectPageData({
 		xcodeLink,
 		androidStudioLink
 	],
+	linksTitle: 'More Info',
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/faceBookIcon.png',
@@ -268,6 +272,7 @@ export const BatterySaverData = new ProjectPageData({
 		flareLink,
 		vsCodeLink
 	],
+	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
 			imageUrl: '/assets/images/battery-saver/IMG-20190627-WA0000.jpg',
@@ -306,6 +311,7 @@ export const PlantSystemData = new ProjectPageData({
 		arduinoLink,
 		vsCodeLink
 	],
+	linksTitle: 'More Info',
 	screenShots: [
 
 		new GalleryImageData({
@@ -367,6 +373,7 @@ export const PertitionData = new ProjectPageData({
 		vsCodeLink,
 		handlebarsLink
 	],
+	linksTitle: 'Visit the petition',
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/green-lava-lamp.jpg',
@@ -426,6 +433,7 @@ export const LaissezFaireData = new ProjectPageData({
 		javaScriptLink,
 		awsLink
 	],
+	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
 			imageUrl: '/assets/images/social-network/Screenshot 2019-06-25 at 11.19.30.png',
@@ -475,6 +483,7 @@ export const GoatstagramData = new ProjectPageData({
 		javaScriptLink,
 		awsLink
 	],
+	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
 			imageUrl: '/assets/images/goatstagram/Screenshot 2019-06-25 at 11.55.54.png',
@@ -530,6 +539,7 @@ export const SpicedAcademyData = new ProjectPageData({
 		javaScriptLink,
 		awsLink
 	],
+	linksTitle: 'More Info',
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/twitter-logo.png',
@@ -602,6 +612,7 @@ export const thisData = new ProjectPageData({
 		javaScriptLink,
 		awsLink
 	],
+	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
 			imageUrl: '/assets/images/me-noeyes.png',
@@ -627,6 +638,7 @@ export const connectFourData = new ProjectPageData({
 		htmlLink,
 		javaScriptLink,
 	],
+	linksTitle: 'Play the game.',
 	links: [
 		new LinkData({
 			imageUrl: 'assets/images/connect-four/logo.jpg',

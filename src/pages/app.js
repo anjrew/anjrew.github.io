@@ -93,11 +93,14 @@ class App extends React.Component{
             }
         }
         const location = options[1].split('%20').join(' ');
-        console.log('location is', location);
         if (location){
             this.props.dispatch(action.showProject(location, image));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
+        window.addEventListener("resize", () => {
+            console.log('Resizing with' ,window.innerWidth);
+            action.calibrateAppSize(window.innerWidth);
+        });
     }
 	
     scrollToRef(section){
