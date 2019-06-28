@@ -108,7 +108,6 @@ class About extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log('current track in wkvdne', state.tracks && state.tracks[0]);
     return {
         mobileApp: state.mobileApp,
         currentTrack: state.tracks && state.tracks[0]

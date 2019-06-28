@@ -53,7 +53,7 @@ class VideoPlayer extends Component {
                 onClick={() => {
                     console.log('data in video', this.props.data);
                     this.props.dispatch(action.dismissVideo());
-                    window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}/image/${this.props.data.name}`);
+                    window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}`);
                 }}>
                 <ReactPlayer 
                     width={'100%'}
