@@ -74,7 +74,7 @@ class About extends React.Component {
             >here</a>.</p>
             <br/>
             
-            <p style={{ opacity: track? 1:0}} >  
+            <p style={{ ...alignment ,opacity: track? 1:0}} >  
                 {me} {prefix} listening to {' '}
                 <a href={track && track.url}
                     target="_blank"
