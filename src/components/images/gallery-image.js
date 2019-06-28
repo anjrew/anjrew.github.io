@@ -17,7 +17,7 @@ class GalleryImage extends React.Component{
 
     render(){
         const data = this.props.data;
-        const size = this.props.size || '300px';
+        const size = this.props.size || this.props.mobileApp ? '80px':'300px' ;
         const width = size;
         const height = size;
        
@@ -55,6 +55,9 @@ class GalleryImage extends React.Component{
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
+        if (this.props.mobileApp ){
+            fontSize = '20px';
+        }
 
         return<React.Fragment>
             <div 
@@ -68,8 +71,8 @@ class GalleryImage extends React.Component{
                         cursor: 'pointer',  
                         display: 'flex',
                         placeContent: 'center center' ,
-                        width: width,
-                        height:'300px',
+                        width: size,
+                        height:size,
                         position: 'absolute',
                         zIndex:'10',
                         alignSelf: 'center',
@@ -92,7 +95,7 @@ class GalleryImage extends React.Component{
                         onMouseLeave={this.mouseLeave }
                         onClick={() => { 
                             this.mouseClick(history);}}
-                    >{data && data.name}</h2>;
+                    >{data && data.name}</h2>
 				
                 </div>
 
@@ -109,9 +112,9 @@ class GalleryImage extends React.Component{
         this.setState({ hoverImage: false  }); 
     }
     mouseClick(){
-        if (!this.props.mobileApp) {
+        // if (!this.props.mobileApp) {
             this.props.dispatch(action.showImage(this.props.data));
-        }
+        // }
     }
 }
 

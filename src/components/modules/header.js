@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Row } from '../layout/row';
@@ -24,19 +25,37 @@ class Header extends React.Component {
                             animateIn="fadeInLeft"
                             animateOnce={true}
                         >
-                            <h1>Hello</h1>
+                            <h1>Hello.</h1>
                         </ScrollAnimation>
 
                     </Row>
+                    { this.props.mobileApp && 
+					<ScrollAnimation
+							    initiallyVisible={this.props.mobileApp}
+							    animateIn={  "fadeIn"  }
+							    animateOnce={true}>
+							    <h1 style={{ textAlign: 'right' }}>I am</h1>
+
+					</ScrollAnimation>
+                    }
                     <Row
                         placeContent={'center flex-end'}>
-                        <ScrollAnimation
-                            initiallyVisible={this.props.mobileApp}
-                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
-                            animateOnce={true}
-                        >
-                            <h1>I am Andrew</h1>
-                        </ScrollAnimation>
+                        { !this.props.mobileApp ? 
+                            <ScrollAnimation
+							    initiallyVisible={this.props.mobileApp}
+							    animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
+							    animateOnce={true}>
+							    <h1 style={{ textAlign: 'right' }}>I am Andrew</h1>
+
+                            </ScrollAnimation> :
+
+                            <ScrollAnimation
+                                initiallyVisible={this.props.mobileApp}
+                                animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
+                                animateOnce={true}>
+                                <h1 style={{ textAlign: 'right' }}>Andrew</h1>
+                            </ScrollAnimation>
+                        }
                     </Row>
                 </Column>
                 {/* } */}

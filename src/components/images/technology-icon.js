@@ -14,7 +14,7 @@ export class TechnologyIcon extends React.Component{
 
     render(){
         const data = this.props.data;
-        const size = data.size || '100px';
+        const size = data.size || this.props.mobileApp ? '60px':'100px';
         const width = size;
         const height = size;
 		

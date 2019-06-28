@@ -79,7 +79,7 @@ class ProjectPage extends React.Component{
                                         { data.title &&   
 											<h1 
 											    style={{ 
-											    	fontSize: this.props.smallScreen ? '50px' : data.title.length > 10 ? '80px': data.title.length > 8 ? '100px' : '120px',
+											    	fontSize: this.props.mobileApp ? '35px' : this.props.smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
 											        textDecoration: 'underline',
 											        textAlign: this.props.smallScreen ? 'center' : 'start'  
 											    }}

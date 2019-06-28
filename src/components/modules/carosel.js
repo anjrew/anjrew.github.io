@@ -32,13 +32,15 @@ class Carosel extends React.Component{
 
     render(){
         const arrowStyle = {
+            height: this.props.mobileApp? '50px' : '150px',
+            width: this.props.mobileApp? '50px' : '150px',
             padding: '10px',
             margin: '10px',
             cursor: 'pointer'
         };
         const imageStyle = {
             objectFit: 'cover',
-            maxWidth: 'calc(90% - 300px)',
+            maxWidth: this.props.mobileApp || 'calc(90% - 300px)',
             width: 'auto',
             height: 'calc(80% - 100px)',
         };
@@ -72,7 +74,8 @@ class Carosel extends React.Component{
                             history.push(`/${this.props.currentImage.project}`);
                         }}>
                         <Row
-                            height='calc(80% - 100px)'>
+                            height='calc(80% - 100px)'
+                            width={'auto'}>
                             <div
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -116,8 +119,14 @@ class Carosel extends React.Component{
 			
                         <Container
                             paddin='30px'>
-                            <h3 style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.name}</h3>
-                            <p style={{color: 'white', backgroundColor: 'rgba(0,0,0,0)'}}>{this.props.currentImage && this.props.currentImage.description}</p>
+                            <h3 style={{color: 'white', 
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                textAlign: "center"}}>{this.props.currentImage && this.props.currentImage.name}</h3>
+                            <p style={{
+                                color: 'white',
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                textAlign: "center"
+                            }}>{this.props.currentImage && this.props.currentImage.description}</p>
                         </Container>
 			
                     </Column>);
@@ -158,7 +167,8 @@ const mapStateToProps = state => {
         currentImage: state.currentImage,
         nextImage: state.nextImage,
         showImage: state.showImage,
-        direction: state.direction
+        direction: state.direction,
+        mobileApp: state.mobileApp
     };
 };
 

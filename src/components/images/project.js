@@ -70,8 +70,8 @@ class ProjectImage extends React.Component{
                     style={{
                         display: 'flex',
                         placeContent: 'center center' ,
-                        width: width,
-                        height:'300px',
+                        width: size,
+                        height:size,
                         position: 'absolute',
                         zIndex:'10',
                         alignSelf: 'center',
