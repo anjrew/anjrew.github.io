@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 class Footer extends React.Component {
 
     render() {
-        const style = { cursor: 'pointer' };
+        const style = { cursor: 'pointer', backgroundColor: 'white' };
         const isMobile = this.props.mobileApp; 
         const headerButton = <button style={style} onClick={() => this.props.scrollToRef('header')} >Home</button>;
         const aboutButton =  <button style={style} onClick={() => this.props.scrollToRef('about')} >About</button>;
