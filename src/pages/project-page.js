@@ -224,13 +224,22 @@ class ProjectPage extends React.Component{
             if (options[2]){
                 if ( options[2] == 'image' ){ 
                     if(options[3]){ image = options[3].split('%20').join(' '); }
-		 		}
+                }
+                if ( options[2] == 'video' ){ 
+                    if(options[3]){ image = options[3].split('%20').join(' '); }
+                }
             }
 			
             for (let index = 0; index < this.props.data.screenShots.length; index++) {
                 const imagedata = this.props.data.screenShots[index];
                 if (imagedata.name == image){
                     this.props.dispatch(action.showImage(imagedata));
+                }
+            }
+            for (let index = 0; index < this.props.data.videos.length; index++) {
+                const videoData = this.props.data.videos[index];
+                if (videoData.name == image){
+                    this.props.dispatch(action.showVideo(videoData));
                 }
             }
         }, 600);
