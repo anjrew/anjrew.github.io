@@ -90,16 +90,8 @@ class App extends React.Component{
     componentDidMount() {
         const options = window.location.pathname.split('/');
         var image;
-        if (options[2]){
-            if ( options[2] == 'image' ){ 
-                if(options[3]){ image = options[3].split('%20').join(' '); }
-            }
-            if ( options[2] == 'video' ){ 
-                if(options[3]){ image = options[3].split('%20').join(' '); }
-            }
-        }
-		const location = options[1].split('%20').join(' ');
-		console.log('the location is ', location)
+    
+        const location = options[1].split('%20').join(' ');
         if (location){
             this.props.dispatch(action.showProject(location, image));
         }
