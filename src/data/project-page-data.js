@@ -63,6 +63,7 @@ export class VideoData {
 		this.url = data['url'];
 		this.name = data['name'];
 		this.imageUrl = data['imageUrl'];
+		this.screenShot = data['screenShot'];
 		for (const key in data) {
 			const element = data[key];
 			if (element == null || element == undefined) {
@@ -192,7 +193,8 @@ export const DialInData = new ProjectPageData({
 			description: 'A Demo of a user using the application',
 			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
 			name: 'Demo',
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37.png'
+			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.06.png',
+			screenShot: true
 		})
 	]
 });

@@ -15,8 +15,8 @@ class VideoPlayer extends Component {
     }
 	
     render(){
-		const data =  this.props.data;
-		console.log('Data in video', data)
+        const data =  this.props.data;
+        console.log('Data in video', data);
         const arrowStyle = {
             height: this.props.mobileApp? '50px' : '150px',
             width: this.props.mobileApp? '50px' : '150px',
@@ -36,7 +36,7 @@ class VideoPlayer extends Component {
 		
         return <CSSTransition 
             key={'videoPLayer'} 
-            in={this.props.data}
+            in={!!this.props.data}
             onExited={() => this.props.dispatch(action.renderNext()) }
             timeout={400} 
             classNames="fade" 
@@ -51,17 +51,14 @@ class VideoPlayer extends Component {
                 zIndex='800'
                 backgroundColor= 'rgba(0,0,0,0.80)'
                 onClick={() => {
+                    console.log('data in video', this.props.data);
                     this.props.dispatch(action.dismissVideo());
                     window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}/image/${this.props.data.name}`);
                 }}>
-                <Row
-                    height='calc(80% - 100px)'
-                    width={'auto'}
-                    minWidth='100%'>
-                    <ReactPlayer 
-                        url={this.props.data && this.props.data.url}
-                        controls={true}/>;
-                </Row>
+                <ReactPlayer 
+                    width={'100%'}
+                    url={this.props.data && this.props.data.url}
+                    controls={true}/>;
 			
                 <Container
                     paddin='30px'>

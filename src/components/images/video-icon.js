@@ -102,7 +102,6 @@ class VideoIcon extends React.Component{
                 <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
             </div>
         </React.Fragment>;
-
     }
 	
     mouseOver(){

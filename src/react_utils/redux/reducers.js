@@ -69,7 +69,7 @@ export default function reducer(state = {}, action) {
 				...state,
 				video: action.video
 			};
-		case "DISMISS_VIDEO":
+		case "DISSMISS_VIDEO":
 			return {
 				...state,
 				video: null
