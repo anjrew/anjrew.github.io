@@ -77,6 +77,8 @@ class About extends React.Component {
             <p style={{ opacity: track? 1:0}} >  
                 {me} {prefix} listening to {' '}
                 <a href={track && track.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >{track && track.name}</a> {' '}
 			by {track && track.artist['#text']} { '  ' } 
                 <span style={{display: 'inline-block'}} className={currentlyPlaying && "pulse"}>🎶</span></p>

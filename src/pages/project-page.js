@@ -261,8 +261,6 @@ class ProjectPage extends React.Component{
                 const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
 				
                 if (shouldDismissUp || shouldDismissDown){ 
-                    console.log('dismissing because shouldDismissUp ', shouldDismissUp);
-                    console.log('dismissing because shouldDismissDown ', shouldDismissDown);
                     this.props.dispatch(action.dismissAll());
                     window.history.pushState({}, '/','/');
                 }
