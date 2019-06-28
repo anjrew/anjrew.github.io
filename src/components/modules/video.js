@@ -4,7 +4,6 @@ import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { Action as action } from '../../react_utils/redux/actions';
 import { Column } from '../layout/column';
-import { Row } from '../layout/row';
 import { Container } from '../boxes/container';
 
 class VideoPlayer extends Component {
@@ -15,7 +14,6 @@ class VideoPlayer extends Component {
     }
 	
     render(){
-        const data =  this.props.data;
         if(this.props.data){
             window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}/video/${this.props.data.name}`);
         }

@@ -40,11 +40,13 @@ export const Action = {
                     }
                 }   
             }
-        }
-		
+		}
+		projectName = projectName.trim();
+		console.log('project name', projectName, 'and the test is ', 'Dial In', 'so', projectName == 'Dial In');
         var data;
         switch(projectName){
             case 'Dial In':
+				console.log('in here')
                 data = DialInData;
                 break;
             case 'CupOmatic':
@@ -77,7 +79,7 @@ export const Action = {
             default: 
                 console.log('All done');
         }	
-
+		console.log('Going to show project with data', data);
         return {
             type: "SHOW_PROJECT",
             project: data,

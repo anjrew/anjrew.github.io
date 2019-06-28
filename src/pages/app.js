@@ -98,13 +98,13 @@ class App extends React.Component{
                 if(options[3]){ image = options[3].split('%20').join(' '); }
             }
         }
-        const location = options[1].split('%20').join(' ');
+		const location = options[1].split('%20').join(' ');
+		console.log('the location is ', location)
         if (location){
             this.props.dispatch(action.showProject(location, image));
         }
         this.props.dispatch(action.calibrateAppSize(window.innerWidth));
         window.addEventListener("resize", () => {
-            // console.log('Resizing with' ,window.innerWidth);
             this.props.dispatch(action.calibrateAppSize(window.innerWidth));
         });
         this.getTracks();
