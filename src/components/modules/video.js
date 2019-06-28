@@ -16,22 +16,8 @@ class VideoPlayer extends Component {
 	
     render(){
         const data =  this.props.data;
-        console.log('Data in video', data);
-        const arrowStyle = {
-            height: this.props.mobileApp? '50px' : '150px',
-            width: this.props.mobileApp? '50px' : '150px',
-            padding: '10px',
-            margin: '10px',
-            cursor: 'pointer'
-        };
-        const imageStyle = {
-            objectFit: 'cover',
-            maxWidth: this.props.mobileApp ? 'calc(80% - 100px)' : 'calc(90% - 300px)',
-            width: 'auto',
-            height: 'calc(80% - 100px)',
-        };
         if(this.props.data){
-            window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}/image/${this.props.data.name}`);
+            window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}/video/${this.props.data.name}`);
         }
 		
         return <CSSTransition 
@@ -53,7 +39,7 @@ class VideoPlayer extends Component {
                 onClick={() => {
                     console.log('data in video', this.props.data);
                     this.props.dispatch(action.dismissVideo());
-                    window.history.pushState({}, 'this.props.data.name',`/${this.props.data.project}`);
+                    window.history.pushState({}, '',`/${this.props.data.project}`);
                 }}>
                 <ReactPlayer 
                     width={'100%'}

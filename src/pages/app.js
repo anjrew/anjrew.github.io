@@ -94,6 +94,9 @@ class App extends React.Component{
             if ( options[2] == 'image' ){ 
                 if(options[3]){ image = options[3].split('%20').join(' '); }
             }
+            if ( options[2] == 'video' ){ 
+                if(options[3]){ image = options[3].split('%20').join(' '); }
+            }
         }
         const location = options[1].split('%20').join(' ');
         if (location){
