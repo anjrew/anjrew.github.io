@@ -117,7 +117,6 @@ app.get('/get-tracks', function(req, res) {
             res.json(songs);
         }
     });
-	
 });
 
 app.get('*', function(req, res) {

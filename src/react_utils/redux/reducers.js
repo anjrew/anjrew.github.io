@@ -58,6 +58,11 @@ export default function reducer(state = {}, action) {
                 direction: state.nextDirection,
                 nextDirection: null
             };
+        case "ADD_TRACKS":
+            return {
+                ...state,
+                tracks: action.tracks
+            };
         default:
             return state;
     }

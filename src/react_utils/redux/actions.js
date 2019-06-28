@@ -129,6 +129,12 @@ export const Action = {
         return {
             type: "RENDER_NEXT_IMAGE"
         };
+    },
+    addTracks(tracks){
+        return {
+            type: "ADD_TRACKS",
+            tracks: tracks
+        };
     }
 };
 

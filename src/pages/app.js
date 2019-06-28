@@ -131,7 +131,7 @@ class App extends React.Component{
 	
     getTracks(){
         axios.get('/get-tracks').then((respose) => {
-            console.log(respose);
+            this.props.dispatch(action.addTracks(respose.data));
         }).catch((e) =>{
             console.log(e);
         });
