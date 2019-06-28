@@ -26,7 +26,6 @@ const pageData = {
 // All aJax requests will go from this file
 export const Action = {
     showProject: function(projectName, image){
-        console.log('IN show project with name', projectName, 'and image', image);
         var returnImage;
         if (image) {
             for (const key in pageData) {
@@ -78,7 +77,6 @@ export const Action = {
             default: 
                 console.log('All done');
         }	
-        console.log('the return image is ', returnImage,' and the data is ' , data);
 
         return {
             type: "SHOW_PROJECT",
@@ -121,8 +119,6 @@ export const Action = {
         };
     },
     calibrateAppSize(widowWidth){
-        console.log('mobileApp:', widowWidth < 750);
-        // console.log('smallScreen:', widowWidth < 1020);
         return {
             type: "SET_APP_SIZE",
             mobileApp: widowWidth < 750,

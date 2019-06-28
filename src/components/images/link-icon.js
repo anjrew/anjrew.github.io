@@ -44,10 +44,9 @@ class LinkIcon extends React.Component{
         }
 		
         var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '13px' : '20px';
-        if (biggestWordLength > 8 ) {
+        if (biggestWordLength > 8 || this.props.mobileApp ) {
             fontSize = '10px';
         }
-
 
         return (
             <a href={data.href} alt={data.name} target="_blank" rel="noopener noreferrer">

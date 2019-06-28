@@ -66,8 +66,6 @@ class About extends React.Component {
             >here</a>.</p>
         </Column>;
 		
-        console.log('rendering with about mobileApp', this.props.mobileApp);
-
 
         return (
             <SafeArea

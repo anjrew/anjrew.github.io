@@ -3,6 +3,7 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { Action as action } from '../react_utils/redux/actions';
+import  axios  from '../react_utils/axios';
 
 // Components
 import { Parallax } from 'react-parallax';
@@ -34,8 +35,7 @@ class App extends React.Component{
         this.scrollToRef = this.scrollToRef.bind(this);
     }
 
-	render(){
-		console.log('rendering with mobileApp', this.props.mobileApp)
+    render(){
         const windowWidth = window.innerWidth;
         const props = this.props;
         var backGroundImage = '';
@@ -85,7 +85,6 @@ class App extends React.Component{
     }
 
     componentDidMount() {
-		
         const options = window.location.pathname.split('/');
         var image;
         if (options[2]){
@@ -102,6 +101,8 @@ class App extends React.Component{
             // console.log('Resizing with' ,window.innerWidth);
             this.props.dispatch(action.calibrateAppSize(window.innerWidth));
         });
+        this.getTracks();
+
     }
 	
     scrollToRef(section){
@@ -126,6 +127,14 @@ class App extends React.Component{
                 break;
         }
         window.scrollTo({ top: ref.current.offsetTop, behavior: 'smooth' });
+    }
+	
+    getTracks(){
+        axios.get('/get-tracks').then((respose) => {
+            console.log(respose);
+        }).catch((e) =>{
+            console.log(e);
+        });
     }
 }
 

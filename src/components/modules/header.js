@@ -11,10 +11,7 @@ import { connect } from 'react-redux';
 class Header extends React.Component {
 
     render() {
-		console.log('small screen', this.props.smallScreen)
-		console.log('mobileApp', this.props.mobileApp)
 		const showIam = (this.props.smallScreen && this.props.mobileApp) || this.props.mobileApp || this.props.smallScreen; 
-		console.log('showIam', showIam)
         return (
             <SafeArea>
 

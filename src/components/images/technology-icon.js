@@ -28,7 +28,7 @@ export class TechnologyIcon extends React.Component{
         }
 		
         var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '24px' : '40px';
-        if (biggestWordLength > 8 ) {
+        if (biggestWordLength > 8 || this.props.mobileApp) {
             fontSize = '20px';
         }
 

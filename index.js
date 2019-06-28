@@ -106,58 +106,26 @@ if (process.env.NODE_ENV != 'production') {
 // Direct the user to the welcome screen if they are not logged in
 // If there is a user ID the user must be logged in.
 
-app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-    // https.request({
-    //     method: 'GET',
-    //     host: 'ws.audioscrobbler.com',
-    // 	// path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
-    // 	path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
-
-		
-    // }, function(resp) {
-    // 	print.warning('The response from last fm was', resp);
-    // 	print.warning('The response from last fm was', resp.recentTracks);
-
-    // }).end();
-	
-    https.request({
-        method: 'GET',
-        host: 'ws.audioscrobbler.com',
-    	// path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
-    	path: '/2.0/?method=chart.gettopartists&api_key=8d860c323a1ca1af00d0cd41d1f99da9&format=json'
-
-		
-    }, function(resp) {
-    	print.warning('The response from last fm was', resp);
-    	print.warning('The response from last fm was', resp.recentTracks);
-
-    }).end();
-	
-    // request.get(
-    //     'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json')
-    //     	.on('response',(resp) => {
-    //         print.error('The response is  ', resp);
-    //         // let data=''; 
-    //         // console.log('data, is ', data);
-    //         // resp.on('data', (chunk=>{
-    //         //     data +=chunk;
-    //         // }));
-    //         // resp.on('end', ()=>{
-    //         //     console.log(JSON.parse(data));
-    //         // });
-    //     });
-	
+app.get('/get-tracks', function(req, res) {
 
     getTracks(function  (err, songs){
         if (err) {
-            res.sendStatus(500);
+            print.error(err);
+            res.sendStatus(500).JSON(err);
         }
         else{
-            console.log(songs);
+            res.json(songs);
         }
     });
+	
 });
+
+app.get('*', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
+
+
+
 
 function getTracks(callback){
 
@@ -181,9 +149,9 @@ function getTracks(callback){
                 .on('data', (chunk) => body += chunk)
                 .on('end', () => {
                     try {
-                        console.log(body);
+						print.info(body);
                         body = JSON.parse(body);
-                        callback(null, body);
+                        callback(null, body.recenttracks.track);
                     } catch (e) {
                         callback(e);
                     }
