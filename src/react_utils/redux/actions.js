@@ -136,10 +136,10 @@ export const Action = {
             tracks: tracks
         };
     },
-    showVideo(url){
+    showVideo(video){
         return {
             type: "SHOW_VIDEO",
-            url: url
+            video: video
         };
     },
     dismissVideo(){

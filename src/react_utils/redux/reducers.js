@@ -67,7 +67,7 @@ export default function reducer(state = {}, action) {
 		case "SHOW_VIDEO":
 			return {
 				...state,
-				video: action.url
+				video: action.video
 			};
 		case "DISMISS_VIDEO":
 			return {

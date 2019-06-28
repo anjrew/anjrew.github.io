@@ -41,6 +41,12 @@ export class ProjectPageData {
 				const image = this.screenShots[index];
 				image.project = this.title;
 			}
+			if (this.videos) {
+				for (let index = 0; index < this.videos.length; index++) {
+					const image = this.videos[index];
+					image.project = this.title;
+				}
+			}
 		}
 		for (const key in data) {
 			const element = data[key];
@@ -56,6 +62,7 @@ export class VideoData {
 		this.description = data['description'];
 		this.url = data['url'];
 		this.name = data['name'];
+		this.imageUrl = data['imageUrl'];
 		for (const key in data) {
 			const element = data[key];
 			if (element == null || element == undefined) {
@@ -179,6 +186,14 @@ export const DialInData = new ProjectPageData({
 			screenShot: true,
 			name: 'Options menu',
 		}),
+	],
+	videos: [
+		new VideoData({
+			description: 'A Demo of a user using the application',
+			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
+			name: 'Demo',
+			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37.png'
+		})
 	]
 });
 

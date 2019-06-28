@@ -16,6 +16,7 @@ import ProjectPage from './project-page';
 import Overlay from '../components/graphics/overlay';
 import Carosel from '../components/modules/carosel';
 import Footer from '../components/modules/footer';
+import VideoPlayer from '../components/modules/video';
 
 // PAGES
 
@@ -77,6 +78,8 @@ class App extends React.Component{
                     </CSSTransition>
 
                     <Carosel/>
+
+                    <VideoPlayer />
                     
                     <Overlay in={!!props.showProject || !!props.currentImage} />
                 </Parallax>

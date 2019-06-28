@@ -11,6 +11,8 @@ import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';
 import LinkIcon from '../components/images/link-icon';
+import VideoIcon from '../components/images/video-icon';
+
 import { Action as action } from '../react_utils/redux/actions';
 import { Padding } from '../components/layout/padding';
 
@@ -160,6 +162,23 @@ class ProjectPage extends React.Component{
                                     placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
                                     { data.screenShots && data.screenShots.map((screenshot) => {
                                         return <GalleryImage key={screenshot.imageUrl} data={screenshot} />;  
+                                    	})
+                                    }
+                                </Wrap>
+                            </Column>
+                                }
+								
+                                { data.videos &&
+                            <Column
+                                id='videos'
+                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                margin={sectionMargin}>
+                                <h3>Videos</h3>
+                                <Wrap
+                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+                                    { data.videos && data.videos.map((video) => {
+                                        return <VideoIcon key={video.imageUrl} data={video} />;  
                                     	})
                                     }
                                 </Wrap>
