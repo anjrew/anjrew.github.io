@@ -24,12 +24,11 @@ class Header extends React.Component {
                     placeContent='space-evenly'
                 >
                     <Row
-                        placeContent={'center flex-start'}>
+                        placeContent={this.props.mobileApp ?'center center': 'center flex-start'}>
                         <ScrollAnimation
                             initiallyVisible={this.props.mobileApp}
                             animateIn="fadeInLeft"
-                            animateOnce={true}
-                        >
+                            animateOnce={true}>
                             <h1>Hello.</h1>
                         </ScrollAnimation>
 
@@ -43,7 +42,7 @@ class Header extends React.Component {
 						</ScrollAnimation>
                     }
                     <Row
-                        placeContent={'center flex-end'}>
+                        placeContent={this.props.mobileApp ?'center center':'center flex-end'}>
                         { this.props.mobileApp || this.props.smallScreen ? 
                            
 
@@ -58,7 +57,9 @@ class Header extends React.Component {
 							 initiallyVisible={this.props.mobileApp}
 							 animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInRight" }
 							 animateOnce={true}>
-							 <h1 style={{ textAlign: 'right' }}>I am Andrew</h1>
+							 <h1 style={{ 
+								 textAlign: this.props.mobileApp ?'center center':'right'
+								 }}>I am Andrew</h1>
 
 						 </ScrollAnimation> 
                         }
