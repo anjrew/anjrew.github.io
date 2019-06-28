@@ -205,7 +205,7 @@ class ProjectPage extends React.Component{
             var elemenTop;
             const toobig = windowBottom > totalHeight;
             if ( (toobig) ){
-                elemenTop = totalHeight - elementHeight;
+                elemenTop = totalHeight - elementHeight - 100;
             } else {
                 elemenTop = windowScrollYTop;
             }
