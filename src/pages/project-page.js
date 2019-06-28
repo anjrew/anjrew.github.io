@@ -36,7 +36,7 @@ class ProjectPage extends React.Component{
         const data = this.props.data || {};
         const margin = 20;
         const sectionMargin =  margin + 'px';
-		var logo;
+        var logo;
 		
         if (data){
             logo = <div >

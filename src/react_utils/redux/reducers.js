@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-mixed-spaces-and-tabs */
 export default function reducer(state = {}, action) {
     // console.log('IN reducer with action ', action, ' and state ', state);
@@ -62,7 +63,17 @@ export default function reducer(state = {}, action) {
             return {
                 ...state,
                 tracks: action.tracks
-            };
+			};
+		case "SHOW_VIDEO":
+			return {
+				...state,
+				video: action.url
+			};
+		case "DISMISS_VIDEO":
+			return {
+				...state,
+				video: null
+			};
         default:
             return state;
     }

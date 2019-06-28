@@ -135,6 +135,17 @@ export const Action = {
             type: "ADD_TRACKS",
             tracks: tracks
         };
+    },
+    showVideo(url){
+        return {
+            type: "SHOW_VIDEO",
+            url: url
+        };
+    },
+    dismissVideo(){
+        return {
+            type: "DISSMISS_VIDEO"
+        };
     }
 };
 

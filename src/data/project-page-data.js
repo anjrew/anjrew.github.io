@@ -35,6 +35,7 @@ export class ProjectPageData {
 		this.links = data['links'];
 		this.screenShots = data['screenShots'];
 		this.linksTitle = data['linksTitle'];
+		this.videos = data['videos'];
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
@@ -45,6 +46,20 @@ export class ProjectPageData {
 			const element = data[key];
 			if (element == null || element == undefined) {
 				throw Error(`${key} Arguments are missing`);
+			}
+		}
+	}
+}
+
+export class VideoData {
+	constructor(data) {
+		this.description = data['description'];
+		this.url = data['url'];
+		this.name = data['name'];
+		for (const key in data) {
+			const element = data[key];
+			if (element == null || element == undefined) {
+				throw Error(`${key} Arguments are missing, and the other data was, `, data);
 			}
 		}
 	}
