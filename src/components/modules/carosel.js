@@ -40,7 +40,7 @@ class Carosel extends React.Component{
         };
         const imageStyle = {
             objectFit: 'cover',
-            maxWidth: this.props.mobileApp || 'calc(90% - 300px)',
+            maxWidth: this.props.mobileApp ? 'calc(80% - 100px)' : 'calc(90% - 300px)',
             width: 'auto',
             height: 'calc(80% - 100px)',
         };

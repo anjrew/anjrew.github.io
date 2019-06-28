@@ -19,7 +19,9 @@ class ProjectPage extends React.Component{
 
     constructor(){
         super();
-        this.state = {};
+        this.state = {
+            canDimiss: false
+        };
         this.dismiss = this.dismiss.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.elemRef = React.createRef();
@@ -88,7 +90,8 @@ class ProjectPage extends React.Component{
                                         {this.props.smallScreen && data && data.logoUrl && logo }
                                         <p 
                                             style={{ 
-                                                textAlign: this.props.smallScreen ? 'center' : 'start' 
+                                                textAlign: this.props.smallScreen ? 'center' : 'start' ,
+                                                fontSize: this.props.mobileApp && '15px'
                                             }}
                                         >{data.description}</p>
 	
@@ -181,15 +184,18 @@ class ProjectPage extends React.Component{
             var elemenTop;
             const toobig = windowBottom > totalHeight;
             if ( (toobig) ){
-                elemenTop = totalHeight - elementHeight - 100;
+                elemenTop = totalHeight - elementHeight + 100;
             } else {
-                elemenTop = windowScrollYTop;
+                elemenTop = windowScrollYTop - 100;
             }
             window.scrollTo(0, elemenTop);
             this.setState({ 
                 elemenTop: elemenTop,
                 height: elementHeight + 500
-            });
+            }, () => this.setState({
+                canDimiss: true
+            })
+            );
 			
 					
             const options = window.location.pathname.split('/');
@@ -214,18 +220,22 @@ class ProjectPage extends React.Component{
     }
 	
     handleScroll(){
-        if( this.elemRef.current){
-            const windowScrollYTop = window.scrollY;
-            const elementHeight = this.elemRef.current.clientHeight;
-            const windowBottom = windowScrollYTop + window.innerHeight;
-            const rect = this.elemRef.current.getBoundingClientRect();
-            const elementDistanceFromTop = rect.top + window.scrollY;
-            const shouldDismissUp = windowBottom < elementDistanceFromTop + 100;
-            const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
-
-            if (shouldDismissUp || shouldDismissDown){ 
-                this.props.dispatch(action.dismissAll());
-            	window.history.pushState({}, '/','/');
+        if(this.state.canDimiss){
+            if( this.elemRef.current){
+                const windowScrollYTop = window.scrollY;
+                const elementHeight = this.elemRef.current.clientHeight;
+                const windowBottom = windowScrollYTop + window.innerHeight;
+                const rect = this.elemRef.current.getBoundingClientRect();
+                const elementDistanceFromTop = rect.top + window.scrollY;
+                const shouldDismissUp = windowBottom < elementDistanceFromTop + 100;
+                const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
+				
+                if (shouldDismissUp || shouldDismissDown){ 
+                    console.log('dismissing because shouldDismissUp ', shouldDismissUp);
+                    console.log('dismissing because shouldDismissDown ', shouldDismissDown);
+                    this.props.dispatch(action.dismissAll());
+                    window.history.pushState({}, '/','/');
+                }
             }
         }
     }
