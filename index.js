@@ -30,8 +30,6 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 
 
 
-
-
 const cookieSessionMiddleWare = cookieSession({
     secret: `earyzhes profile.`,
     maxAge: 1000 * 60 * 60 * 24 * 14
@@ -121,9 +119,9 @@ app.get('*', function(req, res) {
     // 	print.warning('The response from last fm was', resp);
     // 	print.warning('The response from last fm was', resp.recentTracks);
 
-	// }).end();
+    // }).end();
 	
-	https.request({
+    https.request({
         method: 'GET',
         host: 'ws.audioscrobbler.com',
     	// path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json'
@@ -139,7 +137,7 @@ app.get('*', function(req, res) {
     // request.get(
     //     'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json')
     //     	.on('response',(resp) => {
-    //         console.log('The response is  ', resp);
+    //         print.error('The response is  ', resp);
     //         // let data=''; 
     //         // console.log('data, is ', data);
     //         // resp.on('data', (chunk=>{
@@ -149,8 +147,54 @@ app.get('*', function(req, res) {
     //         //     console.log(JSON.parse(data));
     //         // });
     //     });
-    
+	
+
+    getTracks(function  (err, songs){
+        if (err) {
+            res.sendStatus(500);
+        }
+        else{
+            console.log(songs);
+        }
+    });
 });
+
+function getTracks(callback){
+
+    const req = https.request({
+        host: 'ws.audioscrobbler.com',
+        path: '/2.0/?method=user.getrecenttracks&nowplaying="true"&user=earyzhe&api_key=09baea5eb602d2030db265810ceac1a4&format=json',
+        method: 'GET',
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        }
+    }, 
+    // The the response comes in a callback
+    (res) => {
+        if (res.statusCode != 200){
+            callback(new Error(res.statusCode));
+        }
+        else{
+
+            let body = '';
+            res
+                .on('data', (chunk) => body += chunk)
+                .on('end', () => {
+                    try {
+                        console.log(body);
+                        body = JSON.parse(body);
+                        callback(null, body);
+                    } catch (e) {
+                        callback(e);
+                    }
+                });
+        }
+    });
+
+    req.on('error', (err) => callback(err));
+    req.write('grant_type=client_credentials');
+    req.end();
+}
 
 if (require.main === module) {
     server.listen(process.env.PORT || 8080, function() {
