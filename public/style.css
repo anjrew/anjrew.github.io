@@ -12,6 +12,7 @@ body{
 }
 
 .link-button{
+	cursor: pointer;
     transform: translateY(-3px);
     transform: scale(1.05);
     background:none;
