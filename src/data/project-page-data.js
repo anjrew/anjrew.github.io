@@ -670,12 +670,12 @@ export const connectFourData = new ProjectPageData({
 		htmlLink,
 		javaScriptLink,
 	],
-	linksTitle: 'Play the game.',
+	linksTitle: 'Play',
 	links: [
 		new LinkData({
 			imageUrl: 'assets/images/connect-four/logo.jpg',
 			href: 'https://connect-four-andrew-johnson.herokuapp.com/',
-			name: 'Play the game',	
+			name: 'Play',	
 			static: true
 		}),
 	]
