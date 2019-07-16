@@ -190,7 +190,6 @@ class ProjectPage extends React.Component{
                 }} />
             </BrowserRouter>
         );
-    
     }
 
     componentDidMount() {

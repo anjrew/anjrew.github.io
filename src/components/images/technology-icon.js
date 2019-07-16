@@ -14,7 +14,8 @@ export class TechnologyIcon extends React.Component{
 
     render(){
         const data = this.props.data;
-        const size = data.size || this.props.mobileApp ? '60px':'100px';
+        const mobileApp = this.props.mobileApp;
+        const size = data.size || mobileApp ? '60px':'100px';
         const width = size;
         const height = size;
 		
@@ -28,7 +29,7 @@ export class TechnologyIcon extends React.Component{
         }
 		
         var fontSize = data.name.length > 15 || biggestWordLength > 4 ? '24px' : '40px';
-        if (biggestWordLength > 8 || this.props.mobileApp) {
+        if (biggestWordLength > 8 || mobileApp) {
             fontSize = '20px';
         }
 
@@ -83,13 +84,13 @@ export class TechnologyIcon extends React.Component{
                                 transition: 'opacity 500ms',
                                 opacity: this.state.showText ? 1 : 0,
                                 alignSelf: 'center',
-                                backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'
+                                backgroundColor: mobileApp ? 'white' : 'rgba(0,0,0,0)'
                             }}
                             onMouseEnter={() =>{ this.setState({ showText: true }); } }
                             onMouseLeave={() =>{ this.setState({ showText: false  }); } }
                         >{data.name}</h2>
                     </div>
-                    <img style={imageStyle} src={data.imageUrl || data.src}/>
+                    <img style={imageStyle} src={ mobileApp? data.smallImageUrl : data.largeImageUrl }/>
                 </div>
             </a>
         );
