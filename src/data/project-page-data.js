@@ -674,7 +674,7 @@ export const SpicedAcademyData = new ProjectPageData({
 			name: 'Instagram'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/social-media-icons/spiced-logo.png',
+			imageUrl: '/assets/images/projects/spiced/icon/spiced-logo-300px.jpg',
 			href: 'www.spiced-academy.com',
 			name: 'www.spiced-academy.com'
 		})
