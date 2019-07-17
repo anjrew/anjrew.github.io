@@ -16,8 +16,10 @@ class GalleryImage extends React.Component{
     }
 
     render(){
+        const props = this.props;
+        const mobileApp = props.mobileApp;
         const data = this.props.data;
-        const size = this.props.size || this.props.mobileApp ? '80px':'300px' ;
+        const size = this.props.size || mobileApp ? '80px':'300px' ;
         const width = size;
         const height = size;
        
@@ -99,7 +101,7 @@ class GalleryImage extends React.Component{
 				
                 </div>
 
-                <img style={imageStyle} src={data.imageUrl || data.src} alt={data.description}/>
+                <img style={imageStyle} src={ mobileApp ? data.smallImageUrl : data.largeImageUrl} alt={data.description}/>
             </div>
         </React.Fragment>;
 

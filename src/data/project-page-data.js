@@ -79,7 +79,8 @@ export class VideoData {
 export class GalleryImageData {
 	constructor(data) {
 		this.description = data['description'];
-		this.imageUrl = data['imageUrl'];
+		this.smallImageUrl = data['smallImageUrl'];
+		this.largeImageUrl = data['largeImageUrl'];
 		this.name = data['name'];
 		this.screenShot = data['screenShot'];
 		for (const key in data) {
@@ -128,63 +129,81 @@ export const DialInData = new ProjectPageData({
 	],
 	screenShots: [
 		new GalleryImageData({
-			imageUrl: '/assets/images/dial-in.jpg',
+			smallImageUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/image/dial-in.jpg',
 			description: 'Workflow',
 			name: 'Working on bar',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.13.03.png',
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.13.03.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.13.03.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.13.03.png',
 			description: '1',
 			name: 'Login',
 			screenShot: true
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.06.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.06.png',
 			description: '2',
 			name: 'Recipes',
 			screenShot: true
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.31.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.31.png',
 			description: '3',
 			name: 'Feed',
 			screenShot: true
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.45.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.45.png',			
 			description: '4',
 			screenShot: true,
 			name: 'Profile',
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.59.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',	
 			description: '5',
 			screenShot: true,
 			name: 'Recipe',
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.16.05.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.05.png',			
 			description: '5',
 			screenShot: true,
 			name: 'Score',
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.16.27.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
 			description: '6',
 			screenShot: true,
 			name: 'Flavours',
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.37.png',
+			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',
+			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
+			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
 			description: 'Options menu.',
 			screenShot: true,
 			name: 'Options menu',
