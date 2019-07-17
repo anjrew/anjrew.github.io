@@ -71,7 +71,6 @@ class LinkIcon extends React.Component{
                                 color: 'black',
                                 textAlign: 'center',
                                 margin: '30px',
-                                // wordBreak: 'break-all',
                                 fontSize: fontSize,
                                 transition: 'opacity 500ms',
                                 opacity: this.state.hover && data.static ? 1 : 0,

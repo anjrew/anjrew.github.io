@@ -46,7 +46,7 @@ class App extends React.Component{
             blur = 5;
             backGroundImage = '/assets/images/triple-me-for-mobile.png';
         } else {
-            backGroundImage = '/assets/images/me-noeyes-3.png';
+            backGroundImage = '/assets/images/me/me-noeyes-3.png';
         }
 		
         return ( 

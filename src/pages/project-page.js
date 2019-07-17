@@ -36,6 +36,7 @@ class ProjectPage extends React.Component{
 
     render(){
         const data = this.props.data || {};
+        const mobileApp = this.props.mobileApp;
         const margin = 20;
         const sectionMargin =  margin + 'px';
         var logo;
@@ -44,9 +45,10 @@ class ProjectPage extends React.Component{
             logo = <div >
                 <img style={{
                     objectFit: 'cover',
-                    height: this.props.mobileApp ? '200px' : '350px',
-                    width: this.props.mobileApp ? '200px' : '350px'
-                }} src={data.logoUrl}/>
+                    height: mobileApp ? '200px' : '350px',
+                    width: mobileApp ? '200px' : '350px'
+                }} 
+                src={ mobileApp ? data.logoUrlSmall : data.logoUrlBig }/>
             </div>;
         }
 		
@@ -89,7 +91,7 @@ class ProjectPage extends React.Component{
 											    }}
 											>{data.title}</h1>
                                         }
-                                        {this.props.smallScreen && data && data.logoUrl && logo }
+                                        { logo }
                                         <p 
                                             style={{ 
                                                 textAlign: this.props.smallScreen ? 'center' : 'start' ,
@@ -235,10 +237,12 @@ class ProjectPage extends React.Component{
                     this.props.dispatch(action.showImage(imagedata));
                 }
             }
-            for (let index = 0; index < this.props.data.videos.length; index++) {
-                const videoData = this.props.data.videos[index];
-                if (videoData.name == image){
-                    this.props.dispatch(action.showVideo(videoData));
+            if (this.props.data.videos){
+                for (let index = 0; index < this.props.data.videos.length; index++) {
+                    const videoData = this.props.data.videos[index];
+                    if (videoData.name == image){
+                        this.props.dispatch(action.showVideo(videoData));
+                    }
                 }
             }
         }, 600);

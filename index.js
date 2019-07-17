@@ -148,7 +148,6 @@ function getTracks(callback){
                 .on('data', (chunk) => body += chunk)
                 .on('end', () => {
                     try {
-						print.info(body);
                         body = JSON.parse(body);
                         callback(null, body.recenttracks.track);
                     } catch (e) {

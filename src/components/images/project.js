@@ -19,7 +19,8 @@ class ProjectImage extends React.Component{
 
     render(){
 		
-        const size = this.props.mobileApp ? '100px' : '300px';
+        const mobileApp = this.props.mobileApp;
+        const size = mobileApp ? '100px' : '300px';
         const width = size;
         const height = size;
 		
@@ -36,7 +37,6 @@ class ProjectImage extends React.Component{
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
-
 
         const imageContainerStyle = {
             cursor:  'pointer',
@@ -95,7 +95,7 @@ class ProjectImage extends React.Component{
 
                     >{this.props.name}</h2>
                 </div>
-                <img style={imageStyle} src={this.props.imageUrl || this.props.src}/>
+                <img style={imageStyle} src={this.props.logoUrlBig}/>
             </div>
         );
     }

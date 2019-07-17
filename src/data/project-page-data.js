@@ -27,7 +27,7 @@ import {
 export class ProjectPageData {
 
 	constructor(data) {
-		this.backgroundImage = data['backgroundImage'];
+
 		this.logoUrl = data['logoUrl'];
 		this.title = data['title'];
 		this.description = data['description'];
@@ -36,6 +36,8 @@ export class ProjectPageData {
 		this.screenShots = data['screenShots'];
 		this.linksTitle = data['linksTitle'];
 		this.videos = data['videos'];
+		this.logoUrlSmall = data['logoUrlSmall']
+		this.logoUrlBig = data['logoUrlBig']
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
@@ -90,13 +92,13 @@ export class GalleryImageData {
 }
 
 export const DialInData = new ProjectPageData({
-	backgroundImage: '/assets/images/dial-in.jpg',
 	title: 'Dial In',
 	description: `A tool to help coffee professionals record and analyse data. 
 	I started off by making the app in Swift and purly iOS. I had a sudden realisation that I should definity
 	dive into cross platform development. That's what I did. I started from scratch and started making the app 
 	in the Flutter framework. I've never looked back :)`,
-	logoUrl: '/assets/images/dial-in-logo.png',
+	logoUrlSmall: '/assets/images/projects/dial-in/icon/dial-in-logo-200px.jpg',
+	logoUrlBig: '/assets/images/projects/dial-in/icon/dial-in-logo-350px.jpg',
 	technologies: [
 		flutterLink,
 		dartLink,
@@ -200,10 +202,10 @@ export const DialInData = new ProjectPageData({
 });
 
 export const CupomaticData = new ProjectPageData({
-	backgroundImage: '/assets/images/dial-in.jpg',
 	title: 'CupOmatic',
 	description: 'A tool to assist coffee professionals with the the cupping protocol',
-	logoUrl: '/assets/images/cupOmatic-logo.jpg',
+	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
+	logoUrlBig: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-350px.jpg',
 	technologies: [
 		swiftLink,
 		javaLink,
@@ -293,12 +295,12 @@ export const CupomaticData = new ProjectPageData({
 });
 
 export const BatterySaverData = new ProjectPageData({
-	backgroundImage: '/assets/images/battery_saver_logo.png',
 	title: 'Battery Saver',
 	description: `Battery saver works with bluetooth hardware to control the charge of your device. 
 	Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
 		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
-	logoUrl: '/assets/images/battery_saver_logo.png',
+	logoUrlSmall: '/assets/images/projects/battery-saver/icon/battery_saver_logo-200px.jpg',
+	logoUrlBig: '/assets/images/projects/battery-saver/icon/battery_saver_logo-350px.jpg',
 	technologies: [
 		flutterLink,
 		flareLink,
@@ -332,13 +334,13 @@ export const BatterySaverData = new ProjectPageData({
 });
 
 export const PlantSystemData = new ProjectPageData({
-	backgroundImage: '/assets/images/plant-watering.jpg',
 	title: 'Plant irrigation system',
 	description: `I love plants... The more the merrier. But a person can only look after soo many. 
 	BUT, with the help of a machine, A person can have many more plants. And that is why I decided to make this 
 	project. As well as being alot of fun, it was a big learning experience. I used an Arduino micro controlller with 24v relays to controll the water flow to 
 	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
-	logoUrl: '/assets/images/plant-watering.jpg',
+	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
 	technologies: [
 		arduinoLink,
 		vsCodeLink
@@ -390,12 +392,12 @@ export const PlantSystemData = new ProjectPageData({
 });
 
 export const PertitionData = new ProjectPageData({
-	backgroundImage: '/assets/images/green-lava-lamp.jpg',
 	title: 'Lava lamp pertition',
 	description: `Being a firm believer in lava lamps, I created a pertition site to record the
 	amount of people who would like lava lamps to be exempt from VAT.
 	 Follow the link and take a look yourself :).`,
-	logoUrl: '/assets/images/green-lava-lamp.jpg',
+	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
 	technologies: [
 		nodeLink,
 		postGresLink,
@@ -449,12 +451,13 @@ export const PertitionData = new ProjectPageData({
 });
 
 export const LaissezFaireData = new ProjectPageData({
-	backgroundImage: '/assets/images/laissez-faire.jpg',
+
 	title: 'Laissez-Faire',
 	description: `Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
 	and more.`,
-	logoUrl: '/assets/images/laissez-faire.jpg',
+	logoUrlSmall: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/llassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -501,11 +504,11 @@ export const LaissezFaireData = new ProjectPageData({
 });
 
 export const GoatstagramData = new ProjectPageData({
-	backgroundImage: '/assets/images/goatstagram.jpg',
 	title: 'Goatstagram',
 	description: `Goatstagram is a comic imageboard which only accepts pictures of goats. 
 	The page is Audited by admin regulary to enforce this. Complete with sound affects you should definity head here for a laugh.`,
-	logoUrl: '/assets/images/goatstagram.jpg',
+	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
 	technologies: [
 		nodeLink,
 		vueLink,
@@ -551,14 +554,13 @@ export const GoatstagramData = new ProjectPageData({
 });
 
 export const SpicedAcademyData = new ProjectPageData({
-	backgroundImage: '/assets/images/spiced-logo.png',
 	title: 'SPICED ACADEMY',
 	description: `I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
-	That project is the one you are looking at righ now :).
-	`,
-	logoUrl: '/assets/images/spiced-logo.png',
+	That project is the one you are looking at righ now :).`,
+	logoUrlSmall: '/assets/images/projects/spiced/icon/spiced-logo-200px.jpg',
+	logoUrlBig: '/assets/images/projects/spiced/icon/spiced-logo-350px.jpg',
 	projects: [
 		'https://connect-four-andrew-johnson.herokuapp.com/'
 	],
@@ -629,11 +631,11 @@ export const SpicedAcademyData = new ProjectPageData({
 });
 
 export const thisData = new ProjectPageData({
-	backgroundImage: '/assets/images/me-noeyes.png',
 	title: 'this.',
 	description: `This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
 	 so I can blend my personal experience into truly unique products.`,
-	logoUrl: '/assets/images/me-noeyes.png',
+	logoUrlSmall: '/assets/images/me/me-noeyes.png',
+	logoUrlBig: '/assets/images/me/me-noeyes.png',
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -656,7 +658,6 @@ export const thisData = new ProjectPageData({
 });
 
 export const connectFourData = new ProjectPageData({
-	backgroundImage: '',
 	title: 'Connect Four',
 	description: `A game made at Spiced Academy, using vanilla Javascript, CSS, 
 	and HTML.
@@ -675,7 +676,7 @@ export const connectFourData = new ProjectPageData({
 		new LinkData({
 			imageUrl: 'assets/images/connect-four/logo.jpg',
 			href: 'https://connect-four-andrew-johnson.herokuapp.com/',
-			name: 'Play',	
+			name: 'Play',
 			static: true
 		}),
 	]

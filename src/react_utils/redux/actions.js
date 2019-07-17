@@ -61,7 +61,6 @@ export const Action = {
                 data = connectFourData;
                 break;
             default: 
-                console.log('All done');
         }	
         return {
             type: "SHOW_PROJECT",

@@ -22,7 +22,7 @@ export const flutterLink =new Technology({
 
 export const flareLink =new Technology({ 
     smallImageUrl: '/assets/images/tech-icons/flare/flare_logo.svg', 
-    largeImageUrl: '/assets/images/tech-icons/flutter/flutter-logo2.svg',
+    largeImageUrl: '/assets/images/tech-icons/flare/flare_logo.svg',
     name: 'Flare',
     href: 'https://www.2dimensions.com/about-flare'
 });
