@@ -11,22 +11,24 @@ import { connect } from 'react-redux';
 class MyWork extends React.Component {
 
     render() {
+		const props = this.props
+		const mobileApp = props.mobileApp;
 
         const elem = <Column
             width='100%'
-            placeContent={this.props.mobileApp ? 'center' :'center flex-start'}>
+            placeContent={mobileApp ? 'center' :'center flex-start'}>
 
             <h2 style={{
-                alignSelf: this.props.mobileApp ? 'center': 'start',  
-                textAlign: this.props.mobileApp ? 'center': 'start',
-                backgroundColor: this.props.mobileApp ? 'white' : 'rgba(0,0,0,0)'					 
+                alignSelf: mobileApp ? 'center': 'start',  
+                textAlign: mobileApp ? 'center': 'start',
+                backgroundColor: mobileApp ? 'white' : 'rgba(0,0,0,0)'					 
             }}>My Work</h2>
 
             <Column
-                alignItems={this.props.mobileApp ? 'center' :'start'}>
+                alignItems={mobileApp ? 'center' :'start'}>
                 <p style={{ 
-                    textAlign: this.props.mobileApp ? 'center': 'start',	
-                    alignSelf: this.props.mobileApp ? 'center': 'start' 
+                    textAlign: mobileApp ? 'center': 'start',	
+                    alignSelf: mobileApp ? 'center': 'start' 
                 }}
                 >Check out my code on  <a
                         style={{ backgroundColor:"white"}}
@@ -38,8 +40,8 @@ class MyWork extends React.Component {
 
 
                 <p style={{ 
-                    textAlign: this.props.mobileApp ? 'center': 'start',
-                    alignSelf: this.props.mobileApp ? 'center': 'start' 
+                    textAlign: mobileApp ? 'center': 'start',
+                    alignSelf: mobileApp ? 'center': 'start' 
                 }}
                 >If you are currently using any of my products;
 				with your help, I can keep them alive and updated! I run on Caffeine...</p>
@@ -55,27 +57,27 @@ class MyWork extends React.Component {
                     />
                 </a>
                 <Wrap
-                    placeContent={this.props.mobileApp ? 'center' : 'flex-start'}>
+                    placeContent={mobileApp ? 'center' : 'flex-start'}>
 					
-                    <ProjectImage src='/assets/images/dial-in.jpg' name='Dial In'/>
+                    <ProjectImage name='Dial In' bigUrl="/assets/images/projects/dial-in/image/dial-in-300px.jpg" smallUrl='/assets/images/projects/dial-in/image/dial-in-300px.jpg' />
 
-                    <ProjectImage src='/assets/images/cupomatic.jpg' name='CupOmatic'/>
+                    <ProjectImage name='CupOmatic' bigUrl="/assets/images/projects/cupomatic/image/cupomatic-300px.jpg" smallUrl='/assets/images/projects/cupomatic/image/cupomatic-100px.jpg' />
 
-                    <ProjectImage src='/assets/images/battery_saver_logo.png' name='Battery Saver'/>
+                    <ProjectImage name='Battery Saver' bigUrl="/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg" smallUrl='/assets/images/projects/battery-saver/image/battery_saver_logo-100px.png' />
 
-                    <ProjectImage src='/assets/images/plant-watering.jpg' name='Plant irrigation system'/>
+                    <ProjectImage name='Plant irrigation system' bigUrl="/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg' />
 
-                    <ProjectImage src='/assets/images/green-lava-lamp.jpg' name='Lava lamp petition'/> 
+                    <ProjectImage name='Lava lamp petition' bigUrl="/public/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg'/> 
 
-                    <ProjectImage src='/assets/images/laissez-faire.jpg' name='Laissez Faire'/>   
+                    <ProjectImage name='Laissez Faire' bigUrl="/assets/images/projects/lassezfaire/image/laissez-faire-300px.jpg" smallUrl='/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg'/>  
 					
-                    <ProjectImage src='/assets/images/goatstagram.jpg' name='Goatstagram'/>
+                    <ProjectImage name='Goatstagram' bigUrl="/assets/images/projects/goatstagram/image/goatstagram-300px.jpg" smallUrl='/assets/images/projects/goatstagram/image/goatstagram-100px.jpg' />
 
-                    <ProjectImage src='/assets/images/spiced-logo.png' name='Spiced Academy'/>
+                    <ProjectImage name='Spiced Academy' bigUrl="/assets/images/projects/spiced/image/spiced-logo-300px.jpg" smallUrl='/assets/images/projects/spiced/image/spiced-logo-100px.png' />
 
-                    <ProjectImage src='/assets/images/me-noeyes-whitebg.png' name='this.'/>  
+                    <ProjectImage name='this' bigUrl="/assets/images/me-noeyes-whitebg.png" smallUrl='/assets/images/me-noeyes-whitebg.png' />  
 
-                    <ProjectImage src='/assets/images/connect-four/logo.jpg' name='Connect Four'/> 
+                    <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/> 
                 </Wrap>
             </Column>
             
@@ -84,14 +86,14 @@ class MyWork extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    referance={this.props.referance}
+                    referance={props.referance}
                     margin={Diamensions.sectionMargin}
-                    placeContent={this.props.mobileApp ? 'center': `flex-start`}
-                    alignItems={this.props.mobileApp ? 'center': `flex-start`}
+                    placeContent={mobileApp ? 'center': `flex-start`}
+                    alignItems={mobileApp ? 'center': `flex-start`}
                 >
-                    { this.props.mobileApp ? elem : 
+                    { mobileApp ? elem : 
                         <ScrollAnimation
-                            animateIn={ this.props.mobileApp ? "fadeInUp" : "fadeInLeft" }
+                            animateIn={ mobileApp ? "fadeInUp" : "fadeInLeft" }
                             animateOnce={true}>	
                             {elem}
                         </ScrollAnimation>

@@ -95,7 +95,7 @@ class ProjectImage extends React.Component{
 
                     >{this.props.name}</h2>
                 </div>
-                <img style={imageStyle} src={this.props.logoUrlBig}/>
+                <img style={imageStyle} src={this.props.logoUrlBig || this.props.src}/>
             </div>
         );
     }
