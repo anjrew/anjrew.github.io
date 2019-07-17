@@ -204,7 +204,8 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.37.png',			description: 'Options menu.',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.37.png',			
+			description: 'Options menu.',
 			screenShot: true,
 			name: 'Options menu',
 		}),
@@ -263,49 +264,63 @@ export const CupomaticData = new ProjectPageData({
 	screenShots: [
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/analyse.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/analyse.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/analyse.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/analyse.jpg',
 			description: 'Analyse',
 			name: 'Alalysing the coffee',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/cupping.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/cupping.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/cupping.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/cupping.jpg',
 			description: 'Cupping at origin',
 			name: 'Cupping',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/devloping.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/devloping.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/devloping.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/devloping.jpg',
 			description: 'Developing',
 			name: 'Android development',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/holding.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/holding.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/holding.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/holding.jpg',
 			description: 'Holding',
 			name: 'Holding',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/qc.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/qc.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/qc.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/qc.jpg',
 			description: 'Quality control',
 			name: 'Qc',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/Screenshot 2018-01-20 16.43.42.png',
-			description: 'Main page',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.43.42.jpgg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/Screenshot 2018-01-20 16.43.42.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/Screenshot 2018-01-20 16.43.42.png',
+			description: 'Main Screen',
 			name: 'Screenshot one',
 			screenShot: true
 		}),
 
 		new GalleryImageData({
-			imageUrl: '/assets/images/screenshots/cupomatic/Screenshot 2018-01-20 16.44.14.png',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.44.14.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/Screenshot 2018-01-20 16.44.14.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/Screenshot 2018-01-20 16.44.14.png',
 			description: 'Settings page',
 			name: 'Screenshot two',
 			screenShot: true
