@@ -463,7 +463,7 @@ export const PertitionData = new ProjectPageData({
 	linksTitle: 'Visit the petition',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/social-media-icons/green-lava-lamp.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
 			href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
 			name: 'Visit the petition',
 			static: true
@@ -471,40 +471,40 @@ export const PertitionData = new ProjectPageData({
 	],
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
+			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.51.06.png',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.51.06.png',
 			description: 'Login page',
 			name: 'Login',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.52.59.png',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.52.59.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.52.59.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.52.59.png',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.52.59.png',
 			description: 'Signed',
 			name: 'Signed',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.53.41.png',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.53.41.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.53.41.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.53.41.png',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.53.41.png',
 			description: 'More info.',
 			name: 'About',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.06.png',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.06.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.06.png',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.06.png',
 			description: 'Pertition',
 			name: 'Pertition',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.41.png',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.41.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.41.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.41.png',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.41.png',
 			description: 'Edit profile',
 			name: 'Edit profile',
@@ -594,41 +594,41 @@ export const GoatstagramData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/goatstagram/screenshots/smallSceen/Screenshot 2019-06-25 at 11.55.54.jpg',
-			largeImageUrl: 'public/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.55.54.jpg',
-			imageUrl: 'public/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.55.54.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.55.54.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.55.54.png',
+			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.55.54.png',
 			description: 'The main page',
 			name: 'Main page',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/goatstagram/screenshots/smallSceen/Screenshot 2019-06-25 at 11.56.56.png',
-			largeImageUrl: 'public/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.56.56.png',
-			imageUrl: 'public/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
+			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
 			description: 'Error propmt on no file selected',
 			name: 'Error handling',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/goatstagram/screenshots/smallSceen/Screenshot 2019-06-25 at 11.59.46.png',
-			largeImageUrl: 'public/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.59.46.png',
-			imageUrl: 'public/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.59.46.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.59.46.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.59.46.png',
+			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.59.46.png',
 			description: 'A radom pic of a funny goat.',
 			name: 'Goaty',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/goatstagram/screenshots/smallSceen/Screenshot 2019-06-25 at 11.58.06.png',
-			largeImageUrl: 'public/assets/images/projects/goatstagram/screenshots/largeScreen/SScreenshot 2019-06-25 at 11.58.06.png',
-			imageUrl: 'public/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.06.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.06.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.06.png',
+			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.06.png',
 			description: 'An image of a Goat',
 			name: 'Image',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/goatstagram/screenshots/smallSceen/Screenshot 2019-06-25 at 11.58.56.png',
-			largeImageUrl: 'public/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.56.png',
-			imageUrl: 'public/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.56.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.56.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.56.png',
+			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.56.png',
 			description: 'Comments section.',
 			name: 'Comments',
 			screenShot: false
@@ -681,41 +681,41 @@ export const SpicedAcademyData = new ProjectPageData({
 	],
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/spiced/screenShot/smallScreen/IMG_7715.JPG',
-			largeImageUrl: 'public/assets/images/projects/spiced/screenShot/largeScreen/IMG_7715.JPG',
-			imageUrl: 'public/assets/images/projects/spiced/screenShot/fullSize/IMG_7715.JPG',
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7715.JPG',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7715.JPG',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7715.JPG',
 			description: 'David teaching.',
 			name: 'Lecture',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/spiced/screenShot/smallScreen/IMG_7716.JPG',
-			largeImageUrl: 'public/assets/images/projects/spiced/screenShot/largeScreen/IMG_7716.JPG',
-			imageUrl: 'public/assets/images/projects/spiced/screenShot/fullSize/IMG_7716.JPG',
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7716.JPG',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7716.JPG',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7716.JPG',
 			description: 'Chris being a jerk.',
 			name: 'Buddy',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-22-13-36-21.jpg',
-			largeImageUrl: 'public/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-22-13-36-21.jpg',
-			imageUrl: 'public/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-22-13-36-21.jpg',
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-22-13-36-21.jpg',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-22-13-36-21.jpg',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-22-13-36-21.jpg',
 			description: 'Project time.',
 			name: 'Coding',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-29-20-43-02.jpg',
-			largeImageUrl: 'public/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-29-20-43-02.jpg',
-			imageUrl: 'public/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-29-20-43-02.jpg',
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-29-20-43-02.jpg',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-29-20-43-02.jpg',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-29-20-43-02.jpg',
 			description: 'Presentation.',
 			name: 'Presenting Goastagram',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-06-21-12-14-37.jpg',
-			largeImageUrl: 'public/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-06-21-12-14-37.jpg',
-			imageUrl: 'public/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-06-21-12-14-37.jpg',
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-06-21-12-14-37.jpg',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-06-21-12-14-37.jpg',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-06-21-12-14-37.jpg',
 			description: 'Presentation pt2.',
 			name: 'Presenting Goastagram pt2',
 			screenShot: false
@@ -742,7 +742,9 @@ export const thisData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			imageUrl: '/assets/images/me-noeyes.png',
+			smallImageUrl: '/assets/images/projects/this/screenShorts/me-noeyes-whitebg_zt9jzk_c_scale,w_160.png',
+			largeImageUrl: '/assets/images/projects/this/screenShorts/me-noeyes-whitebg_zt9jzk_c_scale,w_600.png',
+			imageUrl: '/assets/images/me/me-noeyes-whitebg.png',
 			description: 'Me trying to be edgy and failing',
 			name: 'My portfolio photo',
 			screenshot: false

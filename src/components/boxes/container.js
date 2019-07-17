@@ -6,7 +6,8 @@ export class Container extends React.Component{
     render(){
         return (
             <div 
-                id={this.props.id} 
+                id={this.props.id}
+                className='Container' 
                 style={{
                     flexGrow: this.props.flexGrow,
                     display: this.props.display || 'flex',
@@ -30,7 +31,7 @@ export class Container extends React.Component{
                     opacity: this.props.opacity,
                     top: this.props.top,
                     zIndex: this.props.zIndex,
-					
+                    placeContent: this.props.placeContent
                 }}
                 onClick={this.props.onClick}>
                 {this.props.children}

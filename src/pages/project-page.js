@@ -15,6 +15,7 @@ import VideoIcon from '../components/images/video-icon';
 
 import { Action as action } from '../react_utils/redux/actions';
 import { Padding } from '../components/layout/padding';
+import { Row } from '../components/layout/row';
 
 // PAGES
 class ProjectPage extends React.Component{
@@ -80,7 +81,7 @@ class ProjectPage extends React.Component{
                                     width='100%'
                                     display='flex'
                                     flexDirection={ smallScreen ? 'column' : 'row' }
-                                    placeContent={ smallScreen ? 'center' : 'flex-start' }
+                                    placeContent={ smallScreen || mobileApp ? 'center' : 'space-between' }
                                 >
                                     <Column
                                         placeContent={ smallScreen ? 'center' : 'flex-start' }
@@ -105,18 +106,19 @@ class ProjectPage extends React.Component{
                                         >{data.description}</p>
 	
                                     </Column>
-
-                                    {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
-                                    {renderSideLogo && logo }
-                                    {!smallScreen &&  <Container
-                                        alignSelf={ smallScreen ? 'center' : 'start' }
-                                        alignItems={ smallScreen ? 'center' : 'flex-end' }
-                                        height='100%'
-                                        placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
-                                        <button 
-                                            style={{ cursor: 'pointer' }}
-                                            onClick={() => this.dismiss(history)}>X</button>
-                                    </Container>}
+                                    <Row width='unset'>
+                                        {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
+                                        {renderSideLogo && logo }
+                                        {!smallScreen &&  <Container
+                                            alignSelf={ smallScreen ? 'center' : 'start' }
+                                            alignItems={ smallScreen ? 'center' : 'flex-end' }
+                                            height='100%'
+                                            placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
+                                            <button 
+                                                style={{ cursor: 'pointer' }}
+                                                onClick={() => this.dismiss(history)}>X</button>
+                                        </Container>}
+                                    </Row>
                                 </Container>
 	
 						
