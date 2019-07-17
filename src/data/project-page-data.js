@@ -534,40 +534,40 @@ export const LaissezFaireData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallSceen/Screenshot 2019-06-25 at 11.19.30.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.19.30.jpg',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.19.30.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.19.30.png',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.19.30.png',
 			description: 'Login page',
 			name: 'Login',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallSceen/Screenshot 2019-06-25 at 11.20.42.png',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.20.42.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.20.42.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.20.42.png',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.20.42.png',
 			description: 'User Profile.',
 			name: 'User Profile',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallSceen/Screenshot 2019-06-25 at 11.21.21.png',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.21.21.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.21.21.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.21.21.png',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.21.21.png',
 			description: 'Find users',
 			name: 'Find Users',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallSceen/Screenshot 2019-06-25 at 11.22.08.png',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/SScreenshot 2019-06-25 at 11.22.08.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.08.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.08.png',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.08.png',
 			description: 'Friends',
 			name: 'Friends.',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallSceen/Screenshot 2019-06-25 at 11.22.42.png',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.42.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.42.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.42.png',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.42.png',
 			description: 'Requests.',
 			name: 'Requests',
