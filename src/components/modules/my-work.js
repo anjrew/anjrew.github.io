@@ -75,7 +75,7 @@ class MyWork extends React.Component {
 
                     <ProjectImage name='Spiced Academy' bigUrl="/assets/images/projects/spiced/image/spiced-logo-300px.jpg" smallUrl='/assets/images/projects/spiced/image/spiced-logo-100px.png' />
 
-                    <ProjectImage name='this' bigUrl="/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png" smallUrl='/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png' />  
+                    <ProjectImage name='this.' bigUrl="/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png" smallUrl='/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png' />  
 
                     <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/> 
                 </Wrap>
