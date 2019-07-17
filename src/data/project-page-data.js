@@ -193,7 +193,7 @@ export const DialInData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.27.png',
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
 			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
 			description: '6',
@@ -309,7 +309,7 @@ export const CupomaticData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.43.42.jpgg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.43.42.jpg',
 			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/Screenshot 2018-01-20 16.43.42.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/Screenshot 2018-01-20 16.43.42.png',
 			description: 'Main Screen',
@@ -343,7 +343,7 @@ export const BatterySaverData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/smallScreen/IMG-20190627-WA0000.jpg',
+			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0000.jpg',
 			largeImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0000.jpg',
 			imageUrl: '/assets/images/projects/battery-saver/screenshots/fullSize/IMG-20190627-WA0000.jpg',
 			description: 'Search for battery saver hardware to connect to via bluetooth.',
@@ -352,7 +352,7 @@ export const BatterySaverData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/smallScreen/IMG-20190627-WA0001.jpg',
+			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0001.jpg',
 			largeImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0001.jpg',
 			imageUrl: '/assets/images/projects/battery-saver/screenshots/fullSize/IMG-20190627-WA0001.jpg',
 			description: 'Change settings for tolerance and check frequency..',
@@ -361,7 +361,7 @@ export const BatterySaverData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/smallScreen/IMG-20190627-WA0002.jpg',
+			smallImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0002.jpg',
 			largeImageUrl: '/assets/images/projects/battery-saver/screenshots/largeScreen/IMG-20190627-WA0002.jpg',
 			imageUrl: '/assets/images/projects/battery-saver/screenshots/fullSize/IMG-20190627-WA0002.jpg',
 			description: 'The main screen',
@@ -534,40 +534,40 @@ export const LaissezFaireData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.19.30.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.19.30.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallScreen/Screenshot 2019-06-25 at 11.19.30.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.19.30.jpg',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.19.30.png',
 			description: 'Login page',
 			name: 'Login',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.20.42.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.20.42.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallScreen/Screenshot 2019-06-25 at 11.20.42.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.20.42.jpg',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.20.42.png',
 			description: 'User Profile.',
 			name: 'User Profile',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.21.21.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.21.21.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallScreen/Screenshot 2019-06-25 at 11.21.21.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.21.21.jpg',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.21.21.png',
 			description: 'Find users',
 			name: 'Find Users',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.08.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.08.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallScreen/Screenshot 2019-06-25 at 11.22.08.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.08.jpg',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.08.png',
 			description: 'Friends',
 			name: 'Friends.',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.42.jpg',
-			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.42.png',
+			smallImageUrl: '/assets/images/projects/lassezfaire/screenShots/smallScreen/Screenshot 2019-06-25 at 11.22.42.jpg',
+			largeImageUrl: '/assets/images/projects/lassezfaire/screenShots/largeScreen/Screenshot 2019-06-25 at 11.22.42.jpg',
 			imageUrl: '/assets/images/projects/lassezfaire/screenShots/fullSize/Screenshot 2019-06-25 at 11.22.42.png',
 			description: 'Requests.',
 			name: 'Requests',
@@ -594,40 +594,40 @@ export const GoatstagramData = new ProjectPageData({
 	linksTitle: 'More Info',
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.55.54.jpg',
-			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.55.54.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.55.54.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.55.54.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.55.54.png',
 			description: 'The main page',
 			name: 'Main page',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
-			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
 			description: 'Error propmt on no file selected',
 			name: 'Error handling',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.59.46.jpg',
-			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.59.46.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.59.46.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.59.46.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.59.46.png',
 			description: 'A radom pic of a funny goat.',
 			name: 'Goaty',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.06.jpg',
-			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.06.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.58.06.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.06.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.06.png',
 			description: 'An image of a Goat',
 			name: 'Image',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.56.jpg',
-			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.56.png',
+			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.58.56.jpg',
+			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.58.56.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.58.56.png',
 			description: 'Comments section.',
 			name: 'Comments',
