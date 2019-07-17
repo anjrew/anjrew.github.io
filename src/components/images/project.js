@@ -18,13 +18,13 @@ class ProjectImage extends React.Component{
     }
 
     render(){
-		
-        const mobileApp = this.props.mobileApp;
+        const props = this.props;
+        const mobileApp = props.mobileApp;
         const size = mobileApp ? '100px' : '300px';
         const width = size;
         const height = size;
 		
-        const words = this.props.name.split(' ');
+        const words = props.name.split(' ');
         var biggestWordLength = 0; 
         for (let index = 0; index < words.length; index++) {
             const word = words[index];
@@ -33,7 +33,7 @@ class ProjectImage extends React.Component{
             }
         }
 		
-        var fontSize = this.props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+        var fontSize = props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
@@ -83,19 +83,19 @@ class ProjectImage extends React.Component{
                             color: 'white',
                             textAlign: 'center',
                             margin: '30px',
-                            fontSize: this.props.mobileApp ? '13px' : fontSize,
+                            fontSize: props.mobileApp ? '13px' : fontSize,
                             transition: 'opacity 500ms',
-                            opacity: this.state.showText || this.props.mobileApp ? 1 : 0,
+                            opacity: this.state.showText || mobileApp ? 1 : 0,
                             alignSelf: 'center',
-                            backgroundColor: this.props.mobileApp ?'black' : 'rgba(0,0,0,0)',
+                            backgroundColor: props.mobileApp ?'black' : 'rgba(0,0,0,0)',
                         }}
                         onMouseEnter={() =>{ this.setState({ showText: true }); } }
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
                         onClick={() => this.handleClick() }
 
-                    >{this.props.name}</h2>
+                    >{props.name}</h2>
                 </div>
-                <img style={imageStyle} src={this.props.logoUrlBig || this.props.src}/>
+                <img style={imageStyle} src={mobileApp ? props.smallUrl : props.bigUrl }/>
             </div>
         );
     }

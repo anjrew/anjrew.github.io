@@ -59,7 +59,7 @@ class MyWork extends React.Component {
                 <Wrap
                     placeContent={mobileApp ? 'center' : 'flex-start'}>
 					
-                    <ProjectImage name='Dial In' bigUrl="/assets/images/projects/dial-in/image/dial-in-300px.jpg" smallUrl='/assets/images/projects/dial-in/image/dial-in-300px.jpg' />
+                    <ProjectImage name='Dial In' bigUrl="/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg" smallUrl='/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg' />
 
                     <ProjectImage name='CupOmatic' bigUrl="/assets/images/projects/cupomatic/image/cupomatic-300px.jpg" smallUrl='/assets/images/projects/cupomatic/image/cupomatic-100px.jpg' />
 
@@ -67,15 +67,15 @@ class MyWork extends React.Component {
 
                     <ProjectImage name='Plant irrigation system' bigUrl="/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg' />
 
-                    <ProjectImage name='Lava lamp petition' bigUrl="/public/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg'/> 
+                    <ProjectImage name='Lava lamp petition' bigUrl="/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg" smallUrl='/public/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-100px.jpg'/> 
 
                     <ProjectImage name='Laissez Faire' bigUrl="/assets/images/projects/lassezfaire/image/laissez-faire-300px.jpg" smallUrl='/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg'/>  
 					
-                    <ProjectImage name='Goatstagram' bigUrl="/assets/images/projects/goatstagram/image/goatstagram-300px.jpg" smallUrl='/assets/images/projects/goatstagram/image/goatstagram-100px.jpg' />
+                    <ProjectImage name='Goatstagram' bigUrl="/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_600.jpg" smallUrl='/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg' />
 
                     <ProjectImage name='Spiced Academy' bigUrl="/assets/images/projects/spiced/image/spiced-logo-300px.jpg" smallUrl='/assets/images/projects/spiced/image/spiced-logo-100px.png' />
 
-                    <ProjectImage name='this' bigUrl="/assets/images/me-noeyes-whitebg.png" smallUrl='/assets/images/me-noeyes-whitebg.png' />  
+                    <ProjectImage name='this' bigUrl="/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png" smallUrl='/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png' />  
 
                     <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/> 
                 </Wrap>

@@ -36,8 +36,8 @@ export class ProjectPageData {
 		this.screenShots = data['screenShots'];
 		this.linksTitle = data['linksTitle'];
 		this.videos = data['videos'];
-		this.logoUrlSmall = data['logoUrlSmall']
-		this.logoUrlBig = data['logoUrlBig']
+		this.logoUrlSmall = data['logoUrlSmall'];
+		this.logoUrlBig = data['logoUrlBig'];
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
