@@ -13,7 +13,6 @@ class ProjectImage extends React.Component{
     }
 	
     handleClick(){
-        console.log('this props.name is ', this.props.name);
         this.props.dispatch(action.showProject(this.props.name));
         window.history.pushState({}, '/',`/${this.props.name}`);
     }
