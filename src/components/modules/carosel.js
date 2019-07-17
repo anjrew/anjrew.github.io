@@ -18,27 +18,30 @@ class Carosel extends React.Component{
     }
 	
     render(){
+		
+        const props = this.props;
+        const mobileApp = props.mobileApp;
         const arrowStyle = {
-            height: this.props.mobileApp? '50px' : '150px',
-            width: this.props.mobileApp? '50px' : '150px',
+            height: mobileApp ? '50px' : '150px',
+            width: mobileApp ? '50px' : '150px',
             padding: '10px',
             margin: '10px',
             cursor: 'pointer'
         };
         const imageStyle = {
             objectFit: 'cover',
-            maxWidth: this.props.mobileApp ? 'calc(80% - 100px)' : 'calc(90% - 300px)',
+            maxWidth: mobileApp ? 'calc(80% - 100px)' : 'calc(90% - 300px)',
             width: 'auto',
             height: 'calc(80% - 100px)',
         };
         if(this.props.currentImage){
-            window.history.pushState({}, 'this.props.data.name',`/${this.props.currentImage.project}/image/${this.props.currentImage.name}`);
+            window.history.pushState({}, 'this.props.data.name',`/${props.currentImage.project}/image/${props.currentImage.name}`);
         }
 		
         return <CSSTransition 
             key={'carosel'} 
-            in={!!this.props.nextImage || !!this.props.currentImage}
-            onExited={() => this.props.dispatch(action.renderNext()) }
+            in={!!props.nextImage || !!props.currentImage}
+            onExited={() => props.dispatch(action.renderNext()) }
             timeout={400} 
             classNames="fade" 
             unmountOnExit>
@@ -55,7 +58,7 @@ class Carosel extends React.Component{
                         backgroundColor= 'rgba(0,0,0,0.80)'
                         onClick={() => {
                             this.props.dispatch(action.dismissImage());
-                            history.push(`/${this.props.currentImage.project}`);
+                            history.push(`/${props.currentImage.project}`);
                         }}>
                         <Row
                             height='calc(80% - 100px)'
@@ -65,7 +68,7 @@ class Carosel extends React.Component{
                                 onClick={(e) => {
                                     e.preventDefault();
                                     e.stopPropagation();
-                                    this.props.dispatch(action.previousImage(this.props.currentImage));
+                                    props.dispatch(action.previousImage(props.currentImage));
                                 }}
                             >
                                 <img 
@@ -77,12 +80,12 @@ class Carosel extends React.Component{
                                 key={'key'} 
                                 in={!!this.props.showImage}
                                 onExited={() => {
-                                    this.props.nextImage && this.props.dispatch(action.renderNext());
+                                    props.nextImage && props.dispatch(action.renderNext());
                                 }}
                                 timeout={410}
-                                classNames={this.props.direction || 'fade'} 
+                                classNames={props.direction || 'fade'} 
                                 unmountOnExit>
-                                <img src={this.props.currentImage && this.props.currentImage.imageUrl} 
+                                <img src={props.currentImage && props.currentImage.imageUrl} 
                                     alt='image' 
                                     style={imageStyle}
                                     onClick={(e) => {
@@ -94,7 +97,7 @@ class Carosel extends React.Component{
                                 onClick={(e) => {
                                     e.preventDefault();
                                     e.stopPropagation();
-                                    this.props.dispatch(action.nextImage(this.props.currentImage));
+                                    props.dispatch(action.nextImage(props.currentImage));
                                 }}
                             ><img src="/assets/icons/right-arrow-white.png"
                                     alt='right-arrow' 
@@ -106,12 +109,12 @@ class Carosel extends React.Component{
                             paddin='30px'>
                             <h3 style={{color: 'white', 
                                 backgroundColor: 'rgba(0,0,0,0)',
-                                textAlign: "center"}}>{this.props.currentImage && this.props.currentImage.name}</h3>
+                                textAlign: "center"}}>{props.currentImage && props.currentImage.name}</h3>
                             <p style={{
                                 color: 'white',
                                 backgroundColor: 'rgba(0,0,0,0)',
                                 textAlign: "center"
-                            }}>{this.props.currentImage && this.props.currentImage.description}</p>
+                            }}>{props.currentImage && props.currentImage.description}</p>
                         </Container>
 			
                     </Column>);
@@ -148,7 +151,6 @@ class Carosel extends React.Component{
 }
 
 const mapStateToProps = state => {
-
     return {
         currentImage: state.currentImage,
         nextImage: state.nextImage,

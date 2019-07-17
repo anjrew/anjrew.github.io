@@ -81,6 +81,7 @@ export class GalleryImageData {
 		this.description = data['description'];
 		this.smallImageUrl = data['smallImageUrl'];
 		this.largeImageUrl = data['largeImageUrl'];
+		this.imageUrl =data['imageUrl'];
 		this.name = data['name'];
 		this.screenShot = data['screenShot'];
 		for (const key in data) {
@@ -112,17 +113,17 @@ export const DialInData = new ProjectPageData({
 	linksTitle: 'More Info',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/faceBookIcon.png',
+			imageUrl: '/assets/images/social-media-icons/faceBookIcon.png',
 			href: 'https://www.facebook.com/dialincoffee/',
 			name: 'Facebook'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/instagramLogo.png',
+			imageUrl: '/assets/images/social-media-icons/instagramLogo.png',
 			href: 'https://www.instagram.com/dial_in_coffee/',
 			name: 'Instagram'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/GooglePlayBadge.png',
+			imageUrl: '/assets/images/social-media-icons/GooglePlayBadge.png',
 			href: 'https://play.google.com/store/apps/details?id=com.dialin.android.abc&hl=en',
 			name: 'Google Play'
 		})
@@ -131,7 +132,7 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/image/dial-in.jpg',
+			imageUrl: '/assets/images/projects/dial-in/image/dial-in.jpg',
 			description: 'Workflow',
 			name: 'Working on bar',
 			screenShot: false
@@ -147,8 +148,8 @@ export const DialInData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
 			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.06.png',
 			description: '2',
 			name: 'Recipes',
@@ -156,55 +157,54 @@ export const DialInData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.31.png',
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.31.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.31.png',
 			description: '3',
 			name: 'Feed',
 			screenShot: true
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.45.png',			
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.45.png',			
 			description: '4',
 			screenShot: true,
 			name: 'Profile',
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',	
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',	
 			description: '5',
 			screenShot: true,
 			name: 'Recipe',
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.05.png',			
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.05.png',			
 			description: '5',
 			screenShot: true,
 			name: 'Score',
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.27.png',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
 			description: '6',
 			screenShot: true,
 			name: 'Flavours',
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',
-			largeImageUrl: 'public/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
-			imageUrl: 'public/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
-			description: 'Options menu.',
+			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
+			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.37.png',			description: 'Options menu.',
 			screenShot: true,
 			name: 'Options menu',
 		}),
@@ -214,7 +214,7 @@ export const DialInData = new ProjectPageData({
 			description: 'A Demo of a user using the application',
 			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
 			name: 'Demo',
-			imageUrl: '/assets/images/screenshots/dial-in/Screenshot 2019-06-25 at 08.15.06.png',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
 			screenShot: true
 		})
 	]
@@ -234,27 +234,27 @@ export const CupomaticData = new ProjectPageData({
 	linksTitle: 'More Info',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/faceBookIcon.png',
+			imageUrl: '/assets/images/social-media-icons/faceBookIcon.png',
 			href: 'https://www.facebook.com/cupOmatic/',
 			name: 'Facebook'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/instagramLogo.png',
+			imageUrl: '/assets/images/social-media-icons/instagramLogo.png',
 			href: 'https://www.instagram.com/cupomatic/',
 			name: 'Instagram'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/GooglePlayBadge.png',
+			imageUrl: '/assets/images/social-media-icons/GooglePlayBadge.png',
 			href: '/assets/images/instagramLogo.png',
 			name: 'Google Play'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/app-store-badge.svg',
+			imageUrl: '/assets/images/social-media-icons/app-store-badge.svg',
 			href: 'https://apps.apple.com/app/id1336170587',
 			name: 'App Store'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/cupOmatic-logo.jpg',
+			imageUrl: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
 			href: 'http://www.cupomatic.net/',
 			name: 'CupOmatic.net',
 			static: true
@@ -388,19 +388,20 @@ export const PlantSystemData = new ProjectPageData({
 			screenShot: false
 		}),
 
-		//
 		new GalleryImageData({
 			imageUrl: '/assets/images/plant-system/IMG_7717.JPG',
 			description: 'Testing and calibrationg the sensor',
 			name: 'Sensor',
 			screenShot: false
 		}),
+
 		new GalleryImageData({
 			imageUrl: '/assets/images/plant-system/IMG_7718.JPG',
 			description: 'Mounting the transformer',
 			name: 'Transformer',
 			screenShot: false
 		}),
+
 		new GalleryImageData({
 			imageUrl: '/assets/images/plant-system/IMG_7719.JPG',
 			description: 'The board before',
@@ -429,7 +430,7 @@ export const PertitionData = new ProjectPageData({
 	linksTitle: 'Visit the petition',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/green-lava-lamp.jpg',
+			imageUrl: '/assets/images/social-media-icons/green-lava-lamp.jpg',
 			href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
 			name: 'Visit the petition',
 			static: true
@@ -595,22 +596,22 @@ export const SpicedAcademyData = new ProjectPageData({
 	linksTitle: 'More Info',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/twitter-logo.png',
+			imageUrl: '/assets/images/social-media-icons/twitter-logo.png',
 			href: 'https://twitter.com/spicedacademy',
 			name: 'Twitter'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/faceBookIcon.png',
+			imageUrl: '/assets/images/social-media-icons/faceBookIcon.png',
 			href: 'https://www.facebook.com/spicedacademy/',
 			name: 'Facebook'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/instagramLogo.png',
+			imageUrl: '/assets/images/social-media-icons/instagramLogo.png',
 			href: 'https://www.instagram.com/spicedacademy/',
 			name: 'Instagram'
 		}),
 		new LinkData({
-			imageUrl: '/assets/images/spiced-logo.png',
+			imageUrl: '/assets/images/social-media-icons/spiced-logo.png',
 			href: 'www.spiced-academy.com',
 			name: 'www.spiced-academy.com'
 		})
@@ -695,7 +696,7 @@ export const connectFourData = new ProjectPageData({
 	linksTitle: 'Play',
 	links: [
 		new LinkData({
-			imageUrl: 'assets/images/connect-four/logo.jpg',
+			imageUrl: '/assets/images/projects/connect-four/image/logo-100px.jpg',
 			href: 'https://connect-four-andrew-johnson.herokuapp.com/',
 			name: 'Play',
 			static: true
