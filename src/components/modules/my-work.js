@@ -67,7 +67,7 @@ class MyWork extends React.Component {
 
                     <ProjectImage name='Plant irrigation system' bigUrl="/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg' />
 
-                    <ProjectImage name='Lava lamp petition' bigUrl="/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg" smallUrl='/public/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-100px.jpg'/> 
+                    <ProjectImage name='Lava lamp petition' bigUrl="/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg" smallUrl='/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg'/> 
 
                     <ProjectImage name='Laissez Faire' bigUrl="/assets/images/projects/lassezfaire/image/laissez-faire-300px.jpg" smallUrl='/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg'/>  
 					

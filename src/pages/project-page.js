@@ -35,10 +35,15 @@ class ProjectPage extends React.Component{
     }
 
     render(){
-        const data = this.props.data || {};
-        const mobileApp = this.props.mobileApp;
+        const props = this.props;
+        const data = props.data || {};
+        const mobileApp = props.mobileApp;
+        const smallScreen = props.smallScreen;
         const margin = 20;
         const sectionMargin =  margin + 'px';
+        const renderCenterlogo = smallScreen || mobileApp;
+        const renderSideLogo = !smallScreen && data && (data.logoUrlSmall || data.logoUrlBig);
+
         var logo;
 		
         if (data){
@@ -70,44 +75,44 @@ class ProjectPage extends React.Component{
 							    height={this.state.height}>
                             <Column
                                 referance={this.elemRef}
-                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+                                placeContent={ smallScreen ? 'center' : 'flex-start' }>
                                 <Container
                                     width='100%'
                                     display='flex'
-                                    flexDirection={ this.props.smallScreen ? 'column' : 'row' }
-                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                    flexDirection={ smallScreen ? 'column' : 'row' }
+                                    placeContent={ smallScreen ? 'center' : 'flex-start' }
                                 >
                                     <Column
-                                        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                        alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                        placeContent={ smallScreen ? 'center' : 'flex-start' }
+                                        alignItems={ smallScreen ? 'center' : 'flex-start' }
                                         width='unset'
                                     >
                                         { data.title &&   
 											<h1 
 											    style={{ 
-											    	fontSize: this.props.mobileApp ? '35px' : this.props.smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
+											    	fontSize: mobileApp ? '35px' : smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
 											        textDecoration: 'underline',
-											        textAlign: this.props.smallScreen ? 'center' : 'start'  
+											        textAlign: smallScreen ? 'center' : 'start'  
 											    }}
 											>{data.title}</h1>
                                         }
-                                        { logo }
+                                        { renderCenterlogo && logo }
                                         <p 
                                             style={{ 
-                                                textAlign: this.props.smallScreen ? 'center' : 'start' ,
-                                                fontSize: this.props.mobileApp && '15px'
+                                                textAlign: smallScreen ? 'center' : 'start' ,
+                                                fontSize: mobileApp && '15px'
                                             }}
                                         >{data.description}</p>
 	
                                     </Column>
 
-                                    {!this.props.smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
-                                    {!this.props.smallScreen && data && data.logoUrl && logo }
-                                    {!this.props.smallScreen &&  <Container
-                                        alignSelf={ this.props.smallScreen ? 'center' : 'start' }
-                                        alignItems={ this.props.smallScreen ? 'center' : 'flex-end' }
+                                    {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
+                                    {renderSideLogo && logo }
+                                    {!smallScreen &&  <Container
+                                        alignSelf={ smallScreen ? 'center' : 'start' }
+                                        alignItems={ smallScreen ? 'center' : 'flex-end' }
                                         height='100%'
-                                        placeContent={ this.props.smallScreen ? 'center' : 'flex-end flex-end' }>
+                                        placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
                                         <button 
                                             style={{ cursor: 'pointer' }}
                                             onClick={() => this.dismiss(history)}>X</button>
@@ -118,13 +123,13 @@ class ProjectPage extends React.Component{
                                 {/* technologies */}
                                 { data.technologies && 
 								<Column
-								    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-								    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+								    placeContent={ smallScreen ? 'center' : 'flex-start' }
+								    alignItems={ smallScreen ? 'center' : 'flex-start' }
 								    margin={sectionMargin}>
 								    <h3>Featuring</h3>
 								    <Wrap
-								        alignItems={ this.props.smallScreen ? 'center' : 'start' }
-								        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
+								        alignItems={ smallScreen ? 'center' : 'start' }
+								        placeContent={ smallScreen ? 'center' : 'flex-start' }
 								    >
 								        { data.technologies.map((technology) => {
 								            return ( <TechnologyIcon key={technology.name} data={technology}/> ); 
@@ -138,13 +143,13 @@ class ProjectPage extends React.Component{
                                 { data.links &&
 							<Column	
 							    id='links'
-							    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-							    alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+							    placeContent={ smallScreen ? 'center' : 'flex-start' }
+							    alignItems={ smallScreen ? 'center' : 'flex-start' }
 							    margin={sectionMargin}>
                             	<h3>{data.linksTitle}</h3> 
 							    <Wrap
-							        alignItems={ this.props.smallScreen ? 'center' : 'start' }
-							        placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+							        alignItems={ smallScreen ? 'center' : 'start' }
+							        placeContent={ smallScreen ? 'center' : 'flex-start' }>
 								    { data.links.map((link) => {
 								        return <LinkIcon key={link.href} data={link} />; 
 								    	})
@@ -156,12 +161,12 @@ class ProjectPage extends React.Component{
                         	{ data.screenShots &&
                             <Column
                                 id='screenShots'
-                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                placeContent={ smallScreen ? 'center' : 'flex-start' }
+                                alignItems={ smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}>
                                 <h3>Gallery</h3>
                                 <Wrap
-                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+                                    placeContent={ smallScreen ? 'center' : 'flex-start' }>
                                     { data.screenShots && data.screenShots.map((screenshot) => {
                                         return <GalleryImage key={screenshot.imageUrl} data={screenshot} />;  
                                     	})
@@ -173,12 +178,12 @@ class ProjectPage extends React.Component{
                                 { data.videos &&
                             <Column
                                 id='videos'
-                                placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }
-                                alignItems={ this.props.smallScreen ? 'center' : 'flex-start' }
+                                placeContent={ smallScreen ? 'center' : 'flex-start' }
+                                alignItems={ smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}>
                                 <h3>Videos</h3>
                                 <Wrap
-                                    placeContent={ this.props.smallScreen ? 'center' : 'flex-start' }>
+                                    placeContent={ smallScreen ? 'center' : 'flex-start' }>
                                     { data.videos && data.videos.map((video) => {
                                         return <VideoIcon key={video.imageUrl} data={video} />;  
                                     	})

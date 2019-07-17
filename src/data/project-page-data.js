@@ -300,7 +300,7 @@ export const BatterySaverData = new ProjectPageData({
 	Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
 		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
 	logoUrlSmall: '/assets/images/projects/battery-saver/icon/battery_saver_logo-200px.jpg',
-	logoUrlBig: '/assets/images/projects/battery-saver/icon/battery_saver_logo-350px.jpg',
+	logoUrlBig: '/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg',
 	technologies: [
 		flutterLink,
 		flareLink,
@@ -457,7 +457,7 @@ export const LaissezFaireData = new ProjectPageData({
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
 	and more.`,
 	logoUrlSmall: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_200.jpg',
-	logoUrlBig: '/assets/images/projects/llassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
+	logoUrlBig: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -559,8 +559,8 @@ export const SpicedAcademyData = new ProjectPageData({
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
 	That project is the one you are looking at righ now :).`,
-	logoUrlSmall: '/assets/images/projects/spiced/icon/spiced-logo-200px.jpg',
-	logoUrlBig: '/assets/images/projects/spiced/icon/spiced-logo-350px.jpg',
+	logoUrlSmall: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
+	logoUrlBig: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
 	projects: [
 		'https://connect-four-andrew-johnson.herokuapp.com/'
 	],
@@ -664,6 +664,8 @@ export const connectFourData = new ProjectPageData({
 		
 	Click the link below to play the game :-).\
 	`,
+	logoUrlSmall: '/assets/images/projects/connect-four/image/logo-100px.jpg',
+	logoUrlBig: '/assets/images/projects/connect-four/image/logo-300px.jpg',
 	logoUrl: '/assets/images/connect-four/logo.jpg',
 	technologies: [
 		vsCodeLink,
