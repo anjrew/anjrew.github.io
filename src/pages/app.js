@@ -44,7 +44,7 @@ class App extends React.Component{
         var strength = props.mobileApp ? 1000 : 1000;
         if (windowWidth < 750 ){
             blur = 5;
-            backGroundImage = '/assets/images/triple-me-for-mobile.jpg';
+            backGroundImage = '/assets/images/me/triple-me-for-mobile.jpg';
         } else {
             backGroundImage = '/assets/images/me/me-noeyes-3.jpg';
         }
