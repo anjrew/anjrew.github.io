@@ -11,8 +11,8 @@ import { connect } from 'react-redux';
 class MyWork extends React.Component {
 
     render() {
-		const props = this.props
-		const mobileApp = props.mobileApp;
+        const props = this.props;
+        const mobileApp = props.mobileApp;
 
         const elem = <Column
             width='100%'
@@ -56,9 +56,10 @@ class MyWork extends React.Component {
                         style={{margin: '20px'}}
                     />
                 </a>
-                <Wrap
-                    placeContent={mobileApp ? 'center' : 'flex-start'}>
-					
+                <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
+
+                    <ProjectImage name='Shutterstock scroll' bigUrl="/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_300.jpg" smallUrl='/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_100.jpg'/> 
+
                     <ProjectImage name='Dial In' bigUrl="/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg" smallUrl='/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg' />
 
                     <ProjectImage name='CupOmatic' bigUrl="/assets/images/projects/cupomatic/image/cupomatic-300px.jpg" smallUrl='/assets/images/projects/cupomatic/image/cupomatic-100px.jpg' />
@@ -77,7 +78,8 @@ class MyWork extends React.Component {
 
                     <ProjectImage name='this.' bigUrl="/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png" smallUrl='/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png' />  
 
-                    <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/> 
+                    <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/>
+
                 </Wrap>
             </Column>
             

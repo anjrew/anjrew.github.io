@@ -24,7 +24,10 @@ import {
     awsLink,
     vueLink,
     redisLink,
-    handlebarsLink } from '../../data/technology-data';
+    handlebarsLink,
+    codeMagicLink } from '../../data/technology-data';
+	
+
 	
 // Components
 import { Column } from '../layout/column';
@@ -69,8 +72,7 @@ class Skills extends React.Component {
             </p>
             <br /> 
 
-            <Wrap
-                placeContent={mobileApp ? 'center' : 'flex-start'}>
+            <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
                 <TechnologyIcon key={flutterLink.name} data={flutterLink}/>
                 <TechnologyIcon key={dartLink.name} data={dartLink} />
                 <TechnologyIcon key={firebaseLink.name} data={firebaseLink} />
@@ -93,6 +95,7 @@ class Skills extends React.Component {
                 <TechnologyIcon key={vueLink.name} data={vueLink} />
                 <TechnologyIcon key={redisLink.name} data={redisLink} />
                 <TechnologyIcon key={handlebarsLink.name} data={handlebarsLink} />
+                <TechnologyIcon key={codeMagicLink.name} data={codeMagicLink} />
             </Wrap>
             <br/> 
             <p style={{ textAlign: mobileApp ? 'center':'start' }}>

@@ -21,7 +21,8 @@ import {
 	reactLink,
 	awsLink,
 	vueLink,
-	handlebarsLink
+	handlebarsLink,
+	codeMagicLink
 } from '../data/technology-data';
 
 export class ProjectPageData {
@@ -368,8 +369,6 @@ export const BatterySaverData = new ProjectPageData({
 			name: 'Main Screen',
 			screenShot: false
 		}),
-
-
 	]
 });
 
@@ -761,7 +760,6 @@ export const connectFourData = new ProjectPageData({
 	`,
 	logoUrlSmall: '/assets/images/projects/connect-four/image/logo-100px.jpg',
 	logoUrlBig: '/assets/images/projects/connect-four/image/logo-300px.jpg',
-	logoUrl: '/assets/images/connect-four/logo.jpg',
 	technologies: [
 		vsCodeLink,
 		cssLink,
@@ -777,4 +775,22 @@ export const connectFourData = new ProjectPageData({
 			static: true
 		}),
 	]
+});
+
+export const shutterStockScrollData = new ProjectPageData({
+	title: 'Shutterstock scroll',
+	description: `This is a mobile application that gets images from the Shutterstock api with infinite scroll functionality. 
+	The user can view a larger image when the use clicks on an image.
+
+	I implemented the Flutter framework and carried out extensive unit, widget, golden, and driver tests.
+		
+	CICD was also implemented using Codemagic.
+			`,
+	logoUrlSmall: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_264.jpg',
+	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg',
+	technologies: [
+		vsCodeLink,
+		flutterLink,
+		codeMagicLink
+	],
 });

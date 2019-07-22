@@ -162,9 +162,17 @@ export const redisLink = new Technology({
 
 export const handlebarsLink = new Technology({
     smallImageUrl: '/assets/images/tech-icons/handlebars/handlebars-logo_o7le10_c_scale,w_60.png',
-    largeImageUrl: '/assets/images/tech-icons/handlebars/handlebars-logo_o7le10_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/handlebars/handlebars-logo_o7le10_c_scale,w_100.png',
     name: 'Handlebars',
     href: 'https://handlebarsjs.com/'
 });
+
+export const codeMagicLink = new Technology({
+    smallImageUrl: '/assets/images/tech-icons/code-magic/82l6yd1T_400x400_ezi9wf_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/code-magic/82l6yd1T_400x400_ezi9wf_c_scale,w_100.png',
+    name: 'Code Magic',
+    href: 'https://codemagic.io/start/'
+});
+
 
 

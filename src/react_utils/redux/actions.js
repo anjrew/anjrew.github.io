@@ -8,7 +8,8 @@ import {
     GoatstagramData,
     SpicedAcademyData,
     thisData,
-    connectFourData } from '../../data/project-page-data';
+    connectFourData,
+    shutterStockScrollData } from '../../data/project-page-data';
 	
 const pageData = {
     dialIn :DialInData,
@@ -60,7 +61,12 @@ export const Action = {
             case 'Connect Four':
                 data = connectFourData;
                 break;
-            default: 
+            case 'Shutterstock scroll':
+                data = shutterStockScrollData;
+                break;
+            default:
+                break;
+ 
         }	
         return {
             type: "SHOW_PROJECT",
