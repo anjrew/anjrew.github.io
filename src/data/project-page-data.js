@@ -225,7 +225,7 @@ export const CupomaticData = new ProjectPageData({
 	title: 'CupOmatic',
 	description: 'A tool to assist coffee professionals with the the cupping protocol',
 	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
-	logoUrlBig: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-350px.jpg',
+	logoUrlBig: '/assets/images/projects/cupomatic/icon/cupOmatic-logo.jpg',
 	technologies: [
 		swiftLink,
 		javaLink,
