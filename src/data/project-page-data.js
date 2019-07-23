@@ -789,7 +789,7 @@ export const shutterStockScrollData = new ProjectPageData({
 	technologies: [
 		vsCodeLink,
 		flutterLink,
-		codeMagicLink
+		codeMagicLink,
 	],
 	screenShots: [
 
@@ -808,6 +808,15 @@ export const shutterStockScrollData = new ProjectPageData({
 			description: 'Project time.',
 			name: 'The view from clicking on the image',
 			screenShot: true
+		}),
+	],
+	linksTitle: 'See the repo',
+	links: [
+		new LinkData({
+			imageUrl: '/assets/images/tech-icons/github/icon.svg',
+			href: 'https://github.com/earyzhe/shutterstock_scroll',
+			name: 'Repo',
+			static: true
 		}),
 	],
 	videos: [

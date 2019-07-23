@@ -188,6 +188,14 @@ export const googleCloudPlatform =  new Technology({
     href: 'https://cloud.google.com/gcp/?utm_source=google&utm_medium=cpc&utm_campaign=emea-gb-all-en-dr-bkws-all-all-trial-e-gcp-1007176&utm_content=text-ad-none-any-DEV_c-CRE_166509224290-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20BKWS%20~%20EXA_1:1_GB_EN_General_Cloud_TOP_google%20cloud%20platforms-KWID_43700016292936125-kwd-141425403689-userloc_1006627&utm_term=KW_google%20cloud%20platformsg&ds_rl=1242853&ds_rl=1245734&ds_rl=1245734&gclid=CjwKCAjw4NrpBRBsEiwAUcLcDI9bfBClSubRDzoY0obvaoyYGFbgLai6zOf6BvfRHuoirC-wWuMSOxoCzaIQAvD_BwE'
 });
 
+export const githubLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/github/icon.svg',
+    largeImageUrl: '/assets/images/tech-icons/github/icon.svg',
+    name: 'Github',
+    href: 'https://github.com'
+});
+
+
 export const techlinks = [
     googleCloudPlatform,
     googleVision,
@@ -213,6 +221,7 @@ export const techlinks = [
     vueLink,
     redisLink,
     handlebarsLink,
-    codeMagicLink
+    codeMagicLink,
+    githubLink
 ];
 
