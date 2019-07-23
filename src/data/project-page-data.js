@@ -792,36 +792,21 @@ export const shutterStockScrollData = new ProjectPageData({
 		codeMagicLink
 	],
 	screenShots: [
+
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7715.JPG',
-			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7715.JPG',
-			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7715.JPG',
-			description: 'The loading screen when first opening the app.',
-			name: 'Splashscreen',
-			screenShot: false
-		}),
-		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7716.JPG',
-			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7716.JPG',
+			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.14.51_qn9vx1_c_scale,w_80.png',
+			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/Screenshot_2019-07-23_at_15.14.51_qn9vx1_c_scale,w_300.png',
 			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7716.JPG',
 			description: 'The main image gallery.',
 			name: 'Gallery',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-22-13-36-21.jpg',
-			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-22-13-36-21.jpg',
+			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.15.02_r4i32p_c_scale,w_80.png',
+			largeImageUrl: 'public/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.15.02_r4i32p_c_scale,w_300.png',
 			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-22-13-36-21.jpg',
 			description: 'Project time.',
 			name: 'The view from clicking on the image',
-			screenShot: false
-		}),
-		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-29-20-43-02.jpg',
-			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-29-20-43-02.jpg',
-			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-29-20-43-02.jpg',
-			description: 'A warning when the internet conncection is lost.',
-			name: 'Lost connection',
 			screenShot: false
 		}),
 	],
