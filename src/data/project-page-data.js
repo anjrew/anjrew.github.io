@@ -828,9 +828,9 @@ export const shutterStockScrollData = new ProjectPageData({
 	videos: [
 		new VideoData({
 			description: 'A demo of a user using the application',
-			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
+			url: '/assets/images/projects/shutterstock-scroll/videos/demo.mov',
 			name: 'Demo',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/Screenshot 2019-07-23 at 15.14.51.png',
 			screenShot: true
 		})
 	]
