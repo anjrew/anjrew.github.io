@@ -188,7 +188,7 @@ export const DialInData = new ProjectPageData({
 	],
 	videos: [
 		new VideoData({
-			description: 'A Demo of a user using the application',
+			description: 'A demo of a user using the application',
 			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
 			name: 'Demo',
 			imageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
@@ -791,6 +791,49 @@ export const shutterStockScrollData = new ProjectPageData({
 		flutterLink,
 		codeMagicLink
 	],
+	screenShots: [
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7715.JPG',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7715.JPG',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7715.JPG',
+			description: 'The loading screen when first opening the app.',
+			name: 'Splashscreen',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/IMG_7716.JPG',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/IMG_7716.JPG',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7716.JPG',
+			description: 'The main image gallery.',
+			name: 'Gallery',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-22-13-36-21.jpg',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-22-13-36-21.jpg',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-22-13-36-21.jpg',
+			description: 'Project time.',
+			name: 'The view from clicking on the image',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/spiced/screenShot/smallScreen/PHOTO-2019-05-29-20-43-02.jpg',
+			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-29-20-43-02.jpg',
+			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-29-20-43-02.jpg',
+			description: 'A warning when the internet conncection is lost.',
+			name: 'Lost connection',
+			screenShot: false
+		}),
+	],
+	videos: [
+		new VideoData({
+			description: 'A demo of a user using the application',
+			url: '/assets/videos/dial_in/dial_in_demo_vid.mov',
+			name: 'Demo',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.06.jpg',
+			screenShot: true
+		})
+	]
 });
 
 export const projects = [
