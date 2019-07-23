@@ -1,5 +1,7 @@
 /* eslint-disable indent */
 import LinkData from '../data/link-data';
+import GalleryImageData from './gallery-image-data';
+import VideoData from './video-data';
 import {
 	flutterLink,
 	dartLink,
@@ -39,6 +41,8 @@ export class ProjectPageData {
 		this.videos = data['videos'];
 		this.logoUrlSmall = data['logoUrlSmall'];
 		this.logoUrlBig = data['logoUrlBig'];
+		this.projectBigUrl = data['projectBigUrl'];
+		this.projectSmallUrl = data['projectSmallUrl'];
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
@@ -60,39 +64,6 @@ export class ProjectPageData {
 	}
 }
 
-export class VideoData {
-	constructor(data) {
-		this.description = data['description'];
-		this.url = data['url'];
-		this.name = data['name'];
-		this.imageUrl = data['imageUrl'];
-		this.screenShot = data['screenShot'];
-		for (const key in data) {
-			const element = data[key];
-			if (element == null || element == undefined) {
-				throw Error(`${key} Arguments are missing, and the other data was, `, data);
-			}
-		}
-	}
-}
-
-
-export class GalleryImageData {
-	constructor(data) {
-		this.description = data['description'];
-		this.smallImageUrl = data['smallImageUrl'];
-		this.largeImageUrl = data['largeImageUrl'];
-		this.imageUrl =data['imageUrl'];
-		this.name = data['name'];
-		this.screenShot = data['screenShot'];
-		for (const key in data) {
-			const element = data[key];
-			if (element == null || element == undefined) {
-				throw Error(`${key} Arguments are missing, and the other data was, `, data);
-			}
-		}
-	}
-}
 
 export const DialInData = new ProjectPageData({
 	title: 'Dial In',
@@ -102,6 +73,8 @@ export const DialInData = new ProjectPageData({
 	in the Flutter framework. I've never looked back :)`,
 	logoUrlSmall: '/assets/images/projects/dial-in/icon/dial-in-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/dial-in/icon/dial-in-logo-350px.jpg',
+	projectSmallUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg',
+	projectBigUrl: "/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg",
 	technologies: [
 		flutterLink,
 		dartLink,
@@ -227,6 +200,8 @@ export const CupomaticData = new ProjectPageData({
 	description: 'A tool to assist coffee professionals with the the cupping protocol',
 	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/cupomatic/icon/cupOmatic-logo.jpg',
+	projectSmallUrl: '/assets/images/projects/cupomatic/image/cupomatic-100px.jpg',
+	projectBigUrl: "/assets/images/projects/cupomatic/image/cupomatic-300px.jpg",
 	technologies: [
 		swiftLink,
 		javaLink,
@@ -336,6 +311,8 @@ export const BatterySaverData = new ProjectPageData({
 		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
 	logoUrlSmall: '/assets/images/projects/battery-saver/icon/battery_saver_logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg',
+	projectSmallUrl: '/assets/images/projects/battery-saver/image/battery_saver_logo-100px.png',
+	projectBigUrl: "/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg",
 	technologies: [
 		flutterLink,
 		flareLink,
@@ -380,6 +357,8 @@ export const PlantSystemData = new ProjectPageData({
 	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
 	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
+	projectSmallUrl: '/assets/images/projects/plant-system/image/plant-watering-100px.jpg',
+	projectBigUrl: "/assets/images/projects/plant-system/image/plant-watering-300px.jpg",
 	technologies: [
 		arduinoLink,
 		vsCodeLink
@@ -450,6 +429,8 @@ export const PertitionData = new ProjectPageData({
 	 Follow the link and take a look yourself :).`,
 	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
+	projectSmallUrl: "'/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg'" ,
+	projectBigUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg",
 	technologies: [
 		nodeLink,
 		postGresLink,
@@ -520,6 +501,8 @@ export const LaissezFaireData = new ProjectPageData({
 	and more.`,
 	logoUrlSmall: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
+	projectSmallUrl: '/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg',
+	projectBigUrl: "/assets/images/projects/lassezfaire/image/laissez-faire-300px.jpg",
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -581,6 +564,8 @@ export const GoatstagramData = new ProjectPageData({
 	The page is Audited by admin regulary to enforce this. Complete with sound affects you should definity head here for a laugh.`,
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
+	projectSmallUrl: '/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg',
+	projectBigUrl: "/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_600.jpg",
 	technologies: [
 		nodeLink,
 		vueLink,
@@ -643,6 +628,8 @@ export const SpicedAcademyData = new ProjectPageData({
 	That project is the one you are looking at righ now :).`,
 	logoUrlSmall: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
 	logoUrlBig: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
+	projectSmallUrl: '/assets/images/projects/spiced/image/spiced-logo-100px.png',
+	projectBigUrl: "/assets/images/projects/spiced/image/spiced-logo-300px.jpg",
 	projects: [
 		'https://connect-four-andrew-johnson.herokuapp.com/'
 	],
@@ -728,6 +715,8 @@ export const thisData = new ProjectPageData({
 	 so I can blend my personal experience into truly unique products.`,
 	logoUrlSmall: '/assets/images/me/me-noeyes.png',
 	logoUrlBig: '/assets/images/me/me-noeyes.png',
+	projectSmallUrl: '/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png',
+	projectBigUrl: "/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png",
 	technologies: [
 		nodeLink,
 		reduxLink,
@@ -760,6 +749,8 @@ export const connectFourData = new ProjectPageData({
 	`,
 	logoUrlSmall: '/assets/images/projects/connect-four/image/logo-100px.jpg',
 	logoUrlBig: '/assets/images/projects/connect-four/image/logo-300px.jpg',
+	projectSmallUrl: '/assets/images/projects/connect-four/image/logo-100px.jpg',
+	projectBigUrl: "/assets/images/projects/connect-four/image/logo-300px.jpg",
 	technologies: [
 		vsCodeLink,
 		cssLink,
@@ -787,10 +778,26 @@ export const shutterStockScrollData = new ProjectPageData({
 	CICD was also implemented using Codemagic.
 			`,
 	logoUrlSmall: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_264.jpg',
-	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg',
+	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg', 
+	projectSmallUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_100.jpg',
+	projectBigUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_300.jpg',
 	technologies: [
 		vsCodeLink,
 		flutterLink,
 		codeMagicLink
 	],
 });
+
+export const projects = [
+	DialInData,
+	CupomaticData,
+	BatterySaverData,
+	PlantSystemData,
+	PertitionData,
+	LaissezFaireData,
+	GoatstagramData,
+	SpicedAcademyData,
+	thisData,
+	connectFourData,
+	shutterStockScrollData,
+];

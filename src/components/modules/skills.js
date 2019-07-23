@@ -2,30 +2,7 @@
 import React from 'react';
 import Diamensions from '../../data/diamensions';
 import { connect } from 'react-redux';
-import { 
-    flutterLink,
-    dartLink, 
-    firebaseLink, 
-    vsCodeLink, 
-    xcodeLink, 
-    swiftLink, 
-    javaLink,
-    androidStudioLink,
-    parseServerLink,
-    flareLink,
-    arduinoLink,
-    nodeLink,
-    postGresLink,
-    htmlLink,
-    cssLink,
-    javaScriptLink, 
-    reduxLink,
-    reactLink,
-    awsLink,
-    vueLink,
-    redisLink,
-    handlebarsLink,
-    codeMagicLink } from '../../data/technology-data';
+import { techlinks } from '../../data/technology-data';
 	
 
 	
@@ -73,29 +50,7 @@ class Skills extends React.Component {
             <br /> 
 
             <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
-                <TechnologyIcon key={flutterLink.name} data={flutterLink}/>
-                <TechnologyIcon key={dartLink.name} data={dartLink} />
-                <TechnologyIcon key={firebaseLink.name} data={firebaseLink} />
-                <TechnologyIcon key={vsCodeLink.name} data={vsCodeLink} />
-                <TechnologyIcon key={xcodeLink.name} data={xcodeLink} />
-                <TechnologyIcon key={swiftLink.name} data={swiftLink} />
-                <TechnologyIcon key={javaLink.name} data={javaLink} />
-                <TechnologyIcon key={androidStudioLink.name} data={androidStudioLink} />
-                <TechnologyIcon key={parseServerLink.name} data={parseServerLink} />
-                <TechnologyIcon key={flareLink.name} data={flareLink} />
-                <TechnologyIcon key={arduinoLink.name} data={arduinoLink} />
-                <TechnologyIcon key={nodeLink.name} data={nodeLink} />
-                <TechnologyIcon key={postGresLink.name} data={postGresLink} />
-                <TechnologyIcon key={htmlLink.name} data={htmlLink} />
-                <TechnologyIcon key={cssLink.name} data={cssLink} />
-                <TechnologyIcon key={javaScriptLink.name} data={javaScriptLink} />
-                <TechnologyIcon key={reduxLink.name} data={reduxLink} />
-                <TechnologyIcon key={reactLink.name} data={reactLink} />
-                <TechnologyIcon key={awsLink.name} data={awsLink} />
-                <TechnologyIcon key={vueLink.name} data={vueLink} />
-                <TechnologyIcon key={redisLink.name} data={redisLink} />
-                <TechnologyIcon key={handlebarsLink.name} data={handlebarsLink} />
-                <TechnologyIcon key={codeMagicLink.name} data={codeMagicLink} />
+                { techlinks.map((link) =>  <TechnologyIcon key={link.name} data={link} />)}
             </Wrap>
             <br/> 
             <p style={{ textAlign: mobileApp ? 'center':'start' }}>

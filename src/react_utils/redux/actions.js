@@ -74,6 +74,13 @@ export const Action = {
             direction: "BOTTOM"
         };
     },
+    openProject(project){
+        return {
+            type: "SHOW_PROJECT",
+            project: project,
+            direction: "BOTTOM"
+        };
+    },
     nextImage(image){
         var nextImage = checkPageDataVsImage(pageData, image, 1);
         return {

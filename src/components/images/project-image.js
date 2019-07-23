@@ -13,18 +13,19 @@ class ProjectImage extends React.Component{
     }
 	
     handleClick(){
-        this.props.dispatch(action.showProject(this.props.name));
-        window.history.pushState({}, '/',`/${this.props.name}`);
+        this.props.dispatch(action.openProject(this.props.project));
+        window.history.pushState({}, '/',`/${this.props.project.title}`);
     }
 
     render(){
         const props = this.props;
+        const project = this.props.project;
         const mobileApp = props.mobileApp;
         const size = mobileApp ? '100px' : '300px';
         const width = size;
         const height = size;
 		
-        const words = props.name.split(' ');
+        const words = project.title.split(' ');
         var biggestWordLength = 0; 
         for (let index = 0; index < words.length; index++) {
             const word = words[index];
@@ -33,7 +34,7 @@ class ProjectImage extends React.Component{
             }
         }
 		
-        var fontSize = props.name.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
+        var fontSize = project.title.length > 15 || biggestWordLength > 6 ? '50px' : '80px';
         if (biggestWordLength > 10 ) {
             fontSize = '40px';
         }
@@ -93,9 +94,9 @@ class ProjectImage extends React.Component{
                         onMouseLeave={() =>{ this.setState({ showText: false  }); } }
                         onClick={() => this.handleClick() }
 
-                    >{props.name}</h2>
+                    >{project.title}</h2>
                 </div>
-                <img style={imageStyle} src={mobileApp ? props.smallUrl : props.bigUrl }/>
+                <img style={imageStyle} src={mobileApp ? project.projectSmallUrl : project.projectBigUrl }/>
             </div>
         );
     }

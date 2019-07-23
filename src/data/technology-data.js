@@ -200,27 +200,3 @@ export const techlinks = [
     codeMagicLink
 ];
 
-
-// export const flutterLink = flutterLink;
-// export const flareLink = flareLink;
-// export const dartLink = dartLink;
-// export const firebaseLink = firebaseLink;
-// export const vsCodeLink = vsCodeLink;
-// export const xcodeLink = xcodeLink;
-// export const swiftLink = swiftLink;
-// export const javaLink = javaLink;
-// export const androidStudioLink = androidStudioLink;
-// export const parseServerLink = parseServerLink;
-// export const arduinoLink = arduinoLink;
-// export const nodeLink = nodeLink;
-// export const postGresLink = postGresLink;
-// export const htmlLink = htmlLink;
-// export const cssLink = cssLink;
-// export const javaScriptLink = javaScriptLink;
-// export const reactLink = reactLink;
-// export const reduxLink = reduxLink;
-// export const awsLink = awsLink;
-// export const vueLink = vueLink;
-// export const redisLink = redisLink;
-// export const handlebarsLink = handlebarsLink;
-// export const codeMagicLink = codeMagicLink;

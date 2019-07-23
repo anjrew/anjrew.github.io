@@ -1,12 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { projects } from '../../data/project-page-data';
+
 // Components
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Wrap } from '../layout/wrap';
-import ProjectImage from '../images/project';
+import ProjectImage from '../images/project-image';
 import Diamensions from '../../data/diamensions';
-import { connect } from 'react-redux';
 
 class MyWork extends React.Component {
 
@@ -57,29 +59,7 @@ class MyWork extends React.Component {
                     />
                 </a>
                 <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
-
-                    <ProjectImage name='Shutterstock scroll' bigUrl="/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_300.jpg" smallUrl='/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_100.jpg'/> 
-
-                    <ProjectImage name='Dial In' bigUrl="/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_600.jpg" smallUrl='/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg' />
-
-                    <ProjectImage name='CupOmatic' bigUrl="/assets/images/projects/cupomatic/image/cupomatic-300px.jpg" smallUrl='/assets/images/projects/cupomatic/image/cupomatic-100px.jpg' />
-
-                    <ProjectImage name='Battery Saver' bigUrl="/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg" smallUrl='/assets/images/projects/battery-saver/image/battery_saver_logo-100px.png' />
-
-                    <ProjectImage name='Plant irrigation system' bigUrl="/assets/images/projects/plant-system/image/plant-watering-300px.jpg" smallUrl='/assets/images/projects/plant-system/image/plant-watering-100px.jpg' />
-
-                    <ProjectImage name='Lava lamp petition' bigUrl="/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg" smallUrl='/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg'/> 
-
-                    <ProjectImage name='Laissez Faire' bigUrl="/assets/images/projects/lassezfaire/image/laissez-faire-300px.jpg" smallUrl='/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg'/>  
-					
-                    <ProjectImage name='Goatstagram' bigUrl="/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_600.jpg" smallUrl='/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg' />
-
-                    <ProjectImage name='Spiced Academy' bigUrl="/assets/images/projects/spiced/image/spiced-logo-300px.jpg" smallUrl='/assets/images/projects/spiced/image/spiced-logo-100px.png' />
-
-                    <ProjectImage name='this.' bigUrl="/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png" smallUrl='/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png' />  
-
-                    <ProjectImage name='Connect Four' bigUrl="/assets/images/projects/connect-four/image/logo-300px.jpg" smallUrl='/assets/images/projects/connect-four/image/logo-100px.jpg'/>
-
+                    { projects.map((project) => <ProjectImage key={project.title} project={project}/>)}
                 </Wrap>
             </Column>
             
