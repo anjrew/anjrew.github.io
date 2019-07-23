@@ -794,20 +794,20 @@ export const shutterStockScrollData = new ProjectPageData({
 	screenShots: [
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.14.51_qn9vx1_c_scale,w_80.png',
-			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/Screenshot_2019-07-23_at_15.14.51_qn9vx1_c_scale,w_300.png',
-			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/IMG_7716.JPG',
+			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/main_screen.png',
+			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/main_screen.png',
+			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/fullScreen/main_screen.png',
 			description: 'The main image gallery.',
 			name: 'Gallery',
-			screenShot: false
+			screenShot: true
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.15.02_r4i32p_c_scale,w_80.png',
-			largeImageUrl: 'public/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/Screenshot_2019-07-23_at_15.15.02_r4i32p_c_scale,w_300.png',
-			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-22-13-36-21.jpg',
+			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/image.png',
+			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/image.png',
+			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/fullScreen/image.png',
 			description: 'Project time.',
 			name: 'The view from clicking on the image',
-			screenShot: false
+			screenShot: true
 		}),
 	],
 	videos: [
@@ -815,7 +815,7 @@ export const shutterStockScrollData = new ProjectPageData({
 			description: 'A demo of a user using the application',
 			url: '/assets/images/projects/shutterstock-scroll/videos/demo.mov',
 			name: 'Demo',
-			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/Screenshot 2019-07-23 at 15.14.51.png',
+			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/main_screen.png',
 			screenShot: true
 		})
 	]
