@@ -70,10 +70,17 @@ export class ProjectPageData {
 export const DialInData = new ProjectPageData({
 	title: 'Dial In',
 	description: [
-			`A tool to help coffee professionals record and analyse data. 
-		I started off by making the app in Swift and purly iOS. I had a sudden realisation that I should definity
+		`A tool to help coffee professionals record and analyse data.`,
+
+		`I started off by making the app in Swift and purly for iOS. I had a sudden realisation that I should definity
 		dive into cross platform development. That's what I did. I started from scratch and started making the app 
-		in the Flutter framework. I've never looked back :)`
+		in the Flutter framework. I've never looked back :)`,
+
+		`Users can record all parameters about making thier coffee. They can also view all thier previous records and learn from thier data`,
+
+		`On the back-end I used Firebase with persistant storage so the app had some functionality offline.`,
+
+		`Error reporting implemented with Sentry.`
 	],
 	logoUrlSmall: '/assets/images/projects/dial-in/icon/dial-in-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/dial-in/icon/dial-in-logo-350px.jpg',
@@ -146,7 +153,7 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.45.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.45.png',			
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.45.png',
 			description: '4',
 			screenShot: true,
 			name: 'Profile',
@@ -155,8 +162,8 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',	
-			description: '5',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',
+			description: 'The where users record thier recipes.',
 			screenShot: true,
 			name: 'Recipe',
 		}),
@@ -164,8 +171,8 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.05.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.05.png',			
-			description: '5',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.05.png',
+			description: 'Users can score the coffees.',
 			screenShot: true,
 			name: 'Score',
 		}),
@@ -173,8 +180,8 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.16.27.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',			
-			description: '6',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.16.27.png',
+			description: 'Adding flavour decriptors',
 			screenShot: true,
 			name: 'Flavours',
 		}),
@@ -182,8 +189,8 @@ export const DialInData = new ProjectPageData({
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.37.jpg',
-			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.37.png',			
-			description: 'Options menu.',
+			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.37.png',
+			description: 'Looking at the options drawer.',
 			screenShot: true,
 			name: 'Options menu',
 		}),
@@ -202,7 +209,13 @@ export const DialInData = new ProjectPageData({
 export const CupomaticData = new ProjectPageData({
 	title: 'CupOmatic',
 	description: [
-		'A tool to assist coffee professionals with the the cupping protocol'
+		'A tool to assist coffee professionals with the the cupping protocol',
+
+		`When doing quality control, coffee professionals have to follow a very strict timing protocal. The purpose of this
+		app is to aid them in doing so`,
+
+		`I made this app for iOS in Swift. After becoming quite popular within the community I decided to make the app again in Java for 
+		Android devices.`
 	],
 	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/cupomatic/icon/cupOmatic-logo.jpg',
@@ -315,9 +328,12 @@ export const CupomaticData = new ProjectPageData({
 export const BatterySaverData = new ProjectPageData({
 	title: 'Battery Saver',
 	description: [
-		`Battery saver works with bluetooth hardware to control the charge of your device. 
-		Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
-		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`
+		`Battery saver works with bluetooth hardware, to control the charge of your electronic device.`,
+
+		`Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially. 
+		This is the reason I created this app.`,
+
+		`I implemented google's Bloc pattern with streams and created some cool animations with "Flare".`
 	],
 	logoUrlSmall: '/assets/images/projects/battery-saver/icon/battery_saver_logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg',
@@ -361,13 +377,17 @@ export const BatterySaverData = new ProjectPageData({
 
 export const PlantSystemData = new ProjectPageData({
 	title: 'Plant irrigation system',
-	description: 
-	[
-		`I love plants... The more the merrier. But a person can only look after soo many. 
+	description:
+		[
+			`I love plants... The more the merrier. But a person can only look after soo many. 
 	BUT, with the help of a machine, A person can have many more plants. And that is why I decided to make this 
-	project. As well as being alot of fun, it was a big learning experience. I used an Arduino micro controlller with 24v relays to controll the water flow to 
-	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`
-	],
+	project. As well as being alot of fun, it was a big learning experience. `,
+
+			`I used an Arduino micro controlller with 24v relays to controll the water flow to 
+	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
+
+			`In the near future I plan to connect the device to the Cloud usuing the MQTT protocal to record data and send notifications`
+		],
 	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/plant-system/image/plant-watering-100px.jpg',
@@ -437,15 +457,18 @@ export const PlantSystemData = new ProjectPageData({
 
 export const PertitionData = new ProjectPageData({
 	title: 'Lava lamp pertition',
-	description: 
-	[
-		`Being a firm believer in lava lamps, I created a pertition site to record the
-	amount of people who would like lava lamps to be exempt from VAT.
-	 Follow the link and take a look yourself :).`
-	],
+	description:
+		[
+			`Being a firm believer in lava lamps, I created a pertition site to record the
+	amount of people who would like lava lamps to be exempt from VAT.`,
+
+			`I used PostgresSQL for my database and Express handlebars to render the UI`,
+
+			`Follow the link and take a look yourself :).`
+		],
 	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
-	projectSmallUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg" ,
+	projectSmallUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg",
 	projectBigUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg",
 	technologies: [
 		nodeLink,
@@ -515,7 +538,11 @@ export const LaissezFaireData = new ProjectPageData({
 	description: [
 		`Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
-	and more.`
+	and more.`,
+
+		`This is a React application with Postgres SQL database.`
+
+
 	],
 	logoUrlSmall: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
@@ -578,12 +605,17 @@ export const LaissezFaireData = new ProjectPageData({
 
 export const GoatstagramData = new ProjectPageData({
 	title: 'Goatstagram',
-	description: 
-	[
-		`Goatstagram is a comic imageboard which only accepts pictures of goats. I implemented a security feature that only lets users 
-	upload pictures of goats. I used the google vision API to check the uploaded images for goats. If the image does not contain goats the image is rejected. All the images are hosted on an amazon S3 bucket. 
-	Complete with sound affects, you should definity head here for a laugh`
-	],
+	description:
+		[
+			`Goatstagram is a comic imageboard which only accepts pictures of goats.`,
+			`I implemented a security feature that only lets users upload pictures of goats. 
+		I used the google vision API to check the uploaded images for goats. 
+		If the image does not contain goats the image is rejected.`,
+
+			`All the images are hosted on an amazon S3 bucket.`,
+
+			`Complete with sound affects, you should definity head here for a laugh`
+		],
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg',
@@ -647,7 +679,7 @@ export const GoatstagramData = new ProjectPageData({
 export const SpicedAcademyData = new ProjectPageData({
 	title: 'SPICED ACADEMY',
 	description: [
-	`I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
+		`I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
 	That project is the one you are looking at righ now :).`
@@ -770,11 +802,12 @@ export const thisData = new ProjectPageData({
 
 export const connectFourData = new ProjectPageData({
 	title: 'Connect Four',
-	description: [`A game made at Spiced Academy, using vanilla Javascript, CSS, 
-	and HTML.
+	description: [
+		`A game made at Spiced Academy, using vanilla Javascript, CSS, and HTML, hosted on Heroku.
 		
-	Click the link below to play the game :-).\
-	`],
+		Click the link below to play the game :-).\
+		`
+	],
 	logoUrlSmall: '/assets/images/projects/connect-four/image/logo-100px.jpg',
 	logoUrlBig: '/assets/images/projects/connect-four/image/logo-300px.jpg',
 	projectSmallUrl: '/assets/images/projects/connect-four/image/logo-100px.jpg',
@@ -801,13 +834,13 @@ export const shutterStockScrollData = new ProjectPageData({
 	description: [
 		`This is a mobile application that gets images from the Shutterstock api with infinite scroll functionality. 
 		The user can view a larger image when the use clicks on an image.`,
-		
+
 		`I implemented the Flutter framework and carried out extensive unit, widget, golden, and driver tests.`,
-			
+
 		`CICD was also implemented using Codemagic.`
 	],
 	logoUrlSmall: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_264.jpg',
-	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg', 
+	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_100.jpg',
 	projectBigUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_300.jpg',
 	technologies: [

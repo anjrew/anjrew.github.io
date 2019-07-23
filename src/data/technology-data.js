@@ -195,6 +195,13 @@ export const githubLink =  new Technology({
     href: 'https://github.com'
 });
 
+export const heroKuLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/heroku/heroku_icon_w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/heroku/heroku_icon_w_100.png',
+    name: 'Heroku',
+    href: 'https://www.heroku.com/'
+});
+
 
 export const techlinks = [
     googleCloudPlatform,
@@ -222,6 +229,7 @@ export const techlinks = [
     redisLink,
     handlebarsLink,
     codeMagicLink,
-    githubLink
+    githubLink,
+    heroKuLink
 ];
 
