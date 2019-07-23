@@ -100,13 +100,16 @@ class ProjectPage extends React.Component{
 											>{data.title}</h1>
                                         }
                                         { renderCenterlogo && logo }
-                                        <p 
-                                            style={{ 
-                                                textAlign: smallScreen ? 'center' : 'start' ,
-                                                fontSize: mobileApp && '15px',
-                                                padding: '20px'
-                                            }}
-                                        >{data.description}</p>
+                                        { data.description && data.description.map((paragraph) =>
+                                            <p 	key={paragraph}
+                                                style={{ 
+                                                    textAlign: smallScreen ? 'center' : 'start' ,
+                                                    fontSize: mobileApp && '15px',
+                                                    padding: '20px'
+                                                }}
+                                            >{paragraph}</p>
+                                        )}
+                                        
 	
                                     </Column>
                                     <Row width='unset'>

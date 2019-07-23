@@ -69,10 +69,12 @@ export class ProjectPageData {
 
 export const DialInData = new ProjectPageData({
 	title: 'Dial In',
-	description: `A tool to help coffee professionals record and analyse data. 
-	I started off by making the app in Swift and purly iOS. I had a sudden realisation that I should definity
-	dive into cross platform development. That's what I did. I started from scratch and started making the app 
-	in the Flutter framework. I've never looked back :)`,
+	description: [
+			`A tool to help coffee professionals record and analyse data. 
+		I started off by making the app in Swift and purly iOS. I had a sudden realisation that I should definity
+		dive into cross platform development. That's what I did. I started from scratch and started making the app 
+		in the Flutter framework. I've never looked back :)`
+	],
 	logoUrlSmall: '/assets/images/projects/dial-in/icon/dial-in-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/dial-in/icon/dial-in-logo-350px.jpg',
 	projectSmallUrl: '/assets/images/projects/dial-in/image/dial-in_pazds8_c_scale,w_300.jpg',
@@ -199,7 +201,9 @@ export const DialInData = new ProjectPageData({
 
 export const CupomaticData = new ProjectPageData({
 	title: 'CupOmatic',
-	description: 'A tool to assist coffee professionals with the the cupping protocol',
+	description: [
+		'A tool to assist coffee professionals with the the cupping protocol'
+	],
 	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/cupomatic/icon/cupOmatic-logo.jpg',
 	projectSmallUrl: '/assets/images/projects/cupomatic/image/cupomatic-100px.jpg',
@@ -245,7 +249,9 @@ export const CupomaticData = new ProjectPageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/analyse.jpg',
 			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/analyse.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/analyse.jpg',
-			description: 'Analyse',
+			description: [
+				'Analyse'
+			],
 			name: 'Alalysing the coffee',
 			screenShot: false
 		}),
@@ -308,9 +314,11 @@ export const CupomaticData = new ProjectPageData({
 
 export const BatterySaverData = new ProjectPageData({
 	title: 'Battery Saver',
-	description: `Battery saver works with bluetooth hardware to control the charge of your device. 
-	Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
-		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`,
+	description: [
+		`Battery saver works with bluetooth hardware to control the charge of your device. 
+		Keeping your devices battery level at a lower, more stable level can increase the life of the battery exponentially
+		I really implemented google's Bloc pattern in the project and create some animations with "Flare".`
+	],
 	logoUrlSmall: '/assets/images/projects/battery-saver/icon/battery_saver_logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg',
 	projectSmallUrl: '/assets/images/projects/battery-saver/image/battery_saver_logo-100px.png',
@@ -353,10 +361,13 @@ export const BatterySaverData = new ProjectPageData({
 
 export const PlantSystemData = new ProjectPageData({
 	title: 'Plant irrigation system',
-	description: `I love plants... The more the merrier. But a person can only look after soo many. 
+	description: 
+	[
+		`I love plants... The more the merrier. But a person can only look after soo many. 
 	BUT, with the help of a machine, A person can have many more plants. And that is why I decided to make this 
 	project. As well as being alot of fun, it was a big learning experience. I used an Arduino micro controlller with 24v relays to controll the water flow to 
-	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
+	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`
+	],
 	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/plant-system/image/plant-watering-100px.jpg',
@@ -426,9 +437,12 @@ export const PlantSystemData = new ProjectPageData({
 
 export const PertitionData = new ProjectPageData({
 	title: 'Lava lamp pertition',
-	description: `Being a firm believer in lava lamps, I created a pertition site to record the
+	description: 
+	[
+		`Being a firm believer in lava lamps, I created a pertition site to record the
 	amount of people who would like lava lamps to be exempt from VAT.
-	 Follow the link and take a look yourself :).`,
+	 Follow the link and take a look yourself :).`
+	],
 	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
 	projectSmallUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg" ,
@@ -498,9 +512,11 @@ export const PertitionData = new ProjectPageData({
 export const LaissezFaireData = new ProjectPageData({
 
 	title: 'Laissez-Faire',
-	description: `Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
+	description: [
+		`Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
-	and more.`,
+	and more.`
+	],
 	logoUrlSmall: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lassezfaire/icon/laissez-faire_yxearl_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/lassezfaire/image/laissez-faire-100px.jpg',
@@ -562,9 +578,12 @@ export const LaissezFaireData = new ProjectPageData({
 
 export const GoatstagramData = new ProjectPageData({
 	title: 'Goatstagram',
-	description: `Goatstagram is a comic imageboard which only accepts pictures of goats. I implemented a security feature that only lets users 
+	description: 
+	[
+		`Goatstagram is a comic imageboard which only accepts pictures of goats. I implemented a security feature that only lets users 
 	upload pictures of goats. I used the google vision API to check the uploaded images for goats. If the image does not contain goats the image is rejected. All the images are hosted on an amazon S3 bucket. 
-	Complete with sound affects, you should definity head here for a laugh`,
+	Complete with sound affects, you should definity head here for a laugh`
+	],
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg',
@@ -627,10 +646,12 @@ export const GoatstagramData = new ProjectPageData({
 
 export const SpicedAcademyData = new ProjectPageData({
 	title: 'SPICED ACADEMY',
-	description: `I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
+	description: [
+	`I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
-	That project is the one you are looking at righ now :).`,
+	That project is the one you are looking at righ now :).`
+	],
 	logoUrlSmall: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
 	logoUrlBig: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
 	projectSmallUrl: '/assets/images/projects/spiced/image/spiced-logo-100px.png',
@@ -716,8 +737,10 @@ export const SpicedAcademyData = new ProjectPageData({
 
 export const thisData = new ProjectPageData({
 	title: 'this.',
-	description: `This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
-	 so I can blend my personal experience into truly unique products.`,
+	description: [
+		`This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
+	 so I can blend my personal experience into truly unique products.`
+	],
 	logoUrlSmall: '/assets/images/me/me-noeyes.png',
 	logoUrlBig: '/assets/images/me/me-noeyes.png',
 	projectSmallUrl: '/assets/images/projects/this/image/me-noeyes-whitebg_tdy9od_c_scale,w_200.png',
@@ -747,11 +770,11 @@ export const thisData = new ProjectPageData({
 
 export const connectFourData = new ProjectPageData({
 	title: 'Connect Four',
-	description: `A game made at Spiced Academy, using vanilla Javascript, CSS, 
+	description: [`A game made at Spiced Academy, using vanilla Javascript, CSS, 
 	and HTML.
 		
 	Click the link below to play the game :-).\
-	`,
+	`],
 	logoUrlSmall: '/assets/images/projects/connect-four/image/logo-100px.jpg',
 	logoUrlBig: '/assets/images/projects/connect-four/image/logo-300px.jpg',
 	projectSmallUrl: '/assets/images/projects/connect-four/image/logo-100px.jpg',
@@ -775,13 +798,14 @@ export const connectFourData = new ProjectPageData({
 
 export const shutterStockScrollData = new ProjectPageData({
 	title: 'Shutterstock scroll',
-	description: `This is a mobile application that gets images from the Shutterstock api with infinite scroll functionality. 
-	The user can view a larger image when the use clicks on an image.
-
-	I implemented the Flutter framework and carried out extensive unit, widget, golden, and driver tests.
+	description: [
+		`This is a mobile application that gets images from the Shutterstock api with infinite scroll functionality. 
+		The user can view a larger image when the use clicks on an image.`,
 		
-	CICD was also implemented using Codemagic.
-			`,
+		`I implemented the Flutter framework and carried out extensive unit, widget, golden, and driver tests.`,
+			
+		`CICD was also implemented using Codemagic.`
+	],
 	logoUrlSmall: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_264.jpg',
 	logoUrlBig: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_350.jpg', 
 	projectSmallUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_100.jpg',
@@ -792,7 +816,6 @@ export const shutterStockScrollData = new ProjectPageData({
 		codeMagicLink,
 	],
 	screenShots: [
-
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/main_screen.png',
 			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/main_screen.png',
@@ -805,8 +828,8 @@ export const shutterStockScrollData = new ProjectPageData({
 			smallImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/smallScreen/image.png',
 			largeImageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/largeScreen/image.png',
 			imageUrl: '/assets/images/projects/shutterstock-scroll/screenshots/fullScreen/image.png',
-			description: 'Project time.',
-			name: 'The view from clicking on the image',
+			description: 'The view from clicking on the image.',
+			name: 'Image',
 			screenShot: true
 		}),
 	],
