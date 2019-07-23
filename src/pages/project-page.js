@@ -93,7 +93,9 @@ class ProjectPage extends React.Component{
 											    style={{ 
 											    	fontSize: mobileApp ? '35px' : smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
 											        textDecoration: 'underline',
-											        textAlign: smallScreen ? 'center' : 'start'  
+											        textAlign: smallScreen ? 'center' : 'start',
+											        padding: '20px'
+ 
 											    }}
 											>{data.title}</h1>
                                         }
@@ -101,7 +103,8 @@ class ProjectPage extends React.Component{
                                         <p 
                                             style={{ 
                                                 textAlign: smallScreen ? 'center' : 'start' ,
-                                                fontSize: mobileApp && '15px'
+                                                fontSize: mobileApp && '15px',
+                                                padding: '20px'
                                             }}
                                         >{data.description}</p>
 	

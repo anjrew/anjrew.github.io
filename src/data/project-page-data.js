@@ -562,13 +562,16 @@ export const LaissezFaireData = new ProjectPageData({
 
 export const GoatstagramData = new ProjectPageData({
 	title: 'Goatstagram',
-	description: `Goatstagram is a comic imageboard which only accepts pictures of goats. 
-	The page is Audited by admin regulary to enforce this. Complete with sound affects you should definity head here for a laugh.`,
+	description: `Goatstagram is a comic imageboard which only accepts pictures of goats. I implemented a security feature that only lets users 
+	upload pictures of goats. I used the google vision API to check the uploaded images for goats. If the image does not contain goats the image is rejected. All the images are hosted on an amazon S3 bucket. 
+	Complete with sound affects, you should definity head here for a laugh`,
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
 	projectSmallUrl: '/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_300.jpg',
 	projectBigUrl: "/assets/images/projects/goatstagram/image/goatstagram_qpnbmb_c_scale,w_600.jpg",
 	technologies: [
+		googleCloudPlatform,
+		googleVision,
 		nodeLink,
 		vueLink,
 		vsCodeLink,
@@ -636,8 +639,6 @@ export const SpicedAcademyData = new ProjectPageData({
 		'https://connect-four-andrew-johnson.herokuapp.com/'
 	],
 	technologies: [
-		googleCloudPlatform,
-		googleVision,
 		nodeLink,
 		vueLink,
 		vsCodeLink,
