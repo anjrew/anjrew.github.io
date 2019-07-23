@@ -429,7 +429,7 @@ export const PertitionData = new ProjectPageData({
 	 Follow the link and take a look yourself :).`,
 	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
-	projectSmallUrl: "'/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg'" ,
+	projectSmallUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg" ,
 	projectBigUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg",
 	technologies: [
 		nodeLink,
@@ -791,6 +791,7 @@ export const shutterStockScrollData = new ProjectPageData({
 export const projects = [
 	DialInData,
 	CupomaticData,
+	shutterStockScrollData,
 	BatterySaverData,
 	PlantSystemData,
 	PertitionData,
@@ -799,5 +800,4 @@ export const projects = [
 	SpicedAcademyData,
 	thisData,
 	connectFourData,
-	shutterStockScrollData,
 ];

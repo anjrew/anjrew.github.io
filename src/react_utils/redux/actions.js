@@ -9,7 +9,8 @@ import {
     SpicedAcademyData,
     thisData,
     connectFourData,
-    shutterStockScrollData } from '../../data/project-page-data';
+    shutterStockScrollData, 
+    projects } from '../../data/project-page-data';
 	
 const pageData = {
     dialIn :DialInData,
@@ -30,44 +31,13 @@ export const Action = {
        
         projectName = projectName.trim();
         var data;
-        switch(projectName){
-            case 'Dial In':
-                data = DialInData;
-                break;
-            case 'CupOmatic':
-                data = CupomaticData;
-                break;
-            case 'Battery Saver':
-                data = BatterySaverData;
-                break;
-            case 'Plant irrigation system':
-                data = PlantSystemData;
-                break;
-            case 'Lava lamp petition':
-                data = PertitionData;
-                break;
-            case 'Laissez Faire':
-                data = LaissezFaireData;
-                break;
-            case 'Goatstagram':
-                data = GoatstagramData;
-                break;
-            case 'Spiced Academy':
-                data = SpicedAcademyData;
-                break;
-            case 'this.':
-                data = thisData;
-                break;
-            case 'Connect Four':
-                data = connectFourData;
-                break;
-            case 'Shutterstock scroll':
-                data = shutterStockScrollData;
-                break;
-            default:
-                break;
- 
-        }	
+		
+        for (let index = 0; index < projects.length; index++) {
+            const project = projects[index];
+            if (project.title == projectName) {
+                data = project;
+            }
+        }
         return {
             type: "SHOW_PROJECT",
             project: data,
