@@ -1,29 +1,5 @@
-import { 
-    DialInData, 
-    CupomaticData,
-    BatterySaverData,
-    PlantSystemData,
-    PertitionData,
-    LaissezFaireData,
-    GoatstagramData,
-    SpicedAcademyData,
-    thisData,
-    connectFourData,
-    shutterStockScrollData, 
-    projects } from '../../data/project-page-data';
+import { projects } from '../../data/project-page-data';
 	
-const pageData = {
-    dialIn :DialInData,
-    cupomatic :CupomaticData,
-    batterySaver :BatterySaverData,
-    plantSystem :PlantSystemData,
-    pertition :PertitionData,
-    laissezFaire :LaissezFaireData,
-    goatstagram :GoatstagramData,
-    spicedAcademy :SpicedAcademyData,
-    this :thisData,
-    connectFour: connectFourData
-};
 
 // All aJax requests will go from this file
 export const Action = {
@@ -52,7 +28,7 @@ export const Action = {
         };
     },
     nextImage(image){
-        var nextImage = checkPageDataVsImage(pageData, image, 1);
+        var nextImage = checkPageDataVsImage(projects, image, 1);
         return {
             type: "PREPARE_NEXT_IMAGE",
             image: nextImage,
@@ -60,7 +36,7 @@ export const Action = {
         };
     },
     previousImage(image){
-        var previousImage = checkPageDataVsImage(pageData, image, -1);
+        var previousImage = checkPageDataVsImage(projects, image, -1);
         return {
             type: "PREPARE_NEXT_IMAGE",
             image: previousImage,
@@ -125,12 +101,13 @@ function checkImageData(element ,imageData, ) {
 }
 
 function checkPageDataVsImage(pageData, image, returnDifference){
-    for (const key in pageData) {
+    for (let index = 0; index < pageData.length; index++) {
+        const project = pageData[index];
         if (image){
-            if (image.project == pageData[key].title){
-                var currentIndex = pageData[key].screenShots.findIndex((element) => checkImageData(element, image));
+            if (image.project == project.title){
+                var currentIndex = project.screenShots.findIndex((element) => checkImageData(element, image));
                 if (currentIndex >= 0) {
-                    return pageData[key].screenShots[currentIndex + returnDifference];
+                    return project.screenShots[currentIndex + returnDifference];
                 }
             }
         }

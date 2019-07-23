@@ -24,7 +24,9 @@ import {
 	awsLink,
 	vueLink,
 	handlebarsLink,
-	codeMagicLink
+	codeMagicLink,
+	googleCloudPlatform,
+	googleVision
 } from '../data/technology-data';
 
 export class ProjectPageData {
@@ -634,6 +636,8 @@ export const SpicedAcademyData = new ProjectPageData({
 		'https://connect-four-andrew-johnson.herokuapp.com/'
 	],
 	technologies: [
+		googleCloudPlatform,
+		googleVision,
 		nodeLink,
 		vueLink,
 		vsCodeLink,

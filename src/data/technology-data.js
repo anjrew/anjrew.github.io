@@ -174,7 +174,23 @@ export const codeMagicLink =  new Technology({
     href: 'https://codemagic.io/start/'
 });
 
+export const googleVision =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/google_vision/icon.png',
+    largeImageUrl: '/assets/images/tech-icons/google_vision/icon.png',
+    name: 'Google Vision',
+    href: 'https://cloud.google.com/vision/?utm_source=google&utm_medium=cpc&utm_campaign=emea-gb-all-en-dr-bkws-all-all-trial-e-gcp-1007176&utm_content=text-ad-none-any-DEV_c-CRE_253506618223-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+EXA_M:1_GB_EN_ML_Vision+API_SEO-KWID_43700020841653050-kwd-506032299072-userloc_1006627&utm_term=KW_google%20visong&ds_rl=1242853&ds_rl=1245734&ds_rl=1242853&ds_rl=1245734&gclid=CjwKCAjw4NrpBRBsEiwAUcLcDLJ87uAiNJ19IzImpLmrqPF07hbcsMdb-fboT98n47AYWzqd5agzchoCIkMQAvD_BwE'
+});
+
+export const googleCloudPlatform =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/google_cloud_platform/icon.png',
+    largeImageUrl: '/assets/images/tech-icons/google_cloud_platform/icon.png',
+    name: 'Google Cloud Platform',
+    href: 'https://cloud.google.com/gcp/?utm_source=google&utm_medium=cpc&utm_campaign=emea-gb-all-en-dr-bkws-all-all-trial-e-gcp-1007176&utm_content=text-ad-none-any-DEV_c-CRE_166509224290-ADGP_Hybrid%20%7C%20AW%20SEM%20%7C%20BKWS%20~%20EXA_1:1_GB_EN_General_Cloud_TOP_google%20cloud%20platforms-KWID_43700016292936125-kwd-141425403689-userloc_1006627&utm_term=KW_google%20cloud%20platformsg&ds_rl=1242853&ds_rl=1245734&ds_rl=1245734&gclid=CjwKCAjw4NrpBRBsEiwAUcLcDI9bfBClSubRDzoY0obvaoyYGFbgLai6zOf6BvfRHuoirC-wWuMSOxoCzaIQAvD_BwE'
+});
+
 export const techlinks = [
+    googleCloudPlatform,
+    googleVision,
     flutterLink,
     flareLink,
     dartLink,
