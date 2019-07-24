@@ -189,8 +189,8 @@ export const googleCloudPlatform =  new Technology({
 });
 
 export const githubLink =  new Technology({
-    smallImageUrl: '/assets/images/tech-icons/github/icon.svg',
-    largeImageUrl: '/assets/images/tech-icons/github/icon.svg',
+    smallImageUrl: '/assets/images/tech-icons/github/icon.png',
+    largeImageUrl: '/assets/images/tech-icons/github/icon.png',
     name: 'Github',
     href: 'https://github.com'
 });

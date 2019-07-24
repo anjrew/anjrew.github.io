@@ -252,7 +252,7 @@ export const CupomaticData = new ProjectPageData({
 		new LinkData({
 			imageUrl: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
 			href: 'http://www.cupomatic.net/',
-			name: 'CupOmatic.net',
+			name: 'Web page',
 			static: true
 		}),
 	],
