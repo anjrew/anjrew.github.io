@@ -265,7 +265,7 @@ export const CupomaticData = new ProjectPageData({
 			description: [
 				'Analyse'
 			],
-			name: 'Alalysing the coffee',
+			name: 'Analysing the coffee',
 			screenShot: false
 		}),
 
