@@ -20,6 +20,23 @@ class Skills extends React.Component {
         const alignment = {
             selfAlign: mobileApp ? 'center':'start',
             textAlign: mobileApp ? 'center':'start' };
+			
+        const dartlink = <a 
+            href='https://dart.dev/'
+            target='_blank'
+            rel="noopener noreferrer">Dart</a>; 
+
+        const flutterlink = <a 
+            href='https://flutter.dev/'
+            target='_blank'
+            rel="noopener noreferrer"
+        >Flutter</a>;
+		
+        const firebaseLink = <a 
+            href='https://firebase.google.com/'
+            target='_blank'
+            rel="noopener noreferrer">Firebase</a>;
+
         const elem = <Column
             width={mobileApp ? '100%' : '60%'}
             placeContent={mobileApp ? 'center':`center flex-end`}
@@ -28,21 +45,11 @@ class Skills extends React.Component {
             <h2 style={alignment}>Skills</h2>
 			
             <p style={alignment}>
-				The main area I specialise in is making mobile and web applications using Google's <a 
-                    href='https://flutter.dev/'
-                    target='_blank'
-                    rel="noopener noreferrer"
-                >Flutter</a> framework with code written in <a 
-                    href='https://dart.dev/'
-                    target='_blank'
-                    rel="noopener noreferrer">Dart</a>.
+				The main areas I specialise in is making mobile and web applications using Google's {flutterlink} framework with code written in {dartlink} or React using Javascript.
             </p>
             <br /> 
 
-            <p style={alignment}>Server side I implement node.js and use <a 
-                href='https://firebase.google.com/'
-                target='_blank'
-                rel="noopener noreferrer">Firebase</a> or PostgreSQL for databases.</p>
+            <p style={alignment}>Server side I implement node.js and use {firebaseLink} or PostgreSQL for databases.</p>
             <br /> 
             <p style={alignment}>
 				Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.

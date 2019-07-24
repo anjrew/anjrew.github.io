@@ -36,7 +36,7 @@ class About extends React.Component {
             alignSelf={props.mobileApp ? 'center':`flex-start`} >
             <h2 style={alignment}>About</h2>
             <p style={alignment}>
-				I am a Berlin-based software developer. 
+				I am a software developer. 
             </p>
             <br/>
             <p style={alignment}>
