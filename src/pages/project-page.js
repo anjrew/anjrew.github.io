@@ -109,6 +109,14 @@ class ProjectPage extends React.Component{
                                                 }}
                                             >{paragraph}</p>
                                         )}
+                                        { data.siteUrl &&  <a 
+                                            href={data.siteUrl}
+                                            target='_blank'
+                                            rel="noopener noreferrer">Visit the official site.</a>}
+                                        { data.repoUrl &&  <a 
+                                            href={data.repoUrl}
+                                            target='_blank'
+                                            rel="noopener noreferrer">Look at the code in the repo.</a>}
                                         
 	
                                     </Column>
@@ -199,6 +207,8 @@ class ProjectPage extends React.Component{
                                 </Wrap>
                             </Column>
                                 }
+								
+								
                             </Column>
                         </SafeArea>				
                     </div>;

@@ -4,6 +4,8 @@ import { init as initSocket } from './react_utils/socket';
 
 // PAGES
 import App from './pages/app';
+import AdminPage from './pages/admin';
+import LoginPage from './pages/login';
 
 // REDUX SHIT
 import reducer from './react_utils/redux/reducers';
@@ -16,8 +18,16 @@ const store = createStore(reducer, composeWithDevTools(applyMiddleware(reduxProm
 
 // initSocket(store);
 
-const elem = <Provider store={store}>
-    <App />
-</Provider>;
+let elem;
+if (location.pathname === '/admin') {
+    elem = <AdminPage />; 
+} else if (location.pathname === '/login'){
+    elem = <LoginPage/>;
+} else {
+    initSocket(store);
+    elem = <Provider store={store}>
+        <App />
+    </Provider>;
+}
 
 ReactDOM.render(elem, document.querySelector('main'));
