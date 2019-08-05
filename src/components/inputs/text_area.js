@@ -1,26 +1,23 @@
 
 import React from 'react';
 
-export class TextArea extends React.Component {
-    constructor(props) {
-        super(props);
-        this.style = {
-            padding: props.padding || '20px',
-            borderRadius: props.borderRadius || '10px',
-            width: props.width
-        };
-    }
+export default class TextArea extends React.Component {
 
     render(){
+        const props = this.props;
         return (
             <textarea
-                style={this.style}
+                style={{
+                    padding: props.padding || '20px',
+                    borderRadius: props.borderRadius || '10px',
+                    width: props.width
+                }}
                 type='text'
-                name= {this.props.name}
-                value={this.props.value}
-                placeholder={this.props.placeholder}
-                autoComplete={this.props.autoComplete || 'true'}
-                onChange={e => this.props.handleChange(e)}
+                name= {props.name}
+                value={props.value}
+                placeholder={props.placeholder}
+                autoComplete={props.autoComplete || 'true'}
+                onChange={e => props.handleChange(e)}
             />
         );
     }

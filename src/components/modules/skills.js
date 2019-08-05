@@ -31,6 +31,18 @@ class Skills extends React.Component {
             target='_blank'
             rel="noopener noreferrer"
         >Flutter</a>;
+
+        const reactLink = <a 
+            href='https://reactjs.org/'
+            target='_blank'
+            rel="noopener noreferrer"
+        >React</a>;
+
+        const javascriptLink = <a 
+            href='https://www.javascript.com/'
+            target='_blank'
+            rel="noopener noreferrer"
+        >React</a>;
 		
         const firebaseLink = <a 
             href='https://firebase.google.com/'
@@ -45,7 +57,7 @@ class Skills extends React.Component {
             <h2 style={alignment}>Skills</h2>
 			
             <p style={alignment}>
-				The main areas I specialise in is making mobile and web applications using Google's {flutterlink} framework with code written in {dartlink} or React using Javascript.
+				The main areas I specialise in is making mobile and web applications using Google's {flutterlink} framework with code written in {dartlink} or {reactLink} using {javascriptLink}.
             </p>
             <br /> 
 

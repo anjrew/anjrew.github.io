@@ -44,7 +44,9 @@ export class ProjectPageData {
 		this.logoUrlSmall = data['logoUrlSmall'];
 		this.logoUrlBig = data['logoUrlBig'];
 		this.projectBigUrl = data['projectBigUrl'];
-		this.projectSmallUrl = data['projectSmallUrl'];
+        this.projectSmallUrl = data['projectSmallUrl'];
+        this.siteUrl = data['siteUrl'];
+        this.repoUrl = data['repoUrl'];
 		if (this.screenShots) {
 			for (let index = 0; index < this.screenShots.length; index++) {
 				const image = this.screenShots[index];
@@ -673,7 +675,8 @@ export const GoatstagramData = new ProjectPageData({
 			name: 'Comments',
 			screenShot: false
 		}),
-	]
+    ],
+    siteUrl: "https://goatstagram-online.herokuapp.com/"
 });
 
 export const SpicedAcademyData = new ProjectPageData({
