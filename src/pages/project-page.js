@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 // Components
 import { SafeArea } from '../components/layout/safe_area';
 import { Column } from '../components/layout/column';
-import { Container } from '../components/boxes/container';
+import Container from '../components/boxes/container';
 import { Wrap } from '../components/layout/wrap';
 import TechnologyIcon from '../components/images/technology-icon';
 import GalleryImage from '../components/images/gallery-image';

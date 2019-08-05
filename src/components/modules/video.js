@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { Action as action } from '../../react_utils/redux/actions';
 import { Column } from '../layout/column';
-import { Container } from '../boxes/container';
+import Container from '../boxes/container';
 
 class VideoPlayer extends Component {
 

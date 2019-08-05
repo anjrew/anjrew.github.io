@@ -8,7 +8,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 // Components
 import { Column } from '../layout/column';
 import { Row } from '../layout/row';
-import { Container } from '../boxes/container';
+import Container from '../boxes/container';
 
 class Carosel extends React.Component{
 

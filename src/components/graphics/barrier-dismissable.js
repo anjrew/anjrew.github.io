@@ -3,7 +3,7 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 // Components
-import { Container } from '../../components/boxes/container';
+import Container from '../../components/boxes/container';
 
 export default class BarrierDismissable extends React.Component{
 

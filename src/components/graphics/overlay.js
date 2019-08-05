@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Route } from "react-router-dom";
 
 // Components
-import { Container } from '../../components/boxes/container';
+import Container from '../../components/boxes/container';
 import { Action as action } from '../../react_utils/redux/actions';
 
 export class Overlay extends React.Component{

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from "../components/boxes/container";
+import Container from "../components/boxes/container";
 
 export default class AdminPage extends React.Component{
 

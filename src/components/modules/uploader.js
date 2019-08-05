@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 
 // Components
 import { Row } from '../layout/row';
-import { Container } from '../boxes/container';
+import Container from '../boxes/container';
 import { CircularProgressIndicator } from '../progress_indicators/circular_progress_indicator';
 import { BrowseButton } from '../buttons/upload_button';
 

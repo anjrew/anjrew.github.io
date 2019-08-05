@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../boxes/container';
+import Container from '../boxes/container';
 import { CircularProgressIndicator } from '../progress_indicators/circular_progress_indicator';
 
 export class Loader extends React.Component{
