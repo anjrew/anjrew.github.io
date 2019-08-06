@@ -202,6 +202,20 @@ export const heroKuLink =  new Technology({
     href: 'https://www.heroku.com/'
 });
 
+export const jestLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/jest/jest_icon_60w.jpg',
+    largeImageUrl: '/assets/images/tech-icons/jest/jest_icon_w100.jpg',
+    name: 'Jest',
+    href: 'https://jestjs.io/'
+});
+
+export const affinityLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/affinity/affinity-designe-logo_60w.png',
+    largeImageUrl: '/assets/images/tech-icons/affinity/affinity-designe-logo_100.png',
+    name: 'Jest',
+    href: 'https://affinity.serif.com/en-gb/photo/'
+});
+
 
 export const techlinks = [
     googleCloudPlatform,
@@ -230,6 +244,8 @@ export const techlinks = [
     handlebarsLink,
     codeMagicLink,
     githubLink,
-    heroKuLink
+    heroKuLink,
+    jestLink,
+    affinityLink
 ];
 

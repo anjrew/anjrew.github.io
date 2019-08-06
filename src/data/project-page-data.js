@@ -26,7 +26,8 @@ import {
 	handlebarsLink,
 	codeMagicLink,
 	googleCloudPlatform,
-	googleVision
+	googleVision,
+	heroKuLink
 } from '../data/technology-data';
 
 export class ProjectPageData {
@@ -74,13 +75,13 @@ export const DialInData = new ProjectPageData({
 	description: [
 		`A tool to help coffee professionals record and analyse data.`,
 
-		`I started off by making the app in Swift and purly for iOS. I had a sudden realisation that I should definity
+		`I started off by making the app in Swift and purley for iOS. I had a sudden realisation that I should definitly
 		dive into cross platform development. That's what I did. I started from scratch and started making the app 
 		in the Flutter framework. I've never looked back :)`,
 
-		`Users can record all parameters about making thier coffee. They can also view all thier previous records and learn from thier data`,
+		`Users can record all parameters about making their coffee. They can also view all their previous records and learn from their data.`,
 
-		`On the back-end I used Firebase with persistant storage so the app had some functionality offline.`,
+		`On the back-end I used Firebase with persistent storage so the app had some functionality offline.`,
 
 		`Error reporting implemented with Sentry.`
 	],
@@ -165,7 +166,7 @@ export const DialInData = new ProjectPageData({
 			smallImageUrl: '/assets/images/projects/dial-in/screenshots/smallScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
 			largeImageUrl: '/assets/images/projects/dial-in/screenshots/largeScreen/Screenshot 2019-06-25 at 08.15.59.jpg',
 			imageUrl: '/assets/images/projects/dial-in/screenshots/fullSize/Screenshot 2019-06-25 at 08.15.59.png',
-			description: 'The where users record thier recipes.',
+			description: 'The where users record their recipes.',
 			screenShot: true,
 			name: 'Recipe',
 		}),
@@ -213,8 +214,8 @@ export const CupomaticData = new ProjectPageData({
 	description: [
 		'A tool to assist coffee professionals with the the cupping protocol',
 
-		`When doing quality control, coffee professionals have to follow a very strict timing protocal. The purpose of this
-		app is to aid them in doing so`,
+		`When doing quality control, coffee professionals have to follow a very strict timing protocol. The purpose of this
+		app is to aid them in doing so.`,
 
 		`I made this app for iOS in Swift. After becoming quite popular within the community I decided to make the app again in Java for 
 		Android devices.`
@@ -383,12 +384,12 @@ export const PlantSystemData = new ProjectPageData({
 		[
 			`I love plants... The more the merrier. But a person can only look after soo many. 
 	BUT, with the help of a machine, A person can have many more plants. And that is why I decided to make this 
-	project. As well as being alot of fun, it was a big learning experience. `,
+	project. As well as being a lot of fun, it was a big learning experience. `,
 
-			`I used an Arduino micro controlller with 24v relays to controll the water flow to 
+			`I used an Arduino micro controller with 24v relays to control the water flow to 
 	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
 
-			`In the near future I plan to connect the device to the Cloud usuing the MQTT protocal to record data and send notifications`
+			`In the near future I plan to connect the device to the Cloud usuing the MQTT protocol to record data and send notifications`
 		],
 	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
@@ -458,7 +459,7 @@ export const PlantSystemData = new ProjectPageData({
 });
 
 export const PertitionData = new ProjectPageData({
-	title: 'Lava lamp pertition',
+	title: 'Lava lamp petition',
 	description:
 		[
 			`Being a firm believer in lava lamps, I created a pertition site to record the
@@ -519,8 +520,8 @@ export const PertitionData = new ProjectPageData({
 			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
 			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
 			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.06.png',
-			description: 'Pertition',
-			name: 'Pertition',
+			description: 'Petition',
+			name: 'Petition',
 			screenShot: false
 		}),
 		new GalleryImageData({
@@ -558,7 +559,8 @@ export const LaissezFaireData = new ProjectPageData({
 		cssLink,
 		htmlLink,
 		javaScriptLink,
-		awsLink
+		awsLink,
+		postGresLink
 	],
 	linksTitle: 'More Info',
 	screenShots: [
@@ -616,7 +618,7 @@ export const GoatstagramData = new ProjectPageData({
 
 			`All the images are hosted on an amazon S3 bucket.`,
 
-			`Complete with sound affects, you should definity head here for a laugh`
+			`Complete with sound affects, you should definitly head here for a laugh`
 		],
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
@@ -631,7 +633,8 @@ export const GoatstagramData = new ProjectPageData({
 		cssLink,
 		htmlLink,
 		javaScriptLink,
-		awsLink
+		awsLink,
+		heroKuLink
 	],
 	linksTitle: 'More Info',
 	screenShots: [
@@ -788,7 +791,7 @@ export const thisData = new ProjectPageData({
 		cssLink,
 		htmlLink,
 		javaScriptLink,
-		awsLink
+		heroKuLink
 	],
 	linksTitle: 'More Info',
 	screenShots: [
