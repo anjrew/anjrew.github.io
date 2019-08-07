@@ -387,9 +387,15 @@ export const PlantSystemData = new ProjectPageData({
 	project. As well as being a lot of fun, it was a big learning experience. `,
 
 			`I used an Arduino micro controller with 24v relays to control the water flow to 
-	each plant. Also a main relay pumping the water from the water tank(an old cooking pot :)`,
+	each plant. Also a main relay controls a pump that is pumping the water from the water tank(an old cooking pot).`,
 
-			`In the near future I plan to connect the device to the Cloud usuing the MQTT protocol to record data and send notifications`
+			`The Arduino microcontroller sends out data through the serial port and this is received by an ESP32 dev board. 
+			The ESP32 transmits the data to a MQTT broker hosted on CloudMQTT.`,
+
+			`This then forwards the data to an instance of Telegraf hosted on my own AWS EC2 server. Telegraf sends the data to an InfluxDB database. 
+			The EC2 instance also has Grafana installed which queries the database and gives a beautiful data visualisation.`,
+
+			`I then made a wrapper in Flutter so you can view your Grafana data through an application.`
 		],
 	logoUrlSmall: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/plant-system/icon/plant-watering_cjqsyo_c_scale,w_350.jpg',
@@ -397,7 +403,9 @@ export const PlantSystemData = new ProjectPageData({
 	projectBigUrl: "/assets/images/projects/plant-system/image/plant-watering-300px.jpg",
 	technologies: [
 		arduinoLink,
-		vsCodeLink
+		vsCodeLink,
+		flutterLink,
+		awsLink,
 	],
 	linksTitle: 'More Info',
 	screenShots: [
