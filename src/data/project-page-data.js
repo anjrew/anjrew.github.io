@@ -389,7 +389,7 @@ export const PlantSystemData = new ProjectPageData({
 			`I used an Arduino micro controller with 24v relays to control the water flow to 
 	each plant. Also a main relay controls a pump that is pumping the water from the water tank(an old cooking pot).`,
 
-			`The Arduino microcontroller sends out data through the serial port and this is received by an ESP32 dev board. 
+			`The Arduino micro-controller sends out data through the serial port and this is received by an ESP32 dev board. 
 			The ESP32 transmits the data to a MQTT broker hosted on CloudMQTT.`,
 
 			`This then forwards the data to an instance of Telegraf hosted on my own AWS EC2 server. Telegraf sends the data to an InfluxDB database. 
@@ -463,7 +463,8 @@ export const PlantSystemData = new ProjectPageData({
 			name: 'Main Layout',
 			screenShot: false
 		}),
-	]
+	],
+	siteUrl: "http://ec2-34-217-213-209.us-west-2.compute.amazonaws.com:3000/"
 });
 
 export const PertitionData = new ProjectPageData({
@@ -779,6 +780,7 @@ export const SpicedAcademyData = new ProjectPageData({
 			screenShot: false
 		}),
 	],
+	siteUrl: "https://www.spiced-academy.com/"
 });
 
 export const thisData = new ProjectPageData({

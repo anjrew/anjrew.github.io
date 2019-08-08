@@ -31,11 +31,13 @@ class ProjectPage extends React.Component{
     }
 	
     dismiss(history){
+        console.log("Dismiss");
         this.props.dispatch(action.dismissAll());
         history.push('/');
     }
 
     render(){
+        console.log("Rendering Project");
         const props = this.props;
         const data = props.data || {};
         const mobileApp = props.mobileApp;
@@ -221,18 +223,26 @@ class ProjectPage extends React.Component{
 
         setTimeout(() => { 
             document.addEventListener('scroll', this.handleScroll);	
-
+            // Top of the view window
             const windowScrollYTop = window.scrollY;
+            // Height of the whole document
             const totalHeight = document.documentElement.scrollHeight;
+            console.log(`Element totalHeight ${totalHeight} `);
+            // Height of the element
             const elementHeight = this.elemRef.current.clientHeight;
+            console.log(`Element height ${elementHeight} `);
+            //The postition of the window bottom
             const windowBottom = windowScrollYTop + elementHeight;
-            var elemenTop;
+            let elemenTop;
             const toobig = windowBottom > totalHeight;
             if ( (toobig) ){
                 elemenTop = totalHeight - elementHeight - 100;
             } else {
                 elemenTop = windowScrollYTop;
             }
+			
+            console.log(`Element top ${elemenTop} `);
+
             window.scrollTo(0, elemenTop);
             this.setState({ 
                 elemenTop: elemenTop,
@@ -269,7 +279,7 @@ class ProjectPage extends React.Component{
                     }
                 }
             }
-        }, 600);
+        }, 5000);
     }
 
     componentWillUnmount(){
@@ -281,6 +291,7 @@ class ProjectPage extends React.Component{
             if( this.elemRef.current){
                 const windowScrollYTop = window.scrollY;
                 const elementHeight = this.elemRef.current.clientHeight;
+                console.log(`Element height ${elementHeight} `);
                 const windowBottom = windowScrollYTop + window.innerHeight;
                 const rect = this.elemRef.current.getBoundingClientRect();
                 const elementDistanceFromTop = rect.top + window.scrollY;
@@ -288,6 +299,11 @@ class ProjectPage extends React.Component{
                 const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
 				
                 if (shouldDismissUp || shouldDismissDown){ 
+                    if(shouldDismissUp){
+                        console.log("Dismissing because of up");
+                    } else {
+                        console.log("Dismissing because of down");
+                    }
                     this.props.dispatch(action.dismissAll());
                     window.history.pushState({}, '/','/');
                 }
