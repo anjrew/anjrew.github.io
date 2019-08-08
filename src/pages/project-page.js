@@ -113,10 +113,17 @@ class ProjectPage extends React.Component{
                                         )}
                                         { data.siteUrl &&  <a 
                                             href={data.siteUrl}
+                                            style={{
+                                                padding: '20px',
+                                                fontSize: "30px"
+                                            }}
                                             target='_blank'
                                             rel="noopener noreferrer">Visit the official site.</a>}
                                         { data.repoUrl &&  <a 
-                                            href={data.repoUrl}
+                                            style={{
+                                                padding: '20px',
+                                                fontSize: "30px"
+                                            }}                                            href={data.repoUrl}
                                             target='_blank'
                                             rel="noopener noreferrer">Look at the code in the repo.</a>}
                                         
@@ -143,7 +150,8 @@ class ProjectPage extends React.Component{
 								<Column
 								    placeContent={ smallScreen ? 'center' : 'flex-start' }
 								    alignItems={ smallScreen ? 'center' : 'flex-start' }
-								    margin={sectionMargin}>
+								    margin={sectionMargin}
+								    padding="20px">
 								    <h3>Featuring</h3>
 								    <Wrap
 								        alignItems={ smallScreen ? 'center' : 'start' }
@@ -163,7 +171,8 @@ class ProjectPage extends React.Component{
 							    id='links'
 							    placeContent={ smallScreen ? 'center' : 'flex-start' }
 							    alignItems={ smallScreen ? 'center' : 'flex-start' }
-							    margin={sectionMargin}>
+							    margin={sectionMargin}
+							    padding="20px">
                             	<h3>{data.linksTitle}</h3> 
 							    <Wrap
 							        alignItems={ smallScreen ? 'center' : 'start' }
@@ -181,7 +190,9 @@ class ProjectPage extends React.Component{
                                 id='screenShots'
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }
                                 alignItems={ smallScreen ? 'center' : 'flex-start' }
-                                margin={sectionMargin}>
+                                margin={sectionMargin}
+                                padding="20px">
+
                                 <h3>Gallery</h3>
                                 <Wrap
                                     placeContent={ smallScreen ? 'center' : 'flex-start' }>
@@ -198,7 +209,8 @@ class ProjectPage extends React.Component{
                                 id='videos'
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }
                                 alignItems={ smallScreen ? 'center' : 'flex-start' }
-                                margin={sectionMargin}>
+                                margin={sectionMargin}
+                                padding="20px">
                                 <h3>Videos</h3>
                                 <Wrap
                                     placeContent={ smallScreen ? 'center' : 'flex-start' }>
