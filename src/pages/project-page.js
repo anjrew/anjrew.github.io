@@ -16,6 +16,7 @@ import VideoIcon from '../components/images/video-icon';
 import { Action as action } from '../react_utils/redux/actions';
 import { Padding } from '../components/layout/padding';
 import { Row } from '../components/layout/row';
+import { transform } from '@babel/core';
 
 // PAGES
 class ProjectPage extends React.Component{
@@ -47,11 +48,12 @@ class ProjectPage extends React.Component{
         const renderCenterlogo = smallScreen || mobileApp;
         const renderSideLogo = !smallScreen && data && (data.logoUrlSmall || data.logoUrlBig);
 
-        var logo;
+        let logo;
 		
         if (data){
             logo = <div >
                 <img style={{
+                    paddingTop: '20px',
                     objectFit: 'cover',
                     height: mobileApp ? '200px' : '350px',
                     width: mobileApp ? '200px' : '350px'
@@ -84,6 +86,7 @@ class ProjectPage extends React.Component{
                                     display='flex'
                                     flexDirection={ smallScreen ? 'column' : 'row' }
                                     placeContent={ smallScreen || mobileApp ? 'center' : 'space-between' }
+                                    alignItems='flex-start'
                                 >
                                     <Column
                                         placeContent={ smallScreen ? 'center' : 'flex-start' }
@@ -138,20 +141,27 @@ class ProjectPage extends React.Component{
                                             height='100%'
                                             placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
                                             <button 
-                                                style={{ cursor: 'pointer' }}
+                                                style={{
+                                                    backgroundColor: 'rgba(0,0,0,0)',
+													 cursor: 'pointer', 
+                                                    position: 'absolute',
+                                                    transform: 'translateX(29px) translateY(-10px)'
+                                                }}
                                                 onClick={() => this.dismiss(history)}>X</button>
                                         </Container>}
                                     </Row>
                                 </Container>
 	
-						
-                                {/* technologies */}
-                                { data.technologies && 
+                                <Column
+                                    padding={'10px'}
+                                    width='unset'>
+                                    {/* technologies */}
+                                    { data.technologies && 
 								<Column
 								    placeContent={ smallScreen ? 'center' : 'flex-start' }
 								    alignItems={ smallScreen ? 'center' : 'flex-start' }
 								    margin={sectionMargin}
-								    padding="20px">
+								    maxWidth="80%">
 								    <h3>Featuring</h3>
 								    <Wrap
 								        alignItems={ smallScreen ? 'center' : 'start' }
@@ -163,16 +173,17 @@ class ProjectPage extends React.Component{
 								        }
 								    </Wrap>									
 								</Column>
-                                }
+                                    }
 	
-                                {/* links  */}
-                                { data.links &&
+                                    {/* links  */}
+                                    { data.links &&
 							<Column	
 							    id='links'
 							    placeContent={ smallScreen ? 'center' : 'flex-start' }
 							    alignItems={ smallScreen ? 'center' : 'flex-start' }
 							    margin={sectionMargin}
-							    padding="20px">
+							    maxWidth="80%">
+
                             	<h3>{data.linksTitle}</h3> 
 							    <Wrap
 							        alignItems={ smallScreen ? 'center' : 'start' }
@@ -183,7 +194,7 @@ class ProjectPage extends React.Component{
 								    }
 							    </Wrap>
 							</Column>
-                                }
+                                    }
 
                         	{ data.screenShots &&
                             <Column
@@ -191,7 +202,7 @@ class ProjectPage extends React.Component{
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }
                                 alignItems={ smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}
-                                padding="20px">
+                                maxWidth="80%">
 
                                 <h3>Gallery</h3>
                                 <Wrap
@@ -202,15 +213,15 @@ class ProjectPage extends React.Component{
                                     }
                                 </Wrap>
                             </Column>
-                                }
+                                    }
 								
-                                { data.videos &&
+                                    { data.videos &&
                             <Column
                                 id='videos'
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }
                                 alignItems={ smallScreen ? 'center' : 'flex-start' }
                                 margin={sectionMargin}
-                                padding="20px">
+                                maxWidth="80%">
                                 <h3>Videos</h3>
                                 <Wrap
                                     placeContent={ smallScreen ? 'center' : 'flex-start' }>
@@ -220,7 +231,8 @@ class ProjectPage extends React.Component{
                                     }
                                 </Wrap>
                             </Column>
-                                }
+                                    }
+                                </Column>
 								
 								
                             </Column>
