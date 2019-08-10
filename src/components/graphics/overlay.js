@@ -37,7 +37,10 @@ export class Overlay extends React.Component{
                             backgroundColor= 'rgba(0,0,0,0.70)'
                             zIndex="5"
                             top='0px'
-                            onClick={() => this.dismiss(history)}
+                            onClick={(e) => {
+								this.dismiss(history);
+								event.preventDefault();
+							}}
                         >
                         </Container>
                     </CSSTransition>;
