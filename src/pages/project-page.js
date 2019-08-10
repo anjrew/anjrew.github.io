@@ -30,13 +30,11 @@ class ProjectPage extends React.Component{
     }
 	
     dismiss(history){
-        console.log("Dismiss");
         this.props.dispatch(action.dismissAll());
         history.push('/');
     }
 
     render(){
-        console.log("Rendering Project");
         const props = this.props;
         const data = props.data || {};
         const mobileApp = props.mobileApp;
