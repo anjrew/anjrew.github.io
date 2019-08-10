@@ -9,7 +9,6 @@ const csurf = require('csurf');
 const path = require('path');
 const print = require('./utils/print');
 const server = require('http').Server(app);
-const io = require('socket.io')(server, { origins: 'localhost:8080' });
 const https = require('https');
 const request = require('request');
 
@@ -36,35 +35,6 @@ const cookieSessionMiddleWare = cookieSession({
 });
 
 app.use(cookieSessionMiddleWare);
-
-const onlineUsers = {};
-
-io.use(async (socket, next)=>{
-
-    cookieSessionMiddleWare(socket.request, socket.request.res, next);
-	
-    const userId = socket.request.session.userId;
-    print.success(`socket with the id ${socket.id} is now connected and userID is ${userId}`);
-
-    // Emit sends data to the client
-    socket.emit('connected', {
-        message: 'You are connected to the server via socket.io',
-        userId: userId
-    });
-	
-    io.sockets.emit('updateOnlineUsers', {
-        onlineUsers: onlineUsers
-    });
-	
-    // Check if it is new connection
-    socket.on('disconnect', function() {
-        print.error(`socket with the id ${socket.id} is now disconnected`);
-        delete onlineUsers[userId];
-        io.sockets.emit('updateOnlineUsers', {
-            onlineUsers: onlineUsers
-        });
-    });
-});
 
 app.use(express.static(`${__dirname}/public`));
 
