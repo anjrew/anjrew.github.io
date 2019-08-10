@@ -104,6 +104,7 @@ class ProjectPage extends React.Component{
                             placeContent={ smallScreen ? 'center' : 'flex-start' }
                             alignItems={ smallScreen ? 'center' : 'flex-start' }
                             width='unset'
+                            alignSelf= "flex-start"
                         >
                             { data.title &&   
 								<h1 
