@@ -46,6 +46,7 @@ class ProjectPage extends React.Component{
         const sectionMargin =  margin + 'px';
         const renderCenterlogo = smallScreen || mobileApp;
         const renderSideLogo = !smallScreen && data && (data.logoUrlSmall || data.logoUrlBig);
+        const notBigScreen = smallScreen || mobileApp;
 
         let logo;
 		
@@ -60,6 +61,23 @@ class ProjectPage extends React.Component{
                 src={ mobileApp ? data.logoUrlSmall : data.logoUrlBig }/>
             </div>;
         }
+		
+        const dismissCross =<Container
+            alignSelf={ smallScreen ? 'center' : 'start' }
+            alignItems={ smallScreen ? 'center' : 'flex-end' }
+            height='100%'
+            placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
+            <button 
+                style={{
+                    backgroundColor: 'rgba(0,0,0,0)',
+				 cursor: 'pointer', 
+                    position: 'absolute',
+                    right: '-7px',
+                    top: '-5px'
+                    // transform: notBigScreen ? 'translateX(29px) translateY(-10px)' : 'translateX(29px) translateY(-10px)'
+                }}
+                onClick={() => this.dismiss(history)}>X</button>
+        </Container>;
 		
 		
         const containerTop = this.state.elemenTop || window.scrollY + 'px';				
@@ -80,6 +98,7 @@ class ProjectPage extends React.Component{
                             <Column
                                 referance={this.elemRef}
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }>
+                                {notBigScreen && dismissCross}
                                 <Container
                                     width='100%'
                                     display='flex'
@@ -116,15 +135,17 @@ class ProjectPage extends React.Component{
                                         { data.siteUrl &&  <a 
                                             href={data.siteUrl}
                                             style={{
+                                                textAlign: 'center',
                                                 padding: '20px',
-                                                fontSize: "30px"
+                                                fontSize: "25px"
                                             }}
                                             target='_blank'
                                             rel="noopener noreferrer">Visit the official site.</a>}
                                         { data.repoUrl &&  <a 
                                             style={{
+                                                textAlign: 'center',
                                                 padding: '20px',
-                                                fontSize: "30px"
+                                                fontSize: "25px"
                                             }}                                            href={data.repoUrl}
                                             target='_blank'
                                             rel="noopener noreferrer">Look at the code in the repo.</a>}
@@ -133,21 +154,10 @@ class ProjectPage extends React.Component{
                                     </Column>
                                     <Row width='unset'>
                                         {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
+                                        {/* Logo */}
                                         {renderSideLogo && logo }
-                                        {!smallScreen &&  <Container
-                                            alignSelf={ smallScreen ? 'center' : 'start' }
-                                            alignItems={ smallScreen ? 'center' : 'flex-end' }
-                                            height='100%'
-                                            placeContent={ smallScreen ? 'center' : 'flex-end flex-end' }>
-                                            <button 
-                                                style={{
-                                                    backgroundColor: 'rgba(0,0,0,0)',
-													 cursor: 'pointer', 
-                                                    position: 'absolute',
-                                                    transform: 'translateX(29px) translateY(-10px)'
-                                                }}
-                                                onClick={() => this.dismiss(history)}>X</button>
-                                        </Container>}
+                                        {/* Dismiss Cross */}
+                                        {!smallScreen &&  dismissCross}
                                     </Row>
                                 </Container>
 	
