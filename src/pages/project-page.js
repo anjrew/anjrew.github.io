@@ -1,7 +1,6 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route } from "react-router-dom";
 
 // Components
 import { SafeArea } from '../components/layout/safe_area';
@@ -81,91 +80,88 @@ class ProjectPage extends React.Component{
 		
 		
         const containerTop = this.state.elemenTop || window.scrollY + 'px';				
-        return ( 
-            <BrowserRouter>
-                <Route render= {({ history }) => {
-                    return <div style={{ 
-                        width: `calc(100% - ${margin * 4 + 'px'})`,
-                        position: 'absolute',
-                        zIndex: '10',
-                        margin: margin + 'px',
-                        padding: margin + 'px',
-                        top: containerTop,
-                        backgroundColor: 'rgba(255,255,255,0.99)'
-                    }}>
-                        <SafeArea 
-							    height={this.state.height}>
-                            <Column
-                                referance={this.elemRef}
-                                placeContent={ smallScreen ? 'center' : 'flex-start' }>
-                                {notBigScreen && dismissCross}
-                                <Container
-                                    width='100%'
-                                    display='flex'
-                                    flexDirection={ smallScreen ? 'column' : 'row' }
-                                    placeContent={ smallScreen || mobileApp ? 'center' : 'space-between' }
-                                    alignItems='flex-start'
-                                >
-                                    <Column
-                                        placeContent={ smallScreen ? 'center' : 'flex-start' }
-                                        alignItems={ smallScreen ? 'center' : 'flex-start' }
-                                        width='unset'
-                                    >
-                                        { data.title &&   
-											<h1 
-											    style={{ 
-											    	fontSize: mobileApp ? '35px' : smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
-											        textDecoration: 'underline',
-											        textAlign: smallScreen ? 'center' : 'start',
-											        padding: '20px'
- 
-											    }}
-											>{data.title}</h1>
-                                        }
-                                        { renderCenterlogo && logo }
-                                        { data.description && data.description.map((paragraph) =>
-                                            <p 	key={paragraph}
-                                                style={{ 
-                                                    textAlign: smallScreen ? 'center' : 'start' ,
-                                                    fontSize: mobileApp && '15px',
-                                                    padding: '20px'
-                                                }}
-                                            >{paragraph}</p>
-                                        )}
-                                        { data.siteUrl &&  <a 
-                                            href={data.siteUrl}
-                                            style={{
-                                                textAlign: 'center',
-                                                padding: '20px',
-                                                fontSize: "25px"
-                                            }}
-                                            target='_blank'
-                                            rel="noopener noreferrer">Visit the official site.</a>}
-                                        { data.repoUrl &&  <a 
-                                            style={{
-                                                textAlign: 'center',
-                                                padding: '20px',
-                                                fontSize: "25px"
-                                            }}                                            href={data.repoUrl}
-                                            target='_blank'
-                                            rel="noopener noreferrer">Look at the code in the repo.</a>}
+        return (  <div style={{ 
+            width: `calc(100% - ${margin * 4 + 'px'})`,
+            position: 'absolute',
+            zIndex: '10',
+            margin: margin + 'px',
+            padding: margin + 'px',
+            top: containerTop,
+            backgroundColor: 'rgba(255,255,255,0.99)'
+        }}>
+            <SafeArea 
+                height={this.state.height}>
+                <Column
+                    referance={this.elemRef}
+                    placeContent={ smallScreen ? 'center' : 'flex-start' }>
+                    {notBigScreen && dismissCross}
+                    <Container
+                        width='100%'
+                        display='flex'
+                        flexDirection={ smallScreen ? 'column' : 'row' }
+                        placeContent={ smallScreen || mobileApp ? 'center' : 'space-between' }
+                        alignItems='flex-start'
+                    >
+                        <Column
+                            placeContent={ smallScreen ? 'center' : 'flex-start' }
+                            alignItems={ smallScreen ? 'center' : 'flex-start' }
+                            width='unset'
+                        >
+                            { data.title &&   
+								<h1 
+								    style={{ 
+								        fontSize: mobileApp ? '35px' : smallScreen ? '50px' :  data.title.length > 10 ? '80px' : data.title.length > 8 ? '100px' : '120px',
+								        textDecoration: 'underline',
+								        textAlign: smallScreen ? 'center' : 'start',
+								        padding: '20px'
+
+								    }}
+								>{data.title}</h1>
+                            }
+                            { renderCenterlogo && logo }
+                            { data.description && data.description.map((paragraph) =>
+                                <p 	key={paragraph}
+                                    style={{ 
+                                        textAlign: smallScreen ? 'center' : 'start' ,
+                                        fontSize: mobileApp && '15px',
+                                        padding: '20px'
+                                    }}
+                                >{paragraph}</p>
+                            )}
+                            { data.siteUrl &&  <a 
+                                href={data.siteUrl}
+                                style={{
+                                    textAlign: 'center',
+                                    padding: '20px',
+                                    fontSize: "25px"
+                                }}
+                                target='_blank'
+                                rel="noopener noreferrer">Visit the official site.</a>}
+                            { data.repoUrl &&  <a 
+                                style={{
+                                    textAlign: 'center',
+                                    padding: '20px',
+                                    fontSize: "25px"
+                                }}                                            href={data.repoUrl}
+                                target='_blank'
+                                rel="noopener noreferrer">Look at the code in the repo.</a>}
                                         
 	
-                                    </Column>
-                                    <Row width='unset'>
-                                        {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
-                                        {/* Logo */}
-                                        {renderSideLogo && logo }
-                                        {/* Dismiss Cross */}
-                                        {!smallScreen &&  dismissCross}
-                                    </Row>
-                                </Container>
+                        </Column>
+                        <Row width='unset'>
+                            {!smallScreen && data && data.logoUrl && <Padding padding='30px' flexGrow='1'/>}
+                            {/* Logo */}
+                            {renderSideLogo && logo }
+                            {/* Dismiss Cross */}
+                            {!smallScreen &&  dismissCross}
+                        </Row>
+                    </Container>
 	
-                                <Column
-                                    padding={'10px'}
-                                    width='unset'>
-                                    {/* technologies */}
-                                    { data.technologies && 
+                    <Column
+                        padding={'10px'}
+                        width='unset'>
+                        {/* technologies */}
+                        { data.technologies && 
 								<Column
 								    placeContent={ smallScreen ? 'center' : 'flex-start' }
 								    alignItems={ smallScreen ? 'center' : 'flex-start' }
@@ -182,10 +178,10 @@ class ProjectPage extends React.Component{
 								        }
 								    </Wrap>									
 								</Column>
-                                    }
+                        }
 	
-                                    {/* links  */}
-                                    { data.links &&
+                        {/* links  */}
+                        { data.links &&
 							<Column	
 							    id='links'
 							    placeContent={ smallScreen ? 'center' : 'flex-start' }
@@ -203,7 +199,7 @@ class ProjectPage extends React.Component{
 								    }
 							    </Wrap>
 							</Column>
-                                    }
+                        }
 
                         	{ data.screenShots &&
                             <Column
@@ -222,9 +218,9 @@ class ProjectPage extends React.Component{
                                     }
                                 </Wrap>
                             </Column>
-                                    }
+                        }
 								
-                                    { data.videos &&
+                        { data.videos &&
                             <Column
                                 id='videos'
                                 placeContent={ smallScreen ? 'center' : 'flex-start' }
@@ -240,15 +236,13 @@ class ProjectPage extends React.Component{
                                     }
                                 </Wrap>
                             </Column>
-                                    }
-                                </Column>
+                        }
+                    </Column>
 								
 								
-                            </Column>
-                        </SafeArea>				
-                    </div>;
-                }} />
-            </BrowserRouter>
+                </Column>
+            </SafeArea>				
+        </div>
         );
     }
 

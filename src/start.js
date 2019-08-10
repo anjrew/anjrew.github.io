@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { init as initSocket } from './react_utils/socket';
 
 // PAGES
 import App from './pages/app';
@@ -15,7 +14,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(reduxPromise)));
 
-// initSocket(store);
 
 let elem;
 if (location.pathname === '/admin') {
@@ -23,7 +21,6 @@ if (location.pathname === '/admin') {
 } else if (location.pathname === '/login'){
     elem = <LoginPage/>;
 } else {
-    initSocket(store);
     elem = <Provider store={store}>
         <App />
     </Provider>;
