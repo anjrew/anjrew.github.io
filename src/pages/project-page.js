@@ -260,25 +260,42 @@ class ProjectPage extends React.Component{
             const elementHeight = this.elemRef.current.clientHeight;
             console.log(`Element height ${elementHeight} `);
             //The postition of the window bottom
-            const windowBottom = windowScrollYTop + elementHeight;
+            const elementBottom = offset(this.elemRef.current).top + elementHeight ;
+            console.log('elementBottom' ,elementBottom);
             let elemenTop;
-            const toobig = windowBottom > documentHeight;
+            const toobig = elementBottom > documentHeight;
             if ( (toobig) ){
+                console.log('Project page was to big, adjusting');
                 elemenTop = documentHeight - elementHeight - 100;
+                this.setState({ 
+                    elemenTop: elemenTop,
+                    height: elementHeight + 500
+                }, () => {
+					window.moveTo(0, elemenTop);
+					this.setState({
+                        canDimiss: true,
+                    });
+                }
+                );
             } else {
+                this.setState({ 
+                    elemenTop: elemenTop,
+                    height: elementHeight + 500
+                }, () => {
+                    window.moveTo(0, elemenTop);
+                    this.setState({
+                        canDimiss: true,
+                    });
+                }
+                );
                 elemenTop = windowScrollYTop;
             }
 			
+            const elementBounds = this.elemRef.current.getBoundingClientRect();
+            console.log('Window inner height: ', window.innerHeight);
+            console.log('Element bounds top: ',elementBounds.top);
+            console.log('Element bounds bottom: ',elementBounds.bottom);
             console.log(`Element top ${elemenTop} `);
-
-            window.scrollTo(0, elemenTop);
-            this.setState({ 
-                elemenTop: elemenTop,
-                height: elementHeight + 500
-            }, () => this.setState({
-                canDimiss: true
-            })
-            );
 			
 					
             const options = window.location.pathname.split('/');
@@ -309,36 +326,61 @@ class ProjectPage extends React.Component{
             }
         }, 1000);
     }
+	
+    offset(el) {
+        var rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+    }
 
     componentWillUnmount(){
         document.removeEventListener('scroll', this.handleScroll, true);
     }
 	
     handleScroll(){
+        if (this.elemRef){
 
-        if(this.state.canDimiss){
-            if( this.elemRef.current){
-
-                const elementBounds = this.elemRef.current.getBoundingClientRect();
-                console.log('Window inner height: ', window.innerHeight);
-                console.log('Element bounds top: ',elementBounds.top);
-                console.log('Element bounds bottom: ',elementBounds.bottom);
-                const shouldDismissUp = elementBounds.top > window.innerHeight / 2;
-                const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
-	
-                if (shouldDismissUp || shouldDismissDown){ 
-                    if(shouldDismissUp){
-                        console.log("Dismissing because of up");
-                    } else {
-                        console.log("Dismissing because of down");
+            console.log('Scrolling with dismiss', this.state.canDimiss, "and elem", this.elemRef, 'ansd state elemTop', this.state.elemenTop ,' and current top', offset(this.elemRef.current).top + 140);
+            if(this.state.elemenTop == offset(this.elemRef.current).top){
+                this.setState({
+                    canDimiss: true,
+                });
+            }
+            if(this.state.canDimiss){
+                if( this.elemRef.current){
+					
+                    const elementBounds = this.elemRef.current.getBoundingClientRect();
+                    console.log('Window inner height: ', window.innerHeight);
+                    console.log('Element bounds top: ',elementBounds.top);
+                    console.log('Element bounds bottom: ',elementBounds.bottom);
+                    const shouldDismissUp = elementBounds.top > window.innerHeight / 2;
+                    const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
+					
+                    if (shouldDismissUp || shouldDismissDown){ 
+                        if(shouldDismissUp){
+                            console.log("Dismissing because of up");
+                        } else {
+                            console.log("Dismissing because of down");
+                        }
+                        this.props.dispatch(action.dismissAll());
+                        window.history.pushState({}, '/','/');
                     }
-                    this.props.dispatch(action.dismissAll());
-                    window.history.pushState({}, '/','/');
                 }
             }
         }
     }
 }
+	
+function offset(el) {
+    if (el){
+        var rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+    }
+}
+
 	
 const mapStateToProps = state => {
     return {
