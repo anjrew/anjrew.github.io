@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
 import { connect } from 'react-redux';
@@ -88,7 +89,9 @@ class ProjectPage extends React.Component{
             backgroundColor: 'rgba(255,255,255,0.99)'
         }}>
             <SafeArea 
-                height={this.state.height}>
+                height={this.state.height}
+				overflowY= 'scroll'
+				>
                 <Column
                     referance={this.elemRef}
                     placeContent={ smallScreen ? 'center' : 'flex-start' }>
@@ -266,12 +269,12 @@ class ProjectPage extends React.Component{
             const toobig = elementBottom > documentHeight;
             if ( (toobig) ){
                 console.log('Project page was to big, adjusting');
-                elemenTop = documentHeight - elementHeight - 100;
+                elemenTop = documentHeight - elementHeight - 200;
                 this.setState({ 
                     elemenTop: elemenTop,
                     height: elementHeight + 500
                 }, () => {
-					window.moveTo(0, elemenTop);
+                    window.scrollTo(0, elemenTop);
 					this.setState({
                         canDimiss: true,
                     });
@@ -291,13 +294,7 @@ class ProjectPage extends React.Component{
                 elemenTop = windowScrollYTop;
             }
 			
-            const elementBounds = this.elemRef.current.getBoundingClientRect();
-            console.log('Window inner height: ', window.innerHeight);
-            console.log('Element bounds top: ',elementBounds.top);
-            console.log('Element bounds bottom: ',elementBounds.bottom);
-            console.log(`Element top ${elemenTop} `);
-			
-					
+          
             const options = window.location.pathname.split('/');
             var image;
             if (options[2]){
@@ -324,7 +321,7 @@ class ProjectPage extends React.Component{
                     }
                 }
             }
-        }, 1000);
+        }, 1);
     }
 	
     offset(el) {
@@ -341,20 +338,16 @@ class ProjectPage extends React.Component{
     handleScroll(){
         if (this.elemRef){
 
-            console.log('Scrolling with dismiss', this.state.canDimiss, "and elem", this.elemRef, 'ansd state elemTop', this.state.elemenTop ,' and current top', offset(this.elemRef.current).top + 140);
-            if(this.state.elemenTop == offset(this.elemRef.current).top){
-                this.setState({
-                    canDimiss: true,
-                });
-            }
+            // if(this.state.elemenTop == offset(this.elemRef.current).top){
+            //     this.setState({
+            //         canDimiss: true,
+            //     });
+            // }
             if(this.state.canDimiss){
                 if( this.elemRef.current){
 					
                     const elementBounds = this.elemRef.current.getBoundingClientRect();
-                    console.log('Window inner height: ', window.innerHeight);
-                    console.log('Element bounds top: ',elementBounds.top);
-                    console.log('Element bounds bottom: ',elementBounds.bottom);
-                    const shouldDismissUp = elementBounds.top > window.innerHeight / 2;
+                    const shouldDismissUp = elementBounds.top > window.innerHeight;
                     const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
 					
                     if (shouldDismissUp || shouldDismissDown){ 

@@ -3,7 +3,7 @@
     transition: all 200ms;
     outline: none;
     margin: 0px;
-    transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
 }
 
 body{
