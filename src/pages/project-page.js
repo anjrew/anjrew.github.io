@@ -29,9 +29,9 @@ class ProjectPage extends React.Component{
         this.elemRef = React.createRef();
     }
 	
-    dismiss(history){
+    dismiss(){
         this.props.dispatch(action.dismissAll());
-        history.push('/');
+        window.history.pushState({}, '/','/');
     }
 
     render(){
@@ -103,7 +103,7 @@ class ProjectPage extends React.Component{
                         <Column
                             placeContent={ smallScreen ? 'center' : 'flex-start' }
                             alignItems={ smallScreen ? 'center' : 'flex-start' }
-                            width='unset'
+                            width='100%'
                             alignSelf= "flex-start"
                         >
                             { data.title &&   
@@ -158,7 +158,9 @@ class ProjectPage extends React.Component{
 	
                     <Column
                         padding={'10px'}
-                        width='unset'>
+                        width='unset'
+                        alignSelf='flex-start'
+                    >
                         {/* technologies */}
                         { data.technologies && 
 								<Column
@@ -188,7 +190,7 @@ class ProjectPage extends React.Component{
 							    margin={sectionMargin}
 							    maxWidth="80%">
 
-                            	<h3>{data.linksTitle}</h3> 
+                            	<h3 style={{ textAlign : 'center'}}>{data.linksTitle}</h3> 
 							    <Wrap
 							        alignItems={ smallScreen ? 'center' : 'start' }
 							        placeContent={ smallScreen ? 'center' : 'flex-start' }>
@@ -252,17 +254,17 @@ class ProjectPage extends React.Component{
             // Top of the view window
             const windowScrollYTop = window.scrollY;
             // Height of the whole document
-            const totalHeight = document.documentElement.scrollHeight;
-            console.log(`Element totalHeight ${totalHeight} `);
+            const documentHeight = document.documentElement.scrollHeight;
+            console.log(`Document totalHeight ${documentHeight} `);
             // Height of the element
             const elementHeight = this.elemRef.current.clientHeight;
             console.log(`Element height ${elementHeight} `);
             //The postition of the window bottom
             const windowBottom = windowScrollYTop + elementHeight;
             let elemenTop;
-            const toobig = windowBottom > totalHeight;
+            const toobig = windowBottom > documentHeight;
             if ( (toobig) ){
-                elemenTop = totalHeight - elementHeight - 100;
+                elemenTop = documentHeight - elementHeight - 100;
             } else {
                 elemenTop = windowScrollYTop;
             }
@@ -305,7 +307,7 @@ class ProjectPage extends React.Component{
                     }
                 }
             }
-        }, 5000);
+        }, 1000);
     }
 
     componentWillUnmount(){
@@ -313,17 +315,17 @@ class ProjectPage extends React.Component{
     }
 	
     handleScroll(){
+
         if(this.state.canDimiss){
             if( this.elemRef.current){
-                const windowScrollYTop = window.scrollY;
-                const elementHeight = this.elemRef.current.clientHeight;
-                console.log(`Element height ${elementHeight} `);
-                const windowBottom = windowScrollYTop + window.innerHeight;
-                const rect = this.elemRef.current.getBoundingClientRect();
-                const elementDistanceFromTop = rect.top + window.scrollY;
-                const shouldDismissUp = windowBottom < elementDistanceFromTop + 100;
-                const shouldDismissDown = windowScrollYTop > elementDistanceFromTop + elementHeight - 100;
-				
+
+                const elementBounds = this.elemRef.current.getBoundingClientRect();
+                console.log('Window inner height: ', window.innerHeight);
+                console.log('Element bounds top: ',elementBounds.top);
+                console.log('Element bounds bottom: ',elementBounds.bottom);
+                const shouldDismissUp = elementBounds.top > window.innerHeight / 2;
+                const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
+	
                 if (shouldDismissUp || shouldDismissDown){ 
                     if(shouldDismissUp){
                         console.log("Dismissing because of up");
