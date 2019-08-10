@@ -39,7 +39,7 @@ export class Overlay extends React.Component{
                             top='0px'
                             onClick={(e) => {
 								this.dismiss(history);
-								event.preventDefault();
+								event.preventDefault(e);
 							}}
                         >
                         </Container>
