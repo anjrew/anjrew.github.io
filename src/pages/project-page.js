@@ -16,7 +16,6 @@ import VideoIcon from '../components/images/video-icon';
 import { Action as action } from '../react_utils/redux/actions';
 import { Padding } from '../components/layout/padding';
 import { Row } from '../components/layout/row';
-import { transform } from '@babel/core';
 
 // PAGES
 class ProjectPage extends React.Component{

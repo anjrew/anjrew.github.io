@@ -13,6 +13,7 @@ class LinkIcon extends React.Component{
 
     render(){
         const data = this.props.data;
+        const mobileApp = this.props.mobileApp;
     
         const imageContainerStyle = {
             cursor:  'pointer',
@@ -28,7 +29,7 @@ class LinkIcon extends React.Component{
         const imageStyle ={
             cursor:  'pointer',
             width: 'auto',
-            height: '100%',
+            height: mobileApp ? '50%':'100%',
             transformOrigin: 'center center', 
             objectFit: 'contain',
             filter: this.state.hover && data.static && `blur(8px) brightness(1.5)`,
@@ -59,8 +60,8 @@ class LinkIcon extends React.Component{
                         style={{
                             display: 'flex',
                             placeContent: 'center center' ,
-                            width: '100%',
-                            height: '100%',
+                            width: mobileApp ? '50%':'100%',
+                            height: mobileApp ? '50%':'100%',
                             position: 'absolute',
                             zIndex:'10',
                             alignSelf: 'center',

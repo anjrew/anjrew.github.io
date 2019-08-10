@@ -231,6 +231,7 @@ export const CupomaticData = new ProjectPageData({
 		androidStudioLink
 	],
 	linksTitle: 'More Info',
+	siteUrl: "http://www.cupomatic.net/",
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/social-media-icons/faceBookIcon.png',
@@ -251,12 +252,6 @@ export const CupomaticData = new ProjectPageData({
 			imageUrl: '/assets/images/social-media-icons/app-store-badge.svg',
 			href: 'https://apps.apple.com/app/id1336170587',
 			name: 'App Store'
-		}),
-		new LinkData({
-			imageUrl: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
-			href: 'http://www.cupomatic.net/',
-			name: 'Web page',
-			static: true
 		}),
 	],
 	screenShots: [
