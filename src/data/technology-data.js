@@ -212,7 +212,7 @@ export const jestLink =  new Technology({
 export const affinityLink =  new Technology({
     smallImageUrl: '/assets/images/tech-icons/affinity/affinity-designe-logo_60w.png',
     largeImageUrl: '/assets/images/tech-icons/affinity/affinity-designe-logo_100.png',
-    name: 'Jest',
+    name: 'Affinity Photo',
     href: 'https://affinity.serif.com/en-gb/photo/'
 });
 
