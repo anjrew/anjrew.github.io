@@ -252,6 +252,8 @@ class ProjectPage extends React.Component{
 
     componentDidMount() {
 
+		console.log('Project mounting');
+
         setTimeout(() => { 
             document.addEventListener('scroll', this.handleScroll);	
             // Top of the view window
@@ -338,16 +340,11 @@ class ProjectPage extends React.Component{
     handleScroll(){
         if (this.elemRef){
 
-            // if(this.state.elemenTop == offset(this.elemRef.current).top){
-            //     this.setState({
-            //         canDimiss: true,
-            //     });
-            // }
             if(this.state.canDimiss){
                 if( this.elemRef.current){
 					
                     const elementBounds = this.elemRef.current.getBoundingClientRect();
-                    const shouldDismissUp = elementBounds.top > window.innerHeight;
+                    const shouldDismissUp = elementBounds.top > window.innerHeight / 2;
                     const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
 					
                     if (shouldDismissUp || shouldDismissDown){ 

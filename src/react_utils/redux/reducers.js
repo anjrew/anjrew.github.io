@@ -8,12 +8,15 @@ export default function reducer(state = {}, action) {
         case "SHOW_PROJECT":
             return { 
                 ...state, 
-                showProject: action.project,
+				project: action.project,
+				showProject: true,
                 currentImage: action.image 
 			};
 			
         case "DISSMISS_ALL":
-			return { ...state, showProject: null };
+			return { ...state,
+				 showProject: null 
+				};
 			
         case "SET_APP_SIZE":
             return { 

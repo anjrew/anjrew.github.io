@@ -70,11 +70,11 @@ class App extends React.Component{
                     <Footer scrollToRef={this.scrollToRef}/>
                    
                     <CSSTransition
-                        in={!!props.showProject}
+                        in={props.showProject}
                         timeout={500}
                         classNames="fade"
                         unmountOnExit>
-                        <ProjectPage data={ props.showProject }/>
+                        <ProjectPage data={ props.project }/>
                     </CSSTransition>
 
                     <Carosel/>
@@ -140,6 +140,7 @@ const mapStateToProps = state => {
 
     return {
         showProject: state.showProject,
+        project: state.project,
         mobileApp: state.mobileApp,
         currentImage: state.currentImage,
         nextImage: state.nextImage,
