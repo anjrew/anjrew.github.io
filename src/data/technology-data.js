@@ -216,6 +216,20 @@ export const affinityLink =  new Technology({
     href: 'https://affinity.serif.com/en-gb/photo/'
 });
 
+export const cLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c/download_dq2paz_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c/download_dq2paz_c_scale,w_100.png',
+    name: 'C',
+    href: 'https://en.wikipedia.org/wiki/C_(programming_language)'
+});
+
+export const cPLusPLusLink =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'C++',
+    href: 'http://www.cplusplus.com'
+});
+
 
 export const techlinks = [
     googleCloudPlatform,
@@ -246,6 +260,8 @@ export const techlinks = [
     githubLink,
     heroKuLink,
     jestLink,
-    affinityLink
+    affinityLink,
+    cLink,
+    cPLusPLusLink
 ];
 
