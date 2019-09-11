@@ -439,27 +439,27 @@ export const PlantSystemData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7717.jpg',
-			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7717.jpg',
-			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7717.jpg',
-			description: 'Testing and calibrationg the sensor',
+			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7717.JPG',
+			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7717.JPG',
+			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7717.JPG',
+			description: 'Testing and calibrating the sensor',
 			name: 'Sensor',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7718.jpg',
-			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7718.jpg',
-			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7718.jpg',
+			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7718.JPG',
+			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7718.JPG',
+			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7718.JPG',
 			description: 'Mounting the transformer',
 			name: 'Transformer',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7719.jpg',
-			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7719.jpg',
-			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7719.jpg',
+			smallImageUrl: '/assets/images/projects/plant-system/screenShots/smallScreen/IMG_7719.JPG',
+			largeImageUrl: '/assets/images/projects/plant-system/screenShots/largeScreen/IMG_7719.JPG',
+			imageUrl: '/assets/images/projects/plant-system/screenShots/fullSize/IMG_7719.JPG',
 			description: 'The board before',
 			name: 'Main Layout',
 			screenShot: false
