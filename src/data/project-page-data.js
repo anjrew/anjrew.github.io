@@ -27,7 +27,9 @@ import {
 	codeMagicLink,
 	googleCloudPlatform,
 	googleVision,
-	heroKuLink
+	heroKuLink,
+	cLink,
+	cPLusPLusLink
 } from '../data/technology-data';
 
 export class ProjectPageData {
@@ -338,7 +340,8 @@ export const BatterySaverData = new ProjectPageData({
 	projectSmallUrl: '/assets/images/projects/battery-saver/image/battery_saver_logo-100px.png',
 	projectBigUrl: "/assets/images/projects/battery-saver/image/battery_saver_logo-300px.jpg",
 	technologies: [
-		flutterLink,
+        flutterLink,
+        dartLink,
 		flareLink,
 		vsCodeLink
 	],
@@ -398,8 +401,11 @@ export const PlantSystemData = new ProjectPageData({
 	projectBigUrl: "/assets/images/projects/plant-system/image/plant-watering-300px.jpg",
 	technologies: [
 		arduinoLink,
+		cLink,
+		cPLusPLusLink,
 		vsCodeLink,
-		flutterLink,
+        flutterLink,
+        dartLink,
 		awsLink,
 	],
 	linksTitle: 'More Info',
@@ -856,7 +862,8 @@ export const shutterStockScrollData = new ProjectPageData({
 	projectBigUrl: '/assets/images/projects/shutterstock-scroll/icon/icon_acxp5h_c_scale,w_300.jpg',
 	technologies: [
 		vsCodeLink,
-		flutterLink,
+        flutterLink,
+        dartLink,
 		codeMagicLink,
 	],
 	screenShots: [
