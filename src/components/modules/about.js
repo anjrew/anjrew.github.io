@@ -23,6 +23,7 @@ class About extends React.Component {
 		
         const props = this.props;
         const linkStyle = {
+            cursor: 'pointer',  
             textDecoration: 'underline', 
             padding: '0px' , 
             margin: ' 0px 8px',
@@ -60,7 +61,7 @@ class About extends React.Component {
 
             <p style={alignment}>
 				Feel free to 
-                <button 
+                <button
                     style={linkStyle}
                     onClick={() => props.scrollToRef('contact')}
                 >Contact</button>
