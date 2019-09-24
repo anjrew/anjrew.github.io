@@ -42,7 +42,7 @@ class Skills extends React.Component {
             href='https://www.javascript.com/'
             target='_blank'
             rel="noopener noreferrer"
-        >React</a>;
+        >Javascript</a>;
 		
         const firebaseLink = <a 
             href='https://firebase.google.com/'
