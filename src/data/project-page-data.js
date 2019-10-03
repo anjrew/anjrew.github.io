@@ -71,6 +71,41 @@ export class ProjectPageData {
 	}
 }
 
+export const huckAdventuresData = new ProjectPageData({
+	title: 'Huck Adventures',
+	description: [
+		`An app for finding adventure partners.`,
+		`Working as a freelancer, I worked on contracts involving adding new features to an existing application`,
+		`We were using Firebase backend with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics amd more.`,
+		`I worked with a great UX/UI team who gave me in depth sketck designs to work from.`,
+	],
+	logoUrlSmall: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_495.jpg',
+	projectSmallUrl: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_495.jpg',
+	projectBigUrl: "/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_600.jpg",
+	technologies: [
+		flutterLink,
+		dartLink,
+		firebaseLink,
+		vsCodeLink,
+		xcodeLink,
+		arduinoLink
+	],
+	siteUrl: "https://huckadventures.com",
+	linksTitle: 'More Info',
+	links: [
+		new LinkData({
+			imageUrl: '/assets/images/social-media-icons/app-store-badge.svg',
+			href: 'https://apps.apple.com/us/app/huck-adventures/id1451419698',
+			name: 'App Store'
+		}),
+		new LinkData({
+			imageUrl: '/assets/images/social-media-icons/GooglePlayBadge.png',
+			href: 'https://play.google.com/store/apps/details?id=com.huckadventures.huckadventures&hl=en',
+			name: 'Google Play'
+		}),
+	],
+});
 
 export const DialInData = new ProjectPageData({
 	title: 'Dial In',
@@ -247,7 +282,7 @@ export const CupomaticData = new ProjectPageData({
 		}),
 		new LinkData({
 			imageUrl: '/assets/images/social-media-icons/GooglePlayBadge.png',
-			href: '/assets/images/instagramLogo.png',
+			href: 'https://play.google.com/store/apps/details?id=com.rinson.cupomaticv2',
 			name: 'Google Play'
 		}),
 		new LinkData({
@@ -905,6 +940,7 @@ export const shutterStockScrollData = new ProjectPageData({
 });
 
 export const projects = [
+	huckAdventuresData,
 	DialInData,
 	CupomaticData,
 	shutterStockScrollData,
@@ -915,5 +951,5 @@ export const projects = [
 	GoatstagramData,
 	SpicedAcademyData,
 	thisData,
-	connectFourData,
+	connectFourData
 ];
