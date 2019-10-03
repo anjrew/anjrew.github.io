@@ -75,9 +75,10 @@ export const huckAdventuresData = new ProjectPageData({
 	title: 'Huck Adventures',
 	description: [
 		`An app for finding adventure partners.`,
-		`Working as a freelancer, I worked on contracts involving adding new features to an existing application`,
-		`We were using Firebase backend with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics amd more.`,
-		`I worked with a great UX/UI team who gave me in depth sketck designs to work from.`,
+		`Working as a freelancer, I worked on contracts involving adding new features to an existing application.`,
+		`My main role was front end development using the Flutter framwork, and writing code in Dart`,
+		`We were using Firebase for backend, with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics functionalitly.`,
+		`I worked with a great UX/UI team who gave me in depth sketch designs to work from.`,
 	],
 	logoUrlSmall: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_495.jpg',
