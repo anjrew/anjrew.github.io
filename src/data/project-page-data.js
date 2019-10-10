@@ -76,7 +76,7 @@ export const huckAdventuresData = new ProjectPageData({
 	description: [
 		`An app for finding adventure partners.`,
 		`Working as a freelancer, I worked on contracts involving adding new features to an existing application.`,
-		`My main role was front end development using the Flutter framwork, and writing code in Dart`,
+		`My main role was front end development using the Flutter framework, and writing code in Dart`,
 		`We were using Firebase for backend, with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics functionalitly.`,
 		`I worked with a great UX/UI team who gave me in depth sketch designs to work from.`,
 	],
