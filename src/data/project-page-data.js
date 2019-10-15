@@ -258,7 +258,7 @@ export const CupomaticData = new ProjectPageData({
 		`I made this app for iOS in Swift. After becoming quite popular within the community I decided to make the app again in Java for 
 		Android devices.`
 	],
-	logoUrlSmall: '/assets/images/projects/cupOmatic/icon/cupOmatic-logo-200px.jpg',
+	logoUrlSmall: '/assets/images/projects/cupomatic/icon/cupOmatic-logo-200px.jpg',
 	logoUrlBig: '/assets/images/projects/cupomatic/icon/cupOmatic-logo.jpg',
 	projectSmallUrl: '/assets/images/projects/cupomatic/image/cupomatic-100px.jpg',
 	projectBigUrl: "/assets/images/projects/cupomatic/image/cupomatic-300px.jpg",
