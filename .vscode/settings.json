@@ -2,8 +2,15 @@
     "editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"cSpell.words": [
+		"audioscrobbler",
 		"earyzhes",
+		"getrecenttracks",
 		"mytoken",
-		"qoaeta"
+		"noopener",
+		"noreferrer",
+		"nowplaying",
+		"qoaeta",
+		"uglifyjs",
+		"zurichversicherung"
 	]
 }

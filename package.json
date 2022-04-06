@@ -1,11 +1,11 @@
 {
     "name": "a-johnson-developer-berlin-portfolio",
     "version": "1.0.0",
-    "description": "",
+    "description": "A Portfolio website",
     "main": "index.js",
     "scripts": {
         "build": "node build.js",
-        "serve": "node ./bundle-server.js ",
+        "serve": "node ./bundle-server.js",
         "test": "jest",
         "start": "node index.js",
         "debug": "nodemon --inspect ./bin/www"
@@ -71,7 +71,7 @@
         ]
     },
     "keywords": [],
-    "author": "",
+    "author": "Andrew Johnson",
     "license": "ISC",
     "devDependencies": {
         "extract-text-webpack-plugin": "^4.0.0-alpha.0",

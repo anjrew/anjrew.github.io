@@ -5,7 +5,7 @@ export class Column extends React.Component{
     render(){
         return (
             <div 
-                ref={ this.props.referance } 
+                ref={ this.props.reference } 
                 className={`column ${this.props.classNames && this.props.classNames}` } 
                 onKeyDown={ this.props.onKeyDown } 
                 style={{

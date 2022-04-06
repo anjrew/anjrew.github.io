@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import Dimensions from '../../data/dimensions';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { connect } from 'react-redux';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
-import ScrollAnimation from 'react-animate-on-scroll';
-import Diamensions from '../../data/diamensions';
-import { connect } from 'react-redux';
 
 class About extends React.Component {
 
@@ -31,7 +31,7 @@ class About extends React.Component {
         const alignment = { textAlign: props.mobileApp ? 'center':'start' };
 			
         const element = <Column
-            margin={Diamensions.sectionMargin}
+            margin={Dimensions.sectionMargin}
             placeContent={props.mobileApp ? 'center':`flex-start'`}
             alignItems={props.mobileApp ? 'center':`flex-start`}
             alignSelf={props.mobileApp ? 'center':`flex-start`} >
@@ -88,8 +88,8 @@ class About extends React.Component {
 
         return (
             <SafeArea
-                referance={props.referance}
-                margin={Diamensions.sectionMargin}
+                reference={props.reference}
+                margin={Dimensions.sectionMargin}
                 placeContent={props.mobileApp ? 'center':`flex-start'`}
                 alignItems={props.mobileApp ? 'center':`flex-start`}
                 width={props.mobileApp ? '100%' : '60%'}

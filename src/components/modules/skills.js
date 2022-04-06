@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Diamensions from '../../data/diamensions';
+import Dimensions from '../../data/dimensions';
 import { connect } from 'react-redux';
-import { techlinks } from '../../data/technology-data';
+import { techLinks } from '../../data/technology-data';
 	
 
 	
@@ -69,7 +69,7 @@ class Skills extends React.Component {
             <br /> 
 
             <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
-                { techlinks.map((link) =>  <TechnologyIcon key={link.name} data={link} />)}
+                { techLinks && techLinks.map((link) =>  <TechnologyIcon key={link.name} data={link} />)}
             </Wrap>
             <br/> 
             <p style={{ textAlign: mobileApp ? 'center':'start' }}>
@@ -82,8 +82,8 @@ class Skills extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    referance={this.props.referance}
-                    margin={Diamensions.sectionMargin}
+                    reference={this.props.reference}
+                    margin={Dimensions.sectionMargin}
                     placeContent={`flex-center`}
                     alignItems={`flex-center`}>
 

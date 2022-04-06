@@ -8,7 +8,7 @@ import { SafeArea } from '../layout/safe_area';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Wrap } from '../layout/wrap';
 import ProjectImage from '../images/project-image';
-import Diamensions from '../../data/diamensions';
+import Dimensions from '../../data/dimensions';
 
 class MyWork extends React.Component {
 
@@ -68,8 +68,8 @@ class MyWork extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    referance={props.referance}
-                    margin={Diamensions.sectionMargin}
+                    reference={props.reference}
+                    margin={Dimensions.sectionMargin}
                     placeContent={mobileApp ? 'center': `flex-start`}
                     alignItems={mobileApp ? 'center': `flex-start`}
                 >

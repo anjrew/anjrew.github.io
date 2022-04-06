@@ -10,18 +10,14 @@ const path = require('path');
 const print = require('./utils/print');
 const server = require('http').Server(app);
 const https = require('https');
-const request = require('request');
 
-
-
-// /2.0/?method=user.getrecenttracks&user=rj&api_key=YOUR_API_KEY&format=json
 
 global.appRoot = path.resolve(__dirname);
 
 // sets rendering
 app.use(cookieParser());
 
-// Very important to get the POST reests of forms
+// Very important to get the POST result of forms
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
     extended: true
@@ -40,7 +36,7 @@ app.use(express.static(`${__dirname}/public`));
 
 app.use(csurf());
 
-// SECURTIY
+// SECURITY
 app.use((req, res, next) => {
     // console.log(chalk.green(`Token is : ${req.csrfToken()}`));
     res.cookie('mytoken', req.csrfToken());
@@ -48,15 +44,11 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    // console.log(chalk.bgBlue(`Recieve ${req.method} to ${req.url}`));
-    next();
-});
-
-app.use((req, res, next) => {
-    // console.log(chalk.blue(`Cookie session variables: `), req.session);
-    next();
-});
+// app.use((req, res, next) => {
+//     console.log(chalk.bgBlue(`Recieve ${req.method} to ${req.url}`));
+//     console.log(chalk.blue(`Cookie session variables: `), req.session);
+//     next();
+// });
 
 
 app.use(compression());
@@ -135,6 +127,6 @@ function getTracks(callback){
 if (require.main === module) {
     server.listen(process.env.PORT || 8080, function() {
         console.log("I'm listening ON 8080.");
-        console.log("Server addess", server.address());
+        console.log("Server address", server.address());
     });
 }

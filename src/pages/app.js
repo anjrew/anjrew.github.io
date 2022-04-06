@@ -57,15 +57,15 @@ class App extends React.Component{
                     bgImageAlt="Andrew Johnson"
                     strength={strength}>
 
-                    <Header referance={this.headerRef} />
+                    <Header reference={this.headerRef} />
 
-                    <About referance={this.aboutRef} scrollToRef={this.scrollToRef}/>
+                    <About reference={this.aboutRef} scrollToRef={this.scrollToRef}/>
 
-                    <Skills referance={this.skillsRef} />
+                    <Skills reference={this.skillsRef} />
 
-                    <MyWork referance={this.myworkRef}/>
+                    <MyWork reference={this.myworkRef}/>
 
-                    <Contact referance={this.contactRef}/>
+                    <Contact reference={this.contactRef}/>
 
                     <Footer scrollToRef={this.scrollToRef}/>
                    

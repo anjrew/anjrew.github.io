@@ -24,7 +24,7 @@ export class SafeArea extends React.Component{
                     overflowY: props.overflowY
                 }} 
                 className="safe-area"
-                ref={ props.referance } >
+                ref={ props.reference } >
                 {props.children}
             </div>
         );

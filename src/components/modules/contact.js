@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Diamensions from '../../data/diamensions';
+import Dimensions from '../../data/dimensions';
 import { connect } from 'react-redux';
 
 // Components
@@ -46,9 +46,9 @@ class Contact extends React.Component {
 		
         return (
             <SafeArea 
-                marginTop={Diamensions.margin}>
+                marginTop={Dimensions.margin}>
                 <Column
-                    referance={this.props.referance}
+                    reference={this.props.reference}
                     placeContent={this.props.mobileApp ? 'center' : 'flex-end' }
                     alignItems={this.props.mobileApp ? 'center' : `flex-end`}
                 >

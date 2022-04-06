@@ -93,7 +93,7 @@ class ProjectPage extends React.Component{
 				overflowY= 'scroll'
 				>
                 <Column
-                    referance={this.elemRef}
+                    reference={this.elemRef}
                     placeContent={ smallScreen ? 'center' : 'flex-start' }>
                     {notBigScreen && dismissCross}
                     <Container
