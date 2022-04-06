@@ -231,7 +231,7 @@ export const cPLusPLusLink =  new Technology({
 });
 
 
-export const techlinks = [
+export const techLinks = [
     googleCloudPlatform,
     googleVision,
     flutterLink,

@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "node build.js",
+        "serve": "node ./bundle-server.js ",
         "test": "jest",
         "start": "node index.js",
         "debug": "nodemon --inspect ./bin/www"

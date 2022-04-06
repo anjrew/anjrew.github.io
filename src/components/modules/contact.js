@@ -38,9 +38,9 @@ class Contact extends React.Component {
                     color='white'
                     alignSelf= {this.props.mobileApp ? 'center' : 'flex-end'}
                     handleClick={() => { 
-                        window.location.href = "mailto:earyzhe@gmail.com"; 
+                        window.location.href = "mailto:andrewmjohnson549@gmail.com"; 
                     }}
-                >earyzhe@gmail.com</LinkButton> 
+                >andrewmjohnson549@gmail.com</LinkButton> 
             </Column>
         </Row>;
 		

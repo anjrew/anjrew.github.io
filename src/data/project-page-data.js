@@ -90,7 +90,6 @@ export const huckAdventuresData = new ProjectPageData({
 		firebaseLink,
 		vsCodeLink,
 		xcodeLink,
-		arduinoLink
 	],
 	siteUrl: "https://huckadventures.com",
 	linksTitle: 'More Info',
