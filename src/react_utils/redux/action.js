@@ -12,7 +12,7 @@ export default class Action {
         Object.assign(this, data);
         this.type = type;
         if (!type) {
-            throw Error('Type is missig');
+            throw Error('Type is missing');
         }
     }
 }

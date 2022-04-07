@@ -3,6 +3,9 @@ import LinkData from '../data/link-data';
 import GalleryImageData from './gallery-image-data';
 import VideoData from './video-data';
 import {
+	techData
+} from '../data/technology-data';
+const {
 	flutterLink,
 	dartLink,
 	firebaseLink,
@@ -30,7 +33,7 @@ import {
 	heroKuLink,
 	cLink,
 	cPLusPLusLink
-} from '../data/technology-data';
+} = techData;
 
 export class ProjectPageData {
 

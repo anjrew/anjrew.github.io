@@ -4,11 +4,13 @@
     "description": "A Portfolio website",
     "main": "index.js",
     "scripts": {
+        "start": "npm run build:watch & npm serve",
         "build": "node build.js",
-        "serve": "node ./bundle-server.js & node index.js",
-        "test": "jest",
-        "start": "node index.js",
-        "debug": "nodemon --inspect ./bin/www"
+        "build:watch": "nodemon build.js",
+        "serve": "npm serve:bundle & npm serve:index",
+        "serve:bundle": "node ./bundle-server.js",
+        "serve:index": "node index.js",
+        "test": "jest"
     },
     "engines": {
         "node": "10.15.1"
@@ -76,6 +78,7 @@
     "devDependencies": {
         "extract-text-webpack-plugin": "^4.0.0-alpha.0",
         "html-webpack-plugin": "^3.2.0",
+        "nodemon": "^2.0.15",
         "webpack": "^4.34.0"
     }
 }
