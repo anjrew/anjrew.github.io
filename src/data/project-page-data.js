@@ -44,7 +44,7 @@ export const drEcklebeData = new ProjectPageData({
 		`Employed as a full stack software developer`,
 		`Working on many projects in the commercial and industrial sector building web apps to Android RFID scanners.`,
 		`My main role was front end development using Angular, but I also was involved in many other areas such as CICD pipelines and Backend APIs`,
-		`We Had a team of 8 people and worked mostly remotely from home.`
+		`We had a team of 8 people and worked mostly remotely from home.`
 	],
 	logoUrlSmall: '/assets/images/projects/dr-ecklebe/icon/dr-ecklebe_ggeoss_c_scale,w_200.png',
 	logoUrlBig: '/assets/images/projects/dr-ecklebe/icon/dr-ecklebe_ggeoss_c_scale,w_1000.png',
