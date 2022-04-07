@@ -81,7 +81,7 @@ class ProjectImage extends React.Component{
                 >
                     <h2 
                         style={{  
-                            color: 'white',
+                            color: project.textBlack ? 'black': 'white',
                             textAlign: 'center',
                             margin: '30px',
                             fontSize: props.mobileApp ? '13px' : fontSize,

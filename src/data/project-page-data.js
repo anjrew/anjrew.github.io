@@ -1,10 +1,12 @@
 /* eslint-disable indent */
 import LinkData from '../models/link-data';
+import ProjectPageData from '../models/project-page.class';
 import GalleryImageData from '../models/gallery-image-data';
 import VideoData from '../models/video-data';
 import {
 	techData
 } from '../data/technology-data';
+
 const {
 	flutterLink,
 	dartLink,
@@ -35,44 +37,47 @@ const {
 	cPLusPLusLink
 } = techData;
 
-export class ProjectPageData {
 
-	constructor(data) {
-
-		this.logoUrl = data['logoUrl'];
-		this.title = data['title'];
-		this.description = data['description'];
-		this.technologies = data['technologies'];
-		this.links = data['links'];
-		this.screenShots = data['screenShots'];
-		this.linksTitle = data['linksTitle'];
-		this.videos = data['videos'];
-		this.logoUrlSmall = data['logoUrlSmall'];
-		this.logoUrlBig = data['logoUrlBig'];
-		this.projectBigUrl = data['projectBigUrl'];
-        this.projectSmallUrl = data['projectSmallUrl'];
-        this.siteUrl = data['siteUrl'];
-        this.repoUrl = data['repoUrl'];
-		if (this.screenShots) {
-			for (let index = 0; index < this.screenShots.length; index++) {
-				const image = this.screenShots[index];
-				image.project = this.title;
-			}
-			if (this.videos) {
-				for (let index = 0; index < this.videos.length; index++) {
-					const image = this.videos[index];
-					image.project = this.title;
-				}
-			}
-		}
-		for (const key in data) {
-			const element = data[key];
-			if (element == null || element == undefined) {
-				throw Error(`${key} Arguments are missing`);
-			}
-		}
-	}
-}
+export const drEcklebeData = new ProjectPageData({
+	title: 'Dr Ecklebe',
+	description: [
+		`Employed as a full stack software developer`,
+		`Working on many projects in the commercial and industrial sector building web apps to Android RFID scanners.`,
+		`My main role was front end development using Angular, but I also was involved in many other areas such as CICD pipelines and Backend APIs`,
+		`We Had a team of 8 people and worked mostly remotely from home.`
+	],
+	logoUrlSmall: '/assets/images/projects/dr-ecklebe/icon/dr-ecklebe_ggeoss_c_scale,w_200.png',
+	logoUrlBig: '/assets/images/projects/dr-ecklebe/icon/dr-ecklebe_ggeoss_c_scale,w_1000.png',
+	projectSmallUrl: '/assets/images/projects/dr-ecklebe/image/csm_Gebaeude_Aussenansicht__Schmal__2019_e5fd3613c4_l9djur_c_scale,w_480.jpg',
+	projectBigUrl: "/assets/images/projects/dr-ecklebe/image/csm_Gebaeude_Aussenansicht__Schmal__2019_e5fd3613c4_l9djur_c_scale,w_851.jpg",
+	technologies: [
+		techData.angular,
+		techData.typescript,
+		techData.ionic,
+		techData.cSharp,
+		techData.confluence,
+		techData.jira,
+		techData.bitBucket,
+		techData.atlassian,
+		techData.azure,
+		techData.docker,
+		techData.cssLink,
+		techData.nodeLink,
+		techData.htmlLink,
+		techData.ngrx,
+		techData.postGresLink,
+		techData.scss,
+	],
+	siteUrl: "https://www.dr-ecklebe.de/",
+	linksTitle: 'More Info',
+	links: [
+		new LinkData({
+			imageUrl: '/assets/images/social-media-icons/YouTube_23392_awmbfv_c_scale,w_60.png',
+			href: 'https://www.youtube.com/channel/UCVl431APNG-nhlzoPqqu2QQ',
+			name: 'Youtube'
+		}),
+	],
+});
 
 export const huckAdventuresData = new ProjectPageData({
 	title: 'Huck Adventures',
@@ -943,6 +948,7 @@ export const shutterStockScrollData = new ProjectPageData({
 });
 
 export const projects = [
+	drEcklebeData,
 	huckAdventuresData,
 	DialInData,
 	CupomaticData,
