@@ -87,7 +87,6 @@ export class Uploader extends React.Component{
     async upload() {
         if ( this.state.file){
 
-            console.log('Upload clicked and this is', this);
             this.setState({
                 uploading: true
             }, () => { 

@@ -230,6 +230,84 @@ export const cPLusPLusLink =  new Technology({
     href: 'http://www.cplusplus.com'
 });
 
+// TODO
+export const atlassian =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Atlassian',
+    href: 'https://www.atlassian.com/'
+});
+
+export const jira =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Jira',
+    href: 'https://www.atlassian.com/software/jira'
+});
+
+export const bitBucket =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Bitbucket',
+    href: 'https://www.atlassian.com/software/bitbucket'
+});
+
+export const confluence =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Confluence',
+    href: 'https://www.atlassian.com/software/confluence'
+});
+
+export const jenkins =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Jenkins',
+    href: 'https://www.jenkins.io/'
+});
+
+export const python =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Python',
+    href: 'https://www.python.org/'
+});
+
+export const cSharp =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'C#',
+    href: 'https://docs.microsoft.com/en-us/dotnet/csharp/'
+});
+
+export const docker =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Docker',
+    href: 'https://www.docker.com/'
+});
+
+export const azure =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Azure',
+    href: 'https://azure.microsoft.com/en-gb/'
+});
+
+export const visualStudio =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'Visual Studio',
+    href: 'https://visualstudio.microsoft.com/'
+});
+
+export const rxJs =  new Technology({
+    smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
+    largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+    name: 'RxJs',
+    href: 'https://rxjs.dev/'
+});
+
 
 export const techLinks = [
     googleCloudPlatform,

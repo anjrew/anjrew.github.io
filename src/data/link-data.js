@@ -1,4 +1,4 @@
-export default class LinkData{
+export default class LinkData {
     constructor (data) {
         this.href = data['href'];
         this.imageUrl = data['imageUrl'];

@@ -252,25 +252,19 @@ class ProjectPage extends React.Component{
 
     componentDidMount() {
 
-		console.log('Project mounting');
-
         setTimeout(() => { 
             document.addEventListener('scroll', this.handleScroll);	
             // Top of the view window
             const windowScrollYTop = window.scrollY;
             // Height of the whole document
             const documentHeight = document.documentElement.scrollHeight;
-            console.log(`Document totalHeight ${documentHeight} `);
             // Height of the element
             const elementHeight = this.elemRef.current.clientHeight;
-            console.log(`Element height ${elementHeight} `);
             //The postition of the window bottom
             const elementBottom = offset(this.elemRef.current).top + elementHeight ;
-            console.log('elementBottom' ,elementBottom);
             let elemenTop;
-            const toobig = elementBottom > documentHeight;
-            if ( (toobig) ){
-                console.log('Project page was to big, adjusting');
+            const tooBig = elementBottom > documentHeight;
+            if ( (tooBig) ){
                 elemenTop = documentHeight - elementHeight - 200;
                 this.setState({ 
                     elemenTop: elemenTop,
@@ -348,11 +342,6 @@ class ProjectPage extends React.Component{
                     const shouldDismissDown = elementBounds.bottom < window.innerHeight / 2;
 					
                     if (shouldDismissUp || shouldDismissDown){ 
-                        if(shouldDismissUp){
-                            console.log("Dismissing because of up");
-                        } else {
-                            console.log("Dismissing because of down");
-                        }
                         this.props.dispatch(action.dismissAll());
                         window.history.pushState({}, '/','/');
                     }

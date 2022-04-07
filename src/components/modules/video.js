@@ -35,7 +35,6 @@ class VideoPlayer extends Component {
                 zIndex='800'
                 backgroundColor= 'rgba(0,0,0,0.80)'
                 onClick={() => {
-                    console.log('data in video', this.props.data);
                     this.props.dispatch(action.dismissVideo());
                     window.history.pushState({}, '',`/${this.props.data.project}`);
                 }}>
