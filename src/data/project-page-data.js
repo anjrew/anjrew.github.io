@@ -1,7 +1,7 @@
 /* eslint-disable indent */
-import LinkData from '../data/link-data';
-import GalleryImageData from './gallery-image-data';
-import VideoData from './video-data';
+import LinkData from '../models/link-data';
+import GalleryImageData from '../models/gallery-image-data';
+import VideoData from '../models/video-data';
 import {
 	techData
 } from '../data/technology-data';
@@ -80,7 +80,7 @@ export const huckAdventuresData = new ProjectPageData({
 		`An app for finding adventure partners.`,
 		`Working as a freelancer, I worked on contracts involving adding new features to an existing application.`,
 		`My main role was front end development using the Flutter framework, and writing code in Dart`,
-		`We were using Firebase for backend, with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics functionalitly.`,
+		`We were using Firebase for backend, with Cloud Messaging, Cloud functions, Firestore database, Auth, Crashlytics functionality.`,
 		`I worked with a great UX/UI team who gave me in depth sketch designs to work from.`,
 	],
 	logoUrlSmall: '/assets/images/projects/huck_adventures/icon/huck_icon_di6ubx_c_scale,w_200.jpg',
@@ -113,9 +113,9 @@ export const huckAdventuresData = new ProjectPageData({
 export const DialInData = new ProjectPageData({
 	title: 'Dial In',
 	description: [
-		`A tool to help coffee professionals record and analyse data.`,
+		`A tool to help coffee professionals record and analyze data.`,
 
-		`I started off by making the app in Swift and purley for iOS. I had a sudden realisation that I should definitly
+		`I started off by making the app in Swift and purely for iOS. I had a sudden realization that I should definitely
 		dive into cross platform development. That's what I did. I started from scratch and started making the app 
 		in the Flutter framework. I've never looked back :)`,
 
@@ -298,18 +298,18 @@ export const CupomaticData = new ProjectPageData({
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/analyse.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/analyse.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/analyse.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/analyse.jpg',
 			description: [
 				'Analyse'
 			],
-			name: 'Analysing the coffee',
+			name: 'Analyzing the coffee',
 			screenShot: false
 		}),
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/cupping.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/cupping.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/cupping.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/cupping.jpg',
 			description: 'Cupping at origin',
 			name: 'Cupping',
@@ -317,9 +317,9 @@ export const CupomaticData = new ProjectPageData({
 		}),
 
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/devloping.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/devloping.jpg',
-			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/devloping.jpg',
+			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/developing.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/developing.jpg',
+			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/developing.jpg',
 			description: 'Developing',
 			name: 'Android development',
 			screenShot: false
@@ -327,7 +327,7 @@ export const CupomaticData = new ProjectPageData({
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/holding.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/holding.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/holding.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/holding.jpg',
 			description: 'Holding',
 			name: 'Holding',
@@ -336,7 +336,7 @@ export const CupomaticData = new ProjectPageData({
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/qc.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/qc.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/qc.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/qc.jpg',
 			description: 'Quality control',
 			name: 'Qc',
@@ -345,7 +345,7 @@ export const CupomaticData = new ProjectPageData({
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.43.42.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/Screenshot 2018-01-20 16.43.42.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/Screenshot 2018-01-20 16.43.42.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/Screenshot 2018-01-20 16.43.42.png',
 			description: 'Main Screen',
 			name: 'Screenshot one',
@@ -354,7 +354,7 @@ export const CupomaticData = new ProjectPageData({
 
 		new GalleryImageData({
 			smallImageUrl: '/assets/images/projects/cupomatic/screenShots/smallScreen/Screenshot 2018-01-20 16.44.14.jpg',
-			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/nomalScreen/Screenshot 2018-01-20 16.44.14.jpg',
+			largeImageUrl: '/assets/images/projects/cupomatic/screenShots/normalScreen/Screenshot 2018-01-20 16.44.14.jpg',
 			imageUrl: '/assets/images/projects/cupomatic/screenShots/fullsize/Screenshot 2018-01-20 16.44.14.png',
 			description: 'Settings page',
 			name: 'Screenshot two',
@@ -429,7 +429,7 @@ export const PlantSystemData = new ProjectPageData({
 			The ESP32 transmits the data to a MQTT broker hosted on CloudMQTT.`,
 
 			`This then forwards the data to an instance of Telegraf hosted on my own AWS EC2 server. Telegraf sends the data to an InfluxDB database. 
-			The EC2 instance also has Grafana installed which queries the database and gives a beautiful data visualisation.`,
+			The EC2 instance also has Grafana installed which queries the database and gives a beautiful data visualization.`,
 
 			`I then made a wrapper in Flutter so you can view your Grafana data through an application.`
 		],
@@ -506,21 +506,21 @@ export const PlantSystemData = new ProjectPageData({
 	siteUrl: "http://ec2-34-217-213-209.us-west-2.compute.amazonaws.com:3000/"
 });
 
-export const PertitionData = new ProjectPageData({
+export const PetitionData = new ProjectPageData({
 	title: 'Lava lamp petition',
 	description:
 		[
-			`Being a firm believer in lava lamps, I created a pertition site to record the
+			`Being a firm believer in lava lamps, I created a petition site to record the
 	amount of people who would like lava lamps to be exempt from VAT.`,
 
 			`I used PostgresSQL for my database and Express handlebars to render the UI`,
 
 			`Follow the link and take a look yourself :).`
 		],
-	logoUrlSmall: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
-	logoUrlBig: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
-	projectSmallUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp-300px.jpg",
-	projectBigUrl: "/assets/images/projects/lava-lamp-pertition/image/green-lava-lamp.jpg",
+	logoUrlSmall: '/assets/images/projects/lava-lamp-petition/icon/green-lava-lamp_qjnjwa_c_scale,w_200.jpg',
+	logoUrlBig: '/assets/images/projects/lava-lamp-petition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
+	projectSmallUrl: "/assets/images/projects/lava-lamp-petition/image/green-lava-lamp-300px.jpg",
+	projectBigUrl: "/assets/images/projects/lava-lamp-petition/image/green-lava-lamp.jpg",
 	technologies: [
 		nodeLink,
 		postGresLink,
@@ -533,7 +533,7 @@ export const PertitionData = new ProjectPageData({
 	linksTitle: 'Visit the petition',
 	links: [
 		new LinkData({
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/icon/green-lava-lamp_qjnjwa_c_scale,w_350.jpg',
 			href: 'https://jonny-boi-salt-petition.herokuapp.com/register',
 			name: 'Visit the petition',
 			static: true
@@ -541,41 +541,41 @@ export const PertitionData = new ProjectPageData({
 	],
 	screenShots: [
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.51.06.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.51.06.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/fullSize/Screenshot 2019-06-25 at 10.51.06.png',
 			description: 'Login page',
 			name: 'Login',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.52.59.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.52.59.jpg',
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.52.59.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.52.59.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.52.59.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/fullSize/Screenshot 2019-06-25 at 10.52.59.png',
 			description: 'Signed',
 			name: 'Signed',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.53.41.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.53.41.jpg',
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.53.41.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.53.41.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.53.41.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/fullSize/Screenshot 2019-06-25 at 10.53.41.png',
 			description: 'More info.',
 			name: 'About',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.06.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.06.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.06.png',
 			description: 'Petition',
 			name: 'Petition',
 			screenShot: false
 		}),
 		new GalleryImageData({
-			smallImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.41.jpg',
-			largeImageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.41.jpg',
-			imageUrl: '/assets/images/projects/lava-lamp-pertition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.41.png',
+			smallImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/smallScreen/Screenshot 2019-06-25 at 10.54.41.jpg',
+			largeImageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/largeScreen/Screenshot 2019-06-25 at 10.54.41.jpg',
+			imageUrl: '/assets/images/projects/lava-lamp-petition/screenShots/fullSize/Screenshot 2019-06-25 at 10.54.41.png',
 			description: 'Edit profile',
 			name: 'Edit profile',
 			screenShot: false
@@ -587,11 +587,11 @@ export const LaissezFaireData = new ProjectPageData({
 
 	title: 'Laissez-Faire',
 	description: [
-		`Laissez-Faire is a social web app currently in production. Aimed towards people in non-monogamous
+		`Laissez-Faire was a social web app concept. Aimed towards people in non-monogamous
 	relationships, It gives people the chance to connect with features such as: user-search, private messaging, friends, chat room, online users
 	and more.`,
 
-		`This is a React application with Postgres SQL database.`
+		`This was a React application with Postgres SQL database.`
 
 
 	],
@@ -666,7 +666,7 @@ export const GoatstagramData = new ProjectPageData({
 
 			`All the images are hosted on an amazon S3 bucket.`,
 
-			`Complete with sound affects, you should definitly head here for a laugh`
+			`Complete with sound affects, you should definitely head here for a laugh`
 		],
 	logoUrlSmall: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_200.jpg',
 	logoUrlBig: '/assets/images/projects/goatstagram/icon/goatstagram_b5dxsg_c_scale,w_350.jpg',
@@ -698,7 +698,7 @@ export const GoatstagramData = new ProjectPageData({
 			smallImageUrl: '/assets/images/projects/goatstagram/screenshots/smallScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
 			largeImageUrl: '/assets/images/projects/goatstagram/screenshots/largeScreen/Screenshot 2019-06-25 at 11.56.56.jpg',
 			imageUrl: '/assets/images/projects/goatstagram/screenshots/fullScreen/Screenshot 2019-06-25 at 11.56.56.png',
-			description: 'Error propmt on no file selected',
+			description: 'Error prompt on no file selected',
 			name: 'Error handling',
 			screenShot: false
 		}),
@@ -733,10 +733,10 @@ export const GoatstagramData = new ProjectPageData({
 export const SpicedAcademyData = new ProjectPageData({
 	title: 'SPICED ACADEMY',
 	description: [
-		`I took a 3 month Full stack web-developement course at SPICED ACADEMY in Berlin in April 2019.
+		`I took a 3 month Full stack web-development course at SPICED ACADEMY in Berlin in April 2019.
 	The course covered all aspects of web development, Including testing, databases, front end and back end code and The technologies
 	listed below. We had many mock project to make and the final project was our own project. 
-	That project is the one you are looking at righ now :).`
+	That project is the one you are looking at right now :).`
 	],
 	logoUrlSmall: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
 	logoUrlBig: '/assets/images/projects/spiced/image/spiced-logo-300px.jpg',
@@ -807,7 +807,7 @@ export const SpicedAcademyData = new ProjectPageData({
 			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-05-29-20-43-02.jpg',
 			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-05-29-20-43-02.jpg',
 			description: 'Presentation.',
-			name: 'Presenting Goastagram',
+			name: 'Presenting Goatstagram',
 			screenShot: false
 		}),
 		new GalleryImageData({
@@ -815,7 +815,7 @@ export const SpicedAcademyData = new ProjectPageData({
 			largeImageUrl: '/assets/images/projects/spiced/screenShot/largeScreen/PHOTO-2019-06-21-12-14-37.jpg',
 			imageUrl: '/assets/images/projects/spiced/screenShot/fullSize/PHOTO-2019-06-21-12-14-37.jpg',
 			description: 'Presentation pt2.',
-			name: 'Presenting Goastagram pt2',
+			name: 'Presenting Goatstagram pt2',
 			screenShot: false
 		}),
 	],
@@ -949,7 +949,7 @@ export const projects = [
 	shutterStockScrollData,
 	BatterySaverData,
 	PlantSystemData,
-	PertitionData,
+	PetitionData,
 	LaissezFaireData,
 	GoatstagramData,
 	SpicedAcademyData,

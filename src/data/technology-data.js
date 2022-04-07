@@ -230,91 +230,89 @@ export const techData = {
         name: 'C++',
         href: 'http://www.cplusplus.com'
     }),
-
-    // TODO
     typescript: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/typescript/typescript_logo_vzo5a1_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/typescript/typescript_logo_vzo5a1_c_scale,w_100.png',
         name: 'Typescript',
         href: 'https://www.typescriptlang.org/'
     }),
     angular: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/angular/angular_qet6em_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/angular/angular_qet6em_c_scale,w_100.png',
         name: 'Angular',
         href: 'https://angular.io/'
     }),
     ngrx: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/ngrx/c2838080-43e2-11eb-8016-9efa387786c8_izl1uf_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/ngrx/c2838080-43e2-11eb-8016-9efa387786c8_izl1uf_c_scale,w_100.png',
         name: 'NGRX',
         href: 'https://ngrx.io/'
     }),
     atlassian: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/atlassian/atlassian_tcflgo_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/atlassian/atlassian_tcflgo_c_scale,w_100.png',
         name: 'Atlassian',
         href: 'https://www.atlassian.com/'
     }),
     jira: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/jira/images_lb2jjh_c_scale,w_60.jpg',
+        largeImageUrl: '/assets/images/tech-icons/jira/images_lb2jjh_c_scale,w_60.jpg',
         name: 'Jira',
         href: 'https://www.atlassian.com/software/jira'
     }),
     bitBucket: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/bitbucket/images_xcpnsp_c_scale,w_60.jpg',
+        largeImageUrl: '/assets/images/tech-icons/bitbucket/images_xcpnsp_c_scale,w_100.jpg',
         name: 'Bitbucket',
         href: 'https://www.atlassian.com/software/bitbucket'
     }),
     confluence: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/confluence/vqdjiu2rm22lvnxubkiv_c_scale,w_60.jpg',
+        largeImageUrl: '/assets/images/tech-icons/confluence/vqdjiu2rm22lvnxubkiv_c_scale,w_100.jpg',
         name: 'Confluence',
         href: 'https://www.atlassian.com/software/confluence'
     }),
     jenkins: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/jenkins/lbv4qgqhdrqmunegyjcm_c_scale,w_60.jpg',
+        largeImageUrl: '/assets/images/tech-icons/jenkins/lbv4qgqhdrqmunegyjcm_c_scale,w_100.jpg',
         name: 'Jenkins',
         href: 'https://www.jenkins.io/'
     }),
     python: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_100.png',
         name: 'Python',
         href: 'https://www.python.org/'
     }),
     cSharp: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/c-sharp/lnvlc4kgrqcmr2pueanx_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/c-sharp/lnvlc4kgrqcmr2pueanx_c_scale,w_60.png',
         name: 'C#',
         href: 'https://docs.microsoft.com/en-us/dotnet/csharp/'
     }),
     docker: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/docker/t5p7wubcge4dgztaf0or_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/docker/t5p7wubcge4dgztaf0or_c_scale,w_60.png',
         name: 'Docker',
         href: 'https://www.docker.com/'
     }),
     azure: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/azure/1200px-Microsoft_Azure.svg_w0c87q_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/azure/1200px-Microsoft_Azure.svg_w0c87q_c_scale,w_100.png',
         name: 'Azure',
         href: 'https://azure.microsoft.com/en-gb/'
     }),
 
     visualStudio: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/visual-studio/lrqudhh563rppr1j5nom_c_scale,w_60.jpg',
+        largeImageUrl: '/assets/images/tech-icons/visual-studio/lrqudhh563rppr1j5nom_c_scale,w_100.jpg',
         name: 'Visual Studio',
         href: 'https://visualstudio.microsoft.com/'
     }),
 
     rxJs:  new Technology({
-        smallImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/c++/download-1_qoaeta_c_scale,w_100.png',
+        smallImageUrl: '/assets/images/tech-icons/rxjs/rxjslogo_bbpurc_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/rxjs/rxjslogo_bbpurc_c_scale,w_100.png',
         name: 'RxJs',
         href: 'https://rxjs.dev/'
     })

@@ -4,10 +4,10 @@
     "description": "A Portfolio website",
     "main": "index.js",
     "scripts": {
-        "start": "npm run build:watch & npm serve",
+        "start": "npm run build:watch & npm run serve",
         "build": "node build.js",
         "build:watch": "nodemon build.js",
-        "serve": "npm serve:bundle & npm serve:index",
+        "serve": "npm run serve:bundle & npm run serve:index",
         "serve:bundle": "node ./bundle-server.js",
         "serve:index": "node index.js",
         "test": "jest"
