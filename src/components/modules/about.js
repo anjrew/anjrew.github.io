@@ -63,6 +63,7 @@ class About extends React.Component {
             <p style={alignment}>
 				Feel free to 
                 <button
+                    style={linkStyle}
                     onClick={() => props.scrollToRef('contact')}
                 >Contact</button>
 				me about work,
