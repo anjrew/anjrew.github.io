@@ -42,7 +42,7 @@ export const drEcklebeData = new ProjectPageData({
 	title: 'Dr Ecklebe',
 	description: [
 		`Employed as a full stack software developer`,
-		`Working on many projects in the commercial and industrial sector building web apps to Android RFID scanners.`,
+		`Working on many projects in the commercial and industrial sector, including building web apps to Android RFID scanner applications.`,
 		`My main role was front end development using Angular, but I also was involved in many other areas such as CICD pipelines and Backend APIs`,
 		`We had a team of 8 people and worked mostly remotely from home.`
 	],

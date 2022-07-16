@@ -23,6 +23,7 @@ class About extends React.Component {
 		
         const props = this.props;
         const linkStyle = {
+            color: 'black',
             cursor: 'pointer',  
             textDecoration: 'underline', 
             padding: '0px' , 
@@ -43,7 +44,7 @@ class About extends React.Component {
             <p style={alignment}>
 				This page is about me and what I do. 
 				So check out my 
-                <button 
+                <button className={'link-button'} 
                     style={linkStyle}
                     onClick={ () => props.scrollToRef('skills')}> Skills </button> 
 				and 
@@ -62,14 +63,13 @@ class About extends React.Component {
             <p style={alignment}>
 				Feel free to 
                 <button
-                    style={linkStyle}
                     onClick={() => props.scrollToRef('contact')}
                 >Contact</button>
 				me about work,
 				general chit-chat, and lava lamp queries.</p>
             <br/>
             <p style={alignment}>You can take a look at my CV <a 
-                href="https://my-portfolio-earyzhe.s3.amazonaws.com/andrew_johnson_developer_cv.pdf"
+                href="https://my-grafana.s3.amazonaws.com/my-portfolio/AndrewJohnsonFullstackCV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >here</a>.</p>
