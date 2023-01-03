@@ -38,6 +38,74 @@ const {
 } = techData;
 
 
+export const awsDeepRacerData = new ProjectPageData({
+	title: 'AWS DeepRacer',
+	description: [
+		`I am an avid participant in the AWS DeepRacer Reinforcement Learning Competition.`,
+		`As a professional with a strong background in artificial intelligence and machine learning, I am always looking for new and exciting ways to challenge and grow my skills. The AWS DeepRacer competition provides a unique opportunity to do just that, as it allows me to test my abilities in the fast-paced and dynamic world of reinforcement learning.`,
+		`So far I have achieved a pro driver ranking and ranked in the top 3% of the timing charts in October 2022`
+	],
+	logoUrlSmall: '/assets/images/projects/aws-deep-racer/icon/deep_racer_icon_xrhwlx_c_scale,w_350.png',
+	logoUrlBig: '/assets/images/projects/aws-deep-racer/icon/DeepRacer_Chrome_Small_rgb.aa9b2a3bee64dae2d593ebf74133277b2811a42e.png',
+	projectSmallUrl: '/assets/images/projects/aws-deep-racer/image/100_deep_racer_screenshot.png',
+	projectBigUrl: "/assets/images/projects/aws-deep-racer/image/300_deep_racer_screenshot.png",
+	technologies: [
+		techData.linux,
+		techData.python,
+		techData.scikitLearn,
+		techData.tensorflow,
+		techData.docker,
+		techData.htmlLink,
+		techData.javaScriptLink,
+		techData.postGresLink,
+	],
+	siteUrl: "https://aws.amazon.com/deepracer/",
+	screenShots: [
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/top-3-percent-lap-time.png',
+			largeImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/top-3-percent-lap-time.png',
+			imageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/top-3-percent-lap-time.png',
+			description: 'Top 3% lap time',
+			name: 'Result',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/aws-deep-racer/image/deep_racer_screenshot.png',
+			largeImageUrl: '/assets/images/projects/aws-deep-racer/image/deep_racer_screenshot.png',
+			imageUrl: '/assets/images/projects/aws-deep-racer/image/deep_racer_screenshot.png',
+			description: 'Racing around the track',
+			name: 'Driving',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/pro-division-welcome-kit.png',
+			largeImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/pro-division-welcome-kit.png',
+			imageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/pro-division-welcome-kit.png',
+			description: 'After getting into the Pro Division a welcome kit was given',
+			name: 'Pro Welcome Kit',
+			screenShot: false
+		}),
+		new GalleryImageData({
+			smallImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/gradcam.png',
+			largeImageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/gradcam.png',
+			imageUrl: '/assets/images/projects/aws-deep-racer/screenShots/fullScreen/gradcam.png',
+			description: 'Explainable AI Gradcam analysis',
+			name: 'Gradcam',
+			screenShot: false
+		}),
+	],
+	videos: [
+		new VideoData({
+			description: 'A good run that got in the top 3% of times in the October 2022 Open Race',
+			url: '/assets/videos/aws_deep_racer/aws-deep-racer-13.05.09.mov',
+			name: 'Time Trial',
+			imageUrl: '/assets/images/projects/aws-deep-racer/image/300_deep_racer_screenshot.png',
+			screenShot: false
+		})
+	]
+});
+
+
 export const drEcklebeData = new ProjectPageData({
 	title: 'Dr Ecklebe',
 	description: [
@@ -830,8 +898,7 @@ export const SpicedAcademyData = new ProjectPageData({
 export const thisData = new ProjectPageData({
 	title: 'this.',
 	description: [
-		`This is a portfolio of some of my personal projects. At the moment I like to make apps related to my previous industry("Coffee"),
-	 so I can blend my personal experience into truly unique products.`
+		`This is a portfolio of some of my personal projects. It was made for my final project when doing the coding bootcamp at SPICED ACADEMY. Made in React`
 	],
 	logoUrlSmall: '/assets/images/me/me-noeyes.png',
 	logoUrlBig: '/assets/images/me/me-noeyes.png',
@@ -948,6 +1015,7 @@ export const shutterStockScrollData = new ProjectPageData({
 });
 
 export const projects = [
+	awsDeepRacerData,
 	drEcklebeData,
 	huckAdventuresData,
 	DialInData,

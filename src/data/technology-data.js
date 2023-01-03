@@ -15,11 +15,73 @@ export default class Technology{
 
 export const techData = {
 
+    tensorflow: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/tensorflow/tensorflow_icon_eqisax_c_scalew_60.png',
+        largeImageUrl: '/assets/images/tech-icons/tensorflow/tensorflow_icon_eqisax_c_scalew_100.png',
+        name: 'Tensorflow',
+        href: 'https://www.tensorflow.org/'
+    }),
+
+    colab: new Technology({
+		smallImageUrl: '/assets/images/tech-icons/colab/colab_logo_ydicq6_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/colab/colab_logo_ydicq6_c_scale,w_100.png',
+        name: 'Colab',
+        href: 'https://colab.research.google.com'
+    }),
+    scikitLearn: new Technology({
+		smallImageUrl: '/assets/images/tech-icons/scikit-learn/scikit_learn_logo.svg',
+        largeImageUrl: '/assets/images/tech-icons/scikit-learn/scikit_learn_logo.svg',
+        name: 'Scikit Learn',
+        href: 'https://scikit-learn.org/'
+    }),
+
+    keras: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/keras/keras_logo_ioybjy_c_scalew_60.png',
+        largeImageUrl: '/assets/images/tech-icons/keras/keras_logo_ioybjy_c_scalew_100.png',
+        name: 'Keras',
+        href: 'https://keras.io/'
+    }),
+
+    jupyter: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/jupyter/jupyter_notebook_logo.svg',
+        largeImageUrl: '/assets/images/tech-icons/jupyter/jupyter_notebook_logo.svg',
+        name: 'Jupyter',
+        href: 'https://jupyter.org'
+    }),
+
+    linux: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/linux/linux_logo_fgvjm2_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/linux/linux_logo_fgvjm2_c_scale,w_100.png',
+        name: 'Linux',
+        href: 'https://www.linux.org/'
+    }),
+
+    mongo: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/mongo/mdb_logo_cqavfo_c_scale,w_60.webp',
+        largeImageUrl: '/assets/images/tech-icons/mongo/mdb_logo_cqavfo_c_scale,w_100.webp',
+        name: 'Mongo DB',
+        href: 'https://www.mongodb.com/'
+    }),
+
+	python: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_60.png',
+        largeImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_100.png',
+        name: 'Python',
+        href: 'https://www.python.org/'
+    }),
+
     typescript: new Technology({
         smallImageUrl: '/assets/images/tech-icons/typescript/typescript_logo_vzo5a1_c_scale,w_60.png',
         largeImageUrl: '/assets/images/tech-icons/typescript/typescript_logo_vzo5a1_c_scale,w_100.png',
         name: 'Typescript',
         href: 'https://www.typescriptlang.org/'
+    }),
+
+    wix: new Technology({
+        smallImageUrl: '/assets/images/tech-icons/wix/wix-svgrepo-com.svg',
+        largeImageUrl: '/assets/images/tech-icons/wix/wix-svgrepo-com.svg',
+        name: 'WIX',
+        href: 'https://wix.com/'
     }),
 
     ionic: new Technology({
@@ -76,13 +138,6 @@ export const techData = {
         largeImageUrl: '/assets/images/tech-icons/jenkins/lbv4qgqhdrqmunegyjcm_c_scale,w_100.jpg',
         name: 'Jenkins',
         href: 'https://www.jenkins.io/'
-    }),
-
-    python: new Technology({
-        smallImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_60.png',
-        largeImageUrl: '/assets/images/tech-icons/python/800px-Python.svg_n5srnj_c_scale,w_100.png',
-        name: 'Python',
-        href: 'https://www.python.org/'
     }),
 
     cSharp: new Technology({

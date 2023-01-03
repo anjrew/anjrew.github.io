@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Dimensions from '../../data/dimensions';
+import dimensions from '../../data/dimensions';
 import { connect } from 'react-redux';
 import { techLinks } from '../../data/technology-data';
 	
@@ -17,37 +17,27 @@ class Skills extends React.Component {
 
     render() {
         const mobileApp = this.props.mobileApp;
+		
         const alignment = {
             selfAlign: mobileApp ? 'center':'start',
             textAlign: mobileApp ? 'center':'start' };
-			
-        const dartlink = <a 
-            href='https://dart.dev/'
-            target='_blank'
-            rel="noopener noreferrer">Dart</a>; 
 
-        const flutterlink = <a 
-            href='https://flutter.dev/'
+        const tensorflowLink = <a 
+            href='https://www.tensorflow.org'
             target='_blank'
             rel="noopener noreferrer"
-        >Flutter</a>;
+        >Tensorflow</a>;
 
-        const reactLink = <a 
-            href='https://reactjs.org/'
+        const scikitLearnLink = <a 
+            href='https://scikit-learn.org/stable/'
             target='_blank'
             rel="noopener noreferrer"
-        >React</a>;
-
-        const javascriptLink = <a 
-            href='https://www.javascript.com/'
-            target='_blank'
-            rel="noopener noreferrer"
-        >Javascript</a>;
+        >Scikit Learn</a>;
 		
-        const firebaseLink = <a 
-            href='https://firebase.google.com/'
+        const postgres = <a 
+            href='https://www.postgresql.org'
             target='_blank'
-            rel="noopener noreferrer">Firebase</a>;
+            rel="noopener noreferrer">PostgreSQL</a>;
 
         const elem = <Column
             width={mobileApp ? '100%' : '60%'}
@@ -57,19 +47,16 @@ class Skills extends React.Component {
             <h2 style={alignment}>Skills</h2>
 			
             <p style={alignment}>
-				The main areas I specialise in is making mobile and web applications using Google's {flutterlink} framework with code written in {dartlink} or {reactLink} using {javascriptLink}.
+				I focus on using machine learning tools such as {tensorflowLink} and {scikitLearnLink} to make the biggest impact on the projects I work on.
             </p>
-            <br /> 
-
-            <p style={alignment}>Server side I implement node.js and use {firebaseLink} or PostgreSQL for databases.</p>
-            <br /> 
+            <br/> 
             <p style={alignment}>
-				Whilst this is my main area of expertise, I have experience with many other languages, frameworks and databases.
+				Whilst this is my main area of expertise, I have experience with many other languages, frameworks, databases and technologies.
             </p>
-            <br /> 
+            <br/> 
 
             <Wrap placeContent={mobileApp ? 'center' : 'flex-start'}>
-                { techLinks && techLinks.map((link) =>  <TechnologyIcon key={link.name} data={link} />)}
+                { techLinks.map((link) =>  <TechnologyIcon key={link.name} data={link} />)}
             </Wrap>
             <br/> 
             <p style={{ textAlign: mobileApp ? 'center':'start' }}>
@@ -82,8 +69,8 @@ class Skills extends React.Component {
         return (
             <SafeArea>
                 <Column
-                    reference={this.props.reference}
-                    margin={Dimensions.sectionMargin}
+					reference={this.props.reference}
+                    margin={dimensions.sectionMargin}
                     placeContent={`flex-center`}
                     alignItems={`flex-center`}>
 

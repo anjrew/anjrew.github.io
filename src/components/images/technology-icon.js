@@ -70,7 +70,6 @@ export class TechnologyIcon extends React.Component{
                             position: 'absolute',
                             zIndex:'10',
                             alignSelf: 'center',
-                            // wordWrap: 'break-word',
                             padding: '10px'
                         }}
                     >
@@ -79,7 +78,6 @@ export class TechnologyIcon extends React.Component{
                                 color: 'black',
                                 textAlign: 'center',
                                 margin: '30px',
-                                // wordBreak: 'break-all',
                                 fontSize: fontSize,
                                 transition: 'opacity 500ms',
                                 opacity: this.state.showText ? 1 : 0,
@@ -90,7 +88,7 @@ export class TechnologyIcon extends React.Component{
                             onMouseLeave={() =>{ this.setState({ showText: false  }); } }
                         >{data.name}</h2>
                     </div>
-                    <img style={imageStyle} src={ mobileApp? data.smallImageUrl : data.largeImageUrl }/>
+                    <img style={imageStyle} src={ mobileApp? data.smallImageUrl : data.largeImageUrl } alt={data.name}/>
                 </div>
             </a>
         );

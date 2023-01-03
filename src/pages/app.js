@@ -31,7 +31,7 @@ class App extends React.Component{
         this.headerRef = React.createRef();
         this.aboutRef = React.createRef();
         this.skillsRef = React.createRef();
-        this.myworkRef = React.createRef();
+        this.myWorkRef = React.createRef();
         this.contactRef = React.createRef();
         this.scrollToRef = this.scrollToRef.bind(this);
     }
@@ -63,7 +63,7 @@ class App extends React.Component{
 
                     <Skills reference={this.skillsRef} />
 
-                    <MyWork reference={this.myworkRef}/>
+                    <MyWork reference={this.myWorkRef}/>
 
                     <Contact reference={this.contactRef}/>
 
@@ -116,7 +116,7 @@ class App extends React.Component{
                 ref = this.skillsRef;
                 break;
             case 'myWork':
-                ref = this.myworkRef;
+                ref = this.myWorkRef;
                 break;
             case 'contact':
                 ref = this.contactRef;

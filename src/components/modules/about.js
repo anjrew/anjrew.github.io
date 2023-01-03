@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Dimensions from '../../data/dimensions';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { connect } from 'react-redux';
 import { Column } from '../layout/column';
 import { SafeArea } from '../layout/safe_area';
+import ScrollAnimation from 'react-animate-on-scroll';
+import dimensions from '../../data/dimensions';
+import { connect } from 'react-redux';
 
 class About extends React.Component {
 
@@ -23,7 +23,6 @@ class About extends React.Component {
 		
         const props = this.props;
         const linkStyle = {
-            color: 'black',
             cursor: 'pointer',  
             textDecoration: 'underline', 
             padding: '0px' , 
@@ -32,19 +31,25 @@ class About extends React.Component {
         const alignment = { textAlign: props.mobileApp ? 'center':'start' };
 			
         const element = <Column
-            margin={Dimensions.sectionMargin}
+	
+            margin={dimensions.sectionMargin}
             placeContent={props.mobileApp ? 'center':`flex-start'`}
             alignItems={props.mobileApp ? 'center':`flex-start`}
             alignSelf={props.mobileApp ? 'center':`flex-start`} >
+				
             <h2 style={alignment}>About</h2>
-            <p style={alignment}>
-				I am a software developer. 
+            <p style={{...alignment, maxWidth: props.mobileApp ? '100%' :'1200px' }}>
+			I am passionate, driven and dedicated to making a positive impact on the world through work in the sustainability, environment, and green energy sectors.
+            </p>
+			<p style={{...alignment, maxWidth: props.mobileApp ? '100%' :'1200px' }}>
+			Whether I am working on a new energy-efficient technology or developing a strategy to reduce waste and minimize resource consumption, I am always striving to find new and creative ways to make a difference.
+			 With this in mind there is no doubt for me that I will continue to make a meaningful contribution to these important causes for years to come.
             </p>
             <br/>
             <p style={alignment}>
 				This page is about me and what I do. 
 				So check out my 
-                <button className={'link-button'} 
+                <button 
                     style={linkStyle}
                     onClick={ () => props.scrollToRef('skills')}> Skills </button> 
 				and 
@@ -55,9 +60,7 @@ class About extends React.Component {
             </p>
 
             <br/>
-            <p style={alignment}>
-			I love intuitive user experiences: pages that load fast, are lag free and responsive to all device sizes.
-            </p>
+            
             <br/>
 
             <p style={alignment}>
@@ -70,7 +73,7 @@ class About extends React.Component {
 				general chit-chat, and lava lamp queries.</p>
             <br/>
             <p style={alignment}>You can take a look at my CV <a 
-                href="https://my-grafana.s3.amazonaws.com/my-portfolio/AndrewJohnsonFullstackCV.pdf"
+                href="https://my-portfolio-earyzhe.s3.amazonaws.com/andrew_johnson_developer_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >here</a>.</p>
@@ -90,7 +93,7 @@ class About extends React.Component {
         return (
             <SafeArea
                 reference={props.reference}
-                margin={Dimensions.sectionMargin}
+                margin={dimensions.sectionMargin}
                 placeContent={props.mobileApp ? 'center':`flex-start'`}
                 alignItems={props.mobileApp ? 'center':`flex-start`}
                 width={props.mobileApp ? '100%' : '60%'}

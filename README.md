@@ -18,3 +18,8 @@ The app will be auto deployed when the master branch is pushed to. It will try t
 It can be updated manually with the Heroku Cli
 
 For more info read [here](https://dev.to/jessesbyers/how-to-update-a-deployed-app-on-heroku-3fde) or [this](https://f-a.nz/dev/update-deploy-to-heroku-app/)
+
+
+## Adding images
+
+- See the file @ 'image_tools/resize_images.py' for automatically resizing images of specific types
