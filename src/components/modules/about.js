@@ -73,7 +73,7 @@ class About extends React.Component {
 				general chit-chat, and lava lamp queries.</p>
             <br/>
             <p style={alignment}>You can take a look at my CV <a 
-                href="https://my-portfolio-earyzhe.s3.amazonaws.com/andrew_johnson_developer_cv.pdf"
+                href="https://aj-hosted-content.s3.eu-central-1.amazonaws.com/CV_EDIT_AJOHNSON+-+revised.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >here</a>.</p>
