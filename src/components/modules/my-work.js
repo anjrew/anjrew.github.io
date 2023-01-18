@@ -35,7 +35,7 @@ class MyWork extends React.Component {
                 >Check out my code on  <a
                         style={{ backgroundColor:"white"}}
                         className='link-button'
-                        href='https://github.com/earyzhe'
+                        href='https://github.com/anjrew'
                         target="_blank"
                         rel="noopener noreferrer"
                     >GitHub</a> and see my projects below.</p> 
@@ -48,7 +48,7 @@ class MyWork extends React.Component {
                 >If you are currently using any of my products;
 				with your help, I can keep them alive and updated! I run on Caffeine...</p>
                 <a 
-                    href= "https://www.buymeacoffee.com/earyzhe" 
+                    href= "https://www.buymeacoffee.com/aj549" 
                     target="_blank"
                     rel="noopener noreferrer">
                     <img

@@ -998,7 +998,7 @@ export const shutterStockScrollData = new ProjectPageData({
 	links: [
 		new LinkData({
 			imageUrl: '/assets/images/tech-icons/github/icon.svg',
-			href: 'https://github.com/earyzhe/shutterstock_scroll',
+			href: 'https://github.com/anjrew/shutterstock_scroll',
 			name: 'Repo',
 			static: true
 		}),
