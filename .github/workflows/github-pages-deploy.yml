@@ -47,6 +47,11 @@ jobs:
       run: |
         npm run build:static
 
+    - name: Add git credentials
+      run:  |
+        git config --global user.name '${{ env.GIT_USER }} ''
+        git config --global user.email ${{ env.GIT_EMAIL }}
+
     - name: Log directory content
       run: |
         ls -a
