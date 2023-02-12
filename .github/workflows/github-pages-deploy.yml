@@ -57,7 +57,7 @@ jobs:
 
     - name: Public File to directory
       run: |
-        cp -R ./public/ $DIST_FOLDER_NAME/
+        cp -R ./public ./dist
 
     - name: Add git credentials
       run:  |
