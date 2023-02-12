@@ -42,7 +42,7 @@ jobs:
 
     - name: Build
       run: |
-        npm run build
+        npm run build:static
 
     - name: Copy files to deployment directory
       run: |

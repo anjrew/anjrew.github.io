@@ -2,10 +2,14 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const isStatic = process.argv.includes("--static");
+
+const buildDirectory = __dirname + (isStatic ? '/dist' : '');
+console.log('Build directory: ' + buildDirectory);
 const conf = {
     entry: ["@babel/polyfill", __dirname + '/src/start.js'],
     output: {
-        path: __dirname,
+        path: buildDirectory,
         filename: 'bundle.js'
     },
     performance: {

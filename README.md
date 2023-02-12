@@ -23,3 +23,7 @@ For more info read [here](https://dev.to/jessesbyers/how-to-update-a-deployed-ap
 ## Adding images
 
 - See the file @ 'image_tools/resize_images.py' for automatically resizing images of specific types
+
+## Building
+
+The build process now builds a static site t
