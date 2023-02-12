@@ -3,6 +3,7 @@
     "version": "1.1.0",
     "description": "A Portfolio website",
     "main": "index.js",
+    "homepage": "https://anjrew.github.io",
     "scripts": {
         "start": "npm run build:watch & npm run serve",
         "build": "node build.js",
@@ -10,7 +11,9 @@
         "serve": "npm run serve:bundle & npm run serve:index",
         "serve:bundle": "node ./bundle-server.js",
         "serve:index": "node index.js",
-        "test": "jest"
+        "test": "jest",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "engines": {
         "node": "10.15.1"
@@ -77,6 +80,7 @@
     "license": "ISC",
     "devDependencies": {
         "extract-text-webpack-plugin": "^4.0.0-alpha.0",
+        "gh-pages": "^5.0.0",
         "html-webpack-plugin": "^3.2.0",
         "nodemon": "^2.0.15",
         "webpack": "^4.34.0"
