@@ -47,6 +47,18 @@ jobs:
       run: |
         npm run build:static
 
+    - name: Copy index.html to dist
+      run: |
+        npm run build:static
+
+    - name: Copy files to deployment directory
+      run: |
+        cp ./index.html $DIST_FOLDER_NAME/
+
+    - name: Public File to directory
+      run: |
+        cp -R ./public/ $DIST_FOLDER_NAME/
+
     - name: Add git credentials
       run:  |
         git config --global user.name '${{ env.GIT_USER }}'
@@ -71,10 +83,6 @@ jobs:
     - name: Log git config
       run: |
         git config --list
-
-    - name: Copy files to deployment directory
-      run: |
-        cp -R ./public $DIST_FOLDER_NAME/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
