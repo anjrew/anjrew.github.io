@@ -46,7 +46,7 @@ jobs:
 
     - name: Copy files to deployment directory
       run: |
-        cp -R build/$FOLDER_NAME $GITHUB_PAGES_BRANCH/
+        cp -R ./$FOLDER_NAME $GITHUB_PAGES_BRANCH/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
