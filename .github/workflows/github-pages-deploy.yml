@@ -21,7 +21,7 @@ concurrency:
 
 env:
   GITHUB_PAGES_BRANCH: gh-pages
-  FOLDER_NAME: dist
+  DIST_FOLDER_NAME: dist
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
   GIT_USER: ${{ secrets.GIT_USER }}
@@ -55,6 +55,10 @@ jobs:
     - name: Log directory content
       run: |
         ls -a
+    
+    - name: Log dist directory content
+      run: |
+        ls -a ./dist
 
     - name: Log env
       run: |
@@ -70,7 +74,7 @@ jobs:
 
     - name: Copy files to deployment directory
       run: |
-        cp -R ./$FOLDER_NAME $GITHUB_PAGES_BRANCH/
+        cp -R ./public $DIST_FOLDER_NAME/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
