@@ -1,5 +1,0 @@
-ps ax | grep node
-killall -9 node
-npm test wait
-node bundle-server.js &
-nodemon --inspect index.js &
